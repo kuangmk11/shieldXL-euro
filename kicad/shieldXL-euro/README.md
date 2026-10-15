@@ -30,6 +30,28 @@ Codec, display, keys, encoders and the MIDI circuit are shieldXL's, unchanged.
 - **Phase:** the input stage inverts. Fine for audio; flip the sign in
   software if a CV use needs it.
 
+## Pi power
+
+The Pi is powered through the 40-pin header, not its own USB-C / micro-USB
+port, so nothing plugs into that port and no right-angle adapter is needed.
+J108 on the panel feeds F101 and D103 onto `+5V`, and `+5V` is header pins 2
+and 4 (X1), as on shieldXL.
+
+- **Protection.** Header power bypasses the Pi's own input protection; F101
+  and D103 stand in for it.
+- **Voltage drop.** The Pi flags undervoltage at about 4.63 V. A 3 A 1812
+  polyfuse drops around 0.1 V at 2-2.5 A, before the cable and connector.
+  With a marginal supply that can trip the warning; a lower-resistance fuse
+  or an eFuse would leave more margin.
+- **Two supplies.** Plugging the Pi's own power port in while J108 is live
+  ties the two supplies together. It can't be reached in a rack; on the
+  bench, use one or the other. An ideal-diode controller on J108 would make
+  it safe.
+- **Pi 5.** Powered from the header it cannot negotiate USB PD, and limits
+  its USB ports to 600 mA in total unless `usb_max_current_enable=1` is set
+  in `config.txt`. That matters with three USB-A sockets on the panel.
+  shieldXL's images are for the Pi 4.
+
 ## Files
 
     shieldXL-euro.kicad_sch          root: the two shield sheets and eurorack.kicad_sch
@@ -71,4 +93,7 @@ The panel layout is in the Missing Mile Modular repo
 - **Keys.** SW1-SW3 are still shieldXL's Choc / MX key footprints; the
   panel is drawn for 9.3 mm round caps (C&K D6 style).
 - **USB-A cable headers.** USB on a 4-pin JST PH is fine for full speed;
-  keep the cables short.
+  keep the cables short. The plugs into the Pi's own USB-A ports stick out
+  sideways and cost depth and side clearance behind the panel. Plan the
+  layout around a small adapter board or flex with low-profile right-angle
+  plugs, carried back to the main board.
