@@ -159,7 +159,41 @@ def strip(path, plan):
     print(f"  {len(dead)} wires pruned, {len(labels)} global labels placed")
 
 
+def orphan_power(path):
+    """Power symbols whose one pin now lands on nothing: the ground symbols
+    that served only a removed jack's sleeve."""
+    s = open(path, encoding="utf-8").read()
+    insts = S.instances(s)
+    live = S.wire_ends(s)
+    for _, _, t in S.blocks(s, "wire"):
+        pts = [(round(float(x), 3), round(float(y), 3)) for x, y in re.findall(r'\(xy ([-\d.]+) ([-\d.]+)\)', t)]
+        live |= set(pts)
+    pins = {}
+    for i in insts:
+        try:
+            for p in S.pin_points(s, i).values():
+                pins[p] = pins.get(p, 0) + 1
+        except ValueError:
+            pass
+    cut = []
+    for i in insts:
+        if not i["ref"].startswith("#") or "FRAME" in i["ref"]:
+            continue
+        try:
+            pts = list(S.pin_points(s, i).values())
+        except ValueError:
+            continue
+        if len(pts) == 1 and pts[0] not in live and pins.get(pts[0], 0) == 1:
+            cut.append(i["span"])
+            print(f"  removed orphan {i['ref']} ({i['lib_id'].split(':')[1]}) at {pts[0]}")
+    for a, b in sorted(cut, reverse=True):
+        s = s[:a] + s[b:]
+    with open(path, "w", encoding="utf-8", newline="\n") as f:
+        f.write(s)
+
+
 if __name__ == "__main__":
     for f, plan in PLAN.items():
         print(f)
         strip(os.path.join(HERE, f), plan)
+        orphan_power(os.path.join(HERE, f))

@@ -1,0 +1,228 @@
+(footprint "Jack_3.5mm_QingPu_WQP-PJ3410_Vertical"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "QingPu WQP-PJ3410 3.5 mm stereo switched jack, tall vertical, PCB mount - the 'NV' jack. Pads T, R, S, TN. Imported from clacktronics/AudioJacks (github.com/clacktronics/AudioJacks, rev 14a8886, MIT, (c) 2021 Barwise - see doc/AudioJacks-LICENSE.txt). Land pattern unchanged from upstream, which lists it as UNTESTED: check against the part before fabbing.")
+	(tags "jack 3.5mm stereo trs switched qingpu pj3410 nv vertical eurorack")
+	(property "Reference" "REF**"
+		(at -2.7 -6 0)
+		(layer "F.SilkS")
+		(uuid "988bc6da-c43e-45b6-beca-3ac8b8fce471")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "PJ3410"
+		(at 2.7 -6.1 0)
+		(layer "F.Fab")
+		(uuid "ec0f0d8b-b8ef-4149-b262-0dfab4f1834b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "874a06fa-ff44-4d41-85b0-7a209ecc2104")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "eb0cb190-ffac-48d2-82e4-179ea20abc5b")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -4.6 -4.5)
+		(end -4.6 -2.3)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ff84dfd8-6e12-4574-a87a-72f482f3f682")
+	)
+	(fp_line
+		(start -4.6 2.4)
+		(end -4.6 5.8)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a3da4c56-312b-47fc-9e42-77e37bc9a23a")
+	)
+	(fp_line
+		(start -4.6 5.8)
+		(end -1.6 5.8)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "61e74739-c9d5-4fe9-a734-9c90ccc572bb")
+	)
+	(fp_line
+		(start -3.5 -5.1)
+		(end -4.6 -4.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3e214fea-a1b6-4ed1-8402-a7d240977d11")
+	)
+	(fp_line
+		(start 1.6 5.8)
+		(end 4.6 5.8)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0f23299a-d478-44fe-b9b0-eea529b1e5ad")
+	)
+	(fp_line
+		(start 3.5 -5.1)
+		(end -3.5 -5.1)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "cfc807e7-007c-4c95-9c4e-3e49039d581f")
+	)
+	(fp_line
+		(start 3.5 -5.1)
+		(end 4.6 -4.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d18dfb9d-e381-4f74-96bb-66564433a6f5")
+	)
+	(fp_line
+		(start 4.6 -4.5)
+		(end 4.6 -2.3)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b5f2fdff-87b1-4140-858b-e0912e3a0b2f")
+	)
+	(fp_line
+		(start 4.6 5.8)
+		(end 4.6 2.4)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f5da8ed0-1a23-41fb-bea5-d007f4d2d929")
+	)
+	(fp_line
+		(start -5 -5.5)
+		(end -5 6)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0b7eee4c-b2a8-483c-bb93-f31a60fa5de4")
+	)
+	(fp_line
+		(start -5 6)
+		(end 5 6)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d670d60b-104f-4813-b164-e379ea97d1a2")
+	)
+	(fp_line
+		(start 5 -5.5)
+		(end -5 -5.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0083142a-137c-453d-b690-ede937cb60e6")
+	)
+	(fp_line
+		(start 5 6)
+		(end 5 -5.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a56f3057-fe42-453e-b182-8700270172a6")
+	)
+	(pad "R" thru_hole oval
+		(at 0 -3.5 90)
+		(size 2.3 4)
+		(drill oval 0.8 2.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "2ffc3cd8-1962-44c1-aa02-55896115ba6e")
+	)
+	(pad "S" thru_hole oval
+		(at 3.7 0)
+		(size 2.8 4.5)
+		(drill oval 0.8 2.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "dd246c6b-e0d5-48a7-8764-a173bc4487a4")
+	)
+	(pad "T" thru_hole oval
+		(at 0 4.5 270)
+		(size 2.3 4)
+		(drill oval 0.8 2.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "f011e38e-e624-4e5d-a985-46aef77c398c")
+	)
+	(pad "TN" thru_hole oval
+		(at -3.7 0)
+		(size 2.8 4.5)
+		(drill oval 0.8 2.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "a890dd9d-fc7b-4159-9c2a-f2ae98bf36bd")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/PJ3410.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

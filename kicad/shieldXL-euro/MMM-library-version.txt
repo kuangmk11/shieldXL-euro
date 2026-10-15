@@ -1,0 +1,4 @@
+Missing Mile Modular house library
+revision: e630c63-dirty
+nickname: MMM
+footprints: CGE_Vactrol, Hole_3.2mm, Hole_4.95mm, Hole_6mm, Hole_7mm, Jack_3.5mm_Cliff_FCR1281_Horizontal, Jack_3.5mm_QingPu_WQP-PJ301BM_Vertical, Jack_3.5mm_QingPu_WQP-PJ301CM_Vertical, Jack_3.5mm_QingPu_WQP-PJ301M-12_Vertical, Jack_3.5mm_QingPu_WQP-PJ302M_Horizontal, Jack_3.5mm_QingPu_WQP-PJ3410_Vertical, Jack_3.5mm_QingPu_WQP-PJ366ST_Vertical, Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical, Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles, LED_3mm, Potentiometer_Alpha_RD901F-40-00D_Single_Vertical, Potentiometer_Alpha_RD902F-40-00D_Dual_Vertical, SW_Taiway_200_DPDT, SW_Taiway_200_SPDT, SW_Taiway_200_SPDT_CommonPin1, Thonkiconn_PJ301M

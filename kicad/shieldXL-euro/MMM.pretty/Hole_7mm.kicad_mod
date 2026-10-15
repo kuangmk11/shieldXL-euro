@@ -1,0 +1,63 @@
+(footprint "Hole_7mm"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Panel hole for an Alpha RD901F 9 mm potentiometer bushing (M7), 7 mm non-plated. Origin at the hole centre. Same family as Hole_3.2mm / Hole_4.95mm / Hole_6mm: pad layers are *.Cu plus 'Rescue', matching those byte-for-byte. 'Rescue' is a stale layer name inherited from the original out-of-tree 'Panel' library and is NOT in a panel's layer table, so KiCad ignores it and the hole gets no mask aperture. Do not 'correct' it to *.Mask: that would open soldermask around every hole, and would put this footprint out of step with the other three and raise lib_footprint_mismatch DRC errors.")
+	(property "Reference" ""
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "1a9c4d02-6f31-4bb8-9d55-2b7e40c1a883")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "pot"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6c2f18ba-9e40-4a17-bb03-5d1c9f7ae214")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0f74e5c6-31ab-4d29-8a60-7c4e9b2df015")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b83d6a51-c07e-4f92-a1d4-e6820f3cb7d9")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
+	(duplicate_pad_numbers_are_jumpers no)
+	(pad "" np_thru_hole circle
+		(at 0 0)
+		(size 7 7)
+		(drill 7)
+		(layers "*.Cu" "Rescue")
+		(uuid "d5e1370f-84c2-4b6a-9f28-3a0c17e5b962")
+	)
+	(embedded_fonts no)
+)

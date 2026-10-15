@@ -1,0 +1,331 @@
+#!/usr/bin/env python3
+"""Write eurorack.kicad_sch: the I/O that makes shieldXL a Eurorack module,
+and hook it into the root sheet.
+
+    python3 tools/make_eurorack_sheet.py
+
+What it adds (references in the 100s, clear of shieldXL's):
+
+  Eurorack power    J101 10-pin header; D101 / D102 reverse protection into
+                    +12V / -12V; 10u + 100n on each rail. Feeds the op-amps
+                    only - the Pi does not run from the rack.
+  audio in  (x2)    J102 / J103 3.5 mm, T -> 100k -> inverting stage, gain
+                    -0.40 (40.2k), out to IN_L_LINE / IN_R_LINE, which feed
+                    shieldXL's own 4.99k / 10k dividers into the codec. A
+                    10 Vpp modular signal reaches the codec at about its
+                    2.7 Vpp full scale. Switch contact to AGND: unpatched
+                    reads zero.
+  audio out (x2)    OUT_L_LINE / OUT_R_LINE (codec, after shieldXL's filter)
+                    -> non-inverting stage, gain 3.49 (24.9k / 10k) -> 1k ->
+                    J104 / J105. Codec full scale, about 2.85 Vpp, leaves as
+                    about 10 Vpp.
+  MIDI              J106 in (PJ366ST) to MIDI_IN_TIP / _RING; J107 out, its
+                    tip and ring chosen by JP101 / JP102 from MIDI_OUT_SNK /
+                    _SRC - Type A as made (1-2 bridged), Type B by cutting
+                    1-2 on both and bridging 2-3. Replaces shieldXL's slide
+                    switch.
+  Pi power          J108 USB-C, power only (5.1k on CC1 / CC2), F101 polyfuse
+                    and D103 TVS onto +5V, which reaches the Pi through the
+                    header as shieldXL's +5V does. Bulk C113.
+  USB host (x3)     J109-J111 vertical USB-A on the panel, each wired to a
+                    4-pin JST PH (J112-J114) for a short cable from one of
+                    the Pi's own USB ports.
+
+Every pin gets a label or power symbol at its end. Nets that cross to the
+shield sheets are global labels; +5V, GND and AGND use the shield sheets'
+own power symbols, copied in, so they are the same nets.
+"""
+
+import os
+import re
+import sys
+import uuid
+
+HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUT = os.path.join(HERE, "eurorack.kicad_sch")
+ROOT_FILE = os.path.join(HERE, "shieldXL-euro.kicad_sch")
+SHEET1 = os.path.join(HERE, "norns-shield-210330_1.kicad_sch")
+KLIB = os.environ.get("KICAD_SYMBOLS", "/mnt/g/Program Files/KiCad/10.0/share/kicad/symbols")
+NS = uuid.UUID("7c1e4b2a-3d5f-4a6b-8c7d-9e0f1a2b3c40")
+SHEET_UUID = str(uuid.uuid5(NS, "eurorack-sheet"))
+PROJECT = "shieldXL-euro"
+_n = [0]
+
+
+def uid():
+    _n[0] += 1
+    return str(uuid.uuid5(NS, str(_n[0])))
+
+
+def balanced(s, j):
+    d = 0
+    for k in range(j, len(s)):
+        if s[k] == "(":
+            d += 1
+        elif s[k] == ")":
+            d -= 1
+            if d == 0:
+                return s[j:k + 1]
+
+
+def lib_block(lib, name):
+    s = open(os.path.join(KLIB, lib + ".kicad_sym"), encoding="utf-8").read()
+    i = s.find(f'\n\t(symbol "{name}"')
+    assert i >= 0, (lib, name)
+    return balanced(s, i + 1)
+
+
+def embed(lib, name):
+    """A stock symbol embedded as lib:name; a derived symbol is flattened onto
+    its parent with its own properties."""
+    blk = lib_block(lib, name)
+    m = re.search(r'\(extends "([^"]+)"\)', blk)
+    if m:
+        parent = lib_block(lib, m.group(1))
+        for k, v in re.findall(r'\(property "(\w+)" "([^"]*)"', blk):
+            parent = re.sub(rf'(\(property "{k}" )"[^"]*"', lambda mm: mm.group(1) + '"' + v.replace("\\", "\\\\") + '"', parent, count=1)
+        blk = parent.replace(f'"{m.group(1)}_', f'"{name}_').replace(f'(symbol "{m.group(1)}"', f'(symbol "{name}"', 1)
+    return blk.replace(f'(symbol "{name}"', f'(symbol "{lib}:{name}"', 1)
+
+
+def shield_power(name):
+    """One of the shield sheets' own (Eagle-import) power symbols, verbatim."""
+    s = open(SHEET1, encoding="utf-8").read()
+    i = s.index(f'(symbol "norns-shield-210330-eagle-import:{name}"')
+    return balanced(s, i)
+
+
+def pins_of(block, unit):
+    out = {}
+    for m in re.finditer(r'\(symbol "[^"]*_(\d+)_(\d+)"', block):
+        if int(m.group(1)) not in (0, unit):
+            continue
+        sub = balanced(block, m.start())
+        for x, y, num in re.findall(r'\(pin \w+ \w+\s*\(at ([-\d.]+) ([-\d.]+) [-\d.]+\)[\s\S]*?\(number "([^"]*)"', sub):
+            out[num] = (float(x), float(y))
+    return out
+
+
+def prop(name, value, x, y, hide=False):
+    h = "\n\t\t\t(hide yes)" if hide else ""
+    return (f'\t\t(property "{name}" "{value}"\n\t\t\t(at {x:g} {y:g} 0){h}\n'
+            "\t\t\t(effects\n\t\t\t\t(font\n\t\t\t\t\t(size 1.27 1.27)\n\t\t\t\t)\n\t\t\t)\n\t\t)\n")
+
+
+FP_R = "Resistor_SMD:R_0805_2012Metric"
+FP_C = "Capacitor_SMD:C_0805_2012Metric"
+FP_JACK = "MMM:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
+FP_TRS = "MMM:Jack_3.5mm_QingPu_WQP-PJ366ST_Vertical"
+FP_JP = "Jumper:SolderJumper-3_P1.3mm_Bridged12_Pad1.0x1.5mm"
+GLOBAL = {"IN_L_LINE", "IN_R_LINE", "OUT_L_LINE", "OUT_R_LINE",
+          "MIDI_OUT_SRC", "MIDI_OUT_SNK", "MIDI_IN_TIP", "MIDI_IN_RING"}
+POWER = {"+5V": "shield", "GND": "shield", "AGND": "shield", "+12V": "power", "-12V": "power"}
+
+# ref, lib, symbol, unit, value, footprint, (x, y), {pin: net or None}
+PARTS = [
+    # --- Eurorack power: op-amps only ------------------------------------------
+    ("J101", "Connector_Generic", "Conn_02x05_Odd_Even", 1, "Eurorack power", "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical",
+     (38.1, 50.8), {"1": "-12V_IN", "2": "-12V_IN", "3": "AGND", "4": "AGND", "5": "AGND", "6": "AGND",
+                    "7": "AGND", "8": "AGND", "9": "+12V_IN", "10": "+12V_IN"}),
+    ("D101", "Device", "D_Schottky", 1, "B5819W", "Diode_SMD:D_SOD-123", (76.2, 40.64), {"2": "+12V_IN", "1": "+12V"}),
+    ("D102", "Device", "D_Schottky", 1, "B5819W", "Diode_SMD:D_SOD-123", (76.2, 60.96), {"2": "-12V", "1": "-12V_IN"}),
+    ("C101", "Device", "C", 1, "10u 25V", FP_C, (101.6, 40.64), {"1": "+12V", "2": "AGND"}),
+    ("C102", "Device", "C", 1, "10u 25V", FP_C, (101.6, 60.96), {"1": "AGND", "2": "-12V"}),
+    ("C103", "Device", "C", 1, "100n", FP_C, (114.3, 40.64), {"1": "+12V", "2": "AGND"}),
+    ("C104", "Device", "C", 1, "100n", FP_C, (114.3, 60.96), {"1": "AGND", "2": "-12V"}),
+    ("U101", "Amplifier_Operational", "TL074", 5, "TL074", "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+     (139.7, 50.8), {"4": "+12V", "11": "-12V"}),
+    # --- audio in: inverting, gain -0.40 ------------------------------------
+    ("J102", "Connector_Audio", "AudioJack2_SwitchT", 1, "IN L", FP_JACK, (38.1, 101.6), {"T": "IN_L_JACK", "TN": "AGND", "S": "AGND"}),
+    ("R101", "Device", "R", 1, "100k", FP_R, (63.5, 101.6), {"1": "IN_L_JACK", "2": "INL_SUM"}),
+    ("R102", "Device", "R", 1, "40.2k", FP_R, (88.9, 93.98), {"1": "INL_SUM", "2": "IN_L_LINE"}),
+    ("C105", "Device", "C", 1, "100p", FP_C, (101.6, 93.98), {"1": "INL_SUM", "2": "IN_L_LINE"}),
+    ("U101", "Amplifier_Operational", "TL074", 1, "TL074", "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+     (88.9, 106.68), {"3": "AGND", "2": "INL_SUM", "1": "IN_L_LINE"}),
+    ("J103", "Connector_Audio", "AudioJack2_SwitchT", 1, "IN R", FP_JACK, (38.1, 132.08), {"T": "IN_R_JACK", "TN": "AGND", "S": "AGND"}),
+    ("R103", "Device", "R", 1, "100k", FP_R, (63.5, 132.08), {"1": "IN_R_JACK", "2": "INR_SUM"}),
+    ("R104", "Device", "R", 1, "40.2k", FP_R, (88.9, 124.46), {"1": "INR_SUM", "2": "IN_R_LINE"}),
+    ("C106", "Device", "C", 1, "100p", FP_C, (101.6, 124.46), {"1": "INR_SUM", "2": "IN_R_LINE"}),
+    ("U101", "Amplifier_Operational", "TL074", 2, "TL074", "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+     (88.9, 137.16), {"5": "AGND", "6": "INR_SUM", "7": "IN_R_LINE"}),
+    # --- audio out: non-inverting, gain 3.49, 1k out ---------------------------
+    ("U101", "Amplifier_Operational", "TL074", 3, "TL074", "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+     (165.1, 106.68), {"10": "OUT_L_LINE", "9": "OUTL_FB", "8": "OUTL_AMP"}),
+    ("R105", "Device", "R", 1, "10k", FP_R, (152.4, 119.38), {"1": "OUTL_FB", "2": "AGND"}),
+    ("R106", "Device", "R", 1, "24.9k", FP_R, (165.1, 93.98), {"1": "OUTL_FB", "2": "OUTL_AMP"}),
+    ("C107", "Device", "C", 1, "100p", FP_C, (177.8, 93.98), {"1": "OUTL_FB", "2": "OUTL_AMP"}),
+    ("R107", "Device", "R", 1, "1k", FP_R, (190.5, 106.68), {"1": "OUTL_AMP", "2": "OUT_L_JACK"}),
+    ("J104", "Connector_Audio", "AudioJack2_SwitchT", 1, "OUT L", FP_JACK, (215.9, 106.68), {"T": "OUT_L_JACK", "TN": None, "S": "AGND"}),
+    ("U101", "Amplifier_Operational", "TL074", 4, "TL074", "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+     (165.1, 137.16), {"12": "OUT_R_LINE", "13": "OUTR_FB", "14": "OUTR_AMP"}),
+    ("R108", "Device", "R", 1, "10k", FP_R, (152.4, 149.86), {"1": "OUTR_FB", "2": "AGND"}),
+    ("R109", "Device", "R", 1, "24.9k", FP_R, (165.1, 124.46), {"1": "OUTR_FB", "2": "OUTR_AMP"}),
+    ("C108", "Device", "C", 1, "100p", FP_C, (177.8, 124.46), {"1": "OUTR_FB", "2": "OUTR_AMP"}),
+    ("R110", "Device", "R", 1, "1k", FP_R, (190.5, 137.16), {"1": "OUTR_AMP", "2": "OUT_R_JACK"}),
+    ("J105", "Connector_Audio", "AudioJack2_SwitchT", 1, "OUT R", FP_JACK, (215.9, 137.16), {"T": "OUT_R_JACK", "TN": None, "S": "AGND"}),
+    # --- MIDI -----------------------------------------------------------------
+    ("J106", "Connector_Audio", "AudioJack3", 1, "MIDI IN", FP_TRS, (241.3, 50.8), {"T": "MIDI_IN_TIP", "R": "MIDI_IN_RING", "S": None}),
+    ("JP101", "Jumper", "SolderJumper_3_Bridged12", 1, "TIP A/B", FP_JP, (279.4, 43.18), {"1": "MIDI_OUT_SNK", "2": "MIDI_OUT_T", "3": "MIDI_OUT_SRC"}),
+    ("JP102", "Jumper", "SolderJumper_3_Bridged12", 1, "RING A/B", FP_JP, (279.4, 66.04), {"1": "MIDI_OUT_SRC", "2": "MIDI_OUT_R", "3": "MIDI_OUT_SNK"}),
+    ("J107", "Connector_Audio", "AudioJack3", 1, "MIDI OUT", FP_TRS, (304.8, 53.34), {"T": "MIDI_OUT_T", "R": "MIDI_OUT_R", "S": "GND"}),
+    # --- Pi power: USB-C on the panel ------------------------------------------
+    ("J108", "Connector", "USB_C_Receptacle_PowerOnly_6P", 1, "USB-C 5V", "",
+     (241.3, 116.84), {"A9": "VBUS_C", "B9": "VBUS_C", "A12": "GND", "B12": "GND", "A5": "CC1", "B5": "CC2", "SH": "GND"}),
+    ("R111", "Device", "R", 1, "5.1k", FP_R, (271.78, 129.54), {"1": "CC1", "2": "GND"}),
+    ("R112", "Device", "R", 1, "5.1k", FP_R, (284.48, 129.54), {"1": "CC2", "2": "GND"}),
+    ("F101", "Device", "Polyfuse", 1, "3A hold", "Fuse:Fuse_1812_4532Metric", (271.78, 104.14), {"1": "VBUS_C", "2": "+5V"}),
+    ("D103", "Device", "D_TVS", 1, "SMBJ5.0CA", "Diode_SMD:D_SMB", (292.1, 99.06), {"1": "+5V", "2": "GND"}),
+    ("C113", "Device", "C", 1, "47u", "Capacitor_SMD:C_1206_3216Metric", (304.8, 104.14), {"1": "+5V", "2": "GND"}),
+] + [
+    # --- USB host: three panel sockets, each cabled from a Pi port ---------------
+    p for n in (1, 2, 3) for p in (
+        (f"J{108 + n}", "Connector", "USB_A", 1, f"USB {n}", "Connector_USB:USB_A_Molex_105057_Vertical",
+         (50.8 + 76.2 * (n - 1), 182.88), {"1": f"USB{n}_VBUS", "2": f"USB{n}_DM", "3": f"USB{n}_DP", "4": "GND", "SH": "GND"}),
+        (f"J{111 + n}", "Connector_Generic", "Conn_01x04", 1, f"Pi USB {n}", "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical",
+         (88.9 + 76.2 * (n - 1), 182.88), {"1": f"USB{n}_VBUS", "2": f"USB{n}_DM", "3": f"USB{n}_DP", "4": "GND"}),
+    )
+]
+# Nets this sheet brings onto the board, driven from off it or through a diode
+# or fuse. +5V, GND and AGND are not flagged: the shield sheets' Eagle-era
+# parts call those pins bidirectional, and a flag there only trades the
+# original's "not driven" for a pin-to-pin clash.
+FLAGS = ["+12V", "-12V", "VBUS_C", "USB1_VBUS", "USB2_VBUS", "USB3_VBUS"]
+
+
+def build():
+    blocks = {}
+    for _, lib, sym, *_ in PARTS:
+        blocks[f"{lib}:{sym}"] = embed(lib, sym)
+    for p in ("+12V", "-12V", "PWR_FLAG"):
+        blocks[f"power:{p}"] = embed("power", p)
+    for p in ("+5V", "GND", "AGND"):
+        blocks[f"norns-shield-210330-eagle-import:{p}"] = shield_power(p)
+
+    o = ["(kicad_sch", "\t(version 20231120)", '\t(generator "make_eurorack_sheet.py")',
+         '\t(generator_version "8.0")', f'\t(uuid "{str(uuid.uuid5(NS, "file"))}")', '\t(paper "A3")',
+         "\t(title_block", '\t\t(title "Eurorack I/O")', '\t\t(comment 1 "Generated by tools/make_eurorack_sheet.py")', "\t)",
+         "\t(lib_symbols"]
+    for b in blocks.values():
+        o.append("\t\t" + b.replace("\n\t", "\n\t\t"))
+    o.append("\t)")
+
+    def instance(lib_id, ref, value, fp, x, y, unit, pinnums, hide_ref=False):
+        lines = [f"\t(symbol\n\t\t(lib_id \"{lib_id}\")\n\t\t(at {x:g} {y:g} 0)\n\t\t(unit {unit})\n"
+                 "\t\t(exclude_from_sim no)\n"
+                 f"\t\t(in_bom {'no' if ref.startswith(('JP', '#')) else 'yes'})\n\t\t(on_board yes)\n\t\t(dnp no)\n"
+                 f'\t\t(uuid "{uid()}")\n',
+                 prop("Reference", ref, x + 2.54, y - 7.62, hide_ref),
+                 prop("Value", value, x + 2.54, y + 7.62, hide_ref and ref.startswith("#FLG")),
+                 prop("Footprint", fp, x, y, True),
+                 prop("Datasheet", "", x, y, True)]
+        for n in pinnums:
+            lines.append(f'\t\t(pin "{n}"\n\t\t\t(uuid "{uid()}")\n\t\t)\n')
+        lines.append(f'\t\t(instances\n\t\t\t(project "{PROJECT}"\n\t\t\t\t(path "/{root_uuid}/{SHEET_UUID}"\n'
+                     f'\t\t\t\t\t(reference "{ref}")\n\t\t\t\t\t(unit {unit})\n\t\t\t\t)\n\t\t\t)\n\t\t)\n\t)')
+        return "".join(lines)
+
+    npwr = [0]
+
+    def power(net, x, y):
+        npwr[0] += 1
+        lib_id = f"{'norns-shield-210330-eagle-import' if POWER[net] == 'shield' else 'power'}:{net}"
+        (px, py), = pins_of(blocks[lib_id], 1).values()
+        return instance(lib_id, f"#PWR{100 + npwr[0]}", net, "", round(x - px, 3), round(y + py, 3), 1, ["1"], hide_ref=True)
+
+    def label(net, x, y):
+        kind = "global_label" if net in GLOBAL else "label"
+        extra = ('\t\t(shape bidirectional)\n' if kind == "global_label" else "")
+        prop_isr = ('\t\t(property "Intersheetrefs" "${INTERSHEET_REFS}"\n\t\t\t(at %g %g 0)\n\t\t\t(effects\n'
+                    '\t\t\t\t(font\n\t\t\t\t\t(size 1.27 1.27)\n\t\t\t\t)\n\t\t\t\t(hide yes)\n\t\t\t)\n\t\t)\n' % (x, y)
+                    if kind == "global_label" else "")
+        return (f'\t({kind} "{net}"\n{extra}\t\t(at {x:g} {y:g} 0)\n\t\t(effects\n\t\t\t(font\n\t\t\t\t(size 1.27 1.27)\n'
+                f'\t\t\t)\n\t\t\t(justify left bottom)\n\t\t)\n\t\t(uuid "{uid()}")\n{prop_isr}\t)')
+
+    nets = {}
+    for ref, lib, sym, unit, value, fp, (x, y), conn in PARTS:
+        pp = pins_of(blocks[f"{lib}:{sym}"], unit)
+        o.append(instance(f"{lib}:{sym}", ref, value, fp, x, y, unit, list(pp)))
+        done = set()
+        for num, net in conn.items():
+            px, py = pp[num]
+            ax, ay = round(x + px, 2), round(y - py, 2)
+            key = (ax, ay, net)
+            nets.setdefault(net, []).append(f"{ref}.{num}")
+            if key in done:          # stacked pins (USB-C VBUS / GND) share one point
+                continue
+            done.add(key)
+            if net is None:
+                o.append(f'\t(no_connect\n\t\t(at {ax:g} {ay:g})\n\t\t(uuid "{uid()}")\n\t)')
+            elif net in POWER:
+                o.append(power(net, ax, ay))
+            else:
+                o.append(label(net, ax, ay))
+    for i, net in enumerate(FLAGS):
+        x, y = 25.4 + 15.24 * i, 20.32
+        o.append(label(net, x, y) if net not in POWER else power(net, x, y))
+        o.append(instance("power:PWR_FLAG", f"#FLG{101 + i}", "PWR_FLAG", "", x, y, 1, ["1"], hide_ref=True))
+    o.append(")")
+    with open(OUT, "w", encoding="utf-8", newline="\n") as f:
+        f.write("\n".join(o) + "\n")
+    return nets
+
+
+def hook_root():
+    """Add the sheet to the root schematic, once."""
+    s = open(ROOT_FILE, encoding="utf-8").read()
+    if "eurorack.kicad_sch" in s:
+        return False
+    block = f'''	(sheet
+		(at 127 25.4)
+		(size 48.895 40.64)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "{SHEET_UUID}")
+		(property "Sheetname" "eurorack"
+			(at 127 24.6884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "eurorack.kicad_sch"
+			(at 127 66.6246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "{PROJECT}"
+				(path "/{root_uuid}"
+					(page "3")
+				)
+			)
+		)
+	)
+'''
+    i = s.index("\t(sheet_instances")
+    s = s[:i] + block + s[i:]
+    with open(ROOT_FILE, "w", encoding="utf-8", newline="\n") as f:
+        f.write(s)
+    return True
+
+
+root_uuid = re.search(r'\(uuid "([^"]+)"\)', open(ROOT_FILE, encoding="utf-8").read()).group(1)
+
+if __name__ == "__main__":
+    nets = build()
+    print(f"wrote {OUT}")
+    print("root sheet:", "hooked in" if hook_root() else "already has it")
+    for net, members in sorted(nets.items(), key=lambda kv: str(kv[0])):
+        print(f"  {str(net):13} {' '.join(members)}")

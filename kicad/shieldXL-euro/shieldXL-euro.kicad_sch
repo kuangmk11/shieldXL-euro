@@ -81,6 +81,44 @@
 			)
 		)
 	)
+	(sheet
+		(at 127 25.4)
+		(size 48.895 40.64)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "291b9154-df7e-5c77-b48b-0f7a699ae26f")
+		(property "Sheetname" "eurorack"
+			(at 127 24.6884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "eurorack.kicad_sch"
+			(at 127 66.6246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "shieldXL-euro"
+				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465"
+					(page "3")
+				)
+			)
+		)
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")

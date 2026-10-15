@@ -1,0 +1,259 @@
+(footprint "Jack_3.5mm_QingPu_WQP-PJ301BM_Vertical"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "QingPu WQP-PJ301BM 3.5 mm mono switched jack, vertical, PCB mount - the shielded 'Erthenvar' jack. Pads T and TN on the barrel axis at -4.8 / +3.3, two S shield lugs at x -4.7 / +4.7: the lug slots reach 5.2 mm either side of the barrel, so the land pattern is 10.4 mm wide before copper. Imported from clacktronics/AudioJacks (github.com/clacktronics/AudioJacks, rev 14a8886, MIT, (c) 2021 Barwise - see doc/AudioJacks-LICENSE.txt). Land pattern unchanged from upstream, which lists it as UNTESTED: check against the part before fabbing.")
+	(tags "jack 3.5mm mono ts switched qingpu pj301bm erthenvar shielded vertical eurorack")
+	(property "Reference" "REF**"
+		(at -2.6 -6.4 0)
+		(layer "F.SilkS")
+		(uuid "6ba8d2f0-bb59-432f-833f-8886eaf6f7f5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "PJ301BM"
+		(at 3.7 -6.4 0)
+		(layer "F.Fab")
+		(uuid "c716335c-a1b1-4a83-ab3b-4e325c59e8ac")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "75adc8dd-0459-4fc4-832c-33c749527644")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c0604d58-7fe5-4853-b85c-6f1ddc565a0d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -4.5 -5.7)
+		(end -4.5 -2.1)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a72dee55-d96d-47ad-ba5d-62c924b55e45")
+	)
+	(fp_line
+		(start -4.5 -5.7)
+		(end -2 -5.7)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e9cce465-df8c-4bf4-8817-1b7f57df7f8e")
+	)
+	(fp_line
+		(start -4.5 5.2)
+		(end -4.5 3.3)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2303c90b-cc4b-4160-9098-2fc44cc8a378")
+	)
+	(fp_line
+		(start -4.5 5.2)
+		(end 4.5 5.2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5babd50e-b3ea-407b-8894-4f95e22527d5")
+	)
+	(fp_line
+		(start 4.5 -5.7)
+		(end 2 -5.7)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "48f79ced-6a49-4a6b-8b84-26e4e8646ecd")
+	)
+	(fp_line
+		(start 4.5 -5.7)
+		(end 4.5 -1.7)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "34324c49-631a-4479-a4f4-97f8966e5155")
+	)
+	(fp_line
+		(start 4.5 5.2)
+		(end 4.5 2.9)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c57b175e-11b8-42ec-83b4-285c6df83e06")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 1.5 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "Dwgs.User")
+		(uuid "b92380e8-3e53-4dbd-b233-8f296fc393b4")
+	)
+	(fp_line
+		(start -5.1 -6.4)
+		(end 5.1 -6.4)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "189c7433-2a3c-424b-878a-5ded12bf2a96")
+	)
+	(fp_line
+		(start -5.1 5.9)
+		(end -5.1 -6.4)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "4f0511ef-9055-4d03-be3d-c5c257e23253")
+	)
+	(fp_line
+		(start 5.1 -6.4)
+		(end 5.1 5.9)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "310ffdc2-f22f-4777-a9ca-2d742c35a84a")
+	)
+	(fp_line
+		(start 5.1 5.9)
+		(end -5.1 5.9)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "5d115016-f0a7-4b5f-8494-0a967a8aaf35")
+	)
+	(fp_line
+		(start -4.5 -5.7)
+		(end 4.5 -5.7)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "2d90f7bc-7f45-4fd7-b268-91f194928fe3")
+	)
+	(fp_line
+		(start -4.5 5.2)
+		(end -4.5 -5.7)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "dd266aed-9d9a-47ca-acc0-076f8643b9d2")
+	)
+	(fp_line
+		(start 4.5 -5.7)
+		(end 4.5 5.2)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "37804862-f969-4522-8780-9dedf22426ee")
+	)
+	(fp_line
+		(start 4.5 5.2)
+		(end -4.5 5.2)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7aef05ca-9d86-4db5-9a48-184505fb081e")
+	)
+	(pad "S" thru_hole oval
+		(at -4.7 0.6 90)
+		(size 4.5 3)
+		(drill oval 2.5 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "1a59a4c8-8a3e-4fa1-a20f-0fe67b18ec1a")
+	)
+	(pad "S" thru_hole oval
+		(at 4.7 0.6 90)
+		(size 3.8 3)
+		(drill oval 1.8 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "89f46d01-658c-44b7-b710-6f09084da65c")
+	)
+	(pad "T" thru_hole oval
+		(at 0 -4.8)
+		(size 4 2)
+		(drill oval 2.5 0.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "74db825e-e60e-40ce-a7c1-2e883945afa8")
+	)
+	(pad "TN" thru_hole oval
+		(at 0 3.3)
+		(size 4 2)
+		(drill oval 2.5 0.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "ad447b1e-22f0-4ca0-8d99-d857b6a30d9c")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/PJ301BM.step"
+		(offset
+			(xyz 0 0 2)
+		)
+		(scale
+			(xyz -1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

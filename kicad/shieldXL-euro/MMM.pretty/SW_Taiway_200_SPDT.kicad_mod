@@ -1,0 +1,122 @@
+(footprint "SW_Taiway_200_SPDT"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Taiway series 200 sub-miniature SPDT toggle, PCB vertical, M2 PC thru-hole. Fits any 200-MSPx: ON-ON (MSP1), ON-OFF-ON (MSP3), and the momentary variants. Three terminals in a line on 2.54, 10-48 UNS bushing (o4.80 thread, 5.50 high, flat) -> o4.95 panel hole. Body 5.10 (throw axis, X) x 8.10. Pads numbered as the datasheet does: 1 and 3 are the throws, PAD 2 IS THE COMMON and is the centre terminal. Taiway's contact table reads 2-3 / OPEN / 2-1 in this numbering. Shares the throw axis and bushing with SW_Taiway_200_DPDT, so an SPDT and a DPDT sit on the same panel pitch.")
+	(tags "toggle switch spdt on-on on-off-on subminiature taiway 200 eurorack")
+	(property "Reference" "SW"
+		(at 0 -6 0)
+		(layer "F.SilkS")
+		(uuid "9d4b5e80-6a3c-4c5d-9e4f-2c4b6d0a2f01")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SW_Taiway_200_SPDT"
+		(at 0 6 0)
+		(layer "F.Fab")
+		(uuid "9d4b5e80-6a3c-4c5d-9e4f-2c4b6d0a2f02")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1250c3c5-11de-4508-b268-42db9cee9ec6")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5c17c355-1910-47ff-ba92-fc275070ca2d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -4.05 -2.85)
+		(end 4.05 -2.85)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "9d4b5e80-6a3c-4c5d-9e4f-2c4b6d0a2f05")
+	)
+	(fp_rect
+		(start -4.3 -2.8)
+		(end 4.3 2.8)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "9d4b5e80-6a3c-4c5d-9e4f-2c4b6d0a2f04")
+	)
+	(fp_rect
+		(start -4.05 -2.55)
+		(end 4.05 2.55)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "9d4b5e80-6a3c-4c5d-9e4f-2c4b6d0a2f03")
+	)
+	(pad "1" thru_hole circle
+		(at -2.54 0)
+		(size 1.7 1.7)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9d4b5e80-6a3c-4c5d-9e4f-2c4b6d0a2f21")
+	)
+	(pad "2" thru_hole circle
+		(at 0 0)
+		(size 1.7 1.7)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9d4b5e80-6a3c-4c5d-9e4f-2c4b6d0a2f22")
+	)
+	(pad "3" thru_hole circle
+		(at 2.54 0)
+		(size 1.7 1.7)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9d4b5e80-6a3c-4c5d-9e4f-2c4b6d0a2f23")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/200MSPxT2B1M2xE.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

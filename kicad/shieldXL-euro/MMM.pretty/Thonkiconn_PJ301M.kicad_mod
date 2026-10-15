@@ -1,0 +1,251 @@
+(footprint "Thonkiconn_PJ301M"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Thonk 'Thonkiconn' 3.5 mm switching jack socket, PCB vertical. Checked against doc/Thonkiconn_Jack_Datasheet-new.jpg, which Thonk publishes under model no. PJ398SM - the same part this footprint is named PJ301M for. Three terminals in a line on the barrel axis; measured from that axis the datasheet gives -4.92 / +3.38 / +6.48 and this footprint uses -5.0 / +3.5 / +6.5, so it is the datasheet rounded, worst case 0.12 mm out. Terminal slots are specified 0.5-0.6 x 1.3-1.5; this uses plain o1.1 round holes, the usual synth-DIY simplification, proven by assembled Doubleplus_Pulses boards. Pads are named not numbered - S = datasheet 1, TN = 2, T = 3.")
+	(property "Reference" "REF**"
+		(at -4.7498 5.1054 270)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "8250b66f-3d6f-4920-b339-f805fb3e7282")
+		(effects
+			(font
+				(size 0.922528 0.922528)
+				(thickness 0.093472)
+			)
+			(justify right bottom)
+		)
+	)
+	(property "Value" "THONKICONNNEW"
+		(at 0 0 90)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b7f7f9e5-c610-4c30-bb63-50eea4100415")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 90)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7416ea9a-0f4d-4721-956f-d8296ed3742f")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 90)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "896c7d7c-535e-4d12-8f1c-49bdab240c3e")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -4.5 -6)
+		(end -4.5 4.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "cab4cce6-8fbd-4add-b86e-23b51f7eb93b")
+	)
+	(fp_line
+		(start -4.5 -6)
+		(end -1.5 -6)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e2e23e46-c9d6-4a1f-a5e2-7558dde3a997")
+	)
+	(fp_line
+		(start -4.5 4.5)
+		(end 0.2 4.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "aafac706-a46c-4fca-8ca3-6020e7e73523")
+	)
+	(fp_line
+		(start -1.5 -6)
+		(end -1.5 -4)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2e15d947-5c5d-4100-8a40-b7a1a1e0537e")
+	)
+	(fp_line
+		(start -1.5 -6)
+		(end 1.5 -6)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "34449063-262b-4881-9e3f-a1ff54d3a2bf")
+	)
+	(fp_line
+		(start -1.5 -4)
+		(end 1.5 -4)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "075d3132-092f-46af-87b6-7e411a7c257d")
+	)
+	(fp_line
+		(start -0.2 4.6)
+		(end -0.2 6.7)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "03ec0f73-f0ef-433b-9039-4dd5cbe5ac02")
+	)
+	(fp_line
+		(start -0.2 6.7)
+		(end 0.2 6.7)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0af7f36e-1b0f-4914-a953-c041c550f567")
+	)
+	(fp_line
+		(start 0.2 4.5)
+		(end 4.5 4.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d932aadc-d8c4-4f1e-9e5b-2e120f0bb565")
+	)
+	(fp_line
+		(start 0.2 6.7)
+		(end 0.2 4.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fc2640b4-ea6c-4725-ab89-7da6eb08919d")
+	)
+	(fp_line
+		(start 1.5 -6)
+		(end 4.5 -6)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1874bc4b-706e-40e5-a442-8be9d24bf0d8")
+	)
+	(fp_line
+		(start 1.5 -4)
+		(end 1.5 -6)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "cd9ca265-fffb-4a1d-93b3-587a46d1766e")
+	)
+	(fp_line
+		(start 4.5 4.5)
+		(end 4.5 -6)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e1fb944a-b878-470c-a659-32abda350a96")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 2.690721 0)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "1c262940-f63e-4b8e-a125-7efee25d436d")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 3.162275 0)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "add6bcc6-0242-4ae8-ad08-2221fd723bc5")
+	)
+	(pad "S" thru_hole circle
+		(at 0 6.5 90)
+		(size 1.65 1.65)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.0508)
+		(thermal_bridge_angle 0)
+		(uuid "893316c7-3b31-472a-ab8b-0934e728b4b4")
+	)
+	(pad "T" thru_hole circle
+		(at 0 -5 90)
+		(size 1.65 1.65)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.0508)
+		(thermal_bridge_angle 0)
+		(uuid "0c09b104-da5d-4a77-af52-717b0a70dd23")
+	)
+	(pad "TN" thru_hole circle
+		(at 0 3.5 90)
+		(size 1.65 1.65)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.0508)
+		(thermal_bridge_angle 0)
+		(uuid "f7bdc3e5-4e07-4f8a-9c69-33fa3a1ba542")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/PJ301M-12 Thonkiconn v0.2.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

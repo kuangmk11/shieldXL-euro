@@ -1,0 +1,46 @@
+(footprint "SW_Taiway_200_SPDT_CommonPin1"
+	(version 20240108)
+	(generator "hand")
+	(layer "F.Cu")
+	(descr "Taiway series 200 sub-miniature SPDT. Same land pattern as SW_Taiway_200_SPDT - three terminals in a line on 2.54, 10-48 UNS bushing (o4.80 thread) -> o4.95 panel hole - but numbered with PAD 1 ON THE CENTRE (common) terminal instead of pad 2. DEPRECATED: use SW_Taiway_200_SPDT for new designs. Kept because TM_LPG-MIX MK3 has four variation switches already routed to this numbering with a two-pin Switch:SW_SPST symbol, and the common sits on the centre terminal either way - which is all the switch itself cares about. Formerly called SW_100_SPDT, which was simply wrong: the Taiway 100 series is the Miniature range, .185 [4.70] terminal pitch and a 1/4-40UNS bushing, and would not fit this footprint or its panel hole.")
+	(tags "toggle switch spdt spst on-on on-off-on subminiature taiway 200 eurorack deprecated")
+	(attr through_hole)
+	(property "Reference" "SW" (at 0 -4.0 0) (layer "F.SilkS")
+		(uuid 7c2e1d70-4a2b-4f3c-8d1e-1b3f5c9e0e11) (effects (font (size 1 1) (thickness 0.15)))
+	)
+	(property "Value" "SW_Taiway_200_SPDT_CommonPin1" (at 0 4.0 0) (layer "F.Fab")
+		(uuid 7c2e1d70-4a2b-4f3c-8d1e-1b3f5c9e0e12) (effects (font (size 1 1) (thickness 0.15)))
+	)
+	(fp_rect
+		(start -4.05 -3.05) (end 4.05 3.05)
+		(stroke (width 0.1) (type default)) (fill no)
+		(layer "F.Fab") (uuid 7c2e1d70-4a2b-4f3c-8d1e-1b3f5c9e0e13)
+	)
+	(fp_rect
+		(start -4.3 -3.3) (end 4.3 3.3)
+		(stroke (width 0.05) (type default)) (fill no)
+		(layer "F.CrtYd") (uuid 7c2e1d70-4a2b-4f3c-8d1e-1b3f5c9e0e14)
+	)
+	(fp_line
+		(start -4.05 -3.35) (end 4.05 -3.35)
+		(stroke (width 0.12) (type default))
+		(layer "F.SilkS") (uuid 7c2e1d70-4a2b-4f3c-8d1e-1b3f5c9e0e15)
+	)
+	(pad "1" thru_hole circle
+		(at 0 0) (size 1.7 1.7) (drill 1.1)
+		(layers "*.Cu" "*.Mask") (uuid 7c2e1d70-4a2b-4f3c-8d1e-1b3f5c9e0e21)
+	)
+	(pad "2" thru_hole circle
+		(at 2.54 0) (size 1.7 1.7) (drill 1.1)
+		(layers "*.Cu" "*.Mask") (uuid 7c2e1d70-4a2b-4f3c-8d1e-1b3f5c9e0e22)
+	)
+	(pad "3" thru_hole circle
+		(at -2.54 0) (size 1.7 1.7) (drill 1.1)
+		(layers "*.Cu" "*.Mask") (uuid 7c2e1d70-4a2b-4f3c-8d1e-1b3f5c9e0e23)
+	)
+	(model "${KIPRJMOD}/3d/200MSPxT2B1M2xE.stp"
+		(offset (xyz 0 0 0))
+		(scale (xyz 1 1 1))
+		(rotate (xyz 0 0 0))
+	)
+)

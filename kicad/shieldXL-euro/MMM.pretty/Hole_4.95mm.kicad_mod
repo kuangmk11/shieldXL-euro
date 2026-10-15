@@ -1,0 +1,63 @@
+(footprint "Hole_4.95mm"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Panel hole for the Taiway 200-MDP3 sub-miniature toggle bushing, 4.95 mm non-plated (10-48 UNS bushing, o4.80 thread). Origin at the hole centre. Previously supplied by an out-of-tree 'Panel' library; vendored here so the panel project opens on any machine. Pad layers are *.Cu plus 'Rescue', matching the placed instances byte-for-byte. 'Rescue' is a stale layer name inherited from the original out-of-tree Panel library and is NOT in the panel's layer table, so KiCad ignores it and the hole gets no mask aperture. Do not 'correct' it to *.Mask: that would open soldermask around every hole, changing the already-fabbed gerbers, and would raise 27 lib_footprint_mismatch DRC errors.")
+	(property "Reference" ""
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "5c1bc91a-53d5-490c-b096-2456ab58f544")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SW"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1c2dbd72-9a2a-4db6-b01c-7da8e4b9c035")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c1ca3cf1-ee43-4554-a60c-52238da54b65")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "89fb98ae-5808-407e-af52-182f07764591")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
+	(duplicate_pad_numbers_are_jumpers no)
+	(pad "" np_thru_hole circle
+		(at 0 0)
+		(size 4.95 4.95)
+		(drill 4.95)
+		(layers "*.Cu" "Rescue")
+		(uuid "d16d4eaa-a8d9-46d5-926f-e2c4ed193418")
+	)
+	(embedded_fonts no)
+)

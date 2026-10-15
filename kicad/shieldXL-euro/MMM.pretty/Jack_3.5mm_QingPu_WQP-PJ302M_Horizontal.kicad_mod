@@ -1,0 +1,223 @@
+(footprint "Jack_3.5mm_QingPu_WQP-PJ302M_Horizontal"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "QingPu WQP-PJ302M 3.5 mm mono switched jack, horizontal (side-mounting), PCB mount. Pads T, TN, S. Imported from clacktronics/AudioJacks (github.com/clacktronics/AudioJacks, rev 14a8886, MIT, (c) 2021 Barwise - see doc/AudioJacks-LICENSE.txt). Land pattern unchanged from upstream, which lists it as UNTESTED: check against the part before fabbing.")
+	(tags "jack 3.5mm mono ts switched qingpu pj302m horizontal eurorack")
+	(property "Reference" "REF**"
+		(at -3.5 -18.8 0)
+		(layer "F.SilkS")
+		(uuid "acfe7c95-b2b1-4f82-9390-0c74f4341d6d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "PJ302M"
+		(at 2.5 -19 0)
+		(layer "F.Fab")
+		(uuid "cee1159d-7e0c-4580-847f-48280e418ced")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6b2b76c4-3eaa-4cb7-be09-bd3d2656dc4a")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3258ca1d-e507-4f33-acb6-c0a009a1bc48")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -5.5 -18)
+		(end -5.5 -0.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c93e39c4-56a4-477d-ac22-c53c3dbd9087")
+	)
+	(fp_line
+		(start 5.5 -18)
+		(end -5.5 -18)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "bb7d60ac-f616-4db4-ad76-d6ec30124a6b")
+	)
+	(fp_line
+		(start 5.5 -15.5)
+		(end 5.5 -18)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "13604493-b168-4d32-8031-c4e4248b01a8")
+	)
+	(fp_line
+		(start 5.5 -0.5)
+		(end 5.5 -10.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0fde4e21-76ca-45cd-84ef-ba711a90088a")
+	)
+	(fp_line
+		(start -5.5 0)
+		(end 5.5 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "56c81268-8097-46d4-84b4-3dfdc54da152")
+	)
+	(fp_line
+		(start -5.2 -17.7)
+		(end -5.2 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "77ebbfac-784e-4403-addd-6c0fdf36075a")
+	)
+	(fp_line
+		(start -5.2 0)
+		(end 5.2 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4ccb4f7c-e4ad-4d0d-9266-f6f53474805d")
+	)
+	(fp_line
+		(start -3 0)
+		(end -3 3.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "48005e8e-699a-4951-be4d-7630e452f854")
+	)
+	(fp_line
+		(start -3 3.5)
+		(end 3 3.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1cbe089e-e3c7-4d16-9f4d-2fc2306a2f6c")
+	)
+	(fp_line
+		(start 3 3.5)
+		(end 3 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "03862557-fc1a-4218-b9db-6b7eaa32c754")
+	)
+	(fp_line
+		(start 5.2 -17.7)
+		(end -5.2 -17.7)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4c413b72-5e70-4688-91d2-41654b57ff76")
+	)
+	(fp_line
+		(start 5.2 0)
+		(end 5.2 -17.7)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "8231cbd7-1afd-483c-b22e-5dd4c5ce39ab")
+	)
+	(fp_text user "Board Edge"
+		(at 0.1 0.9 0)
+		(layer "Dwgs.User")
+		(uuid "684aa092-9910-41ef-82a9-3a93ee44ab3f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "S" thru_hole roundrect
+		(at 0 -2)
+		(size 4.6 2.9)
+		(drill oval 2.6 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.25)
+		(uuid "84fe1dff-19fc-47ae-8b0c-631f23a2b34a")
+	)
+	(pad "T" thru_hole roundrect
+		(at 0 -15.2)
+		(size 4.6 2.9)
+		(drill oval 2.6 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.25)
+		(uuid "6a09d574-260c-47ad-a135-93d56be26423")
+	)
+	(pad "TN" thru_hole oval
+		(at 5.2 -13 90)
+		(size 4.6 2.5)
+		(drill oval 2.6 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "f6cba9fb-418c-4e2e-a0e8-50086d60a58c")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/PJ302M.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

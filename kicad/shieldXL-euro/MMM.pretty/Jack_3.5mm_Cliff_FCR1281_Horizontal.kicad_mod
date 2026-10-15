@@ -1,0 +1,303 @@
+(footprint "Jack_3.5mm_Cliff_FCR1281_Horizontal"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Cliff FCR1281 / CL1384 3.5 mm mono jack, horizontal, PCB mount - the Doepfer / Expert Sleepers style. Pads T, TN, S, SN. Imported from clacktronics/AudioJacks (github.com/clacktronics/AudioJacks, rev 14a8886, MIT, (c) 2021 Barwise - see doc/AudioJacks-LICENSE.txt). Land pattern unchanged from upstream, which lists it as UNTESTED: check against the part before fabbing.")
+	(tags "jack 3.5mm mono ts cliff fcr1281 cl1384 horizontal eurorack")
+	(property "Reference" "REF**"
+		(at -3.3 -9.5 0)
+		(layer "F.SilkS")
+		(uuid "a37e64d8-8546-4cc3-826c-7ed87f3c3168")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "FCR1281"
+		(at 2.7 -9.5 0)
+		(layer "F.Fab")
+		(uuid "45173267-b4e6-4f58-b81b-8956e1f20f45")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "337d3f8c-254d-41de-8639-2de9b388c895")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8c6e036c-6d72-475a-9d15-442b88f1b758")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -5.2 -8.6)
+		(end -5.2 -7.7)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "de84dc29-73f2-4041-ae33-fe988dc3fcb8")
+	)
+	(fp_line
+		(start -5.2 -8.6)
+		(end 5.2 -8.6)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0dd461cf-1dfe-4f63-a6fb-d1088ce58f8d")
+	)
+	(fp_line
+		(start -5.2 -4.9)
+		(end -5.2 -3.7)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "57eea7e3-c215-448b-8bb3-51d9a48f01b5")
+	)
+	(fp_line
+		(start -5.2 -1.1)
+		(end -5.2 -0.4)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0d4c4de7-ceb3-4449-baa2-0d690ac5d18c")
+	)
+	(fp_line
+		(start 5.2 -8.6)
+		(end 5.2 -7.7)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a476480b-1cb5-408c-882d-13d9a609ec99")
+	)
+	(fp_line
+		(start 5.2 -4.8)
+		(end 5.2 -3.7)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5bae33bd-1dbb-48ca-8e88-3b6d8dd5f6d7")
+	)
+	(fp_line
+		(start 5.2 -1.1)
+		(end 5.2 -0.4)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "59c1c1c1-faa5-4798-aace-84e07eeb6abd")
+	)
+	(fp_line
+		(start -5.2 0)
+		(end 5.2 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "7295170f-d5b3-4d8e-9d51-89b21495c2b0")
+	)
+	(fp_line
+		(start -4 0)
+		(end -4 5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "811db7be-aa3d-4fdc-b63f-d460addb6e9b")
+	)
+	(fp_line
+		(start -4 5)
+		(end 4 5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "4792c5e6-cf04-4968-ad01-e4a4eb669132")
+	)
+	(fp_line
+		(start 4 5)
+		(end 4 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "366c2f90-18b6-4fe0-ad4a-65c3358e67db")
+	)
+	(fp_line
+		(start -6.85 -9.6)
+		(end 6.85 -9.6)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "83e8be35-7f65-4348-aaa1-1541a43fc52c")
+	)
+	(fp_line
+		(start -6.85 0)
+		(end -6.85 -9.6)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "71389881-a33a-46bc-9064-4266485a9983")
+	)
+	(fp_line
+		(start 6.85 0)
+		(end -6.85 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "100d3ee2-49e2-436b-bf36-71b258467290")
+	)
+	(fp_line
+		(start 6.85 0)
+		(end 6.85 -9.6)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "2f4ebc41-c7c6-4eab-9329-62c9c595a3e3")
+	)
+	(fp_line
+		(start -5.2 -8.6)
+		(end -5.2 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "8ef850a6-87ca-4829-8807-4a75ea72fb0d")
+	)
+	(fp_line
+		(start -5.2 0)
+		(end 5.2 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "01ad4177-cddc-427f-b401-c4027b432830")
+	)
+	(fp_line
+		(start 5.2 -8.6)
+		(end -5.2 -8.6)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "65a16663-c45c-4f99-81b6-ac8b79c39689")
+	)
+	(fp_line
+		(start 5.2 0)
+		(end 5.2 -8.6)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ef20ad94-0251-4532-811f-3eac61c92b3c")
+	)
+	(fp_text user "Board Edge"
+		(at 0 0.9 0)
+		(layer "Dwgs.User")
+		(uuid "d76b3c9a-a414-4376-a9b3-b034ffb48d16")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "S" thru_hole roundrect
+		(at 4.7 -2.4)
+		(size 2.5 2.2)
+		(drill oval 0.5 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.25)
+		(uuid "89ca35d6-4bd1-4163-9b44-1249a4464bf3")
+	)
+	(pad "SN" thru_hole roundrect
+		(at -4.7 -2.4)
+		(size 2.5 2.2)
+		(drill oval 0.5 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.25)
+		(uuid "0589fce4-72a2-4a81-9403-8a2d11bebe47")
+	)
+	(pad "T" thru_hole roundrect
+		(at 4.7 -6.2)
+		(size 2.5 2.2)
+		(drill oval 0.5 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.25)
+		(uuid "aec72731-e5e8-41cc-b2c5-0531b60904c3")
+	)
+	(pad "TN" thru_hole roundrect
+		(at -4.7 -6.2)
+		(size 2.5 2.2)
+		(drill oval 0.5 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.25)
+		(uuid "4b7339f0-785d-4212-abcb-838852fd15fe")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/FCR1281.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

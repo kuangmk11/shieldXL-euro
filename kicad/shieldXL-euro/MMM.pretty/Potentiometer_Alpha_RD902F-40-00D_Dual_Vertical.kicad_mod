@@ -1,0 +1,326 @@
+(footprint "Potentiometer_Alpha_RD902F-40-00D_Dual_Vertical"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Taiwan Alpha RD902F-40-00D, 9 mm vertical DUAL-gang potentiometer - the two-gang sibling of Potentiometer_Alpha_RD901F-40-00D_Single_Vertical, same M7x0.75 bushing and same shaft, so it drops into a panel drilled for the single. Land pattern from the KiCad stock footprint, checked against doc/alpha pots.pdf page 5 (RD902F-40-00D): 6-o1.0 holes as two 3-pin rows of 2.5 pitch, the rows 2.5 apart, front row 7.5 from the shaft; mounting lugs 7.5 from the front pin row and 9.5 apart centre to centre (datasheet 11.3 outer span less 1.8 lug width), lug slots 1.1 x 1.8. NOTE the lug span is 9.5 here against the single's 9.6 - the datasheet really does draw them 0.1 apart, it is not a transcription slip. Pins 1-2-3 are gang R1 (front row, nearest the shaft), pins 4-5-6 are gang R2 (back row); wiper is the centre pin of each, 2 and 5. The two gangs are electrically independent - nothing is commoned inside the part. 3D model is the real dual-gang body, in the same frame as the single's STEP: identical in x (-5.787 to 5.787) and z (-3.5 to 25.0), and extending 2.5 further on the pin side (y -10.150 against the single's -7.650). That 2.5 is the second row's offset arriving independently from the solid model, which is worth knowing because 5 is the easy thing to assume. The single's seating therefore works unchanged: offset 7.5 -2.5 0, rotate 0 0 90.")
+	(tags "potentiometer vertical 9mm dual gang alpha rd902f eurorack")
+	(property "Reference" "REF**"
+		(at 6.35 -5.06 180)
+		(layer "F.SilkS")
+		(uuid "408820e0-5f83-4258-9cff-be6b93fb150c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Potentiometer_Alpha_RD902F-40-00D_Dual_Vertical"
+		(at 0 10.16 180)
+		(layer "F.Fab")
+		(uuid "800c4cde-9959-43e0-8d6d-24a6299d63a2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7cdf098e-b008-4371-9412-422918e8d792")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "668a59a2-c29b-4af7-8801-8138a3e45298")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start 0.88 -2.37)
+		(end 5.6 -2.37)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b420d9ab-90da-49d0-ba33-7e37d8522448")
+	)
+	(fp_line
+		(start 0.88 -1.19)
+		(end 0.88 -2.37)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "bff5700e-c404-4ca8-bab4-60bdcb7ce9f1")
+	)
+	(fp_line
+		(start 0.88 1.71)
+		(end 0.88 1.18)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "34dc32f6-ac0c-45a0-afc0-b2136e5b3c83")
+	)
+	(fp_line
+		(start 0.88 4.16)
+		(end 0.88 3.33)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "23b99fa1-6a66-42ee-b092-2a58f8776153")
+	)
+	(fp_line
+		(start 0.88 7.37)
+		(end 0.88 5.88)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e70c287d-9fa8-4c23-af01-4ae407c21229")
+	)
+	(fp_line
+		(start 0.88 7.37)
+		(end 5.6 7.37)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a43a9578-1330-44a3-9f2b-3b795d3daca7")
+	)
+	(fp_line
+		(start 9.41 -2.37)
+		(end 12.47 -2.37)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b396015c-166c-443b-92b2-a7325aeab282")
+	)
+	(fp_line
+		(start 9.41 7.37)
+		(end 12.47 7.37)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "22311be2-db61-4a8e-9d50-bfc815faa3de")
+	)
+	(fp_line
+		(start 12.47 7.37)
+		(end 12.47 -2.37)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4eea47d8-e1ce-4bb5-95ce-b2f2cafae890")
+	)
+	(fp_line
+		(start -3.65 -3.86)
+		(end -3.65 8.86)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "242d7fdd-f4da-4e34-86da-261314cf21b1")
+	)
+	(fp_line
+		(start -3.65 8.86)
+		(end 12.6 8.86)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "4c6e5f28-0e69-41c7-a8a6-a3ffb3f4bfce")
+	)
+	(fp_line
+		(start 12.6 -3.86)
+		(end -3.65 -3.86)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d3ad917a-4a09-4f07-a450-b0299d0aaa60")
+	)
+	(fp_line
+		(start 12.6 8.86)
+		(end 12.6 -3.86)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "aa5aab78-d424-4df0-a6a1-f4e3108b06ef")
+	)
+	(fp_line
+		(start 1 -2.25)
+		(end 12.35 -2.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "dfa8b87a-0d94-41e6-95ee-10bf77ee248d")
+	)
+	(fp_line
+		(start 1 7.25)
+		(end 1 -2.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "693813cf-5edb-4802-817f-59c4146fc0e0")
+	)
+	(fp_line
+		(start 1 7.25)
+		(end 12.35 7.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f1b375a0-381a-4267-881f-3eb33b68a600")
+	)
+	(fp_line
+		(start 12.35 7.25)
+		(end 12.35 -2.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b3efa988-78c4-41c0-90f3-b061d659f37a")
+	)
+	(fp_circle
+		(center 7.5 2.5)
+		(end 7.5 -1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "b1076aab-285d-44b4-aaa4-769d90ea5484")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 7.62 2.54 0)
+		(layer "F.Fab")
+		(uuid "7d0e1d95-5253-4858-a62d-6aa3b3eaeca3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" thru_hole oval
+		(at 7.5 -2.25 90)
+		(size 2.72 3.24)
+		(drill oval 1.1 1.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "8cf6c76e-e58b-4716-a1b1-392154b8b6c1")
+	)
+	(pad "" thru_hole oval
+		(at 7.5 7.25 90)
+		(size 2.72 3.24)
+		(drill oval 1.1 1.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "b37de43e-0167-4ae4-a2d4-4f70a48f3c82")
+	)
+	(pad "1" thru_hole rect
+		(at 0 0 90)
+		(size 1.8 1.8)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "fb82844d-d2a7-457d-addb-d4670c2ffd72")
+	)
+	(pad "2" thru_hole circle
+		(at 0 2.5 90)
+		(size 1.8 1.8)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "66b9970a-7c74-4dae-b082-77d380c83930")
+	)
+	(pad "3" thru_hole circle
+		(at 0 5 90)
+		(size 1.8 1.8)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "59c7293f-e759-4ef6-b923-00be224c2f44")
+	)
+	(pad "4" thru_hole circle
+		(at -2.5 0 90)
+		(size 1.8 1.8)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "3693307f-4db9-4ad1-af9f-c8bba1df86a5")
+	)
+	(pad "5" thru_hole circle
+		(at -2.5 2.5 90)
+		(size 1.8 1.8)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "807bf0f0-b454-4ccd-9bae-b4ad176c515a")
+	)
+	(pad "6" thru_hole circle
+		(at -2.5 5 90)
+		(size 1.8 1.8)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "4b2dab44-37e8-4752-ad94-74f60fec4ebf")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/Alpha RD902F-40-00D.stp"
+		(offset
+			(xyz 7.5 -2.5 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 90)
+		)
+	)
+)
