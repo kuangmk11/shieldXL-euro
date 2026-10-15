@@ -4155,12 +4155,6 @@
 		(uuid "34199f32-d059-42ad-b0b8-cbc7a4839712")
 	)
 	(junction
-		(at 99.06 212.09)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "36ecedd6-fe44-4f53-8493-723b3d22db55")
-	)
-	(junction
 		(at 132.08 144.78)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4263,18 +4257,6 @@
 		(uuid "7697df57-3261-4915-a18c-1c0c9849c568")
 	)
 	(junction
-		(at 99.06 204.47)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7d1954de-7710-46a5-97d8-37a14a28fe84")
-	)
-	(junction
-		(at 97.79 233.68)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7e4866a5-41bd-4327-9cd1-6598d65e6979")
-	)
-	(junction
 		(at 132.08 132.08)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4299,12 +4281,6 @@
 		(uuid "92558b36-d02b-4d01-bbf1-2d0e77fa7c20")
 	)
 	(junction
-		(at 264.16 220.98)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "95c61013-7fcd-43d8-aabe-8e5be9fb6275")
-	)
-	(junction
 		(at 170.18 144.78)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4315,12 +4291,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9b8e7c1d-307e-4253-b22e-ca17d9b43f7b")
-	)
-	(junction
-		(at 97.79 228.6)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a3fb430f-c7ec-4c38-8dfe-90ad91c2fe81")
 	)
 	(junction
 		(at 330.2 185.42)
@@ -4484,16 +4454,6 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 220.98) (xy 271.78 220.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0670b91f-6696-4cfa-909d-cf1c501aa303")
-	)
-	(wire
-		(pts
 			(xy 180.34 99.06) (xy 213.36 99.06)
 		)
 		(stroke
@@ -4501,16 +4461,6 @@
 			(type solid)
 		)
 		(uuid "09a2685d-1cb5-4c1a-9961-6672effe1dec")
-	)
-	(wire
-		(pts
-			(xy 262.89 220.98) (xy 264.16 220.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0ae2e8d2-f53b-46ea-86c7-b67bc4c0146f")
 	)
 	(wire
 		(pts
@@ -4534,16 +4484,6 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 209.55) (xy 95.25 209.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0ccc60e6-7b3d-48d8-bd46-1b150db0bb2a")
-	)
-	(wire
-		(pts
 			(xy 180.34 93.98) (xy 213.36 93.98)
 		)
 		(stroke
@@ -4551,16 +4491,6 @@
 			(type solid)
 		)
 		(uuid "0ea983be-56c8-4d88-995d-c83b1b2fb258")
-	)
-	(wire
-		(pts
-			(xy 87.63 217.17) (xy 99.06 217.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0ef46837-3289-47e5-b0a0-7f18b668ec5b")
 	)
 	(wire
 		(pts
@@ -4594,16 +4524,6 @@
 	)
 	(wire
 		(pts
-			(xy 271.78 194.31) (xy 264.16 194.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "173459a3-a55f-448a-9981-cc454d44a3b1")
-	)
-	(wire
-		(pts
 			(xy 121.92 93.98) (xy 121.92 96.52)
 		)
 		(stroke
@@ -4611,16 +4531,6 @@
 			(type solid)
 		)
 		(uuid "1796a3e0-8226-439c-ac70-7b2e9be83414")
-	)
-	(wire
-		(pts
-			(xy 264.16 215.9) (xy 264.16 220.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "18b578dd-d8f1-43b9-aa6a-b5831656f531")
 	)
 	(wire
 		(pts
@@ -4814,16 +4724,6 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 233.68) (xy 97.79 233.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2dc244a0-3f24-4abd-9603-2d225b64f918")
-	)
-	(wire
-		(pts
 			(xy 294.64 132.08) (xy 294.64 129.54)
 		)
 		(stroke
@@ -4934,16 +4834,6 @@
 	)
 	(wire
 		(pts
-			(xy 97.79 228.6) (xy 97.79 233.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "38c1ad0b-936a-4517-b360-353177eab07d")
-	)
-	(wire
-		(pts
 			(xy 121.92 218.44) (xy 124.46 218.44)
 		)
 		(stroke
@@ -4954,16 +4844,6 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 212.09) (xy 99.06 217.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3b56a94a-9ce2-4c11-a787-6a4a4369c5cf")
-	)
-	(wire
-		(pts
 			(xy 149.86 228.6) (xy 149.86 231.14)
 		)
 		(stroke
@@ -4971,16 +4851,6 @@
 			(type solid)
 		)
 		(uuid "3be12b59-5532-4677-b157-c57bde6618ab")
-	)
-	(wire
-		(pts
-			(xy 87.63 212.09) (xy 99.06 212.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c9d5026-635a-471f-a340-1860ef2c083a")
 	)
 	(wire
 		(pts
@@ -5081,16 +4951,6 @@
 			(type solid)
 		)
 		(uuid "504e44f7-6136-4801-a367-540cda6b78f2")
-	)
-	(wire
-		(pts
-			(xy 95.25 209.55) (xy 95.25 241.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "50fcdfc2-b429-4a8d-aedb-3211a104818e")
 	)
 	(wire
 		(pts
@@ -5354,16 +5214,6 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 208.28) (xy 271.78 208.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6de9bd2e-2228-43ad-87c0-740063246b0e")
-	)
-	(wire
-		(pts
 			(xy 165.1 116.84) (xy 165.1 114.3)
 		)
 		(stroke
@@ -5494,16 +5344,6 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 236.22) (xy 97.79 236.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8537085e-22ea-41c4-9b0a-1ef0b64f4faf")
-	)
-	(wire
-		(pts
 			(xy 190.5 205.74) (xy 195.58 205.74)
 		)
 		(stroke
@@ -5531,16 +5371,6 @@
 			(type solid)
 		)
 		(uuid "87eb936d-76c2-4845-bdfb-f0be4a6a7afb")
-	)
-	(wire
-		(pts
-			(xy 95.25 241.3) (xy 87.63 241.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "88735b7f-27f4-4b10-a66e-1dfe9941b1bc")
 	)
 	(wire
 		(pts
@@ -5614,16 +5444,6 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 204.47) (xy 99.06 204.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9738870c-2b76-4fb5-a9b5-b07241b1d763")
-	)
-	(wire
-		(pts
 			(xy 182.88 101.6) (xy 172.72 101.6)
 		)
 		(stroke
@@ -5661,16 +5481,6 @@
 			(type solid)
 		)
 		(uuid "9c46f0da-cf82-456e-b495-e00ce7fc6eba")
-	)
-	(wire
-		(pts
-			(xy 97.79 233.68) (xy 97.79 236.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9d8b97fa-0650-4afc-bd32-5c39e8ab606c")
 	)
 	(wire
 		(pts
@@ -5864,26 +5674,6 @@
 	)
 	(wire
 		(pts
-			(xy 260.35 199.39) (xy 271.78 199.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b80f5eca-5b5f-4033-aa7c-a62cb6563cb0")
-	)
-	(wire
-		(pts
-			(xy 99.06 204.47) (xy 99.06 212.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b8c405ce-54ba-4efd-96eb-ff5f09adaaf3")
-	)
-	(wire
-		(pts
 			(xy 180.34 91.44) (xy 213.36 91.44)
 		)
 		(stroke
@@ -5901,16 +5691,6 @@
 			(type solid)
 		)
 		(uuid "bb251914-d1f2-4401-8e67-6178452ecf33")
-	)
-	(wire
-		(pts
-			(xy 271.78 215.9) (xy 264.16 215.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bc040156-3cfb-4aa2-ad60-55cd21345c70")
 	)
 	(wire
 		(pts
@@ -6224,16 +6004,6 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 194.31) (xy 264.16 208.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e2827e6f-c4ee-4565-b843-2a2c83dcf411")
-	)
-	(wire
-		(pts
 			(xy 96.52 124.46) (xy 99.06 124.46)
 		)
 		(stroke
@@ -6321,16 +6091,6 @@
 			(type solid)
 		)
 		(uuid "eda3b409-51c0-459f-bea0-c0a20764dcb4")
-	)
-	(wire
-		(pts
-			(xy 87.63 228.6) (xy 97.79 228.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ede7bbc1-0617-4a17-b260-3c98fedf8c87")
 	)
 	(wire
 		(pts
@@ -7768,85 +7528,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Audio:NRJ6HF")
-		(at 276.86 194.31 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "24adb7f9-3aa3-4b41-89a5-d42e0cbb75cf")
-		(property "Reference" "J1"
-			(at 278.765 204.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "NRJ6HF"
-			(at 278.765 201.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "ShieldXL:Jack_6.35mm_Neutrik_NRJ6HF_Horizontal"
-			(at 276.86 194.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.neutrik.com/en/product/nrj6hf"
-			(at 276.86 194.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 276.86 194.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "R"
-			(uuid "685c359f-24f2-4754-9f23-4c039a339b4f")
-		)
-		(pin "RN"
-			(uuid "eeb96a7d-8bea-4209-99a8-62184b14e831")
-		)
-		(pin "S"
-			(uuid "8d572730-e047-47a9-8e2d-364c0283aaff")
-		)
-		(pin "SN"
-			(uuid "85820e32-7892-447e-afb1-e1a1988b9569")
-		)
-		(pin "T"
-			(uuid "6db22f12-862c-40cc-8501-44428f572509")
-		)
-		(pin "TN"
-			(uuid "9f8fb1ba-e6a4-4f2a-b8c1-acc7d67c5639")
-		)
-		(instances
-			(project "shieldXL-euro"
-				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/d872c92c-5229-43e6-807a-8bd0f3dfa8f7"
-					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "norns-shield-210330-eagle-import:AGND")
 		(at 100.33 228.6 90)
 		(unit 1)
@@ -8867,85 +8548,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Audio:NRJ6HF")
-		(at 276.86 215.9 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6c6f92d2-ac26-4101-9c31-9ad5d8f6fd71")
-		(property "Reference" "J2"
-			(at 278.765 226.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "NRJ6HF"
-			(at 278.765 223.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "ShieldXL:Jack_6.35mm_Neutrik_NRJ6HF_Horizontal"
-			(at 276.86 215.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.neutrik.com/en/product/nrj6hf"
-			(at 276.86 215.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 276.86 215.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "R"
-			(uuid "60d52678-60c5-4132-bf78-4c9d266e45e4")
-		)
-		(pin "RN"
-			(uuid "6160b1cd-3d2c-401b-a97e-fa7f3bbcc683")
-		)
-		(pin "S"
-			(uuid "26f22911-a6f9-4d68-b36c-6f515517b5d1")
-		)
-		(pin "SN"
-			(uuid "41f93913-2870-46e4-bd0d-d5d69590532b")
-		)
-		(pin "T"
-			(uuid "4549b0c7-e565-42f8-b6c2-a419147fc976")
-		)
-		(pin "TN"
-			(uuid "647734d8-d530-459a-9f9b-9a4f1959e561")
-		)
-		(instances
-			(project "shieldXL-euro"
-				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/d872c92c-5229-43e6-807a-8bd0f3dfa8f7"
-					(reference "J2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "norns-shield-210330-eagle-import:GND")
 		(at 205.74 132.08 0)
 		(unit 1)
@@ -9624,86 +9226,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Audio:NRJ6HF")
-		(at 82.55 209.55 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9c045cb3-dc93-45d1-ad3c-1daf1ed83fda")
-		(property "Reference" "J4"
-			(at 80.645 199.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "NRJ6HF"
-			(at 80.645 201.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "ShieldXL:Jack_6.35mm_Neutrik_NRJ6HF_Horizontal"
-			(at 82.55 209.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.neutrik.com/en/product/nrj6hf"
-			(at 82.55 209.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 82.55 209.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "R"
-			(uuid "b1d4d010-19df-4da4-99f9-d0a5bca8f932")
-		)
-		(pin "RN"
-			(uuid "1c8249e6-5e1e-4e75-9d52-c76c4fb13b69")
-		)
-		(pin "S"
-			(uuid "c5d264aa-1946-4859-a0c6-decf012c1989")
-		)
-		(pin "SN"
-			(uuid "5d8bbd74-ca9f-46b5-b51d-ab5f9534983c")
-		)
-		(pin "T"
-			(uuid "3d0b5901-3041-4089-8871-5e437df19cf5")
-		)
-		(pin "TN"
-			(uuid "491f2487-aa67-4b03-bc30-467379a74add")
-		)
-		(instances
-			(project "shieldXL-euro"
-				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/d872c92c-5229-43e6-807a-8bd0f3dfa8f7"
-					(reference "J4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "norns-shield-210330-eagle-import:C-USC0805")
 		(at 172.72 106.68 0)
 		(unit 1)
@@ -10166,86 +9688,6 @@
 			(project "shieldXL-euro"
 				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/d872c92c-5229-43e6-807a-8bd0f3dfa8f7"
 					(reference "#GND01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Audio:NRJ6HF")
-		(at 82.55 233.68 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a5b6b011-137d-4456-84cb-1e94ad2db954")
-		(property "Reference" "J5"
-			(at 80.645 223.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "NRJ6HF"
-			(at 80.645 226.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "ShieldXL:Jack_6.35mm_Neutrik_NRJ6HF_Horizontal"
-			(at 82.55 233.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.neutrik.com/en/product/nrj6hf"
-			(at 82.55 233.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 82.55 233.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "R"
-			(uuid "487501ae-e67d-4613-9469-8e8c41d0b926")
-		)
-		(pin "RN"
-			(uuid "05068401-f611-4bad-a09c-a94a6527f977")
-		)
-		(pin "S"
-			(uuid "c1f7eca8-bfbc-4d8f-8b74-548c296978f6")
-		)
-		(pin "SN"
-			(uuid "b3b8fe0f-25fa-4bf8-a1a9-376f7ffae36d")
-		)
-		(pin "T"
-			(uuid "b4b12b4b-6fc5-4e47-9575-1de154f16a27")
-		)
-		(pin "TN"
-			(uuid "9ab0b238-1e0e-48a4-bad8-7a76399f7c47")
-		)
-		(instances
-			(project "shieldXL-euro"
-				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/d872c92c-5229-43e6-807a-8bd0f3dfa8f7"
-					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -12551,6 +11993,90 @@
 					(reference "C6")
 					(unit 1)
 				)
+			)
+		)
+	)
+	(global_label "OUT_L_LINE"
+		(shape bidirectional)
+		(at 271.78 189.23 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2151320d-0c1c-5129-8220-a9b342e44211")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 271.78 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "OUT_R_LINE"
+		(shape bidirectional)
+		(at 271.78 210.82 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "cf7d7b15-11d3-5c2e-bdb3-93451b0c2bc8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 271.78 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "IN_L_LINE"
+		(shape bidirectional)
+		(at 87.63 214.63 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "49657f4d-a50c-514c-b526-f4df98cc167e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 87.63 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "IN_R_LINE"
+		(shape bidirectional)
+		(at 87.63 238.76 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "efd0098e-cfe4-5f28-9a3f-a1eb334a754e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 87.63 238.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 	)

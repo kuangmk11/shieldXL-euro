@@ -3796,16 +3796,6 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 63.5) (xy 214.63 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c44c8ce-6959-4186-922e-0a29e7db13b4")
-	)
-	(wire
-		(pts
 			(xy 148.59 22.86) (xy 148.59 17.78)
 		)
 		(stroke
@@ -3873,16 +3863,6 @@
 			(type solid)
 		)
 		(uuid "41baf06e-fc7b-491a-8c22-99bb11724fc1")
-	)
-	(wire
-		(pts
-			(xy 212.09 57.15) (xy 214.63 57.15)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "47102bf7-9afb-44ce-8a91-8134e5fe2275")
 	)
 	(wire
 		(pts
@@ -4106,16 +4086,6 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 66.04) (xy 212.09 57.15)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "6ac8a1bd-ce0d-48ec-b743-95c9fc37932a")
-	)
-	(wire
-		(pts
 			(xy 303.53 30.48) (xy 326.39 30.48)
 		)
 		(stroke
@@ -4163,16 +4133,6 @@
 			(type solid)
 		)
 		(uuid "6f74dc06-a443-4ed4-97a4-b402e3693055")
-	)
-	(wire
-		(pts
-			(xy 189.23 66.04) (xy 212.09 66.04)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "70975874-0050-4d34-a922-671777d37a97")
 	)
 	(wire
 		(pts
@@ -4226,16 +4186,6 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 60.96) (xy 196.85 56.134)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "7c4c2dab-5a70-49ea-9116-a16d2a8e0e7d")
-	)
-	(wire
-		(pts
 			(xy 147.32 104.14) (xy 147.32 114.3)
 		)
 		(stroke
@@ -4253,16 +4203,6 @@
 			(type solid)
 		)
 		(uuid "80bb0147-829e-453c-ae8e-a8b98c89a796")
-	)
-	(wire
-		(pts
-			(xy 214.63 48.26) (xy 214.63 57.15)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "81100256-219a-4046-81a8-d212314e0e53")
 	)
 	(wire
 		(pts
@@ -4736,16 +4676,6 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 63.5) (xy 189.23 63.5)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "cab6ecab-1ff9-4529-9783-a512b3b022f4")
-	)
-	(wire
-		(pts
 			(xy 149.86 116.84) (xy 157.48 116.84)
 		)
 		(stroke
@@ -4773,16 +4703,6 @@
 			(type solid)
 		)
 		(uuid "d0f8447e-c7a6-4615-b06c-13f0b6f02b3e")
-	)
-	(wire
-		(pts
-			(xy 189.23 60.96) (xy 196.85 60.96)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "d16ad726-8ad8-4c44-b9d6-22c67d74933f")
 	)
 	(wire
 		(pts
@@ -6441,93 +6361,6 @@
 			(project "shieldXL-euro"
 				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/53fda09e-7af9-4285-ac8e-05ed312a27ba"
 					(reference "R48")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Hachi-Ni_v26-eagle-import:EG1390B")
-		(at 212.09 78.74 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "1abf04a0-7278-4ced-914f-df737468fec0")
-		(property "Reference" "S1"
-			(at 207.772 72.644 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "EG1390B"
-			(at 208.026 61.468 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "ShieldXL:SOP250P600X400-6N"
-			(at 212.09 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 212.09 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 212.09 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "438e5ca1-8f15-49e5-a5f4-76d52b88a43d")
-		)
-		(pin "2"
-			(uuid "4ba77165-b7aa-43d4-ad23-b8d4c7ecd729")
-		)
-		(pin "3"
-			(uuid "82a4d305-33c4-4616-9b43-b874a2f35cc4")
-		)
-		(pin "4"
-			(uuid "09709df7-22f4-4875-8a0a-e1b55a4be54b")
-		)
-		(pin "5"
-			(uuid "4de784b4-e183-497e-acea-a7626ed8221f")
-		)
-		(pin "6"
-			(uuid "f3ba51cf-ff44-44c2-bf38-f0014ea69f89")
-		)
-		(instances
-			(project "Hachi-Ni_v26"
-				(path "/62ca0448-8214-4fa6-89ca-4a62b295d057/dcf1a22e-2574-4c83-a4dc-208deeeb6342"
-					(reference "S1")
-					(unit 1)
-				)
-			)
-			(project "shieldXL-euro"
-				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/53fda09e-7af9-4285-ac8e-05ed312a27ba"
-					(reference "S1")
 					(unit 1)
 				)
 			)
@@ -9323,84 +9156,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Hachi-Ni_v26-eagle-import:PJ-320B")
-		(at 181.61 63.5 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "bb8cc51e-afe7-491c-ba38-b8e9c8e149e5")
-		(property "Reference" "J1"
-			(at 176.5095 57.7621 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "PJ-320B"
-			(at 171.4293 71.1509 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "ShieldXL:LUOYANG-DISHANG_PJ-320B"
-			(at 181.61 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 181.61 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 181.61 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "e0565605-e21a-454c-ae6f-37e20b7ca320")
-		)
-		(pin "3"
-			(uuid "f35d1058-5889-4692-9040-8e289b21d062")
-		)
-		(pin "4"
-			(uuid "6f06fa8a-2ef0-4a1a-b874-d8f6fa4f1cbf")
-		)
-		(instances
-			(project "Hachi-Ni_v26"
-				(path "/62ca0448-8214-4fa6-89ca-4a62b295d057/dcf1a22e-2574-4c83-a4dc-208deeeb6342"
-					(reference "J1")
-					(unit 1)
-				)
-			)
-			(project "shieldXL-euro"
-				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/53fda09e-7af9-4285-ac8e-05ed312a27ba"
-					(reference "J3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "norns-shield-210330-eagle-import:+3V3")
 		(at 246.38 172.72 0)
 		(unit 1)
@@ -10374,85 +10129,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Hachi-Ni_v26-eagle-import:PJ-320B")
-		(at 250.19 33.02 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f74aa2eb-c69c-4c9f-a16a-f3a24e1126e1")
-		(property "Reference" "J2"
-			(at 255.2904 27.2821 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "PJ-320B"
-			(at 260.3706 40.671 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "ShieldXL:LUOYANG-DISHANG_PJ-320B"
-			(at 250.19 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 250.19 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 250.19 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "f025b0d6-ee5c-4238-9651-46e4fc453307")
-		)
-		(pin "3"
-			(uuid "8a307bef-3d8e-4acf-a548-4f389c692e78")
-		)
-		(pin "4"
-			(uuid "4556803e-ae94-4bab-b950-3e3099fa7a94")
-		)
-		(instances
-			(project "Hachi-Ni_v26"
-				(path "/62ca0448-8214-4fa6-89ca-4a62b295d057/dcf1a22e-2574-4c83-a4dc-208deeeb6342"
-					(reference "J2")
-					(unit 1)
-				)
-			)
-			(project "shieldXL-euro"
-				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/53fda09e-7af9-4285-ac8e-05ed312a27ba"
-					(reference "J6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Hachi-Ni_v26-eagle-import:MICROBUILDER_RESISTOR_0603")
 		(at 326.39 35.56 90)
 		(unit 1)
@@ -10523,6 +10199,132 @@
 					(reference "R20")
 					(unit 1)
 				)
+			)
+		)
+	)
+	(global_label "MIDI_OUT_SRC"
+		(shape bidirectional)
+		(at 212.09 78.74 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e29b2602-2a33-5e6f-87e4-a6cca33f6c8b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 212.09 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "MIDI_OUT_SRC"
+		(shape bidirectional)
+		(at 217.17 48.26 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e359e8c8-7c2d-53e1-bdc5-c22cc26b1281")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 217.17 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "MIDI_OUT_SNK"
+		(shape bidirectional)
+		(at 217.17 78.74 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a25b3917-792a-5693-b832-c43664d8f71c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 217.17 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "MIDI_OUT_SNK"
+		(shape bidirectional)
+		(at 212.09 48.26 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "70afbcb5-4a31-54ef-bb45-e7c0bff4af97")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 212.09 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "MIDI_IN_TIP"
+		(shape bidirectional)
+		(at 242.57 35.56 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ad165ae9-a92f-5428-8f54-f6da181c792e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 242.57 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "MIDI_IN_RING"
+		(shape bidirectional)
+		(at 242.57 33.02 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d8d07b11-0fc9-57c0-8947-8baf52e90d98")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 242.57 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 	)
