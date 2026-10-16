@@ -39,6 +39,8 @@ CENTRE = {"Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles": (0.0, 6.48),
           "SW_CK_D6R": (0.0, 0.0),
           "USB_C_Receptacle_Molex_2047110001_Vertical": (0.0, 0.0),
           "USB_A_Molex_105057_Vertical": (3.5, -2.38)}   # middle of its pads / body
+# parts that stand turned on the board (deg); the rest sit at 0
+ANGLE = {"USB_C_Receptacle_Molex_2047110001_Vertical": 90}
 
 # the display's FPC connector, on the back where shieldXL had it relative to the
 # display module (see FPC_SLOT in tools/make_outline.py): its origin 40.540,
@@ -87,7 +89,7 @@ def main():
             continue
         if f.IsFlipped():
             f.Flip(f.GetPosition(), pcbnew.FLIP_DIRECTION_LEFT_RIGHT)
-        f.SetOrientationDegrees(0)
+        f.SetOrientationDegrees(ANGLE.get(fpname, 0))
         dx, dy = CENTRE[fpname]
         f.SetPosition(pcbnew.VECTOR2I(mm(OX + x - dx), mm(OY + y - dy)))
         f.SetLocked(True)
