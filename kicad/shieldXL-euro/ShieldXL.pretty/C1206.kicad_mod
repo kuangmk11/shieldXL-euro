@@ -52,4 +52,15 @@
     (solder_mask_margin 0.1016) (thermal_bridge_angle 45) (tstamp 3635e816-b049-4d88-a5c1-def7596e7db5))
   (pad "2" smd rect (at 1.4 0) (size 1.6 1.8) (layers "F.Cu" "F.Paste" "F.Mask")
     (solder_mask_margin 0.1016) (thermal_bridge_angle 45) (tstamp 86c12fa5-50ce-4069-a5cd-6019f5d123d2))
+  (model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1206_3216Metric.step"
+  	(offset
+  		(xyz 0 0 0)
+  	)
+  	(scale
+  		(xyz 1 1 1)
+  	)
+  	(rotate
+  		(xyz 0 0 0)
+  	)
+  )
 )

@@ -342,39 +342,15 @@
 		(thermal_bridge_angle 45)
 		(uuid "74993f59-0fa9-4e1a-ab3b-5bb5131e90c5")
 	)
-	(model "/Users/nevetsokyeron/Documents/KiCad/7.0/3dmodels/MyLibrary/PEC11R-4015F-S0024.stp"
-		(hide yes)
-		(offset
-			(xyz -32.5 -11 5)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 90 180 0)
-		)
-	)
-	(model "/Users/nevetsokyeron/Documents/KiCad/7.0/3dmodels/Encoders/EC11B-Vert-15K-green.step"
-		(hide yes)
-		(offset
-			(xyz 0 0 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 0)
-		)
-	)
-	(model "/Users/nevetsokyeron/Documents/KiCad/7.0/3dmodels/Encoders/SW-PEC11R-4215F-N0024.stp"
-		(offset
-			(xyz 0 0 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 0)
-		)
-	)
+  (model "${KIPRJMOD}/3dmodels/SW-PEC11R-4215F-N0024.stp"
+  	(offset
+  		(xyz 0 0 0)
+  	)
+  	(scale
+  		(xyz 1 1 1)
+  	)
+  	(rotate
+  		(xyz 0 0 0)
+  	)
+  )
 )

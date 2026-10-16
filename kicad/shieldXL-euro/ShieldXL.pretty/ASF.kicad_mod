@@ -35,4 +35,15 @@
     (solder_mask_margin 0.1016) (thermal_bridge_angle 45) (tstamp 4869b4a4-f68f-4d31-a7bb-8391631aac8b))
   (pad "4" smd rect (at -1.25 -1.15 180) (size 1.6 1.5) (layers "F.Cu" "F.Paste" "F.Mask")
     (solder_mask_margin 0.1016) (thermal_bridge_angle 45) (tstamp 522e81a9-2678-43d6-85c3-358843029695))
+  (model "${KICAD10_3DMODEL_DIR}/Oscillator.3dshapes/Oscillator_SMD_EuroQuartz_XO53-4Pin_5.0x3.2mm.step"
+  	(offset
+  		(xyz 0 0 0)
+  	)
+  	(scale
+  		(xyz 1 1 1)
+  	)
+  	(rotate
+  		(xyz 0 0 0)
+  	)
+  )
 )

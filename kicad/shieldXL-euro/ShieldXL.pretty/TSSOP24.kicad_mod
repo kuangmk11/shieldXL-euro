@@ -291,4 +291,15 @@
     (solder_mask_margin 0.1016) (thermal_bridge_angle 45) (tstamp 058ec060-72be-4b17-91b7-959b241fbee4))
   (pad "24" smd rect (at -3.575 -2.9178) (size 0.3048 0.9906) (layers "F.Cu" "F.Paste" "F.Mask")
     (solder_mask_margin 0.1016) (thermal_bridge_angle 45) (tstamp a6cc3137-89be-4ea8-adb7-61e29297e713))
+  (model "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/TSSOP-24_4.4x7.8mm_P0.65mm.step"
+  	(offset
+  		(xyz 0 0 0)
+  	)
+  	(scale
+  		(xyz 1 1 1)
+  	)
+  	(rotate
+  		(xyz 0 0 -90)
+  	)
+  )
 )

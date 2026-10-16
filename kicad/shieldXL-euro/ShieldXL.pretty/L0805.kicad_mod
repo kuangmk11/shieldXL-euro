@@ -52,4 +52,15 @@
     (solder_mask_margin 0.1016) (thermal_bridge_angle 45) (tstamp 935c8971-d374-4966-80f0-d6047f71190c))
   (pad "2" smd rect (at 1.016 0) (size 1.2 1.3) (layers "F.Cu" "F.Paste" "F.Mask")
     (solder_mask_margin 0.1016) (thermal_bridge_angle 45) (tstamp ed81ffd1-ddea-40e6-bf30-e7c873ecd684))
+  (model "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_0805_2012Metric.step"
+  	(offset
+  		(xyz 0 0 0)
+  	)
+  	(scale
+  		(xyz 1 1 1)
+  	)
+  	(rotate
+  		(xyz 0 0 0)
+  	)
+  )
 )
