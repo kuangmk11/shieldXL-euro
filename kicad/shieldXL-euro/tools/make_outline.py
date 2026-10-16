@@ -206,6 +206,9 @@ def draw_art(board, layer, k, pts, width, filled):
 
 
 def build():
+    lock = os.path.join(os.path.dirname(BOARD), "~" + os.path.basename(BOARD) + ".lck")
+    if os.path.exists(lock):
+        raise SystemExit("the board is open in KiCad (lock file found): save, close it, then run again")
     cuts, holes, art = panel_geometry()
     board = pcbnew.LoadBoard(BOARD)
     moved = stash(board)
