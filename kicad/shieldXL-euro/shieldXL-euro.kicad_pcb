@@ -20591,7 +20591,7 @@
 			(thermal_bridge_angle 45)
 			(uuid "6ac82e3f-dfec-4f74-950e-fb1fe9d85269")
 		)
-		(pad "6" smd rect
+		(pad "5" smd rect
 			(at -0.95 1.3)
 			(size 0.69 0.99)
 			(layers "B.Cu" "B.Mask" "B.Paste")
@@ -22383,7 +22383,6 @@
 		(uuid "cb2100f1-7486-45d1-836b-42d325f02e0f")
 		(effects
 			(font
-				(face "Helvetica Neue")
 				(size 1.778 1.778)
 				(thickness 0.127)
 			)
@@ -22483,7 +22482,6 @@
 		(uuid "7441d415-ce81-4c86-89f7-027b1fe7dae2")
 		(effects
 			(font
-				(face "Helvetica Neue")
 				(size 1.778 1.778)
 				(thickness 0.127)
 			)
@@ -22551,7 +22549,6 @@
 		(uuid "01f16a24-4156-4136-b5ba-c31ab27f6b4c")
 		(effects
 			(font
-				(face "Helvetica Neue")
 				(size 2.3876 2.3876)
 				(thickness 0.29845)
 			)
@@ -22722,7 +22719,6 @@
 		(uuid "28bab50c-1015-46b6-bb40-26c5ae8926a4")
 		(effects
 			(font
-				(face "Helvetica Neue")
 				(size 2.54 2.54)
 				(thickness 0.254)
 			)
@@ -22746,7 +22742,6 @@
 		(uuid "fd789c26-a5f9-4989-b1fd-53cbcd656ef6")
 		(effects
 			(font
-				(face "Helvetica Neue")
 				(size 2.54 2.54)
 				(thickness 0.254)
 			)
@@ -22776,7 +22771,6 @@
 		(uuid "34cf9e15-b4e2-436f-8a0d-e267a8c5c236")
 		(effects
 			(font
-				(face "Helvetica Neue")
 				(size 2.54 2.54)
 				(thickness 0.254)
 			)
@@ -22817,7 +22811,6 @@
 		(uuid "8b208297-3407-4121-a3a1-d5176c04fab8")
 		(effects
 			(font
-				(face "Helvetica Neue")
 				(size 2.794 2.794)
 				(thickness 0.2667)
 			)
@@ -22934,7 +22927,6 @@
 		(uuid "a7f9aca4-6337-484c-aeaa-3e845c2b7ac5")
 		(effects
 			(font
-				(face "Helvetica Neue")
 				(size 2.794 2.794)
 				(thickness 0.2667)
 			)
@@ -23100,7 +23092,6 @@
 		(uuid "9354415c-bc05-4ad1-a77d-edcfc7a83054")
 		(effects
 			(font
-				(face "Helvetica Neue")
 				(size 1.2 1.2)
 				(thickness 0.1)
 			)
@@ -23236,7 +23227,6 @@
 		(uuid "2595d11e-b93e-4e40-8dff-0710edd3a412")
 		(effects
 			(font
-				(face "Helvetica Neue")
 				(size 1.5 1.5)
 				(thickness 0.1)
 			)
@@ -23274,7 +23264,6 @@
 		(uuid "ce6d4810-85c8-4858-82c1-33fd09661906")
 		(effects
 			(font
-				(face "Helvetica Neue")
 				(size 1.5 1.5)
 				(thickness 0.1)
 			)
