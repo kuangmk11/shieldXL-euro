@@ -140,9 +140,37 @@
       be61f6a3-4bce-4705-84b2-87f47a5a9420
     )
   )
-  (model "/Users/nevetsokyeron/Documents/KiCad/7.0/3dmodels/MyLibrary/RASPBERRY_PI_4B_+_Samtec_ESP-120-33-G-D.stp"
-    (offset (xyz 42.5 28 -13.5))
-    (scale (xyz 1 1 1))
-    (rotate (xyz -90 0 0))
+  (model "${KIPRJMOD}/3dmodels/RASPBERRY PI 4B_4GB.STEP"
+  	(offset
+  		(xyz 42.5 28 -23.1)
+  	)
+  	(scale
+  		(xyz 1 1 1)
+  	)
+  	(rotate
+  		(xyz -90 0 0)
+  	)
+  )
+  (model "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_2x20_P2.54mm_Vertical.step"
+  	(offset
+  		(xyz 8.37 51.23 -1.6)
+  	)
+  	(scale
+  		(xyz 1 1 1)
+  	)
+  	(rotate
+  		(xyz 180 0 90)
+  	)
+  )
+  (model "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_2x20_P2.54mm_Vertical.step"
+  	(offset
+  		(xyz 8.37 51.23 -10.6)
+  	)
+  	(scale
+  		(xyz 1 1 1)
+  	)
+  	(rotate
+  		(xyz 180 0 90)
+  	)
   )
 )

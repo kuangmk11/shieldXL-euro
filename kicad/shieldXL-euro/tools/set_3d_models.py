@@ -51,10 +51,32 @@ MODELS = {
 }
 
 
+# The Pi stack, on X1: the Pi hangs upside down 20 mm (STACK) behind the board's
+# back, far enough for its USB stacks (16 mm) to clear the SMD parts under them
+# (2 mm at most) with 2 mm to spare. Modelled as a standard 8.5 mm 2x20 socket
+# on the board with a 2x20 stacking header (8.5 mm body) in it, seated 0.5 short,
+# then the Pi's own 2.5 mm header base. Seen from the front the socket's pin 2
+# is above pin 1 and the rows run right, so the stock model is flipped about x
+# and turned about z (KiCad turns models the opposite way to footprints).
+# In the Pi model the Pi's PCB top is at y 1.5 and the parts stand along +y.
+STACK, BOARD_T, SOCKET_H, SEAT_GAP, PI_HEADER_BASE = 20.0, 1.6, 8.5, 0.5, 2.5
+SOCKET = K + "Connector_PinSocket_2.54mm.3dshapes/PinSocket_2x20_P2.54mm_Vertical.step"
+PIN1 = (8.37, 51.23)                  # X1's pad 1, y up
+MULTI = {
+    ("MMM", "RASPI_BOARD_B+_UPPER_HOLES"): [
+        (P + "RASPBERRY PI 4B_4GB.STEP", (-90, 0, 0), (42.5, 28, -(BOARD_T + STACK + 1.5))),
+        (SOCKET, (180, 0, 90), (*PIN1, -BOARD_T)),
+        (SOCKET, (180, 0, 90), (*PIN1, -(BOARD_T + SOCKET_H + SEAT_GAP))),
+    ],
+}
+assert abs(SOCKET_H * 2 + SEAT_GAP + PI_HEADER_BASE - STACK) < 1e-9
+
+
 def model_block(path, rot, off=(0, 0, 0), indent="\t"):
     i, j = indent, indent + "\t"
+    r = rot if isinstance(rot, tuple) else (0, 0, rot)
     return (f'{i}(model "{path}"\n{j}(offset\n{j}\t(xyz {off[0]:g} {off[1]:g} {off[2]:g})\n{j})\n{j}(scale\n{j}\t(xyz 1 1 1)\n{j})\n'
-            f'{j}(rotate\n{j}\t(xyz 0 0 {rot})\n{j})\n{i})\n')
+            f'{j}(rotate\n{j}\t(xyz {r[0]:g} {r[1]:g} {r[2]:g})\n{j})\n{i})\n')
 
 
 def strip_models(text):
@@ -84,13 +106,15 @@ def strip_models(text):
 
 def fix_library():
     done = []
-    for (lib, name), (path, rot, *off) in MODELS.items():
+    entries = {k: [(p, r, o[0] if o else (0, 0, 0))] for k, (p, r, *o) in MODELS.items()}
+    entries.update(MULTI)
+    for (lib, name), models in entries.items():
         f = os.path.join(HERE, f"{lib}.pretty", f"{name}.kicad_mod")
         if not os.path.exists(f):
             continue
         t = strip_models(open(f, newline="").read()).rstrip()
         assert t.endswith(")")
-        t = t[:-1].rstrip("\n") + "\n" + model_block(path, rot, off[0] if off else (0, 0, 0), "  ") + ")\n"
+        t = t[:-1].rstrip("\n") + "\n" + "".join(model_block(p, r, o, "  ") for p, r, o in models) + ")\n"
         open(f, "w", newline="").write(t)
         done.append(name)
     return done
@@ -102,16 +126,20 @@ def fix_board():
     for fp in board.GetFootprints():
         fid = fp.GetFPID()
         key = (fid.GetLibNickname().wx_str(), fid.GetLibItemName().wx_str())
-        if key not in MODELS:
+        if key in MULTI:
+            models = MULTI[key]
+        elif key in MODELS:
+            path, rot, *off = MODELS[key]
+            models = [(path, (0, 0, rot), off[0] if off else (0, 0, 0))]
+        else:
             continue
-        path, rot, *off = MODELS[key]
-        ox, oy, oz = off[0] if off else (0, 0, 0)
         fp.Models().clear()
-        m = pcbnew.FP_3DMODEL()
-        m.m_Filename = path
-        m.m_Rotation = pcbnew.VECTOR3D(0, 0, rot)
-        m.m_Offset = pcbnew.VECTOR3D(ox, oy, oz)
-        fp.Models().push_back(m)
+        for path, rot, off in models:
+            m = pcbnew.FP_3DMODEL()
+            m.m_Filename = path
+            m.m_Rotation = pcbnew.VECTOR3D(*rot)
+            m.m_Offset = pcbnew.VECTOR3D(*off)
+            fp.Models().push_back(m)
         n += 1
     pcbnew.SaveBoard(BOARD, board)
     return n

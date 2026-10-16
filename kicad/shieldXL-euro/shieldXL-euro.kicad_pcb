@@ -10045,7 +10045,7 @@
 				)
 			)
 		)
-		(attr dnp)
+		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 7.1 -55.04)
@@ -10768,13 +10768,35 @@
 		(embedded_fonts no)
 		(model "${KIPRJMOD}/3dmodels/RASPBERRY PI 4B_4GB.STEP"
 			(offset
-				(xyz 42.5 28 -14)
+				(xyz 42.5 28 -23.1)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
 				(xyz -90 0 0)
+			)
+		)
+		(model "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_2x20_P2.54mm_Vertical.step"
+			(offset
+				(xyz 8.37 51.23 -1.6)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 180 0 90)
+			)
+		)
+		(model "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_2x20_P2.54mm_Vertical.step"
+			(offset
+				(xyz 8.37 51.23 -10.6)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 180 0 90)
 			)
 		)
 	)

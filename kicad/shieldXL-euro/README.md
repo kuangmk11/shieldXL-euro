@@ -94,7 +94,10 @@ The panel layout is in the Missing Mile Modular repo
   included, is on User.1 (back artwork on User.5). The
   stack, front to back: panel, display on standoffs behind the window, main
   board, Pi 4 on the back, upside down as on MONOFA (extra-tall header,
-  about 20 mm standoffs).
+  about 20 mm standoffs). The 20 mm, main board's back to the Pi's PCB, lets
+  the Pi's USB stacks (16 mm) clear the SMD parts under them by 2 mm; it is
+  modelled (`tools/set_3d_models.py`, on X1) as an 8.5 mm 2x20 socket on the
+  board with a 2x20 stacking header in it, then the Pi's 2.5 mm header base.
 - **The Pi lies landscape, header along the top**, behind the display and
   clear of the controls. That is why the module is 20 HP: 85 mm of Pi, its
   ports, a USB adapter and the microSD card come to about 96 mm, more than
