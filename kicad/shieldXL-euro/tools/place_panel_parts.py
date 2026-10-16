@@ -39,6 +39,12 @@ CENTRE = {"Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles": (0.0, 6.48),
           "SW_CK_D6R": (0.0, 0.0),
           "USB_A_Molex_105057_Vertical": (3.5, -2.38)}   # middle of its pads / body
 
+# the display's FPC connector, on the back where shieldXL had it relative to the
+# display module (see FPC_SLOT in tools/make_outline.py): its origin 40.540,
+# 41.351 from the module's top-left corner, at 90 deg
+FPC_REF, FPC_AT = "U$1", (40.540, 41.351)
+DISP_X0, DISP_TOP = 101.3 / 2 - 82.0 / 2, 10.5
+
 # the Pi, as tools/make_outline.py draws it: its footprint's origin is the
 # corner below the header, seen from the front
 PI_REF = "X1"
@@ -85,6 +91,16 @@ def main():
         f.SetPosition(pcbnew.VECTOR2I(mm(OX + x - dx), mm(OY + y - dy)))
         f.SetLocked(True)
         placed.append(f"{ref} {name}")
+    fpc = fps.get(FPC_REF)
+    if fpc is not None:
+        if not fpc.IsFlipped():
+            fpc.Flip(fpc.GetPosition(), pcbnew.FLIP_DIRECTION_LEFT_RIGHT)
+        fpc.SetOrientationDegrees(90)
+        fpc.SetPosition(pcbnew.VECTOR2I(mm(OX + DISP_X0 + FPC_AT[0]), mm(OY + DISP_TOP + FPC_AT[1])))
+        fpc.SetLocked(True)
+        placed.append(f"{FPC_REF} display FPC")
+    else:
+        missing.append(FPC_REF)
     pi = fps.get(PI_REF)
     if pi is not None:
         if pi.IsFlipped():

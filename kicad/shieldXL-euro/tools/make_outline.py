@@ -42,6 +42,14 @@ BX0, BX1, BY0, BY1, BR = 1.65, PANEL_W - 1.65, 10.25, 118.25, 1.0
 
 # --- the display module, on standoffs between panel and board ---------------------
 DISP_W, DISP_H, DISP_TOP = 82.0, 47.5, 10.5
+DISP_X0 = PANEL_W / 2 - DISP_W / 2
+# Its FPC cable runs from the module's connector through a slot in the board to
+# the connector on the back (U$1), kept where shieldXL had them relative to the
+# display: there the module's lower-right hole (NHD-2.7-12864WDW3-M, holes 2.5 in
+# from each edge) sat on the board hole at (319.948, 136.417), so its top-left
+# corner was at (240.448, 91.417). From that corner:
+FPC_SLOT = (28.045, 29.182, 54.253, 33.241)     # x0, y0, x1, y1; 1 mm corners
+FPC_SLOT_R = 1.0
 
 # --- Pi 4 on the back: 85 x 56, holes 3.5 in on a 58 x 49 grid, the 40-pin
 # header on a long edge, centred 3.5 in, pins 1-40 from 8.37 to 56.63 along it.
@@ -224,6 +232,8 @@ def build():
 
     # the board
     rect(board, pcbnew.Edge_Cuts, BX0, BY0, BX1, BY1, 0.1, BR)
+    sx0, sy0, sx1, sy1 = FPC_SLOT
+    rect(board, pcbnew.Edge_Cuts, DISP_X0 + sx0, DISP_TOP + sy0, DISP_X0 + sx1, DISP_TOP + sy1, 0.05, FPC_SLOT_R)
 
     # User.1: the panel, traced from its own file
     for c in cuts:
@@ -242,7 +252,7 @@ def build():
         draw_art(board, pcbnew.User_1 if side == "F" else pcbnew.User_5, *a)
 
     # User.2: the display module
-    dx0 = PANEL_W / 2 - DISP_W / 2
+    dx0 = DISP_X0
     rect(board, pcbnew.User_2, dx0, DISP_TOP, dx0 + DISP_W, DISP_TOP + DISP_H)
     text(board, pcbnew.User_2, "DISPLAY MODULE (FRONT)", PANEL_W / 2, DISP_TOP + DISP_H - 3)
 
