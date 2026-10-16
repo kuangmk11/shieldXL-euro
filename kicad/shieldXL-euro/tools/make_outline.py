@@ -10,12 +10,14 @@ First run only: everything shieldXL left on the board (parts, tracks, zones,
 artwork) moves aside by STASH_DX as a stash for Update PCB to reuse, and its
 outline goes to User.9. Every run: Edge.Cuts and User.1-4 are redrawn.
 
-  User.1  Panel        the panel's outline, holes and openings
+  User.1  Panel        the panel as seen from the front: outline, holes and
+                       its front artwork (title, labels, rings, the CORONE box)
   User.2  Front        the display module, between panel and board
   User.3  Pi (back)    Pi 4, upside down, landscape: its 40-pin header along
                        the top, behind the display, clear of the controls;
                        its holes, port block and the USB adapters' room
   User.4  Corone       the room for the daughterboard, below the Pi
+  User.5  Panel back   the panel's back artwork, as KiCad draws B.Silkscreen
 """
 
 import os
@@ -28,6 +30,7 @@ PANEL = os.path.normpath(os.path.join(HERE, "..", "..", "..", "Missing Mile Modu
                                      "shieldxl_euro_panel.kicad_pcb"))
 OX, OY = 100.0, 30.0                 # panel origin on the board
 STASH_DX = 160.0
+SILK = {pcbnew.F_SilkS: "F", pcbnew.B_SilkS: "B"}
 STASH_MARK = "SHIELDXL DESKTOP BOARD - PARTS STASH"
 
 # --- the board: inside the rails, inside the panel's width ------------------------
@@ -128,12 +131,16 @@ def stash(board):
 
 
 def panel_geometry():
-    """The panel's cuts and holes as plain numbers (panel frame, mm). KiCad's
-    Python holds one board at a time, so this is read before the main board."""
+    """The panel's cuts, holes and silkscreen as plain numbers (panel frame,
+    mm). KiCad's Python holds one board at a time, so this is read before the
+    main board."""
     panel = pcbnew.LoadBoard(PANEL)
     T = lambda v: (pcbnew.ToMM(v.x) - OX, pcbnew.ToMM(v.y) - OY)
-    cuts, holes = [], []
+    cuts, holes, art = [], [], []
     for d in panel.GetDrawings():
+        if d.GetLayer() in SILK:
+            art.append(art_item(d, T))
+            continue
         if d.GetLayer() != pcbnew.Edge_Cuts:
             continue
         k = d.GetShape()
@@ -150,15 +157,60 @@ def panel_geometry():
     for fp in panel.GetFootprints():
         for pad in fp.Pads():
             holes.append((*T(fp.GetPosition()), pcbnew.ToMM(pad.GetDrillSize().x) / 2))
-    return cuts, holes
+        for g in fp.GraphicalItems():
+            if g.GetLayer() in SILK and isinstance(g, pcbnew.PCB_SHAPE):
+                art.append(art_item(g, T))
+    return cuts, holes, art
+
+
+def art_item(d, T):
+    """One silkscreen shape: (side, kind, points, width, filled)."""
+    k = d.GetShape()
+    if k == pcbnew.SHAPE_T_SEGMENT:
+        pts = (T(d.GetStart()), T(d.GetEnd()))
+    elif k == pcbnew.SHAPE_T_ARC:
+        pts = (T(d.GetStart()), T(d.GetArcMid()), T(d.GetEnd()))
+    elif k == pcbnew.SHAPE_T_CIRCLE:
+        pts = (T(d.GetCenter()), pcbnew.ToMM(d.GetRadius()))
+    elif k == pcbnew.SHAPE_T_BEZIER:
+        pts = (T(d.GetStart()), T(d.GetBezierC1()), T(d.GetBezierC2()), T(d.GetEnd()))
+    elif k == pcbnew.SHAPE_T_RECTANGLE:
+        pts = (T(d.GetStart()), T(d.GetEnd()))
+    elif k == pcbnew.SHAPE_T_POLY:
+        pts = tuple(T(d.GetPolyShape().CVertex(i)) for i in range(d.GetPolyShape().TotalVertices()))
+    else:
+        raise ValueError(f"panel artwork of shape {k}")
+    return SILK[d.GetLayer()], k, pts, pcbnew.ToMM(d.GetWidth()), d.IsSolidFill()
+
+
+def draw_art(board, layer, k, pts, width, filled):
+    s = shape(board, layer, k, width)
+    if k == pcbnew.SHAPE_T_ARC:
+        s.SetArcGeometry(*(pt(*p) for p in pts))
+    elif k == pcbnew.SHAPE_T_CIRCLE:
+        s.SetCenter(pt(*pts[0]))
+        s.SetEnd(pt(pts[0][0] + pts[1], pts[0][1]))
+    elif k == pcbnew.SHAPE_T_BEZIER:
+        s.SetStart(pt(*pts[0]))
+        s.SetBezierC1(pt(*pts[1]))
+        s.SetBezierC2(pt(*pts[2]))
+        s.SetEnd(pt(*pts[3]))
+        s.RebuildBezierToSegmentsPointsList(mm(0.005))
+    elif k == pcbnew.SHAPE_T_POLY:
+        s.SetPolyPoints([pt(*p) for p in pts])
+    else:
+        s.SetStart(pt(*pts[0]))
+        s.SetEnd(pt(*pts[1]))
+    if filled:
+        s.SetFilled(True)
 
 
 def build():
-    cuts, holes = panel_geometry()
+    cuts, holes, art = panel_geometry()
     board = pcbnew.LoadBoard(BOARD)
     moved = stash(board)
     layers = {pcbnew.Edge_Cuts: None, pcbnew.User_1: "Panel", pcbnew.User_2: "Front",
-              pcbnew.User_3: "Pi (back)", pcbnew.User_4: "Corone"}
+              pcbnew.User_3: "Pi (back)", pcbnew.User_4: "Corone", pcbnew.User_5: "Panel back"}
     for d in list(board.GetDrawings()):
         if d.GetLayer() in layers and not (isinstance(d, pcbnew.PCB_TEXT) and d.GetText() == STASH_MARK):
             board.Remove(d)
@@ -182,6 +234,8 @@ def build():
             a.SetArcGeometry(pt(*c[1]), pt(*c[2]), pt(*c[3]))
     for x, y, r in holes:
         circle(board, pcbnew.User_1, x, y, r)
+    for side, *a in art:
+        draw_art(board, pcbnew.User_1 if side == "F" else pcbnew.User_5, *a)
 
     # User.2: the display module
     dx0 = PANEL_W / 2 - DISP_W / 2
@@ -226,12 +280,13 @@ def build():
     text(board, pcbnew.User_4, "CORONE", (CORONE[0] + CORONE[2]) / 2, (CORONE[1] + CORONE[3]) / 2 + 4)
 
     pcbnew.SaveBoard(BOARD, board)
-    return moved
+    return moved, len(art)
 
 
 if __name__ == "__main__":
-    moved = build()
+    moved, n_art = build()
     print("stashed shieldXL's layout" if moved else "stash already in place")
     print(f"board {BX1 - BX0:.2f} x {BY1 - BY0:.2f} mm; Pi x {PI_X0:.2f}-{PI_X0 + PI_L:.2f}, y {PI_Y0:.2f}-{PI_Y0 + PI_W:.2f}; "
           f"adapters to x {PI_X0 + PI_L + PORT_PROUD + ADAPTER:.2f} (panel {PANEL_W})")
+    print(f"panel artwork copied: {n_art} shapes")
     print(f"Corone room {CORONE[2] - CORONE[0]:.1f} x {CORONE[3] - CORONE[1]:.1f} mm")
