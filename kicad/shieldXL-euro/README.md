@@ -90,12 +90,12 @@ The panel layout is in the Missing Mile Modular repo
   board, Pi on the back (extra-tall header, about 20 mm standoffs, as on
   MONOFA). The panel is drawn in the Missing Mile Modular repo and named
   Moirae there.
-- **Corone (crow on a Pico).** Two CV inputs and four CV outputs, the six
-  jacks in the panel's CORONE outline. The Pico is socketed on the back of
-  the main board, in the lower half, under the Pi, and talks to norns over
-  USB through the Pi's fourth port. Not in the schematic yet. crow's
-  hardware is closed; the firmware port follows blackbird (crow for the
-  Music Thing Workshop System Computer).
+- **Corone (crow).** Two CV inputs and four CV outputs, the six jacks in the
+  panel's CORONE outline. A daughterboard running monome's own crow
+  firmware, on one 2 x 10 header on the back of the main board, lower half,
+  under the Pi; USB to norns through the Pi's fourth port. Spec in
+  `../corone/README.md`. The main board's side (jacks, header, ii header,
+  USB cable header) is not in the schematic yet.
 - **A vertical USB-C receptacle.** KiCad's library has none. J108 has no
   footprint until a part is chosen.
 - **Keys.** SW1-SW3 are still shieldXL's Choc / MX key footprints; the
