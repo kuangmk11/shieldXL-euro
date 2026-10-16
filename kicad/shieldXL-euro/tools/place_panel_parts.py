@@ -37,6 +37,7 @@ CENTRE = {"Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles": (0.0, 6.48),
           "PEC11RN": (0.0, 0.0),
           "Choc_MX_combo": (0.0, 0.0),
           "SW_CK_D6R": (0.0, 0.0),
+          "USB_C_Receptacle_Molex_2047110001_Vertical": (0.0, 0.0),
           "USB_A_Molex_105057_Vertical": (3.5, -2.38)}   # middle of its pads / body
 
 # the display's FPC connector, on the back where shieldXL had it relative to the

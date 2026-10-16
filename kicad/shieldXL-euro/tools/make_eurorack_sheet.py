@@ -24,7 +24,7 @@ What it adds (references in the 100s, clear of shieldXL's):
                     _SRC - Type A as made (1-2 bridged), Type B by cutting
                     1-2 on both and bridging 2-3. Replaces shieldXL's slide
                     switch.
-  Pi power          J108 USB-C, power only (5.1k on CC1 / CC2), F101 polyfuse
+  Pi power          J108 USB-C (Molex 204711, vertical), power only (5.1k on CC1 / CC2), F101 polyfuse
                     and D103 TVS onto +5V, which reaches the Pi through the
                     header as shieldXL's +5V does. Bulk C113.
   USB host (x3)     J109-J111 vertical USB-A on the panel. The Pi's four
@@ -178,8 +178,14 @@ PARTS = [
     ("JP102", "Jumper", "SolderJumper_3_Bridged12", 1, "RING A/B", FP_JP, (279.4, 66.04), {"1": "MIDI_OUT_SRC", "2": "MIDI_OUT_R", "3": "MIDI_OUT_SNK"}),
     ("J107", "Connector_Audio", "AudioJack3", 1, "MIDI OUT", FP_TRS, (304.8, 53.34), {"T": "MIDI_OUT_T", "R": "MIDI_OUT_R", "S": "GND"}),
     # --- Pi power: USB-C on the panel ------------------------------------------
-    ("J108", "Connector", "USB_C_Receptacle_PowerOnly_6P", 1, "USB-C 5V", "",
-     (241.3, 116.84), {"A9": "VBUS_C", "B9": "VBUS_C", "A12": "GND", "B12": "GND", "A5": "CC1", "B5": "CC2", "SH": "GND"}),
+    # Molex 204711-0001, vertical: every VBUS and GND contact carries current;
+    # USB 2.0, SBU and the SuperSpeed pairs are left open
+    ("J108", "Connector", "USB_C_Receptacle", 1, "USB-C 5V", "MMM:USB_C_Receptacle_Molex_2047110001_Vertical",
+     (241.3, 116.84), {**{p: "VBUS_C" for p in ("A4", "A9", "B4", "B9")},
+                       **{p: "GND" for p in ("A1", "A12", "B1", "B12", "SH")},
+                       "A5": "CC1", "B5": "CC2",
+                       **{p: None for p in ("A2", "A3", "A6", "A7", "A8", "A10", "A11",
+                                            "B2", "B3", "B6", "B7", "B8", "B10", "B11")}}),
     ("R111", "Device", "R", 1, "5.1k", FP_R, (271.78, 129.54), {"1": "CC1", "2": "GND"}),
     ("R112", "Device", "R", 1, "5.1k", FP_R, (284.48, 129.54), {"1": "CC2", "2": "GND"}),
     ("F101", "Device", "Polyfuse", 1, "3A hold", "Fuse:Fuse_1812_4532Metric", (271.78, 104.14), {"1": "VBUS_C", "2": "+5V"}),

@@ -50,6 +50,11 @@ DISP_X0 = PANEL_W / 2 - DISP_W / 2
 # corner was at (240.448, 91.417). From that corner:
 FPC_SLOT = (28.045, 29.182, 54.253, 33.241)     # x0, y0, x1, y1; 1 mm corners
 FPC_SLOT_R = 1.0
+# the module's own mounting holes, d2.5, 2.5 in from each edge (77 x 42.5 apart);
+# not the top-left one, which falls on the Pi header's pin 2
+DISP_HOLE_IN, DISP_HOLE_D = 2.5, 2.5
+DISP_HOLES = [(DISP_HOLE_IN, DISP_H - DISP_HOLE_IN), (DISP_W - DISP_HOLE_IN, DISP_HOLE_IN),
+              (DISP_W - DISP_HOLE_IN, DISP_H - DISP_HOLE_IN)]
 
 # --- Pi 4 on the back: 85 x 56, holes 3.5 in on a 58 x 49 grid, the 40-pin
 # header on a long edge, centred 3.5 in, pins 1-40 from 8.37 to 56.63 along it.
@@ -234,6 +239,8 @@ def build():
     rect(board, pcbnew.Edge_Cuts, BX0, BY0, BX1, BY1, 0.1, BR)
     sx0, sy0, sx1, sy1 = FPC_SLOT
     rect(board, pcbnew.Edge_Cuts, DISP_X0 + sx0, DISP_TOP + sy0, DISP_X0 + sx1, DISP_TOP + sy1, 0.05, FPC_SLOT_R)
+    for hx, hy in DISP_HOLES:
+        circle(board, pcbnew.Edge_Cuts, DISP_X0 + hx, DISP_TOP + hy, DISP_HOLE_D / 2, 0.05)
 
     # User.1: the panel, traced from its own file
     for c in cuts:

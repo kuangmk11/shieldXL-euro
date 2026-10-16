@@ -1929,7 +1929,7 @@
 			)
 			(embedded_fonts no)
 		)
-			(symbol "Connector:USB_C_Receptacle_PowerOnly_6P"
+			(symbol "Connector:USB_C_Receptacle"
 			(pin_names
 				(offset 1.016)
 			)
@@ -1939,29 +1939,29 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J"
-				(at 0 16.51 0)
+				(at -10.16 29.21 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify bottom)
+					(justify left)
 				)
 			)
-			(property "Value" "USB_C_Receptacle_PowerOnly_6P"
-				(at 0 13.97 0)
+			(property "Value" "USB_C_Receptacle"
+				(at 10.16 29.21 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify bottom)
+					(justify right)
 				)
 			)
 			(property "Footprint" ""
-				(at 3.81 2.54 0)
+				(at 3.81 0 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1972,6 +1972,17 @@
 				)
 			)
 			(property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip"
+				(at 3.81 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "USB Full-Featured Type-C Receptacle connector"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1982,18 +1993,7 @@
 					)
 				)
 			)
-			(property "Description" "USB Power-Only 6P Type-C Receptacle connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "usb universal serial bus type-C power-only charging-only 6P 6C"
+			(property "ki_keywords" "usb universal serial bus type-C full-featured"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2015,10 +2015,65 @@
 					)
 				)
 			)
-			(symbol "USB_C_Receptacle_PowerOnly_6P_0_0"
+			(symbol "USB_C_Receptacle_0_0"
 				(rectangle
-					(start -0.254 -12.7)
-					(end 0.254 -11.684)
+					(start -0.254 -35.56)
+					(end 0.254 -34.544)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 10.16 25.654)
+					(end 9.144 25.146)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 10.16 20.574)
+					(end 9.144 20.066)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 10.16 18.034)
+					(end 9.144 17.526)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 10.16 12.954)
+					(end 9.144 12.446)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 10.16 10.414)
+					(end 9.144 9.906)
 					(stroke
 						(width 0)
 						(type default)
@@ -2039,8 +2094,30 @@
 					)
 				)
 				(rectangle
-					(start 10.16 -4.826)
-					(end 9.144 -5.334)
+					(start 10.16 5.334)
+					(end 9.144 4.826)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 10.16 0.254)
+					(end 9.144 -0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 10.16 -2.286)
+					(end 9.144 -2.794)
 					(stroke
 						(width 0)
 						(type default)
@@ -2060,11 +2137,88 @@
 						(type none)
 					)
 				)
-			)
-			(symbol "USB_C_Receptacle_PowerOnly_6P_0_1"
 				(rectangle
-					(start -10.16 12.7)
-					(end 10.16 -12.7)
+					(start 10.16 -9.906)
+					(end 9.144 -10.414)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 10.16 -14.986)
+					(end 9.144 -15.494)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 10.16 -17.526)
+					(end 9.144 -18.034)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 10.16 -22.606)
+					(end 9.144 -23.114)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 10.16 -25.146)
+					(end 9.144 -25.654)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 10.16 -30.226)
+					(end 9.144 -30.734)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 10.16 -32.766)
+					(end 9.144 -33.274)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "USB_C_Receptacle_0_1"
+				(rectangle
+					(start -10.16 27.94)
+					(end 10.16 -35.56)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -2075,7 +2229,7 @@
 				)
 				(polyline
 					(pts
-						(xy -8.89 -1.27) (xy -8.89 6.35)
+						(xy -8.89 -3.81) (xy -8.89 3.81)
 					)
 					(stroke
 						(width 0.508)
@@ -2086,8 +2240,8 @@
 					)
 				)
 				(rectangle
-					(start -7.62 -1.27)
-					(end -6.35 6.35)
+					(start -7.62 -3.81)
+					(end -6.35 3.81)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -2097,9 +2251,9 @@
 					)
 				)
 				(arc
-					(start -7.62 6.35)
-					(mid -6.985 6.9823)
-					(end -6.35 6.35)
+					(start -7.62 3.81)
+					(mid -6.985 4.4423)
+					(end -6.35 3.81)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -2109,9 +2263,9 @@
 					)
 				)
 				(arc
-					(start -7.62 6.35)
-					(mid -6.985 6.9823)
-					(end -6.35 6.35)
+					(start -7.62 3.81)
+					(mid -6.985 4.4423)
+					(end -6.35 3.81)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -2121,9 +2275,9 @@
 					)
 				)
 				(arc
-					(start -8.89 6.35)
-					(mid -6.985 8.2467)
-					(end -5.08 6.35)
+					(start -8.89 3.81)
+					(mid -6.985 5.7067)
+					(end -5.08 3.81)
 					(stroke
 						(width 0.508)
 						(type default)
@@ -2133,9 +2287,9 @@
 					)
 				)
 				(arc
-					(start -5.08 -1.27)
-					(mid -6.985 -3.1667)
-					(end -8.89 -1.27)
+					(start -5.08 -3.81)
+					(mid -6.985 -5.7067)
+					(end -8.89 -3.81)
 					(stroke
 						(width 0.508)
 						(type default)
@@ -2145,9 +2299,9 @@
 					)
 				)
 				(arc
-					(start -6.35 -1.27)
-					(mid -6.985 -1.9023)
-					(end -7.62 -1.27)
+					(start -6.35 -3.81)
+					(mid -6.985 -4.4423)
+					(end -7.62 -3.81)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -2157,9 +2311,9 @@
 					)
 				)
 				(arc
-					(start -6.35 -1.27)
-					(mid -6.985 -1.9023)
-					(end -7.62 -1.27)
+					(start -6.35 -3.81)
+					(mid -6.985 -4.4423)
+					(end -7.62 -3.81)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -2170,7 +2324,7 @@
 				)
 				(polyline
 					(pts
-						(xy -5.08 6.35) (xy -5.08 -1.27)
+						(xy -5.08 3.81) (xy -5.08 -3.81)
 					)
 					(stroke
 						(width 0.508)
@@ -2180,8 +2334,10 @@
 						(type none)
 					)
 				)
+			)
+			(symbol "USB_C_Receptacle_1_1"
 				(circle
-					(center -2.54 3.683)
+					(center -2.54 1.143)
 					(radius 0.635)
 					(stroke
 						(width 0.254)
@@ -2193,7 +2349,7 @@
 				)
 				(polyline
 					(pts
-						(xy -1.27 6.858) (xy 0 9.398) (xy 1.27 6.858) (xy -1.27 6.858)
+						(xy -1.27 4.318) (xy 0 6.858) (xy 1.27 4.318) (xy -1.27 4.318)
 					)
 					(stroke
 						(width 0.254)
@@ -2205,7 +2361,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0.508) (xy 2.54 3.048) (xy 2.54 4.318)
+						(xy 0 -2.032) (xy 2.54 0.508) (xy 2.54 1.778)
 					)
 					(stroke
 						(width 0.508)
@@ -2217,7 +2373,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 -0.762) (xy -2.54 1.778) (xy -2.54 3.048)
+						(xy 0 -3.302) (xy -2.54 -0.762) (xy -2.54 0.508)
 					)
 					(stroke
 						(width 0.508)
@@ -2229,7 +2385,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 -3.302) (xy 0 6.858)
+						(xy 0 -5.842) (xy 0 4.318)
 					)
 					(stroke
 						(width 0.508)
@@ -2240,7 +2396,7 @@
 					)
 				)
 				(circle
-					(center 0 -3.302)
+					(center 0 -5.842)
 					(radius 1.27)
 					(stroke
 						(width 0)
@@ -2251,8 +2407,8 @@
 					)
 				)
 				(rectangle
-					(start 1.905 4.318)
-					(end 3.175 5.588)
+					(start 1.905 1.778)
+					(end 3.175 3.048)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -2261,10 +2417,80 @@
 						(type outline)
 					)
 				)
-			)
-			(symbol "USB_C_Receptacle_PowerOnly_6P_1_1"
+				(pin passive line
+					(at 0 -40.64 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin bidirectional line
-					(at 15.24 -5.08 180)
+					(at 15.24 -10.16 180)
+					(length 5.08)
+					(name "TX1+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 -7.62 180)
+					(length 5.08)
+					(name "TX1-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 25.4 180)
+					(length 5.08)
+					(name "VBUS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 20.32 180)
 					(length 5.08)
 					(name "CC1"
 						(effects
@@ -2281,9 +2507,64 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 7.62 180)
 					(length 5.08)
+					(name "D+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 12.7 180)
+					(length 5.08)
+					(name "D-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 -30.48 180)
+					(length 5.08)
+					(name "SBU1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 25.4 180)
+					(length 5.08)
+					(hide yes)
 					(name "VBUS"
 						(effects
 							(font
@@ -2299,9 +2580,46 @@
 						)
 					)
 				)
-				(pin passive line
-					(at 0 -17.78 90)
+				(pin bidirectional line
+					(at 15.24 -15.24 180)
 					(length 5.08)
+					(name "RX2-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 -17.78 180)
+					(length 5.08)
+					(name "RX2+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -40.64 90)
+					(length 5.08)
+					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -2317,8 +2635,82 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 0 -40.64 90)
+					(length 5.08)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin bidirectional line
-					(at 15.24 -7.62 180)
+					(at 15.24 -25.4 180)
+					(length 5.08)
+					(name "TX2+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 -22.86 180)
+					(length 5.08)
+					(name "TX2-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 25.4 180)
+					(length 5.08)
+					(hide yes)
+					(name "VBUS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 17.78 180)
 					(length 5.08)
 					(name "CC2"
 						(effects
@@ -2335,8 +2727,62 @@
 						)
 					)
 				)
+				(pin bidirectional line
+					(at 15.24 5.08 180)
+					(length 5.08)
+					(name "D+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 10.16 180)
+					(length 5.08)
+					(name "D-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 -33.02 180)
+					(length 5.08)
+					(name "SBU2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin passive line
-					(at 15.24 7.62 180)
+					(at 15.24 25.4 180)
 					(length 5.08)
 					(hide yes)
 					(name "VBUS"
@@ -2354,8 +2800,44 @@
 						)
 					)
 				)
+				(pin bidirectional line
+					(at 15.24 0 180)
+					(length 5.08)
+					(name "RX1-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 -2.54 180)
+					(length 5.08)
+					(name "RX1+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin passive line
-					(at 0 -17.78 90)
+					(at 0 -40.64 90)
 					(length 5.08)
 					(hide yes)
 					(name "GND"
@@ -2374,7 +2856,7 @@
 					)
 				)
 				(pin passive line
-					(at -7.62 -17.78 90)
+					(at -7.62 -40.64 90)
 					(length 5.08)
 					(name "SHIELD"
 						(effects
@@ -8968,7 +9450,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:USB_C_Receptacle_PowerOnly_6P")
+		(lib_id "Connector:USB_C_Receptacle")
 		(at 241.3 116.84 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8992,7 +9474,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MMM:USB_C_Receptacle_Molex_2047110001_Vertical"
 			(at 241.3 116.84 0)
 			(hide yes)
 			(effects
@@ -9010,26 +9492,80 @@
 				)
 			)
 		)
-		(pin "A5"
+		(pin "A1"
 			(uuid "ac19cbbb-3fd0-53ae-bfc4-ab2f8e6a439e")
 		)
-		(pin "A9"
+		(pin "A2"
 			(uuid "d1831367-8c5e-548d-99bb-5e476bcd9c95")
 		)
-		(pin "A12"
+		(pin "A3"
 			(uuid "1297c707-bc6f-5b67-a608-69dca2de226d")
 		)
-		(pin "B5"
+		(pin "A4"
 			(uuid "7744ba26-e6cf-589e-8ec9-ce32002f3836")
 		)
-		(pin "B9"
+		(pin "A5"
 			(uuid "d4cdb57f-b0e7-50e3-84c3-19385ef4776c")
 		)
-		(pin "B12"
+		(pin "A6"
 			(uuid "bc8f116e-8c40-5d8f-ba4c-4a5e8d1409ef")
 		)
-		(pin "SH"
+		(pin "A7"
 			(uuid "91a2727d-ffc7-5809-a0e0-fd3328ffce13")
+		)
+		(pin "A8"
+			(uuid "d71f3b0a-b9ad-5da4-b9b1-6dda149dac00")
+		)
+		(pin "A9"
+			(uuid "0f40f53f-2067-58ab-8ef0-15c2281f0a62")
+		)
+		(pin "A10"
+			(uuid "65375a3d-de2f-52a3-a768-918309fdda05")
+		)
+		(pin "A11"
+			(uuid "48cbebb0-d22a-5768-912e-4813206d8fda")
+		)
+		(pin "A12"
+			(uuid "bdda758b-d3f1-5907-a8b2-298449ec8fb0")
+		)
+		(pin "B1"
+			(uuid "6c1a8009-419e-5c85-8d7d-de21c96688e8")
+		)
+		(pin "B2"
+			(uuid "0de281ae-22aa-525c-97df-7819d5acac9b")
+		)
+		(pin "B3"
+			(uuid "97861750-358b-5533-8da5-4e40519aa3a8")
+		)
+		(pin "B4"
+			(uuid "f673a243-a105-5d52-833d-bccdbb1d45fb")
+		)
+		(pin "B5"
+			(uuid "c83e75eb-23ac-5573-9643-590e601b6ac6")
+		)
+		(pin "B6"
+			(uuid "989632da-012c-51bc-9c7f-96629e21ac27")
+		)
+		(pin "B7"
+			(uuid "0280d666-d8ce-5126-8bc9-fa77ee667af4")
+		)
+		(pin "B8"
+			(uuid "a360ea9c-3b4e-5d5f-8c97-039a767ec23b")
+		)
+		(pin "B9"
+			(uuid "3f94d4dd-1bc1-5958-92bf-93b0bb35b960")
+		)
+		(pin "B10"
+			(uuid "92a13322-ba28-5a1c-9b3e-f912dd07aabd")
+		)
+		(pin "B11"
+			(uuid "b5a799d4-cb80-52bd-a881-4de002e22106")
+		)
+		(pin "B12"
+			(uuid "06af6de7-f458-5fca-b940-9c2a654ec1bf")
+		)
+		(pin "SH"
+			(uuid "54b59bcc-e2c9-5755-b811-8bbc7ee479dc")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -9041,26 +9577,26 @@
 		)
 	)
 	(label "VBUS_C"
-		(at 256.54 109.22 0)
+		(at 256.54 91.44 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "d71f3b0a-b9ad-5da4-b9b1-6dda149dac00")
+		(uuid "2bd861c5-1476-5de2-aed3-cc818a5940cd")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:GND")
-		(at 241.3 137.16 0)
+		(at 241.3 160.02 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "0f40f53f-2067-58ab-8ef0-15c2281f0a62")
+		(uuid "0d96aff0-22ac-594c-89c9-a502d1b93501")
 		(property "Reference" "#PWR130"
-			(at 243.84 129.54 0)
+			(at 243.84 152.4 0)
 			(hide yes)
 			(effects
 				(font
@@ -9069,7 +9605,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 243.84 144.78 0)
+			(at 243.84 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9077,7 +9613,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 241.3 137.16 0)
+			(at 241.3 160.02 0)
 			(hide yes)
 			(effects
 				(font
@@ -9086,7 +9622,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 241.3 137.16 0)
+			(at 241.3 160.02 0)
 			(hide yes)
 			(effects
 				(font
@@ -9095,7 +9631,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "65375a3d-de2f-52a3-a768-918309fdda05")
+			(uuid "6000234c-09b4-56ff-b871-b12e7b4e7974")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -9106,37 +9642,17 @@
 			)
 		)
 	)
-	(label "CC1"
-		(at 256.54 121.92 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "48cbebb0-d22a-5768-912e-4813206d8fda")
-	)
-	(label "CC2"
-		(at 256.54 124.46 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "bdda758b-d3f1-5907-a8b2-298449ec8fb0")
-	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:GND")
-		(at 233.68 137.16 0)
+		(at 233.68 160.02 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "6c1a8009-419e-5c85-8d7d-de21c96688e8")
+		(uuid "a036f5c2-5459-5cd1-8995-20346bb9f86d")
 		(property "Reference" "#PWR131"
-			(at 236.22 129.54 0)
+			(at 236.22 152.4 0)
 			(hide yes)
 			(effects
 				(font
@@ -9145,7 +9661,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 236.22 144.78 0)
+			(at 236.22 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9153,7 +9669,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 233.68 137.16 0)
+			(at 233.68 160.02 0)
 			(hide yes)
 			(effects
 				(font
@@ -9162,7 +9678,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 233.68 137.16 0)
+			(at 233.68 160.02 0)
 			(hide yes)
 			(effects
 				(font
@@ -9171,7 +9687,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "0de281ae-22aa-525c-97df-7819d5acac9b")
+			(uuid "23a64e8b-004f-55e3-aad7-de956a6a1957")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -9182,6 +9698,82 @@
 			)
 		)
 	)
+	(label "CC1"
+		(at 256.54 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2cd65f2a-b6db-5489-8bab-e73d477fba47")
+	)
+	(label "CC2"
+		(at 256.54 99.06 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6faf4295-fa91-5871-9c71-20e394868054")
+	)
+	(no_connect
+		(at 256.54 127)
+		(uuid "c753a4e2-d412-51db-bed2-bea750a0ee47")
+	)
+	(no_connect
+		(at 256.54 124.46)
+		(uuid "1d5326cb-06cc-5e97-b914-9c3722ae96ca")
+	)
+	(no_connect
+		(at 256.54 109.22)
+		(uuid "4d0a51ba-cf00-5b4a-a9d7-1c52c5b8e3d1")
+	)
+	(no_connect
+		(at 256.54 104.14)
+		(uuid "96e7fea9-d164-580e-9b43-20921ecf2c70")
+	)
+	(no_connect
+		(at 256.54 147.32)
+		(uuid "8a71d33b-ca2f-5e3e-a022-58c7a8290f22")
+	)
+	(no_connect
+		(at 256.54 132.08)
+		(uuid "ff3fa4c6-8d63-5928-8cdd-cdea18e14f2c")
+	)
+	(no_connect
+		(at 256.54 134.62)
+		(uuid "62f711e3-0969-5208-87d6-821537c42c4c")
+	)
+	(no_connect
+		(at 256.54 142.24)
+		(uuid "2dd717e1-c086-5a67-a0c9-9f3791da2121")
+	)
+	(no_connect
+		(at 256.54 139.7)
+		(uuid "498a978c-5361-5e48-8264-48208ed96a37")
+	)
+	(no_connect
+		(at 256.54 111.76)
+		(uuid "8b8ef1f5-5607-5c14-b732-cdbe55330bb8")
+	)
+	(no_connect
+		(at 256.54 106.68)
+		(uuid "0191df3b-1f00-5799-b33e-fe93b11e1d6d")
+	)
+	(no_connect
+		(at 256.54 149.86)
+		(uuid "8dc0ee9e-a4cc-5417-bef5-f34b09ab4a7b")
+	)
+	(no_connect
+		(at 256.54 116.84)
+		(uuid "dd07c102-53d7-5e85-9b09-917bf4d1876c")
+	)
+	(no_connect
+		(at 256.54 119.38)
+		(uuid "c2bad272-a245-5f12-b1cd-965d74a18fc4")
+	)
 	(symbol
 		(lib_id "Device:R")
 		(at 271.78 129.54 0)
@@ -9190,7 +9782,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "97861750-358b-5533-8da5-4e40519aa3a8")
+		(uuid "e80c4b7d-e92b-518a-9d3a-17c48b7cd219")
 		(property "Reference" "R111"
 			(at 274.32 121.92 0)
 			(effects
@@ -9226,10 +9818,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "f673a243-a105-5d52-833d-bccdbb1d45fb")
+			(uuid "9e72f180-0b1c-5160-9b2b-a93dfcf4d97b")
 		)
 		(pin "2"
-			(uuid "c83e75eb-23ac-5573-9643-590e601b6ac6")
+			(uuid "dcd3c39c-a91e-5996-b87e-5726fc38adc8")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -9248,7 +9840,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "989632da-012c-51bc-9c7f-96629e21ac27")
+		(uuid "779df0b3-9fbf-55f5-b6a6-5a274281b730")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:GND")
@@ -9258,7 +9850,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "0280d666-d8ce-5126-8bc9-fa77ee667af4")
+		(uuid "36d1d081-1cad-58df-bf1b-0bae7da9aff1")
 		(property "Reference" "#PWR132"
 			(at 274.32 128.27 0)
 			(hide yes)
@@ -9295,7 +9887,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "a360ea9c-3b4e-5d5f-8c97-039a767ec23b")
+			(uuid "55bf1f4e-b4f5-5a8e-bb67-0ac83f294f1a")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -9314,7 +9906,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "3f94d4dd-1bc1-5958-92bf-93b0bb35b960")
+		(uuid "cc756646-2659-57a7-bbaa-f2ca04456201")
 		(property "Reference" "R112"
 			(at 287.02 121.92 0)
 			(effects
@@ -9350,10 +9942,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "92a13322-ba28-5a1c-9b3e-f912dd07aabd")
+			(uuid "b4c0f98b-bece-52d1-ae50-8cddd01006b1")
 		)
 		(pin "2"
-			(uuid "b5a799d4-cb80-52bd-a881-4de002e22106")
+			(uuid "5d146dcf-3f2f-51ad-b67b-f1d25cb3276c")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -9372,7 +9964,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "06af6de7-f458-5fca-b940-9c2a654ec1bf")
+		(uuid "5b991c94-5d9b-5373-b490-be059a920f3a")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:GND")
@@ -9382,7 +9974,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "54b59bcc-e2c9-5755-b811-8bbc7ee479dc")
+		(uuid "bd1d71a0-7c99-50c1-87c3-39449d3f5e7f")
 		(property "Reference" "#PWR133"
 			(at 287.02 128.27 0)
 			(hide yes)
@@ -9419,7 +10011,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "2bd861c5-1476-5de2-aed3-cc818a5940cd")
+			(uuid "104aedc7-7c5d-5437-8769-5fb6b9894d2f")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -9438,7 +10030,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "0d96aff0-22ac-594c-89c9-a502d1b93501")
+		(uuid "22bc9fdc-74ce-5b18-b23f-0e3c2c11fd89")
 		(property "Reference" "F101"
 			(at 274.32 96.52 0)
 			(effects
@@ -9474,10 +10066,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "6000234c-09b4-56ff-b871-b12e7b4e7974")
+			(uuid "577a67ab-bc94-5064-9494-6d273bc3a86b")
 		)
 		(pin "2"
-			(uuid "a036f5c2-5459-5cd1-8995-20346bb9f86d")
+			(uuid "aced14a0-d62a-5d02-be34-537878300328")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -9496,7 +10088,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "23a64e8b-004f-55e3-aad7-de956a6a1957")
+		(uuid "d3f218b9-bfb2-50c9-b31e-77d9f771ab2d")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:+5V")
@@ -9506,7 +10098,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "2cd65f2a-b6db-5489-8bab-e73d477fba47")
+		(uuid "d6cffaa7-1f92-5849-83c6-8b2e2c1f8794")
 		(property "Reference" "#PWR134"
 			(at 274.32 97.79 0)
 			(hide yes)
@@ -9543,7 +10135,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "6faf4295-fa91-5871-9c71-20e394868054")
+			(uuid "06e9caf1-719b-5177-8d6b-dacc0d4e7a60")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -9562,7 +10154,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c753a4e2-d412-51db-bed2-bea750a0ee47")
+		(uuid "abe5478b-959a-57eb-898a-d598317c5a13")
 		(property "Reference" "D103"
 			(at 294.64 91.44 0)
 			(effects
@@ -9598,10 +10190,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "1d5326cb-06cc-5e97-b914-9c3722ae96ca")
+			(uuid "9ed51d91-f99e-5b75-8d1c-4e0bc0849cd3")
 		)
 		(pin "2"
-			(uuid "4d0a51ba-cf00-5b4a-a9d7-1c52c5b8e3d1")
+			(uuid "8f791c2a-33c0-5da7-80bf-d40e15d176bf")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -9620,7 +10212,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "96e7fea9-d164-580e-9b43-20921ecf2c70")
+		(uuid "0e0a7db2-b71f-580a-a2c4-9b2ef4c6b421")
 		(property "Reference" "#PWR135"
 			(at 290.83 88.9 0)
 			(hide yes)
@@ -9657,7 +10249,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "8a71d33b-ca2f-5e3e-a022-58c7a8290f22")
+			(uuid "1e44fa83-bf42-59f1-87cb-7c65c3b5d628")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -9676,7 +10268,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "ff3fa4c6-8d63-5928-8cdd-cdea18e14f2c")
+		(uuid "a58246d0-7a6a-59bf-8214-967f13d509dc")
 		(property "Reference" "#PWR136"
 			(at 298.45 93.98 0)
 			(hide yes)
@@ -9713,7 +10305,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "62f711e3-0969-5208-87d6-821537c42c4c")
+			(uuid "9d121996-c873-58ab-8163-b2feb015da31")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -9732,7 +10324,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "2dd717e1-c086-5a67-a0c9-9f3791da2121")
+		(uuid "50cb3f9b-695e-5b0f-a68a-6cc7f58970a7")
 		(property "Reference" "C113"
 			(at 307.34 96.52 0)
 			(effects
@@ -9768,10 +10360,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "498a978c-5361-5e48-8264-48208ed96a37")
+			(uuid "a2101b6c-fb6e-556a-89f1-b61a46af8f17")
 		)
 		(pin "2"
-			(uuid "8b8ef1f5-5607-5c14-b732-cdbe55330bb8")
+			(uuid "20192f4f-7c53-5ccd-a4b0-c1beda1ea18f")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -9790,7 +10382,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "0191df3b-1f00-5799-b33e-fe93b11e1d6d")
+		(uuid "2de96480-a67c-5bf0-a8cf-78b3cfeb1493")
 		(property "Reference" "#PWR137"
 			(at 307.34 90.17 0)
 			(hide yes)
@@ -9827,7 +10419,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "8dc0ee9e-a4cc-5417-bef5-f34b09ab4a7b")
+			(uuid "e6a3ed14-35f6-539a-b2fe-7bdba186b728")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -9846,7 +10438,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "dd07c102-53d7-5e85-9b09-917bf4d1876c")
+		(uuid "b8b82342-232e-5845-a52a-cb97fd2d4984")
 		(property "Reference" "#PWR138"
 			(at 307.34 102.87 0)
 			(hide yes)
@@ -9883,7 +10475,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "c2bad272-a245-5f12-b1cd-965d74a18fc4")
+			(uuid "e60c33d6-45ea-5120-8f98-fc410aab6732")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -9902,7 +10494,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e80c4b7d-e92b-518a-9d3a-17c48b7cd219")
+		(uuid "884c2552-30f5-56df-95e8-f5f2048ce0c3")
 		(property "Reference" "J115"
 			(at 40.64 218.44 0)
 			(effects
@@ -9938,13 +10530,13 @@
 			)
 		)
 		(pin "S"
-			(uuid "9e72f180-0b1c-5160-9b2b-a93dfcf4d97b")
+			(uuid "d9e579fb-a856-51a3-a6a3-022e06d7c75b")
 		)
 		(pin "T"
-			(uuid "dcd3c39c-a91e-5996-b87e-5726fc38adc8")
+			(uuid "4a71a557-c473-5828-b7a8-5e01e32f5149")
 		)
 		(pin "TN"
-			(uuid "779df0b3-9fbf-55f5-b6a6-5a274281b730")
+			(uuid "38c77bbf-101e-5a67-9e7d-f412db026a40")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -9963,7 +10555,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "36d1d081-1cad-58df-bf1b-0bae7da9aff1")
+		(uuid "0d33ace8-44d7-5ff0-90fc-dfc1e267bb88")
 	)
 	(label "CRW_IN1_NORM"
 		(at 43.18 228.6 0)
@@ -9973,7 +10565,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "55bf1f4e-b4f5-5a8e-bb67-0ac83f294f1a")
+		(uuid "c5756db1-cd1e-54a9-a48b-3efb87215926")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:AGND")
@@ -9983,7 +10575,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "cc756646-2659-57a7-bbaa-f2ca04456201")
+		(uuid "6737767a-75b3-5e98-b2e5-19d0aecc33e4")
 		(property "Reference" "#PWR139"
 			(at 45.72 218.44 0)
 			(hide yes)
@@ -10020,7 +10612,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "b4c0f98b-bece-52d1-ae50-8cddd01006b1")
+			(uuid "36aaff05-08f6-5dd2-95e8-c4df8971706a")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -10039,7 +10631,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "5d146dcf-3f2f-51ad-b67b-f1d25cb3276c")
+		(uuid "f8c5b8d1-684b-5773-a59e-2c072edcb43a")
 		(property "Reference" "J116"
 			(at 78.74 218.44 0)
 			(effects
@@ -10075,13 +10667,13 @@
 			)
 		)
 		(pin "S"
-			(uuid "5b991c94-5d9b-5373-b490-be059a920f3a")
+			(uuid "46bc7ac5-c385-509e-9b2a-f6eb2f93a32d")
 		)
 		(pin "T"
-			(uuid "bd1d71a0-7c99-50c1-87c3-39449d3f5e7f")
+			(uuid "c0676447-4cb9-508a-a75e-b5718ac1f5be")
 		)
 		(pin "TN"
-			(uuid "104aedc7-7c5d-5437-8769-5fb6b9894d2f")
+			(uuid "99f86bf3-80f5-5b4e-9dbb-e58e33dffd76")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -10100,7 +10692,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "22bc9fdc-74ce-5b18-b23f-0e3c2c11fd89")
+		(uuid "3a2d0cc5-edda-5328-a1be-3b6ec00a3d89")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:AGND")
@@ -10110,7 +10702,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "577a67ab-bc94-5064-9494-6d273bc3a86b")
+		(uuid "19a82523-6220-579d-ae29-680eb2cc3b3b")
 		(property "Reference" "#PWR140"
 			(at 83.82 223.52 0)
 			(hide yes)
@@ -10147,7 +10739,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "aced14a0-d62a-5d02-be34-537878300328")
+			(uuid "19f0749c-65bb-5656-b664-f1e243433318")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -10166,7 +10758,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "d3f218b9-bfb2-50c9-b31e-77d9f771ab2d")
+		(uuid "a033be31-e7f5-5f91-8fd5-f1824c33fdd9")
 		(property "Reference" "#PWR141"
 			(at 83.82 218.44 0)
 			(hide yes)
@@ -10203,7 +10795,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "d6cffaa7-1f92-5849-83c6-8b2e2c1f8794")
+			(uuid "70210465-e825-58b0-b473-d7f0112943b2")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -10222,7 +10814,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "06e9caf1-719b-5177-8d6b-dacc0d4e7a60")
+		(uuid "fa5290e2-1b33-5f37-927c-192824c1d478")
 		(property "Reference" "J117"
 			(at 116.84 218.44 0)
 			(effects
@@ -10258,13 +10850,13 @@
 			)
 		)
 		(pin "S"
-			(uuid "abe5478b-959a-57eb-898a-d598317c5a13")
+			(uuid "1df76d0b-7a70-5869-a34d-eb7e764cf7c3")
 		)
 		(pin "T"
-			(uuid "9ed51d91-f99e-5b75-8d1c-4e0bc0849cd3")
+			(uuid "4f742a16-9df2-5eb2-a4f2-d001d3702d12")
 		)
 		(pin "TN"
-			(uuid "8f791c2a-33c0-5da7-80bf-d40e15d176bf")
+			(uuid "04b1c32a-5c07-52ff-a1b3-ca30a6c74f37")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -10283,11 +10875,11 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0e0a7db2-b71f-580a-a2c4-9b2ef4c6b421")
+		(uuid "ef84ca8f-19a3-515b-8eac-cfc2edafafff")
 	)
 	(no_connect
 		(at 119.38 228.6)
-		(uuid "1e44fa83-bf42-59f1-87cb-7c65c3b5d628")
+		(uuid "d2fdbd78-830d-5dbd-ab86-a3a1c2aa9ee1")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:AGND")
@@ -10297,7 +10889,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "a58246d0-7a6a-59bf-8214-967f13d509dc")
+		(uuid "7992ec50-9ef2-5b51-a550-4454b23d8cd3")
 		(property "Reference" "#PWR142"
 			(at 121.92 218.44 0)
 			(hide yes)
@@ -10334,7 +10926,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "9d121996-c873-58ab-8163-b2feb015da31")
+			(uuid "ffe29cef-60e8-5799-b5f9-66c7ebf090bd")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -10353,7 +10945,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "50cb3f9b-695e-5b0f-a68a-6cc7f58970a7")
+		(uuid "e5f03232-4813-52fb-86c5-abaf422516e6")
 		(property "Reference" "J118"
 			(at 154.94 218.44 0)
 			(effects
@@ -10389,13 +10981,13 @@
 			)
 		)
 		(pin "S"
-			(uuid "a2101b6c-fb6e-556a-89f1-b61a46af8f17")
+			(uuid "7c2585b2-a323-5ef8-9ca5-098972d15c7b")
 		)
 		(pin "T"
-			(uuid "20192f4f-7c53-5ccd-a4b0-c1beda1ea18f")
+			(uuid "d21d1d55-338c-54d5-9277-d5424a4cc7fa")
 		)
 		(pin "TN"
-			(uuid "2de96480-a67c-5bf0-a8cf-78b3cfeb1493")
+			(uuid "2ec91170-ad51-5953-a5ac-6cb7649a654b")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -10414,11 +11006,11 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e6a3ed14-35f6-539a-b2fe-7bdba186b728")
+		(uuid "bb23a039-72e3-5b87-a902-4604d508b25c")
 	)
 	(no_connect
 		(at 157.48 228.6)
-		(uuid "b8b82342-232e-5845-a52a-cb97fd2d4984")
+		(uuid "f821ff15-ab19-5c37-8b6a-aff90104af47")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:AGND")
@@ -10428,7 +11020,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "e60c33d6-45ea-5120-8f98-fc410aab6732")
+		(uuid "ceac467d-82d6-56c3-bec1-5573b054f248")
 		(property "Reference" "#PWR143"
 			(at 160.02 218.44 0)
 			(hide yes)
@@ -10465,7 +11057,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "884c2552-30f5-56df-95e8-f5f2048ce0c3")
+			(uuid "31efa3fd-e58b-59f0-9e4a-c9e580f70c0f")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -10484,7 +11076,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d9e579fb-a856-51a3-a6a3-022e06d7c75b")
+		(uuid "1744da7b-bff8-5571-ba00-8d5bd7c199f0")
 		(property "Reference" "J119"
 			(at 193.04 218.44 0)
 			(effects
@@ -10520,13 +11112,13 @@
 			)
 		)
 		(pin "S"
-			(uuid "4a71a557-c473-5828-b7a8-5e01e32f5149")
+			(uuid "b9a75746-b7d6-5a91-9294-c12d69cf39de")
 		)
 		(pin "T"
-			(uuid "38c77bbf-101e-5a67-9e7d-f412db026a40")
+			(uuid "14744b1c-8f63-5970-8770-fc530785d3f9")
 		)
 		(pin "TN"
-			(uuid "0d33ace8-44d7-5ff0-90fc-dfc1e267bb88")
+			(uuid "df1703a9-0e3e-53af-8216-e75beca1894c")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -10545,11 +11137,11 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c5756db1-cd1e-54a9-a48b-3efb87215926")
+		(uuid "32808643-7319-5bf5-90ff-ffa210270b5c")
 	)
 	(no_connect
 		(at 195.58 228.6)
-		(uuid "6737767a-75b3-5e98-b2e5-19d0aecc33e4")
+		(uuid "4315628a-083e-5e8e-8159-f0540fa95a1e")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:AGND")
@@ -10559,7 +11151,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "36aaff05-08f6-5dd2-95e8-c4df8971706a")
+		(uuid "a4e759c1-cb07-5736-85a2-45d980467eff")
 		(property "Reference" "#PWR144"
 			(at 198.12 218.44 0)
 			(hide yes)
@@ -10596,7 +11188,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "f8c5b8d1-684b-5773-a59e-2c072edcb43a")
+			(uuid "1d0bf73b-d09a-5e01-b45a-b72359f04346")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -10615,7 +11207,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "46bc7ac5-c385-509e-9b2a-f6eb2f93a32d")
+		(uuid "6b0ec9b5-3072-558f-a000-1bae4c5431f4")
 		(property "Reference" "J120"
 			(at 231.14 218.44 0)
 			(effects
@@ -10651,13 +11243,13 @@
 			)
 		)
 		(pin "S"
-			(uuid "c0676447-4cb9-508a-a75e-b5718ac1f5be")
+			(uuid "27df9f9d-307f-57a3-82fe-0da0282bddc8")
 		)
 		(pin "T"
-			(uuid "99f86bf3-80f5-5b4e-9dbb-e58e33dffd76")
+			(uuid "3930e9f8-f82d-5195-8c1c-fa946224a661")
 		)
 		(pin "TN"
-			(uuid "3a2d0cc5-edda-5328-a1be-3b6ec00a3d89")
+			(uuid "4a8a548a-c398-5ee1-a65e-fec757d45de4")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -10676,11 +11268,11 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "19a82523-6220-579d-ae29-680eb2cc3b3b")
+		(uuid "04dfb544-14f8-5309-92a8-3ce4c3aeb601")
 	)
 	(no_connect
 		(at 233.68 228.6)
-		(uuid "19f0749c-65bb-5656-b664-f1e243433318")
+		(uuid "4ea15a83-e281-5d3d-bd46-fe08e259204f")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:AGND")
@@ -10690,7 +11282,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "a033be31-e7f5-5f91-8fd5-f1824c33fdd9")
+		(uuid "28e44b80-0c8e-5a48-9448-482845aa9532")
 		(property "Reference" "#PWR145"
 			(at 236.22 218.44 0)
 			(hide yes)
@@ -10727,7 +11319,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "70210465-e825-58b0-b473-d7f0112943b2")
+			(uuid "51d35ee0-b102-57ff-8a77-be3ebaa00902")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -10746,7 +11338,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "fa5290e2-1b33-5f37-927c-192824c1d478")
+		(uuid "c759d470-d438-5613-b8e5-4ea65fd76a93")
 		(property "Reference" "J121"
 			(at 307.34 218.44 0)
 			(effects
@@ -10782,64 +11374,64 @@
 			)
 		)
 		(pin "1"
-			(uuid "1df76d0b-7a70-5869-a34d-eb7e764cf7c3")
+			(uuid "76a13815-e9c1-5903-9cc7-0a7f34a799e5")
 		)
 		(pin "2"
-			(uuid "4f742a16-9df2-5eb2-a4f2-d001d3702d12")
+			(uuid "bc81cfd8-e45a-5c8f-98da-f78462c70eeb")
 		)
 		(pin "3"
-			(uuid "04b1c32a-5c07-52ff-a1b3-ca30a6c74f37")
+			(uuid "66b32cb9-fd0d-5d41-8ba5-53ce45cb2565")
 		)
 		(pin "4"
-			(uuid "ef84ca8f-19a3-515b-8eac-cfc2edafafff")
+			(uuid "a613a845-2fb9-53a1-acfe-7a49455c203f")
 		)
 		(pin "5"
-			(uuid "d2fdbd78-830d-5dbd-ab86-a3a1c2aa9ee1")
+			(uuid "65435609-6770-535c-a4aa-0b2a924e3125")
 		)
 		(pin "6"
-			(uuid "7992ec50-9ef2-5b51-a550-4454b23d8cd3")
+			(uuid "a6feec75-f011-51d8-bdfd-25a9951b321b")
 		)
 		(pin "7"
-			(uuid "ffe29cef-60e8-5799-b5f9-66c7ebf090bd")
+			(uuid "c90ea803-bb5d-51b3-8526-3985c9d56266")
 		)
 		(pin "8"
-			(uuid "e5f03232-4813-52fb-86c5-abaf422516e6")
+			(uuid "748eb77c-123c-5b0c-8551-fabc724190cf")
 		)
 		(pin "9"
-			(uuid "7c2585b2-a323-5ef8-9ca5-098972d15c7b")
+			(uuid "3f25c4d3-1515-51c3-8a8b-f5086cf458eb")
 		)
 		(pin "10"
-			(uuid "d21d1d55-338c-54d5-9277-d5424a4cc7fa")
+			(uuid "5c1de4e7-39ce-54b7-b901-8513b5be5f51")
 		)
 		(pin "11"
-			(uuid "2ec91170-ad51-5953-a5ac-6cb7649a654b")
+			(uuid "71c31e67-6769-55ce-8e91-5e9787ca54ae")
 		)
 		(pin "12"
-			(uuid "bb23a039-72e3-5b87-a902-4604d508b25c")
+			(uuid "16167675-7809-5e6d-9ff4-d2922d01e8b1")
 		)
 		(pin "13"
-			(uuid "f821ff15-ab19-5c37-8b6a-aff90104af47")
+			(uuid "63cbca72-cb12-588a-b19c-eb6e6f272dc3")
 		)
 		(pin "14"
-			(uuid "ceac467d-82d6-56c3-bec1-5573b054f248")
+			(uuid "cf125b2d-2b16-5cc5-8dc1-be93dbe3e469")
 		)
 		(pin "15"
-			(uuid "31efa3fd-e58b-59f0-9e4a-c9e580f70c0f")
+			(uuid "daa2725b-f748-5222-9df7-ac60a2cf82f2")
 		)
 		(pin "16"
-			(uuid "1744da7b-bff8-5571-ba00-8d5bd7c199f0")
+			(uuid "4c1ae3e2-0ee1-5bcf-a979-59d283eff900")
 		)
 		(pin "17"
-			(uuid "b9a75746-b7d6-5a91-9294-c12d69cf39de")
+			(uuid "c723536f-cddc-52ca-a6b5-91f8eb5e7164")
 		)
 		(pin "18"
-			(uuid "14744b1c-8f63-5970-8770-fc530785d3f9")
+			(uuid "d5d3477a-52b4-5226-87a8-0fd0bf67d01a")
 		)
 		(pin "19"
-			(uuid "df1703a9-0e3e-53af-8216-e75beca1894c")
+			(uuid "93dbe86e-d01a-52d6-b055-bbc1276f75e9")
 		)
 		(pin "20"
-			(uuid "32808643-7319-5bf5-90ff-ffa210270b5c")
+			(uuid "cc0a3031-1023-51b8-a358-af390a1a88e8")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -10858,7 +11450,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "4315628a-083e-5e8e-8159-f0540fa95a1e")
+		(uuid "9bf2bfa9-b48d-557d-a4c6-14bcc3ec5be8")
 		(property "Reference" "#PWR146"
 			(at 302.26 208.28 0)
 			(hide yes)
@@ -10895,7 +11487,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "a4e759c1-cb07-5736-85a2-45d980467eff")
+			(uuid "5232a9a5-4c5f-57b5-b73b-b3bb90daf8d9")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -10914,7 +11506,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "1d0bf73b-d09a-5e01-b45a-b72359f04346")
+		(uuid "eacb6d68-0ed1-57cd-bde7-d81ceaadc5dc")
 		(property "Reference" "#PWR147"
 			(at 314.96 208.28 0)
 			(hide yes)
@@ -10951,7 +11543,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "6b0ec9b5-3072-558f-a000-1bae4c5431f4")
+			(uuid "df5c6887-2f4a-5b0e-8095-0bded67d2fef")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -10970,7 +11562,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "27df9f9d-307f-57a3-82fe-0da0282bddc8")
+		(uuid "480b9b60-98d7-5c17-b0c4-1723d7fd6aae")
 		(property "Reference" "#PWR148"
 			(at 302.26 213.36 0)
 			(hide yes)
@@ -11007,7 +11599,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "3930e9f8-f82d-5195-8c1c-fa946224a661")
+			(uuid "fbaaa54e-99a9-5c22-853f-56be8ee3bfa0")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -11026,7 +11618,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "4a8a548a-c398-5ee1-a65e-fec757d45de4")
+		(uuid "cc02f4e4-67f2-55c9-935e-c9765647a454")
 		(property "Reference" "#PWR149"
 			(at 314.96 213.36 0)
 			(hide yes)
@@ -11063,7 +11655,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "04dfb544-14f8-5309-92a8-3ce4c3aeb601")
+			(uuid "607c9f1b-fddc-5901-b93e-3b4aa2269c15")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -11082,7 +11674,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4ea15a83-e281-5d3d-bd46-fe08e259204f")
+		(uuid "59590265-50c3-59bd-acb9-d2df8cbe1ac8")
 	)
 	(label "CRW_IN1_NORM"
 		(at 312.42 220.98 0)
@@ -11092,7 +11684,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "28e44b80-0c8e-5a48-9448-482845aa9532")
+		(uuid "bf2fe164-19c0-5976-ac1f-5892f3604181")
 	)
 	(label "CRW_IN2"
 		(at 299.72 223.52 0)
@@ -11102,7 +11694,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "51d35ee0-b102-57ff-8a77-be3ebaa00902")
+		(uuid "14bd6692-66f6-53ba-971f-9e0db669bfdc")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:AGND")
@@ -11112,7 +11704,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "c759d470-d438-5613-b8e5-4ea65fd76a93")
+		(uuid "ec299a8a-46a2-56c4-b4e2-1e8354d84ea8")
 		(property "Reference" "#PWR150"
 			(at 314.96 218.44 0)
 			(hide yes)
@@ -11149,7 +11741,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "76a13815-e9c1-5903-9cc7-0a7f34a799e5")
+			(uuid "df5d561b-c7a9-5531-a8df-646b17d0fefe")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -11168,7 +11760,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "bc81cfd8-e45a-5c8f-98da-f78462c70eeb")
+		(uuid "fc01a83f-0112-5a9c-a43d-64e43ffe7a9e")
 	)
 	(label "CRW_OUT2"
 		(at 312.42 226.06 0)
@@ -11178,7 +11770,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "66b32cb9-fd0d-5d41-8ba5-53ce45cb2565")
+		(uuid "dbaf0814-0760-5ec0-bd36-fe1583af598a")
 	)
 	(label "CRW_OUT3"
 		(at 299.72 228.6 0)
@@ -11188,7 +11780,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a613a845-2fb9-53a1-acfe-7a49455c203f")
+		(uuid "ea5293bd-01b2-5db5-bcfe-0084e61a46ba")
 	)
 	(label "CRW_OUT4"
 		(at 312.42 228.6 0)
@@ -11198,7 +11790,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "65435609-6770-535c-a4aa-0b2a924e3125")
+		(uuid "b9c209d9-6eed-5a3a-a595-d40d0e2abf03")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:AGND")
@@ -11208,7 +11800,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "a6feec75-f011-51d8-bdfd-25a9951b321b")
+		(uuid "72406334-e5ea-5812-8443-db2f8ced1748")
 		(property "Reference" "#PWR151"
 			(at 302.26 226.06 0)
 			(hide yes)
@@ -11245,7 +11837,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "c90ea803-bb5d-51b3-8526-3985c9d56266")
+			(uuid "3d715556-6e96-5b39-ac1a-925348aa21c6")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -11264,7 +11856,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "748eb77c-123c-5b0c-8551-fabc724190cf")
+		(uuid "d3e27f19-ad8e-5f49-837c-c352eb8e06af")
 		(property "Reference" "#PWR152"
 			(at 314.96 226.06 0)
 			(hide yes)
@@ -11301,7 +11893,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "3f25c4d3-1515-51c3-8a8b-f5086cf458eb")
+			(uuid "c68ac81b-1db3-5fc0-8d1f-5da2ffe8eead")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -11320,7 +11912,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5c1de4e7-39ce-54b7-b901-8513b5be5f51")
+		(uuid "823ff0f2-aac2-5361-817d-b28f0e89bf5a")
 	)
 	(label "CRW_USB_DM"
 		(at 312.42 233.68 0)
@@ -11330,7 +11922,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "71c31e67-6769-55ce-8e91-5e9787ca54ae")
+		(uuid "5e5fde61-d98e-540f-bc23-2cc8ee3d9cd3")
 	)
 	(label "CRW_USB_VBUS"
 		(at 299.72 236.22 0)
@@ -11340,7 +11932,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "16167675-7809-5e6d-9ff4-d2922d01e8b1")
+		(uuid "a03d3675-487a-562c-959f-68c2faa6878c")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:AGND")
@@ -11350,7 +11942,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "63cbca72-cb12-588a-b19c-eb6e6f272dc3")
+		(uuid "9998e6d8-bbd0-51ae-bd13-9a762ab654c2")
 		(property "Reference" "#PWR153"
 			(at 314.96 231.14 0)
 			(hide yes)
@@ -11387,7 +11979,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "cf125b2d-2b16-5cc5-8dc1-be93dbe3e469")
+			(uuid "778987d0-7721-508c-9456-41a831300ef6")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -11406,7 +11998,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "daa2725b-f748-5222-9df7-ac60a2cf82f2")
+		(uuid "ec1d188d-2037-5a2c-bcef-af22d7d40542")
 	)
 	(label "II_SDA"
 		(at 312.42 238.76 0)
@@ -11416,7 +12008,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4c1ae3e2-0ee1-5bcf-a979-59d283eff900")
+		(uuid "d3120526-0b7f-5ca6-a50a-30e225323650")
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
@@ -11426,7 +12018,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c723536f-cddc-52ca-a6b5-91f8eb5e7164")
+		(uuid "772c619a-4946-5a88-b6a5-5658569e15f7")
 		(property "Reference" "J122"
 			(at 358.14 208.28 0)
 			(effects
@@ -11462,13 +12054,13 @@
 			)
 		)
 		(pin "1"
-			(uuid "d5d3477a-52b4-5226-87a8-0fd0bf67d01a")
+			(uuid "a193a8a7-2860-57a3-8fe2-7636ebe946d3")
 		)
 		(pin "2"
-			(uuid "93dbe86e-d01a-52d6-b055-bbc1276f75e9")
+			(uuid "38b70325-317d-5bd5-9773-3caad20933fd")
 		)
 		(pin "3"
-			(uuid "cc0a3031-1023-51b8-a358-af390a1a88e8")
+			(uuid "ee55adef-f34b-5984-99f5-c7730a1c4aab")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -11487,7 +12079,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "9bf2bfa9-b48d-557d-a4c6-14bcc3ec5be8")
+		(uuid "0752f368-ae95-5384-aff1-b33b09b23cae")
 		(property "Reference" "#PWR154"
 			(at 353.06 208.28 0)
 			(hide yes)
@@ -11524,7 +12116,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "5232a9a5-4c5f-57b5-b73b-b3bb90daf8d9")
+			(uuid "3a156c7a-3e30-5cc6-863a-55e2b36856b9")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -11543,7 +12135,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "eacb6d68-0ed1-57cd-bde7-d81ceaadc5dc")
+		(uuid "77697bc3-b704-5e19-bb2b-4e753a189fce")
 	)
 	(label "II_SDA"
 		(at 350.52 218.44 0)
@@ -11553,7 +12145,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "df5c6887-2f4a-5b0e-8095-0bded67d2fef")
+		(uuid "277b294c-d37b-5f25-8401-d49e223e1589")
 	)
 	(symbol
 		(lib_id "Connector:USB_A")
@@ -11563,7 +12155,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "480b9b60-98d7-5c17-b0c4-1723d7fd6aae")
+		(uuid "74837636-c757-5476-965a-98659904ca95")
 		(property "Reference" "J109"
 			(at 53.34 175.26 0)
 			(effects
@@ -11599,19 +12191,19 @@
 			)
 		)
 		(pin "1"
-			(uuid "fbaaa54e-99a9-5c22-853f-56be8ee3bfa0")
+			(uuid "e8e8a0b6-2338-57ff-8ea9-16ab4784b2c1")
 		)
 		(pin "2"
-			(uuid "cc02f4e4-67f2-55c9-935e-c9765647a454")
+			(uuid "6f0df56a-d636-5516-a449-b533975d6beb")
 		)
 		(pin "3"
-			(uuid "607c9f1b-fddc-5901-b93e-3b4aa2269c15")
+			(uuid "5a8d2869-7dad-5049-bd3e-c2b88ca53628")
 		)
 		(pin "4"
-			(uuid "59590265-50c3-59bd-acb9-d2df8cbe1ac8")
+			(uuid "e7c2f301-785e-5f09-b2ae-030d1b7b7274")
 		)
 		(pin "SH"
-			(uuid "bf2fe164-19c0-5976-ac1f-5892f3604181")
+			(uuid "b25fd331-d7d8-5210-9292-e0cca9ffbec7")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -11630,7 +12222,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "14bd6692-66f6-53ba-971f-9e0db669bfdc")
+		(uuid "8e184613-e20b-54a9-bc85-3eda0f308f68")
 	)
 	(label "USB1_DM"
 		(at 58.42 185.42 0)
@@ -11640,7 +12232,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ec299a8a-46a2-56c4-b4e2-1e8354d84ea8")
+		(uuid "23f726f4-9a50-5809-8ebe-3d0127c6e1e1")
 	)
 	(label "USB1_DP"
 		(at 58.42 182.88 0)
@@ -11650,7 +12242,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "df5d561b-c7a9-5531-a8df-646b17d0fefe")
+		(uuid "972b2b9a-7f19-5aeb-8a34-32a6d63fb3e5")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:GND")
@@ -11660,7 +12252,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "fc01a83f-0112-5a9c-a43d-64e43ffe7a9e")
+		(uuid "1ed260a5-93f1-5873-a5e7-ea2fae635e4c")
 		(property "Reference" "#PWR155"
 			(at 53.34 187.96 0)
 			(hide yes)
@@ -11697,7 +12289,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "dbaf0814-0760-5ec0-bd36-fe1583af598a")
+			(uuid "bd2ea06b-aa0a-5662-8660-281bf7976942")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -11716,7 +12308,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "ea5293bd-01b2-5db5-bcfe-0084e61a46ba")
+		(uuid "22df8c81-1e8b-508d-9518-2f10c5113166")
 		(property "Reference" "#PWR156"
 			(at 50.8 187.96 0)
 			(hide yes)
@@ -11753,7 +12345,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "b9c209d9-6eed-5a3a-a595-d40d0e2abf03")
+			(uuid "d51c089b-1aeb-54ea-b895-eb42599b9a38")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -11772,7 +12364,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "72406334-e5ea-5812-8443-db2f8ced1748")
+		(uuid "c0d44fc3-6df8-5031-88bb-697555c176d1")
 		(property "Reference" "J110"
 			(at 129.54 175.26 0)
 			(effects
@@ -11808,19 +12400,19 @@
 			)
 		)
 		(pin "1"
-			(uuid "3d715556-6e96-5b39-ac1a-925348aa21c6")
+			(uuid "23f93c4a-ad7a-5cb7-8155-f3f2ec5dc705")
 		)
 		(pin "2"
-			(uuid "d3e27f19-ad8e-5f49-837c-c352eb8e06af")
+			(uuid "66ca293f-12ec-577c-bf81-c5e74aa98b6e")
 		)
 		(pin "3"
-			(uuid "c68ac81b-1db3-5fc0-8d1f-5da2ffe8eead")
+			(uuid "3d4faaf3-fdc0-58d8-bba0-0d5c1d9e466f")
 		)
 		(pin "4"
-			(uuid "823ff0f2-aac2-5361-817d-b28f0e89bf5a")
+			(uuid "e501d957-28b9-568d-bf68-a4d23171a034")
 		)
 		(pin "SH"
-			(uuid "5e5fde61-d98e-540f-bc23-2cc8ee3d9cd3")
+			(uuid "0edb7b8e-0c9f-524e-a21d-936590342fcf")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -11839,7 +12431,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a03d3675-487a-562c-959f-68c2faa6878c")
+		(uuid "8970decb-2962-5a00-bd5f-969357e84a63")
 	)
 	(label "USB2_DM"
 		(at 134.62 185.42 0)
@@ -11849,7 +12441,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "9998e6d8-bbd0-51ae-bd13-9a762ab654c2")
+		(uuid "85f0851f-9042-5a82-87d2-cfb9bec83a83")
 	)
 	(label "USB2_DP"
 		(at 134.62 182.88 0)
@@ -11859,7 +12451,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "778987d0-7721-508c-9456-41a831300ef6")
+		(uuid "acc99ea5-9c6d-5245-bb86-a9c9a588bbca")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:GND")
@@ -11869,7 +12461,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "ec1d188d-2037-5a2c-bcef-af22d7d40542")
+		(uuid "8ad05a45-4575-5662-9779-f9eccc465f8f")
 		(property "Reference" "#PWR157"
 			(at 129.54 187.96 0)
 			(hide yes)
@@ -11906,7 +12498,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "d3120526-0b7f-5ca6-a50a-30e225323650")
+			(uuid "6ae811b2-225e-557f-b256-50cf4f0b6723")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -11925,7 +12517,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "772c619a-4946-5a88-b6a5-5658569e15f7")
+		(uuid "5b473e2a-981b-51f4-8a17-465606d8c6d3")
 		(property "Reference" "#PWR158"
 			(at 127 187.96 0)
 			(hide yes)
@@ -11962,7 +12554,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "a193a8a7-2860-57a3-8fe2-7636ebe946d3")
+			(uuid "577be8ed-dc1d-53f4-b196-d1e0c3c6776e")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -11981,7 +12573,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "38b70325-317d-5bd5-9773-3caad20933fd")
+		(uuid "5e394835-90ba-5a78-89e5-066b6724bfae")
 		(property "Reference" "J111"
 			(at 205.74 175.26 0)
 			(effects
@@ -12017,19 +12609,19 @@
 			)
 		)
 		(pin "1"
-			(uuid "ee55adef-f34b-5984-99f5-c7730a1c4aab")
+			(uuid "34a2e0a8-533a-51ae-b351-cf9829605f40")
 		)
 		(pin "2"
-			(uuid "0752f368-ae95-5384-aff1-b33b09b23cae")
+			(uuid "0170f374-6b36-53f2-8a9c-0d87d0273106")
 		)
 		(pin "3"
-			(uuid "3a156c7a-3e30-5cc6-863a-55e2b36856b9")
+			(uuid "5597d035-b4f8-5755-84c8-e5f835c65128")
 		)
 		(pin "4"
-			(uuid "77697bc3-b704-5e19-bb2b-4e753a189fce")
+			(uuid "fb023bfb-9064-5b23-83ef-ebc5efdd34ce")
 		)
 		(pin "SH"
-			(uuid "277b294c-d37b-5f25-8401-d49e223e1589")
+			(uuid "1e2b68d8-1fc4-54ff-9beb-d5eeec0803b1")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -12048,7 +12640,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "74837636-c757-5476-965a-98659904ca95")
+		(uuid "29ec74ac-f535-53e1-9891-55768a87dcd7")
 	)
 	(label "USB3_DM"
 		(at 210.82 185.42 0)
@@ -12058,7 +12650,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e8e8a0b6-2338-57ff-8ea9-16ab4784b2c1")
+		(uuid "2fa51ef8-4e71-5544-8859-2d20947f2a15")
 	)
 	(label "USB3_DP"
 		(at 210.82 182.88 0)
@@ -12068,7 +12660,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "6f0df56a-d636-5516-a449-b533975d6beb")
+		(uuid "f9e34ae5-5b1d-5ef2-b7b4-632afd60bbfa")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:GND")
@@ -12078,7 +12670,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "5a8d2869-7dad-5049-bd3e-c2b88ca53628")
+		(uuid "1f5b7c5e-d8a2-5a3b-a985-d82abc928c70")
 		(property "Reference" "#PWR159"
 			(at 205.74 187.96 0)
 			(hide yes)
@@ -12115,7 +12707,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "e7c2f301-785e-5f09-b2ae-030d1b7b7274")
+			(uuid "84d7b479-9355-5533-9c99-33022da36e12")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -12134,7 +12726,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "b25fd331-d7d8-5210-9292-e0cca9ffbec7")
+		(uuid "d5ddebf3-f172-5c0f-b84f-e99e3cfd639d")
 		(property "Reference" "#PWR160"
 			(at 203.2 187.96 0)
 			(hide yes)
@@ -12171,7 +12763,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "8e184613-e20b-54a9-bc85-3eda0f308f68")
+			(uuid "59ef1ee9-92d9-5464-baac-0ed8c6774e19")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -12190,7 +12782,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "23f726f4-9a50-5809-8ebe-3d0127c6e1e1")
+		(uuid "bbd916a7-0b13-5f95-b3bb-6e73f2d6de0c")
 		(property "Reference" "J112"
 			(at 91.44 241.3 0)
 			(effects
@@ -12226,34 +12818,34 @@
 			)
 		)
 		(pin "1"
-			(uuid "972b2b9a-7f19-5aeb-8a34-32a6d63fb3e5")
+			(uuid "10bf681a-7148-52f5-bd84-41c2e788feae")
 		)
 		(pin "2"
-			(uuid "1ed260a5-93f1-5873-a5e7-ea2fae635e4c")
+			(uuid "9074fdc1-3be9-5cfe-852e-2e4e5d24cede")
 		)
 		(pin "3"
-			(uuid "bd2ea06b-aa0a-5662-8660-281bf7976942")
+			(uuid "a0ec29d1-b882-52ad-b2b7-1699fd2edb83")
 		)
 		(pin "4"
-			(uuid "22df8c81-1e8b-508d-9518-2f10c5113166")
+			(uuid "7295e1d3-35d9-575d-8a46-d8ce7e687d74")
 		)
 		(pin "5"
-			(uuid "d51c089b-1aeb-54ea-b895-eb42599b9a38")
+			(uuid "bae1790b-d385-50eb-bd5e-7a36bee682b3")
 		)
 		(pin "6"
-			(uuid "c0d44fc3-6df8-5031-88bb-697555c176d1")
+			(uuid "bbe5947a-a69a-592e-902b-bcd3216939d1")
 		)
 		(pin "7"
-			(uuid "23f93c4a-ad7a-5cb7-8155-f3f2ec5dc705")
+			(uuid "b39ce18a-ccb7-59d1-8d04-5e45670e5f20")
 		)
 		(pin "8"
-			(uuid "66ca293f-12ec-577c-bf81-c5e74aa98b6e")
+			(uuid "1095cae4-b98b-5b0d-8f0f-2b6b55a1278b")
 		)
 		(pin "9"
-			(uuid "3d4faaf3-fdc0-58d8-bba0-0d5c1d9e466f")
+			(uuid "fac0d82d-a4bf-5b49-a131-14e3f7dfcc5c")
 		)
 		(pin "10"
-			(uuid "e501d957-28b9-568d-bf68-a4d23171a034")
+			(uuid "463f9797-babd-545a-bc47-6112d2c75a29")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -12272,7 +12864,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0edb7b8e-0c9f-524e-a21d-936590342fcf")
+		(uuid "869ff4ce-7d4f-5216-b91a-57d027d9beea")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:GND")
@@ -12282,7 +12874,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "8970decb-2962-5a00-bd5f-969357e84a63")
+		(uuid "73b24b16-a1a9-51b2-ac2e-f1bbf7b6ce54")
 		(property "Reference" "#PWR161"
 			(at 99.06 238.76 0)
 			(hide yes)
@@ -12319,7 +12911,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "85f0851f-9042-5a82-87d2-cfb9bec83a83")
+			(uuid "3a3c25df-0a0a-529b-ade8-fbf461cfee6e")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -12338,7 +12930,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "acc99ea5-9c6d-5245-bb86-a9c9a588bbca")
+		(uuid "3dd799c2-b516-5d6c-a451-e1729c7a1ebc")
 	)
 	(label "USB1_DP"
 		(at 96.52 246.38 0)
@@ -12348,7 +12940,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "8ad05a45-4575-5662-9779-f9eccc465f8f")
+		(uuid "2fda8da6-0db9-5454-b778-b064c54d96f5")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:GND")
@@ -12358,7 +12950,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "6ae811b2-225e-557f-b256-50cf4f0b6723")
+		(uuid "3e6e49af-9032-57fd-acdf-b1fc43c93db7")
 		(property "Reference" "#PWR162"
 			(at 86.36 243.84 0)
 			(hide yes)
@@ -12395,7 +12987,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "5b473e2a-981b-51f4-8a17-465606d8c6d3")
+			(uuid "8fe811bf-b8fb-568d-810c-8ce91fd4c48c")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -12414,7 +13006,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "577be8ed-dc1d-53f4-b196-d1e0c3c6776e")
+		(uuid "2b0f9d73-ee1d-5fab-8091-7f678bf1045f")
 		(property "Reference" "#PWR163"
 			(at 99.06 243.84 0)
 			(hide yes)
@@ -12451,7 +13043,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "5e394835-90ba-5a78-89e5-066b6724bfae")
+			(uuid "54d9b751-e5ed-5718-b19a-c2ef5d3e7265")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -12470,7 +13062,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "34a2e0a8-533a-51ae-b351-cf9829605f40")
+		(uuid "0ece32ad-9bcb-5c65-97f1-c9eddacb2158")
 	)
 	(label "USB2_DP"
 		(at 96.52 251.46 0)
@@ -12480,7 +13072,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0170f374-6b36-53f2-8a9c-0d87d0273106")
+		(uuid "cc2fde3b-8ce2-5117-8b16-4213a400b506")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:GND")
@@ -12490,7 +13082,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "5597d035-b4f8-5755-84c8-e5f835c65128")
+		(uuid "514ea2d5-3458-523c-bfc6-1cc2819e469b")
 		(property "Reference" "#PWR164"
 			(at 86.36 248.92 0)
 			(hide yes)
@@ -12527,7 +13119,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "fb023bfb-9064-5b23-83ef-ebc5efdd34ce")
+			(uuid "5bfc5786-d4b5-5955-a8ad-762d6b87eeb7")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -12546,7 +13138,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1e2b68d8-1fc4-54ff-9beb-d5eeec0803b1")
+		(uuid "2e5b73fb-5c14-54d2-82a6-1210b0b43a44")
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_02x05_Odd_Even")
@@ -12556,7 +13148,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "29ec74ac-f535-53e1-9891-55768a87dcd7")
+		(uuid "aee3f824-9d23-53dc-bbc1-adef4c832343")
 		(property "Reference" "J113"
 			(at 167.64 241.3 0)
 			(effects
@@ -12592,34 +13184,34 @@
 			)
 		)
 		(pin "1"
-			(uuid "2fa51ef8-4e71-5544-8859-2d20947f2a15")
+			(uuid "355516e3-d655-5c72-875c-9c17fed52094")
 		)
 		(pin "2"
-			(uuid "f9e34ae5-5b1d-5ef2-b7b4-632afd60bbfa")
+			(uuid "4dfff968-7ba1-5a1d-8b93-c2858fde8607")
 		)
 		(pin "3"
-			(uuid "1f5b7c5e-d8a2-5a3b-a985-d82abc928c70")
+			(uuid "f2ce3fb5-2ee9-51d7-a2f7-3c4da6bb582f")
 		)
 		(pin "4"
-			(uuid "84d7b479-9355-5533-9c99-33022da36e12")
+			(uuid "bba6500c-1c3a-5e0c-bf20-470849815015")
 		)
 		(pin "5"
-			(uuid "d5ddebf3-f172-5c0f-b84f-e99e3cfd639d")
+			(uuid "c9652631-1c42-57a0-9dc7-d7f660507e1c")
 		)
 		(pin "6"
-			(uuid "59ef1ee9-92d9-5464-baac-0ed8c6774e19")
+			(uuid "425a8a94-9f94-57f9-bfd9-4584f2928825")
 		)
 		(pin "7"
-			(uuid "bbd916a7-0b13-5f95-b3bb-6e73f2d6de0c")
+			(uuid "0b7a08b4-f4d4-5216-8c03-a72d91be9598")
 		)
 		(pin "8"
-			(uuid "10bf681a-7148-52f5-bd84-41c2e788feae")
+			(uuid "58826d3d-44df-544e-bb64-451c38bbf62a")
 		)
 		(pin "9"
-			(uuid "9074fdc1-3be9-5cfe-852e-2e4e5d24cede")
+			(uuid "e1d0ea7f-ff58-5dde-aaeb-dabdc21038aa")
 		)
 		(pin "10"
-			(uuid "a0ec29d1-b882-52ad-b2b7-1699fd2edb83")
+			(uuid "af365317-e9fd-500f-aef3-d5695fffea10")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -12638,7 +13230,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "7295e1d3-35d9-575d-8a46-d8ce7e687d74")
+		(uuid "294c166f-6208-5fb1-94b3-84a48f547387")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:GND")
@@ -12648,7 +13240,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "bae1790b-d385-50eb-bd5e-7a36bee682b3")
+		(uuid "6bb8f87d-225e-51d8-abff-402988f834d8")
 		(property "Reference" "#PWR165"
 			(at 175.26 238.76 0)
 			(hide yes)
@@ -12685,7 +13277,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "bbe5947a-a69a-592e-902b-bcd3216939d1")
+			(uuid "a6adb772-395c-54f3-85ee-b6b3e02ada51")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -12704,7 +13296,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b39ce18a-ccb7-59d1-8d04-5e45670e5f20")
+		(uuid "958962d2-ab41-5d63-b8f3-d879ace6c665")
 	)
 	(label "USB3_DP"
 		(at 172.72 246.38 0)
@@ -12714,7 +13306,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1095cae4-b98b-5b0d-8f0f-2b6b55a1278b")
+		(uuid "6e3862bc-178a-5332-9837-0f231fa15508")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:GND")
@@ -12724,7 +13316,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "fac0d82d-a4bf-5b49-a131-14e3f7dfcc5c")
+		(uuid "3c55bb93-af4d-5491-8b8d-681ba5021d9c")
 		(property "Reference" "#PWR166"
 			(at 162.56 243.84 0)
 			(hide yes)
@@ -12761,7 +13353,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "463f9797-babd-545a-bc47-6112d2c75a29")
+			(uuid "4b510702-f550-5075-ba71-2521cc379907")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -12780,7 +13372,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "869ff4ce-7d4f-5216-b91a-57d027d9beea")
+		(uuid "70d08b1e-e563-5850-b8d5-c4ea6cfa1c8f")
 		(property "Reference" "#PWR167"
 			(at 175.26 243.84 0)
 			(hide yes)
@@ -12817,7 +13409,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "73b24b16-a1a9-51b2-ac2e-f1bbf7b6ce54")
+			(uuid "9f8c7ed9-2b9b-59e9-8000-cfbe84731140")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -12836,7 +13428,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3a3c25df-0a0a-529b-ade8-fbf461cfee6e")
+		(uuid "78f27661-13a5-530d-8465-d915d0683dbd")
 	)
 	(label "CRW_USB_DP"
 		(at 172.72 251.46 0)
@@ -12846,7 +13438,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3dd799c2-b516-5d6c-a451-e1729c7a1ebc")
+		(uuid "6c6e6463-3d48-5d09-ab7c-b82a7987286f")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:GND")
@@ -12856,7 +13448,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "2fda8da6-0db9-5454-b778-b064c54d96f5")
+		(uuid "ed33b33b-106d-5381-8532-ed3414b13d3f")
 		(property "Reference" "#PWR168"
 			(at 162.56 248.92 0)
 			(hide yes)
@@ -12893,7 +13485,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "3e6e49af-9032-57fd-acdf-b1fc43c93db7")
+			(uuid "a3b7b3a1-500e-5f5d-b383-0bf01216af99")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -12912,7 +13504,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "8fe811bf-b8fb-568d-810c-8ce91fd4c48c")
+		(uuid "009497c6-b3bd-50d9-a8fd-17bd43c077af")
 	)
 	(symbol
 		(lib_id "power:+12V")
@@ -12922,7 +13514,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "2b0f9d73-ee1d-5fab-8091-7f678bf1045f")
+		(uuid "941e6366-b6bf-5f9e-bf6d-1c139281399d")
 		(property "Reference" "#PWR169"
 			(at 27.94 12.7 0)
 			(hide yes)
@@ -12959,7 +13551,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "54d9b751-e5ed-5718-b19a-c2ef5d3e7265")
+			(uuid "12c066c0-8681-500d-9671-96b9c96b63a6")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -12978,7 +13570,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "0ece32ad-9bcb-5c65-97f1-c9eddacb2158")
+		(uuid "108230ef-0cd8-5355-8f42-b46e7e471279")
 		(property "Reference" "#FLG101"
 			(at 27.94 12.7 0)
 			(hide yes)
@@ -13016,7 +13608,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "cc2fde3b-8ce2-5117-8b16-4213a400b506")
+			(uuid "77575a7e-f054-5200-8fc9-a662f081315d")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -13035,7 +13627,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "514ea2d5-3458-523c-bfc6-1cc2819e469b")
+		(uuid "85eb466d-a29b-5adb-8348-f2018a959b2b")
 		(property "Reference" "#PWR170"
 			(at 43.18 12.7 0)
 			(hide yes)
@@ -13072,7 +13664,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "5bfc5786-d4b5-5955-a8ad-762d6b87eeb7")
+			(uuid "b99ba1f6-72da-566b-bd7b-5d65583b83b2")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -13091,7 +13683,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "2e5b73fb-5c14-54d2-82a6-1210b0b43a44")
+		(uuid "3abd08d2-b8ae-5334-a530-8cc24af9d074")
 		(property "Reference" "#FLG102"
 			(at 43.18 12.7 0)
 			(hide yes)
@@ -13129,7 +13721,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "aee3f824-9d23-53dc-bbc1-adef4c832343")
+			(uuid "a4622942-c6a0-51f0-ad9b-502381ccd6b9")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -13148,7 +13740,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "355516e3-d655-5c72-875c-9c17fed52094")
+		(uuid "5e41cbf0-d519-5da8-81b3-6f9dee41b1f9")
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -13158,7 +13750,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "4dfff968-7ba1-5a1d-8b93-c2858fde8607")
+		(uuid "ea4c8fb1-3aac-57e8-8365-f5e461340695")
 		(property "Reference" "#FLG103"
 			(at 58.42 12.7 0)
 			(hide yes)
@@ -13196,7 +13788,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "f2ce3fb5-2ee9-51d7-a2f7-3c4da6bb582f")
+			(uuid "59b169d3-5924-5e1a-a9ab-5621d282cacd")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -13215,7 +13807,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "bba6500c-1c3a-5e0c-bf20-470849815015")
+		(uuid "041f5a94-7f13-5a77-8a61-3c57ca0ca6fa")
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -13225,7 +13817,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "c9652631-1c42-57a0-9dc7-d7f660507e1c")
+		(uuid "cb5e0217-e6eb-5000-8dd3-ff25bbcf2e46")
 		(property "Reference" "#FLG104"
 			(at 73.66 12.7 0)
 			(hide yes)
@@ -13263,7 +13855,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "425a8a94-9f94-57f9-bfd9-4584f2928825")
+			(uuid "e86373b3-b692-5074-9b7f-c298dbad3bb3")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -13282,7 +13874,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0b7a08b4-f4d4-5216-8c03-a72d91be9598")
+		(uuid "fdfaf632-2d84-5fb8-99fc-ec185aa4566c")
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -13292,7 +13884,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "58826d3d-44df-544e-bb64-451c38bbf62a")
+		(uuid "6dbbbb99-9d9f-5602-86e8-d8f6ff19821e")
 		(property "Reference" "#FLG105"
 			(at 88.9 12.7 0)
 			(hide yes)
@@ -13330,7 +13922,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "e1d0ea7f-ff58-5dde-aaeb-dabdc21038aa")
+			(uuid "6365656d-317d-5170-b76a-74592e76db0f")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -13349,7 +13941,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "af365317-e9fd-500f-aef3-d5695fffea10")
+		(uuid "0f359789-a7fa-5791-9d9d-9ba765a9b11a")
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -13359,7 +13951,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "294c166f-6208-5fb1-94b3-84a48f547387")
+		(uuid "b424dcfc-eddd-5c4e-83f8-be413e9f0bc3")
 		(property "Reference" "#FLG106"
 			(at 104.14 12.7 0)
 			(hide yes)
@@ -13397,7 +13989,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "6bb8f87d-225e-51d8-abff-402988f834d8")
+			(uuid "60faef2a-28f9-5e42-bce1-1e500275658f")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -13416,7 +14008,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a6adb772-395c-54f3-85ee-b6b3e02ada51")
+		(uuid "a6736de4-9907-5a28-bef3-62b6349f7541")
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -13426,7 +14018,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "958962d2-ab41-5d63-b8f3-d879ace6c665")
+		(uuid "0688e45b-5ac6-5c48-a29e-ff1a72420a7f")
 		(property "Reference" "#FLG107"
 			(at 119.38 12.7 0)
 			(hide yes)
@@ -13464,7 +14056,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "6e3862bc-178a-5332-9837-0f231fa15508")
+			(uuid "c2e1536f-ca88-5ec2-a7d7-57b47c343970")
 		)
 		(instances
 			(project "shieldXL-euro"
