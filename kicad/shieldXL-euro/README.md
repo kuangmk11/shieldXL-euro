@@ -96,8 +96,9 @@ The panel layout is in the Missing Mile Modular repo
 - **The Pi lies landscape, header along the top**, behind the display and
   clear of the controls. That is why the module is 20 HP: 85 mm of Pi, its
   ports, a USB adapter and the microSD card come to about 96 mm, more than
-  18 HP's 91.3. Small adapter boards plug into its four USB ports and carry
-  them down to the main board on a header or ribbon. Its two lower holes
+  18 HP's 91.3. Two small adapter boards plug into its USB stacks and
+  carry the four ports to J112 / J113 on 2 x 5 IDC ribbons
+  (`../usb-adapter`). Its two lower holes
   fall near K1 / E2's pins on the back; SMD standoffs (Wurth WA-SMSI) keep
   the front clear, and the exact spots wait for the real footprints. The
   panel is drawn in the Missing Mile Modular repo and named Moirae there.
@@ -106,7 +107,7 @@ The panel layout is in the Missing Mile Modular repo
   firmware, on one 2 x 10 header on the back of the main board, lower half,
   below the Pi; USB to norns through the Pi's fourth port. Spec and
   schematic in `../corone/`. The main board's side is in the Eurorack sheet:
-  J115-J120 jacks, J121 header, J122 ii, J123 USB cable.
+  J115-J120 jacks, J121 header, J122 ii; its USB comes through J113.
 - **A vertical USB-C receptacle.** KiCad's library has none. J108 has no
   footprint until a part is chosen.
 - **Keys.** SW1-SW3 are still shieldXL's Choc / MX key footprints; the

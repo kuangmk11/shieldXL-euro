@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "usb-adapter")(type "KiCad")(uri "${KIPRJMOD}/usb-adapter.pretty")(options "")(descr "Pi USB adapter"))
+)

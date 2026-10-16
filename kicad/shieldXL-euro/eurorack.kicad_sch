@@ -3592,222 +3592,6 @@
 			)
 			(embedded_fonts no)
 		)
-			(symbol "Connector_Generic:Conn_01x04"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_01x04"
-				(at 0 -7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Conn_01x04_1_1"
-				(rectangle
-					(start -1.27 3.81)
-					(end 1.27 -6.35)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 			(symbol "Connector:USB_A"
 			(pin_names
 				(offset 1.016)
@@ -11548,7 +11332,7 @@
 		)
 		(uuid "71c31e67-6769-55ce-8e91-5e9787ca54ae")
 	)
-	(label "CRW_VBUS"
+	(label "CRW_USB_VBUS"
 		(at 299.72 236.22 0)
 		(effects
 			(font
@@ -11772,156 +11556,6 @@
 		(uuid "df5c6887-2f4a-5b0e-8095-0bded67d2fef")
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
-		(at 355.6 251.46 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "480b9b60-98d7-5c17-b0c4-1723d7fd6aae")
-		(property "Reference" "J123"
-			(at 358.14 243.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Pi USB 4"
-			(at 358.14 259.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical"
-			(at 355.6 251.46 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 355.6 251.46 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fbaaa54e-99a9-5c22-853f-56be8ee3bfa0")
-		)
-		(pin "2"
-			(uuid "cc02f4e4-67f2-55c9-935e-c9765647a454")
-		)
-		(pin "3"
-			(uuid "607c9f1b-fddc-5901-b93e-3b4aa2269c15")
-		)
-		(pin "4"
-			(uuid "59590265-50c3-59bd-acb9-d2df8cbe1ac8")
-		)
-		(instances
-			(project "shieldXL-euro"
-				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/291b9154-df7e-5c77-b48b-0f7a699ae26f"
-					(reference "J123")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(label "CRW_VBUS"
-		(at 350.52 248.92 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "bf2fe164-19c0-5976-ac1f-5892f3604181")
-	)
-	(label "CRW_USB_DM"
-		(at 350.52 251.46 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "14bd6692-66f6-53ba-971f-9e0db669bfdc")
-	)
-	(label "CRW_USB_DP"
-		(at 350.52 254 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ec299a8a-46a2-56c4-b4e2-1e8354d84ea8")
-	)
-	(symbol
-		(lib_id "norns-shield-210330-eagle-import:GND")
-		(at 350.52 259.08 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "df5d561b-c7a9-5531-a8df-646b17d0fefe")
-		(property "Reference" "#PWR155"
-			(at 353.06 251.46 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 353.06 266.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 350.52 259.08 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 350.52 259.08 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fc01a83f-0112-5a9c-a43d-64e43ffe7a9e")
-		)
-		(instances
-			(project "shieldXL-euro"
-				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/291b9154-df7e-5c77-b48b-0f7a699ae26f"
-					(reference "#PWR155")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:USB_A")
 		(at 50.8 182.88 0)
 		(unit 1)
@@ -11929,7 +11563,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "dbaf0814-0760-5ec0-bd36-fe1583af598a")
+		(uuid "480b9b60-98d7-5c17-b0c4-1723d7fd6aae")
 		(property "Reference" "J109"
 			(at 53.34 175.26 0)
 			(effects
@@ -11965,19 +11599,19 @@
 			)
 		)
 		(pin "1"
-			(uuid "ea5293bd-01b2-5db5-bcfe-0084e61a46ba")
+			(uuid "fbaaa54e-99a9-5c22-853f-56be8ee3bfa0")
 		)
 		(pin "2"
-			(uuid "b9c209d9-6eed-5a3a-a595-d40d0e2abf03")
+			(uuid "cc02f4e4-67f2-55c9-935e-c9765647a454")
 		)
 		(pin "3"
-			(uuid "72406334-e5ea-5812-8443-db2f8ced1748")
+			(uuid "607c9f1b-fddc-5901-b93e-3b4aa2269c15")
 		)
 		(pin "4"
-			(uuid "3d715556-6e96-5b39-ac1a-925348aa21c6")
+			(uuid "59590265-50c3-59bd-acb9-d2df8cbe1ac8")
 		)
 		(pin "SH"
-			(uuid "d3e27f19-ad8e-5f49-837c-c352eb8e06af")
+			(uuid "bf2fe164-19c0-5976-ac1f-5892f3604181")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -11996,7 +11630,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c68ac81b-1db3-5fc0-8d1f-5da2ffe8eead")
+		(uuid "14bd6692-66f6-53ba-971f-9e0db669bfdc")
 	)
 	(label "USB1_DM"
 		(at 58.42 185.42 0)
@@ -12006,7 +11640,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "823ff0f2-aac2-5361-817d-b28f0e89bf5a")
+		(uuid "ec299a8a-46a2-56c4-b4e2-1e8354d84ea8")
 	)
 	(label "USB1_DP"
 		(at 58.42 182.88 0)
@@ -12016,7 +11650,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5e5fde61-d98e-540f-bc23-2cc8ee3d9cd3")
+		(uuid "df5d561b-c7a9-5531-a8df-646b17d0fefe")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:GND")
@@ -12026,8 +11660,8 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "a03d3675-487a-562c-959f-68c2faa6878c")
-		(property "Reference" "#PWR156"
+		(uuid "fc01a83f-0112-5a9c-a43d-64e43ffe7a9e")
+		(property "Reference" "#PWR155"
 			(at 53.34 187.96 0)
 			(hide yes)
 			(effects
@@ -12063,12 +11697,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "9998e6d8-bbd0-51ae-bd13-9a762ab654c2")
+			(uuid "dbaf0814-0760-5ec0-bd36-fe1583af598a")
 		)
 		(instances
 			(project "shieldXL-euro"
 				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/291b9154-df7e-5c77-b48b-0f7a699ae26f"
-					(reference "#PWR156")
+					(reference "#PWR155")
 					(unit 1)
 				)
 			)
@@ -12082,8 +11716,8 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "778987d0-7721-508c-9456-41a831300ef6")
-		(property "Reference" "#PWR157"
+		(uuid "ea5293bd-01b2-5db5-bcfe-0084e61a46ba")
+		(property "Reference" "#PWR156"
 			(at 50.8 187.96 0)
 			(hide yes)
 			(effects
@@ -12119,162 +11753,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "ec1d188d-2037-5a2c-bcef-af22d7d40542")
+			(uuid "b9c209d9-6eed-5a3a-a595-d40d0e2abf03")
 		)
 		(instances
 			(project "shieldXL-euro"
 				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/291b9154-df7e-5c77-b48b-0f7a699ae26f"
-					(reference "#PWR157")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
-		(at 88.9 182.88 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d3120526-0b7f-5ca6-a50a-30e225323650")
-		(property "Reference" "J112"
-			(at 91.44 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Pi USB 1"
-			(at 91.44 190.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical"
-			(at 88.9 182.88 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 88.9 182.88 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "772c619a-4946-5a88-b6a5-5658569e15f7")
-		)
-		(pin "2"
-			(uuid "a193a8a7-2860-57a3-8fe2-7636ebe946d3")
-		)
-		(pin "3"
-			(uuid "38b70325-317d-5bd5-9773-3caad20933fd")
-		)
-		(pin "4"
-			(uuid "ee55adef-f34b-5984-99f5-c7730a1c4aab")
-		)
-		(instances
-			(project "shieldXL-euro"
-				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/291b9154-df7e-5c77-b48b-0f7a699ae26f"
-					(reference "J112")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(label "USB1_VBUS"
-		(at 83.82 180.34 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "0752f368-ae95-5384-aff1-b33b09b23cae")
-	)
-	(label "USB1_DM"
-		(at 83.82 182.88 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "3a156c7a-3e30-5cc6-863a-55e2b36856b9")
-	)
-	(label "USB1_DP"
-		(at 83.82 185.42 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "77697bc3-b704-5e19-bb2b-4e753a189fce")
-	)
-	(symbol
-		(lib_id "norns-shield-210330-eagle-import:GND")
-		(at 83.82 190.5 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "277b294c-d37b-5f25-8401-d49e223e1589")
-		(property "Reference" "#PWR158"
-			(at 86.36 182.88 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 86.36 198.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 83.82 190.5 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 83.82 190.5 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "74837636-c757-5476-965a-98659904ca95")
-		)
-		(instances
-			(project "shieldXL-euro"
-				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/291b9154-df7e-5c77-b48b-0f7a699ae26f"
-					(reference "#PWR158")
+					(reference "#PWR156")
 					(unit 1)
 				)
 			)
@@ -12288,7 +11772,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e8e8a0b6-2338-57ff-8ea9-16ab4784b2c1")
+		(uuid "72406334-e5ea-5812-8443-db2f8ced1748")
 		(property "Reference" "J110"
 			(at 129.54 175.26 0)
 			(effects
@@ -12324,19 +11808,19 @@
 			)
 		)
 		(pin "1"
-			(uuid "6f0df56a-d636-5516-a449-b533975d6beb")
+			(uuid "3d715556-6e96-5b39-ac1a-925348aa21c6")
 		)
 		(pin "2"
-			(uuid "5a8d2869-7dad-5049-bd3e-c2b88ca53628")
+			(uuid "d3e27f19-ad8e-5f49-837c-c352eb8e06af")
 		)
 		(pin "3"
-			(uuid "e7c2f301-785e-5f09-b2ae-030d1b7b7274")
+			(uuid "c68ac81b-1db3-5fc0-8d1f-5da2ffe8eead")
 		)
 		(pin "4"
-			(uuid "b25fd331-d7d8-5210-9292-e0cca9ffbec7")
+			(uuid "823ff0f2-aac2-5361-817d-b28f0e89bf5a")
 		)
 		(pin "SH"
-			(uuid "8e184613-e20b-54a9-bc85-3eda0f308f68")
+			(uuid "5e5fde61-d98e-540f-bc23-2cc8ee3d9cd3")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -12355,7 +11839,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "23f726f4-9a50-5809-8ebe-3d0127c6e1e1")
+		(uuid "a03d3675-487a-562c-959f-68c2faa6878c")
 	)
 	(label "USB2_DM"
 		(at 134.62 185.42 0)
@@ -12365,7 +11849,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "972b2b9a-7f19-5aeb-8a34-32a6d63fb3e5")
+		(uuid "9998e6d8-bbd0-51ae-bd13-9a762ab654c2")
 	)
 	(label "USB2_DP"
 		(at 134.62 182.88 0)
@@ -12375,7 +11859,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1ed260a5-93f1-5873-a5e7-ea2fae635e4c")
+		(uuid "778987d0-7721-508c-9456-41a831300ef6")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:GND")
@@ -12385,8 +11869,8 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "bd2ea06b-aa0a-5662-8660-281bf7976942")
-		(property "Reference" "#PWR159"
+		(uuid "ec1d188d-2037-5a2c-bcef-af22d7d40542")
+		(property "Reference" "#PWR157"
 			(at 129.54 187.96 0)
 			(hide yes)
 			(effects
@@ -12422,12 +11906,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "22df8c81-1e8b-508d-9518-2f10c5113166")
+			(uuid "d3120526-0b7f-5ca6-a50a-30e225323650")
 		)
 		(instances
 			(project "shieldXL-euro"
 				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/291b9154-df7e-5c77-b48b-0f7a699ae26f"
-					(reference "#PWR159")
+					(reference "#PWR157")
 					(unit 1)
 				)
 			)
@@ -12441,8 +11925,8 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "d51c089b-1aeb-54ea-b895-eb42599b9a38")
-		(property "Reference" "#PWR160"
+		(uuid "772c619a-4946-5a88-b6a5-5658569e15f7")
+		(property "Reference" "#PWR158"
 			(at 127 187.96 0)
 			(hide yes)
 			(effects
@@ -12478,162 +11962,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "c0d44fc3-6df8-5031-88bb-697555c176d1")
+			(uuid "a193a8a7-2860-57a3-8fe2-7636ebe946d3")
 		)
 		(instances
 			(project "shieldXL-euro"
 				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/291b9154-df7e-5c77-b48b-0f7a699ae26f"
-					(reference "#PWR160")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
-		(at 165.1 182.88 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "23f93c4a-ad7a-5cb7-8155-f3f2ec5dc705")
-		(property "Reference" "J113"
-			(at 167.64 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Pi USB 2"
-			(at 167.64 190.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical"
-			(at 165.1 182.88 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 165.1 182.88 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "66ca293f-12ec-577c-bf81-c5e74aa98b6e")
-		)
-		(pin "2"
-			(uuid "3d4faaf3-fdc0-58d8-bba0-0d5c1d9e466f")
-		)
-		(pin "3"
-			(uuid "e501d957-28b9-568d-bf68-a4d23171a034")
-		)
-		(pin "4"
-			(uuid "0edb7b8e-0c9f-524e-a21d-936590342fcf")
-		)
-		(instances
-			(project "shieldXL-euro"
-				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/291b9154-df7e-5c77-b48b-0f7a699ae26f"
-					(reference "J113")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(label "USB2_VBUS"
-		(at 160.02 180.34 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8970decb-2962-5a00-bd5f-969357e84a63")
-	)
-	(label "USB2_DM"
-		(at 160.02 182.88 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "85f0851f-9042-5a82-87d2-cfb9bec83a83")
-	)
-	(label "USB2_DP"
-		(at 160.02 185.42 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "acc99ea5-9c6d-5245-bb86-a9c9a588bbca")
-	)
-	(symbol
-		(lib_id "norns-shield-210330-eagle-import:GND")
-		(at 160.02 190.5 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "8ad05a45-4575-5662-9779-f9eccc465f8f")
-		(property "Reference" "#PWR161"
-			(at 162.56 182.88 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 162.56 198.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 160.02 190.5 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 160.02 190.5 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6ae811b2-225e-557f-b256-50cf4f0b6723")
-		)
-		(instances
-			(project "shieldXL-euro"
-				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/291b9154-df7e-5c77-b48b-0f7a699ae26f"
-					(reference "#PWR161")
+					(reference "#PWR158")
 					(unit 1)
 				)
 			)
@@ -12647,7 +11981,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "5b473e2a-981b-51f4-8a17-465606d8c6d3")
+		(uuid "38b70325-317d-5bd5-9773-3caad20933fd")
 		(property "Reference" "J111"
 			(at 205.74 175.26 0)
 			(effects
@@ -12683,19 +12017,19 @@
 			)
 		)
 		(pin "1"
-			(uuid "577be8ed-dc1d-53f4-b196-d1e0c3c6776e")
+			(uuid "ee55adef-f34b-5984-99f5-c7730a1c4aab")
 		)
 		(pin "2"
-			(uuid "5e394835-90ba-5a78-89e5-066b6724bfae")
+			(uuid "0752f368-ae95-5384-aff1-b33b09b23cae")
 		)
 		(pin "3"
-			(uuid "34a2e0a8-533a-51ae-b351-cf9829605f40")
+			(uuid "3a156c7a-3e30-5cc6-863a-55e2b36856b9")
 		)
 		(pin "4"
-			(uuid "0170f374-6b36-53f2-8a9c-0d87d0273106")
+			(uuid "77697bc3-b704-5e19-bb2b-4e753a189fce")
 		)
 		(pin "SH"
-			(uuid "5597d035-b4f8-5755-84c8-e5f835c65128")
+			(uuid "277b294c-d37b-5f25-8401-d49e223e1589")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -12714,7 +12048,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "fb023bfb-9064-5b23-83ef-ebc5efdd34ce")
+		(uuid "74837636-c757-5476-965a-98659904ca95")
 	)
 	(label "USB3_DM"
 		(at 210.82 185.42 0)
@@ -12724,7 +12058,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1e2b68d8-1fc4-54ff-9beb-d5eeec0803b1")
+		(uuid "e8e8a0b6-2338-57ff-8ea9-16ab4784b2c1")
 	)
 	(label "USB3_DP"
 		(at 210.82 182.88 0)
@@ -12734,7 +12068,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "29ec74ac-f535-53e1-9891-55768a87dcd7")
+		(uuid "6f0df56a-d636-5516-a449-b533975d6beb")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:GND")
@@ -12744,8 +12078,8 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "2fa51ef8-4e71-5544-8859-2d20947f2a15")
-		(property "Reference" "#PWR162"
+		(uuid "5a8d2869-7dad-5049-bd3e-c2b88ca53628")
+		(property "Reference" "#PWR159"
 			(at 205.74 187.96 0)
 			(hide yes)
 			(effects
@@ -12781,12 +12115,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "f9e34ae5-5b1d-5ef2-b7b4-632afd60bbfa")
+			(uuid "e7c2f301-785e-5f09-b2ae-030d1b7b7274")
 		)
 		(instances
 			(project "shieldXL-euro"
 				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/291b9154-df7e-5c77-b48b-0f7a699ae26f"
-					(reference "#PWR162")
+					(reference "#PWR159")
 					(unit 1)
 				)
 			)
@@ -12800,8 +12134,8 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "1f5b7c5e-d8a2-5a3b-a985-d82abc928c70")
-		(property "Reference" "#PWR163"
+		(uuid "b25fd331-d7d8-5210-9292-e0cca9ffbec7")
+		(property "Reference" "#PWR160"
 			(at 203.2 187.96 0)
 			(hide yes)
 			(effects
@@ -12837,7 +12171,287 @@
 			)
 		)
 		(pin "1"
-			(uuid "84d7b479-9355-5533-9c99-33022da36e12")
+			(uuid "8e184613-e20b-54a9-bc85-3eda0f308f68")
+		)
+		(instances
+			(project "shieldXL-euro"
+				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/291b9154-df7e-5c77-b48b-0f7a699ae26f"
+					(reference "#PWR160")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x05_Odd_Even")
+		(at 88.9 248.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "23f726f4-9a50-5809-8ebe-3d0127c6e1e1")
+		(property "Reference" "J112"
+			(at 91.44 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Pi USB, inner stack"
+			(at 91.44 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical"
+			(at 88.9 248.92 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 248.92 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "972b2b9a-7f19-5aeb-8a34-32a6d63fb3e5")
+		)
+		(pin "2"
+			(uuid "1ed260a5-93f1-5873-a5e7-ea2fae635e4c")
+		)
+		(pin "3"
+			(uuid "bd2ea06b-aa0a-5662-8660-281bf7976942")
+		)
+		(pin "4"
+			(uuid "22df8c81-1e8b-508d-9518-2f10c5113166")
+		)
+		(pin "5"
+			(uuid "d51c089b-1aeb-54ea-b895-eb42599b9a38")
+		)
+		(pin "6"
+			(uuid "c0d44fc3-6df8-5031-88bb-697555c176d1")
+		)
+		(pin "7"
+			(uuid "23f93c4a-ad7a-5cb7-8155-f3f2ec5dc705")
+		)
+		(pin "8"
+			(uuid "66ca293f-12ec-577c-bf81-c5e74aa98b6e")
+		)
+		(pin "9"
+			(uuid "3d4faaf3-fdc0-58d8-bba0-0d5c1d9e466f")
+		)
+		(pin "10"
+			(uuid "e501d957-28b9-568d-bf68-a4d23171a034")
+		)
+		(instances
+			(project "shieldXL-euro"
+				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/291b9154-df7e-5c77-b48b-0f7a699ae26f"
+					(reference "J112")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "USB1_VBUS"
+		(at 83.82 243.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0edb7b8e-0c9f-524e-a21d-936590342fcf")
+	)
+	(symbol
+		(lib_id "norns-shield-210330-eagle-import:GND")
+		(at 96.52 246.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "8970decb-2962-5a00-bd5f-969357e84a63")
+		(property "Reference" "#PWR161"
+			(at 99.06 238.76 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 99.06 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 96.52 246.38 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 246.38 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "85f0851f-9042-5a82-87d2-cfb9bec83a83")
+		)
+		(instances
+			(project "shieldXL-euro"
+				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/291b9154-df7e-5c77-b48b-0f7a699ae26f"
+					(reference "#PWR161")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "USB1_DM"
+		(at 83.82 246.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "acc99ea5-9c6d-5245-bb86-a9c9a588bbca")
+	)
+	(label "USB1_DP"
+		(at 96.52 246.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8ad05a45-4575-5662-9779-f9eccc465f8f")
+	)
+	(symbol
+		(lib_id "norns-shield-210330-eagle-import:GND")
+		(at 83.82 251.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "6ae811b2-225e-557f-b256-50cf4f0b6723")
+		(property "Reference" "#PWR162"
+			(at 86.36 243.84 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 86.36 259.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 83.82 251.46 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 83.82 251.46 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5b473e2a-981b-51f4-8a17-465606d8c6d3")
+		)
+		(instances
+			(project "shieldXL-euro"
+				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/291b9154-df7e-5c77-b48b-0f7a699ae26f"
+					(reference "#PWR162")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "norns-shield-210330-eagle-import:GND")
+		(at 96.52 251.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "577be8ed-dc1d-53f4-b196-d1e0c3c6776e")
+		(property "Reference" "#PWR163"
+			(at 99.06 243.84 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 99.06 259.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 96.52 251.46 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 251.46 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5e394835-90ba-5a78-89e5-066b6724bfae")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -12848,111 +12462,37 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
-		(at 241.3 182.88 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d5ddebf3-f172-5c0f-b84f-e99e3cfd639d")
-		(property "Reference" "J114"
-			(at 243.84 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Pi USB 3"
-			(at 243.84 190.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical"
-			(at 241.3 182.88 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 241.3 182.88 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "59ef1ee9-92d9-5464-baac-0ed8c6774e19")
-		)
-		(pin "2"
-			(uuid "bbd916a7-0b13-5f95-b3bb-6e73f2d6de0c")
-		)
-		(pin "3"
-			(uuid "10bf681a-7148-52f5-bd84-41c2e788feae")
-		)
-		(pin "4"
-			(uuid "9074fdc1-3be9-5cfe-852e-2e4e5d24cede")
-		)
-		(instances
-			(project "shieldXL-euro"
-				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/291b9154-df7e-5c77-b48b-0f7a699ae26f"
-					(reference "J114")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(label "USB3_VBUS"
-		(at 236.22 180.34 0)
+	(label "USB2_DM"
+		(at 83.82 251.46 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "a0ec29d1-b882-52ad-b2b7-1699fd2edb83")
+		(uuid "34a2e0a8-533a-51ae-b351-cf9829605f40")
 	)
-	(label "USB3_DM"
-		(at 236.22 182.88 0)
+	(label "USB2_DP"
+		(at 96.52 251.46 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "7295e1d3-35d9-575d-8a46-d8ce7e687d74")
-	)
-	(label "USB3_DP"
-		(at 236.22 185.42 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "bae1790b-d385-50eb-bd5e-7a36bee682b3")
+		(uuid "0170f374-6b36-53f2-8a9c-0d87d0273106")
 	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:GND")
-		(at 236.22 190.5 0)
+		(at 83.82 256.54 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "bbe5947a-a69a-592e-902b-bcd3216939d1")
+		(uuid "5597d035-b4f8-5755-84c8-e5f835c65128")
 		(property "Reference" "#PWR164"
-			(at 238.76 182.88 0)
+			(at 86.36 248.92 0)
 			(hide yes)
 			(effects
 				(font
@@ -12961,7 +12501,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 238.76 198.12 0)
+			(at 86.36 264.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12969,7 +12509,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 236.22 190.5 0)
+			(at 83.82 256.54 0)
 			(hide yes)
 			(effects
 				(font
@@ -12978,7 +12518,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 236.22 190.5 0)
+			(at 83.82 256.54 0)
 			(hide yes)
 			(effects
 				(font
@@ -12987,7 +12527,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "b39ce18a-ccb7-59d1-8d04-5e45670e5f20")
+			(uuid "fb023bfb-9064-5b23-83ef-ebc5efdd34ce")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -12998,6 +12538,382 @@
 			)
 		)
 	)
+	(label "USB2_VBUS"
+		(at 96.52 254 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1e2b68d8-1fc4-54ff-9beb-d5eeec0803b1")
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x05_Odd_Even")
+		(at 165.1 248.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "29ec74ac-f535-53e1-9891-55768a87dcd7")
+		(property "Reference" "J113"
+			(at 167.64 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Pi USB, outer stack"
+			(at 167.64 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical"
+			(at 165.1 248.92 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 248.92 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2fa51ef8-4e71-5544-8859-2d20947f2a15")
+		)
+		(pin "2"
+			(uuid "f9e34ae5-5b1d-5ef2-b7b4-632afd60bbfa")
+		)
+		(pin "3"
+			(uuid "1f5b7c5e-d8a2-5a3b-a985-d82abc928c70")
+		)
+		(pin "4"
+			(uuid "84d7b479-9355-5533-9c99-33022da36e12")
+		)
+		(pin "5"
+			(uuid "d5ddebf3-f172-5c0f-b84f-e99e3cfd639d")
+		)
+		(pin "6"
+			(uuid "59ef1ee9-92d9-5464-baac-0ed8c6774e19")
+		)
+		(pin "7"
+			(uuid "bbd916a7-0b13-5f95-b3bb-6e73f2d6de0c")
+		)
+		(pin "8"
+			(uuid "10bf681a-7148-52f5-bd84-41c2e788feae")
+		)
+		(pin "9"
+			(uuid "9074fdc1-3be9-5cfe-852e-2e4e5d24cede")
+		)
+		(pin "10"
+			(uuid "a0ec29d1-b882-52ad-b2b7-1699fd2edb83")
+		)
+		(instances
+			(project "shieldXL-euro"
+				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/291b9154-df7e-5c77-b48b-0f7a699ae26f"
+					(reference "J113")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "USB3_VBUS"
+		(at 160.02 243.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7295e1d3-35d9-575d-8a46-d8ce7e687d74")
+	)
+	(symbol
+		(lib_id "norns-shield-210330-eagle-import:GND")
+		(at 172.72 246.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "bae1790b-d385-50eb-bd5e-7a36bee682b3")
+		(property "Reference" "#PWR165"
+			(at 175.26 238.76 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 175.26 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 172.72 246.38 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 172.72 246.38 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bbe5947a-a69a-592e-902b-bcd3216939d1")
+		)
+		(instances
+			(project "shieldXL-euro"
+				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/291b9154-df7e-5c77-b48b-0f7a699ae26f"
+					(reference "#PWR165")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "USB3_DM"
+		(at 160.02 246.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b39ce18a-ccb7-59d1-8d04-5e45670e5f20")
+	)
+	(label "USB3_DP"
+		(at 172.72 246.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1095cae4-b98b-5b0d-8f0f-2b6b55a1278b")
+	)
+	(symbol
+		(lib_id "norns-shield-210330-eagle-import:GND")
+		(at 160.02 251.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "fac0d82d-a4bf-5b49-a131-14e3f7dfcc5c")
+		(property "Reference" "#PWR166"
+			(at 162.56 243.84 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 162.56 259.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 251.46 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 251.46 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "463f9797-babd-545a-bc47-6112d2c75a29")
+		)
+		(instances
+			(project "shieldXL-euro"
+				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/291b9154-df7e-5c77-b48b-0f7a699ae26f"
+					(reference "#PWR166")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "norns-shield-210330-eagle-import:GND")
+		(at 172.72 251.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "869ff4ce-7d4f-5216-b91a-57d027d9beea")
+		(property "Reference" "#PWR167"
+			(at 175.26 243.84 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 175.26 259.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 172.72 251.46 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 172.72 251.46 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "73b24b16-a1a9-51b2-ac2e-f1bbf7b6ce54")
+		)
+		(instances
+			(project "shieldXL-euro"
+				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/291b9154-df7e-5c77-b48b-0f7a699ae26f"
+					(reference "#PWR167")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "CRW_USB_DM"
+		(at 160.02 251.46 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3a3c25df-0a0a-529b-ade8-fbf461cfee6e")
+	)
+	(label "CRW_USB_DP"
+		(at 172.72 251.46 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3dd799c2-b516-5d6c-a451-e1729c7a1ebc")
+	)
+	(symbol
+		(lib_id "norns-shield-210330-eagle-import:GND")
+		(at 160.02 256.54 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "2fda8da6-0db9-5454-b778-b064c54d96f5")
+		(property "Reference" "#PWR168"
+			(at 162.56 248.92 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 162.56 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 256.54 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 256.54 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3e6e49af-9032-57fd-acdf-b1fc43c93db7")
+		)
+		(instances
+			(project "shieldXL-euro"
+				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/291b9154-df7e-5c77-b48b-0f7a699ae26f"
+					(reference "#PWR168")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "CRW_USB_VBUS"
+		(at 172.72 254 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8fe811bf-b8fb-568d-810c-8ce91fd4c48c")
+	)
 	(symbol
 		(lib_id "power:+12V")
 		(at 25.4 20.32 0)
@@ -13006,8 +12922,8 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "1095cae4-b98b-5b0d-8f0f-2b6b55a1278b")
-		(property "Reference" "#PWR165"
+		(uuid "2b0f9d73-ee1d-5fab-8091-7f678bf1045f")
+		(property "Reference" "#PWR169"
 			(at 27.94 12.7 0)
 			(hide yes)
 			(effects
@@ -13043,12 +12959,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "fac0d82d-a4bf-5b49-a131-14e3f7dfcc5c")
+			(uuid "54d9b751-e5ed-5718-b19a-c2ef5d3e7265")
 		)
 		(instances
 			(project "shieldXL-euro"
 				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/291b9154-df7e-5c77-b48b-0f7a699ae26f"
-					(reference "#PWR165")
+					(reference "#PWR169")
 					(unit 1)
 				)
 			)
@@ -13062,7 +12978,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "463f9797-babd-545a-bc47-6112d2c75a29")
+		(uuid "0ece32ad-9bcb-5c65-97f1-c9eddacb2158")
 		(property "Reference" "#FLG101"
 			(at 27.94 12.7 0)
 			(hide yes)
@@ -13100,7 +13016,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "869ff4ce-7d4f-5216-b91a-57d027d9beea")
+			(uuid "cc2fde3b-8ce2-5117-8b16-4213a400b506")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -13119,8 +13035,8 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "73b24b16-a1a9-51b2-ac2e-f1bbf7b6ce54")
-		(property "Reference" "#PWR166"
+		(uuid "514ea2d5-3458-523c-bfc6-1cc2819e469b")
+		(property "Reference" "#PWR170"
 			(at 43.18 12.7 0)
 			(hide yes)
 			(effects
@@ -13156,12 +13072,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "3a3c25df-0a0a-529b-ade8-fbf461cfee6e")
+			(uuid "5bfc5786-d4b5-5955-a8ad-762d6b87eeb7")
 		)
 		(instances
 			(project "shieldXL-euro"
 				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/291b9154-df7e-5c77-b48b-0f7a699ae26f"
-					(reference "#PWR166")
+					(reference "#PWR170")
 					(unit 1)
 				)
 			)
@@ -13175,7 +13091,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "3dd799c2-b516-5d6c-a451-e1729c7a1ebc")
+		(uuid "2e5b73fb-5c14-54d2-82a6-1210b0b43a44")
 		(property "Reference" "#FLG102"
 			(at 43.18 12.7 0)
 			(hide yes)
@@ -13213,7 +13129,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "2fda8da6-0db9-5454-b778-b064c54d96f5")
+			(uuid "aee3f824-9d23-53dc-bbc1-adef4c832343")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -13232,7 +13148,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3e6e49af-9032-57fd-acdf-b1fc43c93db7")
+		(uuid "355516e3-d655-5c72-875c-9c17fed52094")
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -13242,7 +13158,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "8fe811bf-b8fb-568d-810c-8ce91fd4c48c")
+		(uuid "4dfff968-7ba1-5a1d-8b93-c2858fde8607")
 		(property "Reference" "#FLG103"
 			(at 58.42 12.7 0)
 			(hide yes)
@@ -13280,7 +13196,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "2b0f9d73-ee1d-5fab-8091-7f678bf1045f")
+			(uuid "f2ce3fb5-2ee9-51d7-a2f7-3c4da6bb582f")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -13299,7 +13215,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "54d9b751-e5ed-5718-b19a-c2ef5d3e7265")
+		(uuid "bba6500c-1c3a-5e0c-bf20-470849815015")
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -13309,7 +13225,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "0ece32ad-9bcb-5c65-97f1-c9eddacb2158")
+		(uuid "c9652631-1c42-57a0-9dc7-d7f660507e1c")
 		(property "Reference" "#FLG104"
 			(at 73.66 12.7 0)
 			(hide yes)
@@ -13347,7 +13263,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "cc2fde3b-8ce2-5117-8b16-4213a400b506")
+			(uuid "425a8a94-9f94-57f9-bfd9-4584f2928825")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -13366,7 +13282,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "514ea2d5-3458-523c-bfc6-1cc2819e469b")
+		(uuid "0b7a08b4-f4d4-5216-8c03-a72d91be9598")
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -13376,7 +13292,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "5bfc5786-d4b5-5955-a8ad-762d6b87eeb7")
+		(uuid "58826d3d-44df-544e-bb64-451c38bbf62a")
 		(property "Reference" "#FLG105"
 			(at 88.9 12.7 0)
 			(hide yes)
@@ -13414,7 +13330,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "2e5b73fb-5c14-54d2-82a6-1210b0b43a44")
+			(uuid "e1d0ea7f-ff58-5dde-aaeb-dabdc21038aa")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -13433,7 +13349,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "aee3f824-9d23-53dc-bbc1-adef4c832343")
+		(uuid "af365317-e9fd-500f-aef3-d5695fffea10")
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -13443,7 +13359,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "355516e3-d655-5c72-875c-9c17fed52094")
+		(uuid "294c166f-6208-5fb1-94b3-84a48f547387")
 		(property "Reference" "#FLG106"
 			(at 104.14 12.7 0)
 			(hide yes)
@@ -13481,7 +13397,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "4dfff968-7ba1-5a1d-8b93-c2858fde8607")
+			(uuid "6bb8f87d-225e-51d8-abff-402988f834d8")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -13492,7 +13408,7 @@
 			)
 		)
 	)
-	(label "CRW_VBUS"
+	(label "CRW_USB_VBUS"
 		(at 116.84 20.32 0)
 		(effects
 			(font
@@ -13500,7 +13416,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "f2ce3fb5-2ee9-51d7-a2f7-3c4da6bb582f")
+		(uuid "a6adb772-395c-54f3-85ee-b6b3e02ada51")
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -13510,7 +13426,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "bba6500c-1c3a-5e0c-bf20-470849815015")
+		(uuid "958962d2-ab41-5d63-b8f3-d879ace6c665")
 		(property "Reference" "#FLG107"
 			(at 119.38 12.7 0)
 			(hide yes)
@@ -13548,7 +13464,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "c9652631-1c42-57a0-9dc7-d7f660507e1c")
+			(uuid "6e3862bc-178a-5332-9837-0f231fa15508")
 		)
 		(instances
 			(project "shieldXL-euro"

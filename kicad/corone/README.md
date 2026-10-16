@@ -85,7 +85,7 @@ op-amps and mux on ±12 V. VBUS from the Pi is sensed, not used for power.
 | 19 | ii SCL | 20 | ii SDA |
 
 The main board takes ii to a 3-pin header at its back edge, as crow has, and
-USB to a cable header for the Pi's fourth port.
+USB from the Pi's fourth port, through J113 (see ../usb-adapter).
 
 ## Programming
 

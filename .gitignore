@@ -8,3 +8,5 @@ __pycache__/
 kicad/*/.history/
 erc.rpt
 kicad/corone/corone.kicad_prl
+drc.rpt
+kicad/usb-adapter/usb-adapter.kicad_prl
