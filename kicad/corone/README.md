@@ -99,6 +99,33 @@ USB to a cable header for the Pi's fourth port.
 On the back of the main board, lower half, under the Pi. Stands about as
 tall as its header; keep its top clear of the Pi's underside.
 
+## Files
+
+    corone.kicad_sch      the schematic - generated, do not edit by hand
+    corone.kicad_sym      the ADS131A02 symbol (not in KiCad's library), from TI SBAS590E
+    tools/make_corone.py  writes both; the part list and every pin's net are in it
+
+`python3 tools/make_corone.py` rewrites them. ERC (`kicad-cli sch erc`): three
+warnings, no errors - the GND power flag meets the mux's grounded spare
+inputs, which KiCad types as bidirectional.
+
+## Choices the firmware doesn't settle
+
+- **ADC mode.** M0 open (synchronous slave): the firmware never reads DRDY
+  and notes that pulling NSS low resyncs the filter. M1 open (16-bit words,
+  as its comment says), M2 low (no Hamming code).
+- **DAC reset.** RSTSEL high: the DAC8565 resets to mid-scale, so the jacks
+  sit at +2.5 V until the firmware runs. Reset to zero would put +10 V on
+  every output.
+- **ii.** Pull-ups 2.2k from PB3 / PB4. The main board's ii header reads
+  GND, SCL, SDA - the order on monome's Trilogy boards; crow's own header
+  order is unconfirmed, so check it against a cable before ordering.
+- **Power.** AMS1117-5.0 from +12 V carries the whole digital load (about
+  0.5 W at 70 mA); give its tab copper.
+- **VBUS.** Straight to PA9, as the firmware senses it there. With the rack
+  off and the Pi on, 5 V sits on an unpowered pin; real crow on a norns
+  sees the same.
+
 ## Open
 
 - The input clamp, filter and exact resistor values: values above are the

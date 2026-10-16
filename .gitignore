@@ -5,3 +5,6 @@
 kicad/ShieldXL-M-20230615/.history/
 __pycache__/
 *.pyc
+kicad/*/.history/
+erc.rpt
+kicad/corone/corone.kicad_prl

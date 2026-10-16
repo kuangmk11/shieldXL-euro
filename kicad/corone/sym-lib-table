@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "corone")(type "KiCad")(uri "${KIPRJMOD}/corone.kicad_sym")(options "")(descr "Corone: ADS131A02"))
+)

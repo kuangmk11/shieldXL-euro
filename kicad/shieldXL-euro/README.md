@@ -76,7 +76,8 @@ The panel layout is in the Missing Mile Modular repo
   - Removing the desktop I/O changed no other connection. Every shield net
     keeps exactly its pins, less the removed parts'.
   - The new sheet's cross-sheet nets land on the parts named above.
-- **ERC:** 35 findings, against the original's 47.
+- **ERC:** 35 findings, against the original's 47 (`kicad-cli sch erc`,
+  KiCad 10; unchanged by the Corone jacks and headers).
   - 16 of the original's are gone with the parts that caused them.
   - 4 are new: two net-name aliases (`TIP1_5` / `RING1_4` now also carry the
     global `MIDI_OUT_*` names), and AGND / GND "not driven". That is the
@@ -93,9 +94,9 @@ The panel layout is in the Missing Mile Modular repo
 - **Corone (crow).** Two CV inputs and four CV outputs, the six jacks in the
   panel's CORONE outline. A daughterboard running monome's own crow
   firmware, on one 2 x 10 header on the back of the main board, lower half,
-  under the Pi; USB to norns through the Pi's fourth port. Spec in
-  `../corone/README.md`. The main board's side (jacks, header, ii header,
-  USB cable header) is not in the schematic yet.
+  under the Pi; USB to norns through the Pi's fourth port. Spec and
+  schematic in `../corone/`. The main board's side is in the Eurorack sheet:
+  J115-J120 jacks, J121 header, J122 ii, J123 USB cable.
 - **A vertical USB-C receptacle.** KiCad's library has none. J108 has no
   footprint until a part is chosen.
 - **Keys.** SW1-SW3 are still shieldXL's Choc / MX key footprints; the

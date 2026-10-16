@@ -30,6 +30,13 @@ What it adds (references in the 100s, clear of shieldXL's):
   USB host (x3)     J109-J111 vertical USB-A on the panel, each wired to a
                     4-pin JST PH (J112-J114) for a short cable from one of
                     the Pi's own USB ports.
+  Corone (crow)     J115-J120, the six jacks in the panel's CORONE outline:
+                    I/1 (its switch contact carried as CRW_IN1_NORM, which
+                    crow's calibration mux drives), I/2, O/1-O/4. J121, the
+                    2 x 10 header the Corone daughterboard plugs onto (pinout
+                    in ../corone/README.md); J122 ii (GND, SCL, SDA) at the
+                    back edge; J123 a fourth JST PH for the cable to the
+                    Pi's fourth USB port.
 
 Every pin gets a label or power symbol at its end. Nets that cross to the
 shield sheets are global labels; +5V, GND and AGND use the shield sheets'
@@ -176,6 +183,24 @@ PARTS = [
     ("F101", "Device", "Polyfuse", 1, "3A hold", "Fuse:Fuse_1812_4532Metric", (271.78, 104.14), {"1": "VBUS_C", "2": "+5V"}),
     ("D103", "Device", "D_TVS", 1, "SMBJ5.0CA", "Diode_SMD:D_SMB", (292.1, 99.06), {"1": "+5V", "2": "GND"}),
     ("C113", "Device", "C", 1, "47u", "Capacitor_SMD:C_1206_3216Metric", (304.8, 104.14), {"1": "+5V", "2": "GND"}),
+    # --- Corone: crow's jacks and the daughterboard's header -------------------
+    ("J115", "Connector_Audio", "AudioJack2_SwitchT", 1, "CORONE I/1", FP_JACK, (38.1, 226.06),
+     {"T": "CRW_IN1", "TN": "CRW_IN1_NORM", "S": "AGND"}),
+    ("J116", "Connector_Audio", "AudioJack2_SwitchT", 1, "CORONE I/2", FP_JACK, (76.2, 226.06),
+     {"T": "CRW_IN2", "TN": "AGND", "S": "AGND"}),
+] + [
+    (f"J{116 + n}", "Connector_Audio", "AudioJack2_SwitchT", 1, f"CORONE O/{n}", FP_JACK, (76.2 + 38.1 * n, 226.06),
+     {"T": f"CRW_OUT{n}", "TN": None, "S": "AGND"}) for n in (1, 2, 3, 4)
+] + [
+    ("J121", "Connector_Generic", "Conn_02x10_Odd_Even", 1, "Corone", "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical",
+     (304.8, 226.06), {"1": "+12V", "2": "-12V", "3": "AGND", "4": "AGND", "5": "CRW_IN1", "6": "CRW_IN1_NORM",
+                       "7": "CRW_IN2", "8": "AGND", "9": "CRW_OUT1", "10": "CRW_OUT2", "11": "CRW_OUT3",
+                       "12": "CRW_OUT4", "13": "AGND", "14": "AGND", "15": "CRW_USB_DP", "16": "CRW_USB_DM",
+                       "17": "CRW_VBUS", "18": "AGND", "19": "II_SCL", "20": "II_SDA"}),
+    ("J122", "Connector_Generic", "Conn_01x03", 1, "ii", "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+     (355.6, 215.9), {"1": "AGND", "2": "II_SCL", "3": "II_SDA"}),
+    ("J123", "Connector_Generic", "Conn_01x04", 1, "Pi USB 4", "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical",
+     (355.6, 251.46), {"1": "CRW_VBUS", "2": "CRW_USB_DM", "3": "CRW_USB_DP", "4": "GND"}),
 ] + [
     # --- USB host: three panel sockets, each cabled from a Pi port ---------------
     p for n in (1, 2, 3) for p in (
@@ -189,7 +214,7 @@ PARTS = [
 # or fuse. +5V, GND and AGND are not flagged: the shield sheets' Eagle-era
 # parts call those pins bidirectional, and a flag there only trades the
 # original's "not driven" for a pin-to-pin clash.
-FLAGS = ["+12V", "-12V", "VBUS_C", "USB1_VBUS", "USB2_VBUS", "USB3_VBUS"]
+FLAGS = ["+12V", "-12V", "VBUS_C", "USB1_VBUS", "USB2_VBUS", "USB3_VBUS", "CRW_VBUS"]
 
 
 def build():
