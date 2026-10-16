@@ -12929,27 +12929,17 @@
 		)
 		(uuid "9998e6d8-bbd0-51ae-bd13-9a762ab654c2")
 	)
-	(label "CRW_USB_VBUS"
-		(at 299.72 236.22 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "778987d0-7721-508c-9456-41a831300ef6")
-	)
 	(symbol
 		(lib_id "norns-shield-210330-eagle-import:AGND")
-		(at 312.42 238.76 0)
+		(at 299.72 238.76 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "ec1d188d-2037-5a2c-bcef-af22d7d40542")
+		(uuid "778987d0-7721-508c-9456-41a831300ef6")
 		(property "Reference" "#PWR155"
-			(at 314.96 231.14 0)
+			(at 302.26 231.14 0)
 			(hide yes)
 			(effects
 				(font
@@ -12958,7 +12948,7 @@
 			)
 		)
 		(property "Value" "AGND"
-			(at 314.96 246.38 0)
+			(at 302.26 246.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12966,7 +12956,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 312.42 238.76 0)
+			(at 299.72 238.76 0)
 			(hide yes)
 			(effects
 				(font
@@ -12975,7 +12965,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 312.42 238.76 0)
+			(at 299.72 238.76 0)
 			(hide yes)
 			(effects
 				(font
@@ -12984,7 +12974,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "d3120526-0b7f-5ca6-a50a-30e225323650")
+			(uuid "ec1d188d-2037-5a2c-bcef-af22d7d40542")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -12994,6 +12984,16 @@
 				)
 			)
 		)
+	)
+	(label "CRW_USB_VBUS"
+		(at 312.42 236.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d3120526-0b7f-5ca6-a50a-30e225323650")
 	)
 	(label "II_SCL"
 		(at 299.72 238.76 0)

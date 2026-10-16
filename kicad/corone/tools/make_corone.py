@@ -162,7 +162,7 @@ PARTS = [
     ("J1", "Connector_Generic", "Conn_02x10_Odd_Even", 1, "To main board", "Connector_PinSocket_2.54mm:PinSocket_2x10_P2.54mm_Vertical",
      (45.72, 63.5), {"1": "+12V", "2": "-12V", "3": "GND", "4": "GND", "5": "IN1", "6": "IN1_NORM", "7": "IN2",
                      "8": "GND", "9": "OUT1", "10": "OUT2", "11": "OUT3", "12": "OUT4", "13": "GND", "14": "GND",
-                     "15": "USB_DP_EXT", "16": "USB_DM_EXT", "17": "VBUS", "18": "GND", "19": "II_SCL", "20": "II_SDA"}),
+                     "15": "USB_DP_EXT", "16": "USB_DM_EXT", "17": "GND", "18": "VBUS", "19": "II_SCL", "20": "II_SDA"}),
     C("C1", "10u 25V", (35.56, 109.22), "+12V", "GND", C8),
     C("C2", "10u 25V", (50.8, 109.22), "GND", "-12V", C8),
     ("U1", "Regulator_Linear", "AMS1117-5.0", 1, "AMS1117-5.0", "Package_TO_SOT_SMD:SOT-223-3_TabPin2",

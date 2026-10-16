@@ -81,7 +81,7 @@ op-amps and mux on ±12 V. VBUS from the Pi is sensed, not used for power.
 | 11 | OUT 3 | 12 | OUT 4 |
 | 13 | GND | 14 | GND |
 | 15 | USB D+ | 16 | USB D− |
-| 17 | VBUS (sense) | 18 | GND |
+| 17 | GND | 18 | VBUS (sense) |
 | 19 | ii SCL | 20 | ii SDA |
 
 The main board takes ii to a 3-pin header at its back edge, as crow has, and

@@ -8593,27 +8593,17 @@
 		)
 		(uuid "8dcb174b-66d0-539a-a589-0010166695da")
 	)
-	(label "VBUS"
-		(at 40.64 73.66 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "a81014e2-ddf3-5c5d-9c91-6a8171a2331a")
-	)
 	(symbol
 		(lib_id "power:GND")
-		(at 53.34 73.66 0)
+		(at 40.64 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "1c758b88-fcae-5232-8df7-9c072cb9e0b9")
+		(uuid "a81014e2-ddf3-5c5d-9c91-6a8171a2331a")
 		(property "Reference" "#PWR008"
-			(at 55.88 66.04 0)
+			(at 43.18 66.04 0)
 			(hide yes)
 			(effects
 				(font
@@ -8622,7 +8612,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 55.88 81.28 0)
+			(at 43.18 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8630,7 +8620,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 53.34 73.66 0)
+			(at 40.64 73.66 0)
 			(hide yes)
 			(effects
 				(font
@@ -8639,7 +8629,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 53.34 73.66 0)
+			(at 40.64 73.66 0)
 			(hide yes)
 			(effects
 				(font
@@ -8648,7 +8638,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "7d0734c4-28e8-5869-b4a9-4409299ca1fc")
+			(uuid "1c758b88-fcae-5232-8df7-9c072cb9e0b9")
 		)
 		(instances
 			(project "corone"
@@ -8658,6 +8648,16 @@
 				)
 			)
 		)
+	)
+	(label "VBUS"
+		(at 53.34 73.66 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7d0734c4-28e8-5869-b4a9-4409299ca1fc")
 	)
 	(label "II_SCL"
 		(at 40.64 76.2 180)

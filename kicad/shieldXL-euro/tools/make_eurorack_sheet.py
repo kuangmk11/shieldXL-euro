@@ -218,7 +218,7 @@ PARTS = [
      (304.8, 226.06), {"1": "+12V", "2": "-12V", "3": "AGND", "4": "AGND", "5": "CRW_IN1", "6": "CRW_IN1_NORM",
                        "7": "CRW_IN2", "8": "AGND", "9": "CRW_OUT1", "10": "CRW_OUT2", "11": "CRW_OUT3",
                        "12": "CRW_OUT4", "13": "AGND", "14": "AGND", "15": "CRW_USB_DP", "16": "CRW_USB_DM",
-                       "17": "CRW_USB_VBUS", "18": "AGND", "19": "II_SCL", "20": "II_SDA"}),
+                       "17": "AGND", "18": "CRW_USB_VBUS", "19": "II_SCL", "20": "II_SDA"}),
     ("J122", "Connector_Generic", "Conn_01x03", 1, "ii", "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
      (355.6, 215.9), {"1": "AGND", "2": "II_SCL", "3": "II_SDA"}),
 ] + [
