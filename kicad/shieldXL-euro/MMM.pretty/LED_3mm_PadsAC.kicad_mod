@@ -1,0 +1,220 @@
+(footprint "LED_3mm_PadsAC"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "LED, 3.0 mm, 2 pins. Land pattern is RECENTRED against KiCad's stock LED_THT:LED_D3.0mm: pads sit at -1.27 and +1.27 with the body centred on the footprint origin, where the stock footprint puts pad 1 at the origin and the body at +1.27. That is why the 3D model carries an offset of -1.27 in x: LED_D3.0mm.step is drawn for the stock footprint and its solid spans x -0.230 to 2.770, centred on 1.270. Without the offset the LED renders one half-pitch off its own hole. Do not zero the offset - the board is correct and only the render moves. Pads named C (square, cathode) and A, for symbols that number LED pins A/C (shieldXL's Eagle LEDs).")
+	(tags "LED")
+	(property "Reference" "LED"
+		(at -0.0625 -2.985 0)
+		(layer "F.SilkS")
+		(uuid "e18d4133-4fd1-480c-b3cd-c05cc328d1a3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "LED_3mm"
+		(at -1.27 8 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0996b946-2885-42c8-b29e-6dadca1db184")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at -1.27 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2725b497-f95d-4950-9f19-bd1bb6634d16")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at -1.27 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3752a8a4-2e50-4090-a136-b00d94c6dcaa")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "KiLib_Generator" "LED/THT"
+		(at -1.27 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "c7007600-117c-4966-a74e-1be729ac42cc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.56 -1.236)
+		(end -1.56 -1.08)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e9d99b32-b362-4bda-ae7f-cee380cc629e")
+	)
+	(fp_line
+		(start -1.56 1.08)
+		(end -1.56 1.236)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "cf53f01b-0cb0-4e08-b7a8-dcbf0c8f29ed")
+	)
+	(fp_arc
+		(start -1.56 -1.235516)
+		(mid 0.0957 -1.987699)
+		(end 1.6714 -1.08)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7f1ef752-2bdf-4f98-a3d0-8f13fd3f4dd6")
+	)
+	(fp_arc
+		(start -1.041 -1.08)
+		(mid 0 -1.5)
+		(end 1.041 -1.08)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ea456e19-21b5-40cb-8409-63a31bfe7553")
+	)
+	(fp_arc
+		(start 1.041 1.08)
+		(mid 0 1.5)
+		(end -1.041 1.08)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7c78b564-3202-4a6d-913a-427a5ea9dd77")
+	)
+	(fp_arc
+		(start 1.6714 1.08)
+		(mid 0.0957 1.987699)
+		(end -1.56 1.235516)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "dfd1026a-1878-4ff1-af7c-23649f44b8c0")
+	)
+	(fp_rect
+		(start -2.42 -2.21)
+		(end 2.42 2.21)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "c6c532df-59dc-41e6-908b-95c2e0799bb5")
+	)
+	(fp_line
+		(start -1.5 -1.16619)
+		(end -1.5 1.16619)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "32cec4e0-0c7e-49c2-8db5-dffeec3f90ee")
+	)
+	(fp_arc
+		(start -1.5 -1.16619)
+		(mid 1.9 0)
+		(end -1.5 1.16619)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "00e37c4f-0433-4825-bcbf-775179ca1dda")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 1.5 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "11060f68-1283-4c7c-9089-dc4bd70bd55a")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "be55ef34-16d3-4b17-b181-b2c39c3a3eaf")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(point
+		(at 144.593 49.985)
+		(size 2)
+		(layer "F.Fab")
+		(uuid "cecba8bf-696d-4b36-9d87-ffbae0324501")
+	)
+	(pad "C" thru_hole rect
+		(at -1.27 0)
+		(size 1.8 1.8)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "bdf5b6f5-1d1c-49c0-b577-80689d2b1576")
+	)
+	(pad "A" thru_hole circle
+		(at 1.27 0)
+		(size 1.8 1.8)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "3d7eafe2-8689-43a0-a89c-895cedb54d60")
+	)
+	(embedded_fonts no)
+	(model "${KICAD10_3DMODEL_DIR}/LED_THT.3dshapes/LED_D3.0mm.step"
+		(offset
+			(xyz -1.27 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

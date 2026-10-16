@@ -5493,7 +5493,7 @@
 			)
 		)
 	)
-	(global_label "MIDI_TX"
+	(global_label "MIDI_TX_BUF"
 		(shape bidirectional)
 		(at 334.01 48.26 0)
 		(fields_autoplaced yes)
@@ -5581,7 +5581,7 @@
 			)
 		)
 	)
-	(global_label "MIDI_TX"
+	(global_label "MIDI_TX_BUF"
 		(shape bidirectional)
 		(at 267.97 60.96 0)
 		(fields_autoplaced yes)
@@ -6587,7 +6587,7 @@
 				)
 			)
 		)
-		(property "Value" "47Ω"
+		(property "Value" "470Ω"
 			(at 303.53 33.02 0)
 			(effects
 				(font
@@ -6830,7 +6830,7 @@
 				)
 			)
 		)
-		(property "Value" "BLUE"
+		(property "Value" "RED 3mm"
 			(at 330.2 43.434 0)
 			(effects
 				(font
@@ -6838,7 +6838,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ShieldXL:CHIPLED_0603_NOOUTLINE"
+		(property "Footprint" "MMM:LED_3mm_PadsAC"
 			(at 331.47 40.64 0)
 			(effects
 				(font
@@ -7514,7 +7514,7 @@
 				)
 			)
 		)
-		(property "Value" "RED"
+		(property "Value" "RED 3mm"
 			(at 307.34 43.434 0)
 			(effects
 				(font
@@ -7522,7 +7522,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ShieldXL:CHIPLED_0603_NOOUTLINE"
+		(property "Footprint" "MMM:LED_3mm_PadsAC"
 			(at 308.61 40.64 0)
 			(effects
 				(font
@@ -8472,7 +8472,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "47Ω"
+		(property "Value" "100Ω"
 			(at 248.92 64.262 0)
 			(effects
 				(font
@@ -10073,7 +10073,7 @@
 				)
 			)
 		)
-		(property "Value" "15Ω"
+		(property "Value" "470Ω"
 			(at 326.39 33.02 0)
 			(effects
 				(font

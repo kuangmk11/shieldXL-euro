@@ -29,7 +29,8 @@ import panel_lib as PL       # noqa: E402
 REF = {"K1": "SW1", "K2": "SW2", "K3": "SW3", "E1": "E1", "E2": "E2", "E3": "E3",
        "I/1": "J115", "I/2": "J116", "O/1": "J117", "O/2": "J118", "O/3": "J119", "O/4": "J120",
        "I/L": "J102", "I/R": "J103", "M/I": "J106", "M/O": "J107", "O/L": "J104", "O/R": "J105",
-       "USB 1": "J109", "USB 2": "J110", "USB 3": "J111", "USB-C power": "J108"}
+       "USB 1": "J109", "USB 2": "J110", "USB 3": "J111", "USB-C power": "J108",
+       "MIDI in LED": "D1", "MIDI out LED": "D2"}
 
 # where each footprint's shaft (or opening) centre sits from its origin, at 0 deg
 CENTRE = {"Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles": (0.0, 6.48),
@@ -39,6 +40,7 @@ CENTRE = {"Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles": (0.0, 6.48),
           "SW_CK_D6R": (0.0, 0.0),
           "USB_C_Receptacle_Molex_2047110001_Vertical": (0.0, 0.0),
           "USB_C_Receptacle_JAE_DX07S024WJ1R350": (0.0, 0.0),
+          "LED_3mm_PadsAC": (0.0, 0.0),
           "USB_A_Molex_105057_Vertical": (3.5, -2.38)}   # middle of its pads / body
 # parts that stand turned on the board (deg); the rest sit at 0
 ANGLE = {"USB_C_Receptacle_Molex_2047110001_Vertical": 90, "USB_C_Receptacle_JAE_DX07S024WJ1R350": 90}
@@ -66,6 +68,8 @@ def targets():
     out = {}
     for _, name, x, y, _ in P.DRAWN:
         out[P.__dict__.get("SHOWN", {}).get(name, name)] = (x, y)
+    for what, x, y, _ in getattr(P, "LEDS", []):
+        out[what] = (x, y)
     for r in PL.RECTS:
         if r[0] in REF:
             out[r[0]] = ((r[1] + r[3]) / 2, (r[2] + r[4]) / 2)
