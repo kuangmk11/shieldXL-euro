@@ -5,8 +5,8 @@ Run with KiCad's own Python, the board closed:
 
     "/mnt/g/Program Files/KiCad/10.0/bin/python.exe" tools/set_3d_models.py
 
-Writes both the footprint libraries (ShieldXL.pretty) and the copies on the
-board, which keeps its own.
+Writes both the footprint libraries (ShieldXL.pretty, MMM.pretty) and the
+copies on the board, which keeps its own.
 """
 
 import os
@@ -18,6 +18,7 @@ HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BOARD = os.path.join(HERE, "shieldXL-euro.kicad_pcb")
 K = "${KICAD10_3DMODEL_DIR}/"
 P = "${KIPRJMOD}/3dmodels/"
+H = "${KIPRJMOD}/3d/"                 # models that come with the MMM house library
 
 # (library, footprint): (model, z rotation in deg). The angle is how far the
 # Eagle footprint's pads stand turned (counterclockwise, seen from the front)
@@ -36,6 +37,8 @@ MODELS = {
     # ASFL1 oscillator, 5.0 x 3.2: the same body as EuroQuartz's XO53
     ("ShieldXL", "ASF"): (K + "Oscillator.3dshapes/Oscillator_SMD_EuroQuartz_XO53-4Pin_5.0x3.2mm.step", 0),
     ("ShieldXL", "PEC11RN"): (P + "SW-PEC11R-4215F-N0024.stp", 0),
+    # C&K's own model; its pins sit on the footprint's 5 mm square, z 0 at the board
+    ("MMM", "SW_CK_D6R"): (H + "SW-D6R00-F2-LFS.stp", 0),
     # KiCad 10 ships no 1812 fuse model; the 1812 resistor is the same box
     ("Fuse", "Fuse_1812_4532Metric"): (K + "Resistor_SMD.3dshapes/R_1812_4532Metric.step", 0),
 }

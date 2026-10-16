@@ -75,4 +75,15 @@
 		(layers "*.Cu" "*.Mask")
 		(uuid "6a1d6f0e-5b1e-4a43-9a3e-2d6f1c0b6d23"))
 	(embedded_fonts no)
+  (model "${KIPRJMOD}/3d/SW-D6R00-F2-LFS.stp"
+  	(offset
+  		(xyz 0 0 0)
+  	)
+  	(scale
+  		(xyz 1 1 1)
+  	)
+  	(rotate
+  		(xyz 0 0 0)
+  	)
+  )
 )

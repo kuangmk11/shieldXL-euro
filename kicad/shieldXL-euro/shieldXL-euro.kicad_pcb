@@ -1530,6 +1530,17 @@
 			(uuid "d694fc70-44d6-47b0-be5b-6764a203eeae")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/3d/SW-D6R00-F2-LFS.stp"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0805_2012Metric"
 		(layer "F.Cu")
@@ -4417,6 +4428,17 @@
 			(uuid "56ec1549-e012-469e-b558-b5257ad591c8")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/3d/SW-D6R00-F2-LFS.stp"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Jumper:SolderJumper-3_P1.3mm_Bridged12_Pad1.0x1.5mm"
 		(layer "F.Cu")
@@ -7631,6 +7653,17 @@
 			(uuid "debeb53b-dd5b-4111-bc5c-77be328fbfa8")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/3d/SW-D6R00-F2-LFS.stp"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "ShieldXL:PEC11RN"
 		(locked yes)
