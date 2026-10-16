@@ -2175,6 +2175,17 @@
 			(uuid "73ea5955-0e7a-42b1-bbfc-118c37705129")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/3d/2047110001.stp"
+			(offset
+				(xyz 0 0 3.82)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "MMM:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
 		(locked yes)
@@ -3894,9 +3905,9 @@
 			(uuid "63ee1dfb-3145-4d20-b1be-ec307395cc61")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_USB.3dshapes/USB_A_Molex_105057_Vertical.step"
+		(model "${KIPRJMOD}/3d/1050570001.stp"
 			(offset
-				(xyz 0 0 0)
+				(xyz 3.5 1.9 5)
 			)
 			(scale
 				(xyz 1 1 1)
@@ -6898,9 +6909,9 @@
 			(uuid "b950cec7-9df2-4400-9b48-543c1a00b973")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_USB.3dshapes/USB_A_Molex_105057_Vertical.step"
+		(model "${KIPRJMOD}/3d/1050570001.stp"
 			(offset
-				(xyz 0 0 0)
+				(xyz 3.5 1.9 5)
 			)
 			(scale
 				(xyz 1 1 1)
@@ -9594,9 +9605,9 @@
 			(uuid "ca67b0cb-3a73-44fe-a66b-b5e183b88028")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_USB.3dshapes/USB_A_Molex_105057_Vertical.step"
+		(model "${KIPRJMOD}/3d/1050570001.stp"
 			(offset
-				(xyz 0 0 0)
+				(xyz 3.5 1.9 5)
 			)
 			(scale
 				(xyz 1 1 1)

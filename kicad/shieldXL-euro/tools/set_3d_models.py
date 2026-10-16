@@ -20,7 +20,7 @@ K = "${KICAD10_3DMODEL_DIR}/"
 P = "${KIPRJMOD}/3dmodels/"
 H = "${KIPRJMOD}/3d/"                 # models that come with the MMM house library
 
-# (library, footprint): (model, z rotation in deg). The angle is how far the
+# (library, footprint): (model, z rotation in deg[, offset x y z in mm, y up]). The angle is how far the
 # Eagle footprint's pads stand turned (counterclockwise, seen from the front)
 # from the stock footprint's; KiCad turns a model by its rotate z the other way,
 # so the model takes the negative (checked against pin 1 on U1 in a render).
@@ -39,14 +39,21 @@ MODELS = {
     ("ShieldXL", "PEC11RN"): (P + "SW-PEC11R-4215F-N0024.stp", 0),
     # C&K's own model; its pins sit on the footprint's 5 mm square, z 0 at the board
     ("MMM", "SW_CK_D6R"): (H + "SW-D6R00-F2-LFS.stp", 0),
+    # Molex's own models (the house library carries them). The USB-A's shell
+    # flange sits at z -5.0 and its pins on y -1.9 about its centre; pad 1 is
+    # 3.5 left of the middle. The USB-C stands on its z axis with the legs' tips
+    # at -5.22 and L = 1.4 below the board, so the board is at -3.82 (shell top
+    # then 9.04 up, as drawn); it is centred on the footprint's origin.
+    ("Connector_USB", "USB_A_Molex_105057_Vertical"): (H + "1050570001.stp", 0, (3.5, 1.9, 5.0)),
+    ("MMM", "USB_C_Receptacle_Molex_2047110001_Vertical"): (H + "2047110001.stp", 0, (0, 0, 3.82)),
     # KiCad 10 ships no 1812 fuse model; the 1812 resistor is the same box
     ("Fuse", "Fuse_1812_4532Metric"): (K + "Resistor_SMD.3dshapes/R_1812_4532Metric.step", 0),
 }
 
 
-def model_block(path, rot, indent="\t"):
+def model_block(path, rot, off=(0, 0, 0), indent="\t"):
     i, j = indent, indent + "\t"
-    return (f'{i}(model "{path}"\n{j}(offset\n{j}\t(xyz 0 0 0)\n{j})\n{j}(scale\n{j}\t(xyz 1 1 1)\n{j})\n'
+    return (f'{i}(model "{path}"\n{j}(offset\n{j}\t(xyz {off[0]:g} {off[1]:g} {off[2]:g})\n{j})\n{j}(scale\n{j}\t(xyz 1 1 1)\n{j})\n'
             f'{j}(rotate\n{j}\t(xyz 0 0 {rot})\n{j})\n{i})\n')
 
 
@@ -77,13 +84,13 @@ def strip_models(text):
 
 def fix_library():
     done = []
-    for (lib, name), (path, rot) in MODELS.items():
+    for (lib, name), (path, rot, *off) in MODELS.items():
         f = os.path.join(HERE, f"{lib}.pretty", f"{name}.kicad_mod")
         if not os.path.exists(f):
             continue
         t = strip_models(open(f, newline="").read()).rstrip()
         assert t.endswith(")")
-        t = t[:-1].rstrip("\n") + "\n" + model_block(path, rot, "  ") + ")\n"
+        t = t[:-1].rstrip("\n") + "\n" + model_block(path, rot, off[0] if off else (0, 0, 0), "  ") + ")\n"
         open(f, "w", newline="").write(t)
         done.append(name)
     return done
@@ -97,11 +104,13 @@ def fix_board():
         key = (fid.GetLibNickname().wx_str(), fid.GetLibItemName().wx_str())
         if key not in MODELS:
             continue
-        path, rot = MODELS[key]
+        path, rot, *off = MODELS[key]
+        ox, oy, oz = off[0] if off else (0, 0, 0)
         fp.Models().clear()
         m = pcbnew.FP_3DMODEL()
         m.m_Filename = path
         m.m_Rotation = pcbnew.VECTOR3D(0, 0, rot)
+        m.m_Offset = pcbnew.VECTOR3D(ox, oy, oz)
         fp.Models().push_back(m)
         n += 1
     pcbnew.SaveBoard(BOARD, board)
