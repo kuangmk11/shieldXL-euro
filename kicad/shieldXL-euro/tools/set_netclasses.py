@@ -31,7 +31,8 @@ CLASSES = {
                    ["*_LINE", "*_JACK", "*INL_*", "*INR_*", "*OUTL_*", "*OUTR_*",
                     "*CRW_IN*", "*CRW_OUT*", "*/INA", "*/INB", "*/OUTA", "*/OUTB",
                     # the codec's own analog nodes: its coupling caps and references
-                    "Net-(C1[0246]-Pad2)", "Net-(U1-FILT+)", "Net-(U1-VQ)"]),
+                    "Net-(C10-Pad2)", "Net-(C12-Pad2)", "Net-(C14-Pad2)", "Net-(C16-Pad2)",
+                    "Net-(U1-FILT+)", "Net-(U1-VQ)"]),
 }
 TRACK_PRESETS = [0.0, 0.25, 0.3, 0.4, 0.5, 0.8, 1.0, 1.5]
 VIA_PRESETS = [(0.0, 0.0), (0.6, 0.3), (0.8, 0.4)]
