@@ -1,6 +1,6 @@
 # shieldXL-euro
 
-An 18 HP Eurorack module from okyeron / denki-oto's
+A 20 HP Eurorack module from okyeron / denki-oto's
 [shieldXL](https://github.com/okyeron/shieldXL), itself a remix of monome's
 [norns shield](https://github.com/monome/norns-shield). GPL-3.0, as both are.
 
@@ -86,15 +86,25 @@ The panel layout is in the Missing Mile Modular repo
 
 ## Not done yet
 
-- **The board.** Outline to the 18 HP panel, parts placed to its holes. The
+- **The board.** The outline is drawn (`tools/make_outline.py`, run with
+  KiCad's Python): 98 x 108 mm behind the 20 HP panel, with the panel, the
+  display and the Pi traced on User.1-4. shieldXL's desktop layout sits
+  160 mm aside as a stash for Update PCB. Parts are not placed yet. The
   stack, front to back: panel, display on standoffs behind the window, main
-  board, Pi on the back (extra-tall header, about 20 mm standoffs, as on
-  MONOFA). The panel is drawn in the Missing Mile Modular repo and named
-  Moirae there.
+  board, Pi 4 on the back, upside down as on MONOFA (extra-tall header,
+  about 20 mm standoffs).
+- **The Pi lies landscape, header along the top**, behind the display and
+  clear of the controls. That is why the module is 20 HP: 85 mm of Pi, its
+  ports, a USB adapter and the microSD card come to about 96 mm, more than
+  18 HP's 91.3. Small adapter boards plug into its four USB ports and carry
+  them down to the main board on a header or ribbon. Its two lower holes
+  fall near K1 / E2's pins on the back; SMD standoffs (Wurth WA-SMSI) keep
+  the front clear, and the exact spots wait for the real footprints. The
+  panel is drawn in the Missing Mile Modular repo and named Moirae there.
 - **Corone (crow).** Two CV inputs and four CV outputs, the six jacks in the
   panel's CORONE outline. A daughterboard running monome's own crow
   firmware, on one 2 x 10 header on the back of the main board, lower half,
-  under the Pi; USB to norns through the Pi's fourth port. Spec and
+  below the Pi; USB to norns through the Pi's fourth port. Spec and
   schematic in `../corone/`. The main board's side is in the Eurorack sheet:
   J115-J120 jacks, J121 header, J122 ii, J123 USB cable.
 - **A vertical USB-C receptacle.** KiCad's library has none. J108 has no

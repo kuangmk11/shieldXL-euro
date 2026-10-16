@@ -96,8 +96,8 @@ USB to a cable header for the Pi's fourth port.
 
 ## Placement
 
-On the back of the main board, lower half, under the Pi. Stands about as
-tall as its header; keep its top clear of the Pi's underside.
+On the back of the main board, lower half, below the Pi (User.4 on the main
+board marks about 60 x 45 mm of room). Stands about as tall as its header.
 
 ## Files
 

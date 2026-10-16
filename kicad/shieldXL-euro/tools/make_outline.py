@@ -12,10 +12,10 @@ outline goes to User.9. Every run: Edge.Cuts and User.1-4 are redrawn.
 
   User.1  Panel        the panel's outline, holes and openings
   User.2  Front        the display module, between panel and board
-  User.3  Pi (back)    Pi 4, upside down, ports toward the bottom rail; its
-                       holes, 40-pin header, port block and the USB plugs'
-                       room
-  User.4  Corone       the room for the daughterboard, under the Pi
+  User.3  Pi (back)    Pi 4, upside down, landscape: its 40-pin header along
+                       the top, behind the display, clear of the controls;
+                       its holes, port block and the USB adapters' room
+  User.4  Corone       the room for the daughterboard, below the Pi
 """
 
 import os
@@ -32,25 +32,28 @@ STASH_MARK = "SHIELDXL DESKTOP BOARD - PARTS STASH"
 
 # --- the board: inside the rails, inside the panel's width ------------------------
 # 108 mm between the rails (10.25 - 118.25 of the 128.5 panel), 1.65 mm in from
-# each side of the 91.3 mm panel.
-BX0, BX1, BY0, BY1, BR = 1.65, 89.65, 10.25, 118.25, 1.0
+# each side of the 20 HP, 101.3 mm panel.
+PANEL_W = 101.3
+BX0, BX1, BY0, BY1, BR = 1.65, PANEL_W - 1.65, 10.25, 118.25, 1.0
 
 # --- the display module, on standoffs between panel and board ---------------------
 DISP_W, DISP_H, DISP_TOP = 82.0, 47.5, 10.5
-PANEL_W = 91.3
 
 # --- Pi 4 on the back: 85 x 56, holes 3.5 in on a 58 x 49 grid, the 40-pin
-# header on the long edge, centred 3.5 in, pins 1-40 from 8.37 to 56.63 along it.
-# Upside down (its top faces the board) and turned so its ports face the
-# bottom rail: Pi (px, py) -> board (PI_X1 - py, PI_Y0 + px).
+# header on a long edge, centred 3.5 in, pins 1-40 from 8.37 to 56.63 along it.
+# Upside down (its top faces the board), landscape, header along the top: seen
+# from the front it reads as a Pi seen from above, Pi (px, py) -> board
+# (PI_X0 + px, PI_Y0 + py). microSD to the left, ports to the right.
 PI_L, PI_W = 85.0, 56.0
-PI_Y0 = BY0 + 2.6                    # the microSD card stands 2.6 proud of the top edge
-PI_X1 = PANEL_W / 2 + PI_W / 2       # centred
+SD_PROUD = 2.6                       # the card, past the left edge
 PORT_PROUD, PORT_DEPTH = 2.8, 21.5   # Ethernet: furthest out, deepest
-PLUG_ROOM = BY1                      # adapter plugs, down to the board's bottom edge
+ADAPTER = 6.0                        # USB adapter beyond the port faces: plug body and board
+PI_X0 = BX0 + SD_PROUD               # card flush with the board edge
+PI_Y0 = BY0 + 0.5
+USB_PY = ((2.0, 16.0), (20.0, 34.0)) # the two USB stacks along the port edge (Pi y)
 
-# --- Corone: inside the Pi's four standoffs, above its port block -----------------
-CORONE = (PI_X1 - PI_W + 6.5, PI_Y0 + 8.0, PI_X1 - 7.5, PI_Y0 + 85 - PORT_DEPTH - 2.0)
+# --- Corone: below the Pi, clear of its standoffs ----------------------------------
+CORONE = (BX0 + 4.0, PI_Y0 + PI_W + 3.0, BX0 + 64.0, BY1 - 3.0)
 
 
 def mm(v):
@@ -62,7 +65,7 @@ def pt(x, y):
 
 
 def pi_pt(px, py):
-    return PI_X1 - py, PI_Y0 + px
+    return PI_X0 + px, PI_Y0 + py
 
 
 def shape(board, layer, kind, width=0.1):
@@ -196,16 +199,19 @@ def build():
     text(board, U3, "1", x - 3, y, 1.2)
     px0, py0 = pi_pt(PI_L - PORT_DEPTH, 0)
     px1, py1 = pi_pt(PI_L + PORT_PROUD, PI_W)
-    rect(board, U3, min(px0, px1), min(py0, py1), max(px0, px1), max(py0, py1), 0.1)
-    rect(board, U3, min(px0, px1), max(py0, py1), max(px0, px1), PLUG_ROOM, 0.1)
-    sx0, sy0 = pi_pt(-2.6, 22.0)
+    rect(board, U3, px0, py0, px1, py1, 0.1)
+    for a, b in USB_PY:
+        x0, y0 = pi_pt(PI_L + PORT_PROUD, a)
+        x1, y1 = pi_pt(PI_L + PORT_PROUD + ADAPTER, b)
+        rect(board, U3, x0, y0, x1, y1, 0.1)
+    sx0, sy0 = pi_pt(-SD_PROUD, 22.0)
     sx1, sy1 = pi_pt(0, 34.0)
-    rect(board, U3, min(sx0, sx1), min(sy0, sy1), max(sx0, sx1), max(sy0, sy1), 0.1)
-    cx = (min(ax, bx) + max(ax, bx)) / 2
-    text(board, U3, "PI 4, UPSIDE DOWN (BACK)", cx, PI_Y0 + 40)
-    text(board, U3, "PORTS", cx, (min(py0, py1) + max(py0, py1)) / 2, 1.2)
-    text(board, U3, "USB PLUGS", cx, (max(py0, py1) + PLUG_ROOM) / 2, 1.2)
-    text(board, U3, "40-PIN", max(hx0, hx1) + 3.5, (hy0 + hy1) / 2, 1.0)
+    rect(board, U3, sx0, sy0, sx1, sy1, 0.1)
+    text(board, U3, "PI 4, UPSIDE DOWN (BACK)", PI_X0 + PI_L / 2 - 8, PI_Y0 + 32)
+    text(board, U3, "PORTS", (px0 + px1) / 2, (py0 + py1) / 2, 1.2)
+    x, _ = pi_pt(PI_L + PORT_PROUD + ADAPTER / 2, 0)
+    text(board, U3, "USB", x, PI_Y0 + 8, 1.0)
+    text(board, U3, "40-PIN", (hx0 + hx1) / 2, max(hy0, hy1) + 2.0, 1.0)
 
     # User.4: Corone's room
     rect(board, pcbnew.User_4, *CORONE, 0.15)
@@ -218,5 +224,6 @@ def build():
 if __name__ == "__main__":
     moved = build()
     print("stashed shieldXL's layout" if moved else "stash already in place")
-    print(f"board {BX1 - BX0:.2f} x {BY1 - BY0:.2f} mm; Pi x {PI_X1 - PI_W:.2f}-{PI_X1:.2f}, y {PI_Y0:.2f}-{PI_Y0 + PI_L:.2f}")
+    print(f"board {BX1 - BX0:.2f} x {BY1 - BY0:.2f} mm; Pi x {PI_X0:.2f}-{PI_X0 + PI_L:.2f}, y {PI_Y0:.2f}-{PI_Y0 + PI_W:.2f}; "
+          f"adapters to x {PI_X0 + PI_L + PORT_PROUD + ADAPTER:.2f} (panel {PANEL_W})")
     print(f"Corone room {CORONE[2] - CORONE[0]:.1f} x {CORONE[3] - CORONE[1]:.1f} mm")
