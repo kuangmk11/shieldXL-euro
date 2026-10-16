@@ -46,11 +46,16 @@ DISP_W, DISP_H, DISP_TOP = 82.0, 47.5, 10.5
 # (PI_X0 + px, PI_Y0 + py). microSD to the left, ports to the right.
 PI_L, PI_W = 85.0, 56.0
 SD_PROUD = 2.6                       # the card, past the left edge
-PORT_PROUD, PORT_DEPTH = 2.8, 21.5   # Ethernet: furthest out, deepest
-ADAPTER = 6.0                        # USB adapter beyond the port faces: plug body and board
+PORT_PROUD = 2.9                     # USB and Ethernet past the board edge
+# Ports along the far short edge, from the Pi's mechanical drawing (centres
+# measured from the edge opposite the header): USB stacks at 27 and 9, 13.2
+# wide, 17.5 deep; Ethernet at 45.75, 15.3 wide, 21.4 deep.
+USB_PY = (56.0 - 27.0, 56.0 - 9.0)   # stack centres, from the header edge
+USB_W, USB_DEPTH = 13.2, 17.5
+ETH_PY, ETH_W, ETH_DEPTH = 56.0 - 45.75, 15.3, 21.4
+ADAPTER = 6.0                        # USB adapter beyond the port faces
 PI_X0 = BX0 + SD_PROUD               # card flush with the board edge
 PI_Y0 = BY0 + 0.5
-USB_PY = ((2.0, 16.0), (20.0, 34.0)) # the two USB stacks along the port edge (Pi y)
 
 # --- Corone: below the Pi, clear of its standoffs ----------------------------------
 CORONE = (BX0 + 4.0, PI_Y0 + PI_W + 3.0, BX0 + 64.0, BY1 - 3.0)
@@ -197,20 +202,23 @@ def build():
     rect(board, U3, min(hx0, hx1), min(hy0, hy1), max(hx0, hx1), max(hy0, hy1), 0.15)
     x, y = pi_pt(8.37, 3.5 + 1.27)
     text(board, U3, "1", x - 3, y, 1.2)
-    px0, py0 = pi_pt(PI_L - PORT_DEPTH, 0)
-    px1, py1 = pi_pt(PI_L + PORT_PROUD, PI_W)
-    rect(board, U3, px0, py0, px1, py1, 0.1)
-    for a, b in USB_PY:
-        x0, y0 = pi_pt(PI_L + PORT_PROUD, a)
-        x1, y1 = pi_pt(PI_L + PORT_PROUD + ADAPTER, b)
+    for c, w, d in [(c, USB_W, USB_DEPTH) for c in USB_PY] + [(ETH_PY, ETH_W, ETH_DEPTH)]:
+        x0, y0 = pi_pt(PI_L - d + PORT_PROUD, c - w / 2)
+        x1, y1 = pi_pt(PI_L + PORT_PROUD, c + w / 2)
         rect(board, U3, x0, y0, x1, y1, 0.1)
+    for c in USB_PY:
+        x0, y0 = pi_pt(PI_L + PORT_PROUD, c - USB_W / 2 - 1.0)
+        x1, y1 = pi_pt(PI_L + PORT_PROUD + ADAPTER, c + USB_W / 2 + 1.0)
+        rect(board, U3, x0, y0, x1, y1, 0.1)
+    px0, py0 = pi_pt(PI_L - USB_DEPTH, USB_PY[0])
+    px1, py1 = pi_pt(PI_L, USB_PY[1])
     sx0, sy0 = pi_pt(-SD_PROUD, 22.0)
     sx1, sy1 = pi_pt(0, 34.0)
     rect(board, U3, sx0, sy0, sx1, sy1, 0.1)
     text(board, U3, "PI 4, UPSIDE DOWN (BACK)", PI_X0 + PI_L / 2 - 8, PI_Y0 + 32)
     text(board, U3, "PORTS", (px0 + px1) / 2, (py0 + py1) / 2, 1.2)
-    x, _ = pi_pt(PI_L + PORT_PROUD + ADAPTER / 2, 0)
-    text(board, U3, "USB", x, PI_Y0 + 8, 1.0)
+    x, y = pi_pt(PI_L + PORT_PROUD + ADAPTER / 2, USB_PY[0] - USB_W / 2 - 3.0)
+    text(board, U3, "USB", x, y, 1.0)
     text(board, U3, "40-PIN", (hx0 + hx1) / 2, max(hy0, hy1) + 2.0, 1.0)
 
     # User.4: Corone's room
