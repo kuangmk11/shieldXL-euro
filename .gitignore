@@ -11,3 +11,4 @@ kicad/corone/corone.kicad_prl
 drc.rpt
 kicad/usb-adapter/usb-adapter.kicad_prl
 ~*.lck
+kicad/*/*-backups/
