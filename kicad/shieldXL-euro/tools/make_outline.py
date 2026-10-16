@@ -15,7 +15,8 @@ outline goes to User.9. Every run: Edge.Cuts and User.1-4 are redrawn.
   User.2  Front        the display module, between panel and board
   User.3  Pi (back)    Pi 4, upside down, landscape: its 40-pin header along
                        the top, behind the display, clear of the controls;
-                       its holes, port block and the USB adapters' room
+                       its two screw holes by the header, the printed feet at
+                       the other corners, port block and the USB adapters' room
   User.4  Corone       the room for the daughterboard, below the Pi
   User.5  Panel back   the panel's back artwork, as KiCad draws B.Silkscreen
 """
@@ -250,10 +251,12 @@ def build():
     (ax, ay), (bx, by) = pi_pt(0, 0), pi_pt(PI_L, PI_W)
     rect(board, U3, min(ax, bx), min(ay, by), max(ax, bx), max(ay, by), 0.15)
     for px in (3.5, 61.5):
-        for py in (3.5, 52.5):
-            x, y = pi_pt(px, py)
-            circle(board, U3, x, y, 1.35)            # M2.5
-            circle(board, U3, x, y, 2.75)            # standoff
+        x, y = pi_pt(px, 3.5)                    # by the header: screwed down
+        circle(board, U3, x, y, 1.35)            # M2.5
+        circle(board, U3, x, y, 2.75)            # standoff
+        x, y = pi_pt(px, 52.5)                   # far edge: a printed foot fixed
+        circle(board, U3, x, y, 2.75)            # to the Pi, no hole here - K1
+        text(board, U3, "FOOT", x, y + 4.0, 0.8)  # and E2 sit under these corners
     hx0, hy0 = pi_pt(8.37 - 1.27, 3.5 - 2.54)
     hx1, hy1 = pi_pt(56.63 + 1.27, 3.5 + 2.54)
     rect(board, U3, min(hx0, hx1), min(hy0, hy1), max(hx0, hx1), max(hy0, hy1), 0.15)

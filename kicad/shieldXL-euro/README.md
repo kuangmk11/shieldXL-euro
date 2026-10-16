@@ -89,7 +89,9 @@ The panel layout is in the Missing Mile Modular repo
 - **The board.** The outline is drawn (`tools/make_outline.py`, run with
   KiCad's Python): 98 x 108 mm behind the 20 HP panel, with the panel, the
   display and the Pi traced on User.1-4. shieldXL's desktop layout sits
-  160 mm aside as a stash for Update PCB. Parts are not placed yet. The
+  160 mm aside as a stash for Update PCB. The panel parts and the Pi are
+  placed and locked by `tools/place_panel_parts.py`; the panel, artwork
+  included, is on User.1 (back artwork on User.5). The
   stack, front to back: panel, display on standoffs behind the window, main
   board, Pi 4 on the back, upside down as on MONOFA (extra-tall header,
   about 20 mm standoffs).
@@ -98,9 +100,10 @@ The panel layout is in the Missing Mile Modular repo
   ports, a USB adapter and the microSD card come to about 96 mm, more than
   18 HP's 91.3. Two small adapter boards plug into its USB stacks and
   carry the four ports to J112 / J113 on 2 x 5 IDC ribbons
-  (`../usb-adapter`). Its two lower holes
-  fall near K1 / E2's pins on the back; SMD standoffs (Wurth WA-SMSI) keep
-  the front clear, and the exact spots wait for the real footprints. The
+  (`../usb-adapter`). Only its two holes by the header are screwed down
+  (footprint `MMM:RASPI_BOARD_B+_UPPER_HOLES`): the other two land on K1's
+  and E2's pins, so those corners stand on 3D-printed feet fixed to the Pi,
+  drawn on User.3. Keys are C&K D6R00 (`MMM:SW_CK_D6R`). The
   panel is drawn in the Missing Mile Modular repo and named Moirae there.
 - **Corone (crow).** Two CV inputs and four CV outputs, the six jacks in the
   panel's CORONE outline. A daughterboard running monome's own crow
