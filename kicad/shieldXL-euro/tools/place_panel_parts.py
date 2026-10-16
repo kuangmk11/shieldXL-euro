@@ -38,15 +38,19 @@ CENTRE = {"Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles": (0.0, 6.48),
           "Choc_MX_combo": (0.0, 0.0),
           "SW_CK_D6R": (0.0, 0.0),
           "USB_C_Receptacle_Molex_2047110001_Vertical": (0.0, 0.0),
+          "USB_C_Receptacle_JAE_DX07S024WJ1R350": (0.0, 0.0),
           "USB_A_Molex_105057_Vertical": (3.5, -2.38)}   # middle of its pads / body
 # parts that stand turned on the board (deg); the rest sit at 0
-ANGLE = {"USB_C_Receptacle_Molex_2047110001_Vertical": 90}
+ANGLE = {"USB_C_Receptacle_Molex_2047110001_Vertical": 90, "USB_C_Receptacle_JAE_DX07S024WJ1R350": 90}
 
 # the display's FPC connector, on the back where shieldXL had it relative to the
 # display module (see FPC_SLOT in tools/make_outline.py): its origin 40.540,
 # 41.351 from the module's top-left corner, at 90 deg
 FPC_REF, FPC_AT = "U$1", (40.540, 41.351)
 DISP_X0, DISP_TOP = 101.3 / 2 - 82.0 / 2, 10.5
+# the display module itself: a board-only footprint (no pads, not in the
+# schematic) that carries its outline and 3D model, origin at its top-left
+DISP_REF, DISP_FP = "DS1", "Display_NHD-2.7-12864WDW3"
 
 # the Pi, as tools/make_outline.py draws it: its footprint's origin is the
 # corner below the header, seen from the front
@@ -72,8 +76,17 @@ def main():
     lock = os.path.join(os.path.dirname(BOARD), "~" + os.path.basename(BOARD) + ".lck")
     if os.path.exists(lock):
         raise SystemExit("the board is open in KiCad (lock file found): save, close it, then run again")
+    # KiCad's Python reads a footprint library only before it loads a board
+    disp_proto = pcbnew.FootprintLoad(os.path.join(HERE, "MMM.pretty"), DISP_FP)
     board = pcbnew.LoadBoard(BOARD)
     fps = {f.GetReference(): f for f in board.GetFootprints()}
+    if DISP_REF not in fps:
+        d = pcbnew.FOOTPRINT(disp_proto)
+        d.SetParent(board)
+        d.SetFPID(pcbnew.LIB_ID("MMM", DISP_FP))
+        d.SetReference(DISP_REF)
+        board.Add(d)
+        fps[DISP_REF] = d
     placed, missing, unknown = [], [], []
     for name, (x, y) in targets().items():
         ref = REF.get(name)
@@ -104,6 +117,11 @@ def main():
         placed.append(f"{FPC_REF} display FPC")
     else:
         missing.append(FPC_REF)
+    d = fps[DISP_REF]
+    d.SetOrientationDegrees(0)
+    d.SetPosition(pcbnew.VECTOR2I(mm(OX + DISP_X0), mm(OY + DISP_TOP)))
+    d.SetLocked(True)
+    placed.append(f"{DISP_REF} display")
     pi = fps.get(PI_REF)
     if pi is not None:
         if pi.IsFlipped():

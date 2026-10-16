@@ -9466,7 +9466,7 @@
 				)
 			)
 		)
-		(property "Value" "USB-C 5V"
+		(property "Value" "DX07S024WJ1R350"
 			(at 243.84 124.46 0)
 			(effects
 				(font
@@ -9474,7 +9474,7 @@
 				)
 			)
 		)
-		(property "Footprint" "MMM:USB_C_Receptacle_Molex_2047110001_Vertical"
+		(property "Footprint" "Connector_USB:USB_C_Receptacle_JAE_DX07S024WJ1R350"
 			(at 241.3 116.84 0)
 			(hide yes)
 			(effects
