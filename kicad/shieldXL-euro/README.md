@@ -76,7 +76,7 @@ The panel layout is in the Missing Mile Modular repo
   - Removing the desktop I/O changed no other connection. Every shield net
     keeps exactly its pins, less the removed parts'.
   - The new sheet's cross-sheet nets land on the parts named above.
-- **ERC:** 35 findings, against the original's 47 (`kicad-cli sch erc`,
+- **ERC:** 34 findings, against the original's 47 (`kicad-cli sch erc`,
   KiCad 10; unchanged by the Corone jacks and headers).
   - 16 of the original's are gone with the parts that caused them.
   - 4 are new: two net-name aliases (`TIP1_5` / `RING1_4` now also carry the

@@ -4074,24 +4074,6 @@
 					)
 				)
 				(pin bidirectional line
-					(at 12.7 0 180)
-					(length 5.08)
-					(name "FB"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
 					(at 12.7 5.08 180)
 					(length 5.08)
 					(name "OUT"
