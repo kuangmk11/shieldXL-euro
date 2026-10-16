@@ -63,6 +63,11 @@ STACK, BOARD_T, SOCKET_H, SEAT_GAP, PI_HEADER_BASE = 20.0, 1.6, 8.5, 0.5, 2.5
 SOCKET = K + "Connector_PinSocket_2.54mm.3dshapes/PinSocket_2x20_P2.54mm_Vertical.step"
 PIN1 = (8.37, 51.23)                  # X1's pad 1, y up
 MULTI = {
+    # JAE's model (SamacSys) stands on its y axis, legs at -y, centred like
+    # KiCad's footprint; the board is 7.3 up its legs, so the top lands 12.0 up
+    ("Connector_USB", "USB_C_Receptacle_JAE_DX07S024WJ1R350"): [
+        (H + "DX07S024WJ1R350.stp", (0, 0, 0), (0, 0, 7.3)),
+    ],
     ("MMM", "RASPI_BOARD_B+_UPPER_HOLES"): [
         (P + "RASPBERRY PI 4B_4GB.STEP", (-90, 0, 0), (42.5, 28, -(BOARD_T + STACK + 1.5))),
         (SOCKET, (180, 0, 90), (*PIN1, -BOARD_T)),
