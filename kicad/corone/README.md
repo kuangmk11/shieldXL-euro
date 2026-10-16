@@ -117,9 +117,11 @@ inputs, which KiCad types as bidirectional.
 - **DAC reset.** RSTSEL high: the DAC8565 resets to mid-scale, so the jacks
   sit at +2.5 V until the firmware runs. Reset to zero would put +10 V on
   every output.
-- **ii.** Pull-ups 2.2k from PB3 / PB4. The main board's ii header reads
-  GND, SCL, SDA - the order on monome's Trilogy boards; crow's own header
-  order is unconfirmed, so check it against a cable before ordering.
+- **ii.** Pull-ups 2.2k from PB3 / PB4. The main board's ii header (J122)
+  reads GND, SCL, SDA, the common order. There is no standard: monome's i2c
+  guide says the order may be reversed between modules and to connect by
+  name, finding GND by its marking - so J122's silkscreen should name all
+  three pins and mark GND.
 - **Power.** AMS1117-5.0 from +12 V carries the whole digital load (about
   0.5 W at 70 mA); give its tab copper.
 - **VBUS.** Straight to PA9, as the firmware senses it there. With the rack
