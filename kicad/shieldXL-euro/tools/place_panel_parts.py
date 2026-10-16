@@ -36,6 +36,7 @@ CENTRE = {"Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles": (0.0, 6.48),
           "Jack_3.5mm_QingPu_WQP-PJ366ST_Vertical": (0.0, 0.0),
           "PEC11RN": (0.0, 0.0),
           "Choc_MX_combo": (0.0, 0.0),
+          "SW_CK_D6R": (0.0, 0.0),
           "USB_A_Molex_105057_Vertical": (3.5, -2.38)}   # middle of its pads / body
 
 # the Pi, as tools/make_outline.py draws it: its footprint's origin is the

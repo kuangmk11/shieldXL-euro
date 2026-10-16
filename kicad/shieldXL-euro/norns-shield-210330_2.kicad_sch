@@ -7176,7 +7176,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "PVA1"
+		(property "Value" "D6R00 F1 LFS"
 			(at 240.03 198.12 0)
 			(effects
 				(font
@@ -7185,7 +7185,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "ShieldXL:Choc_MX_combo"
+		(property "Footprint" "MMM:SW_CK_D6R"
 			(at 243.84 196.85 0)
 			(effects
 				(font
@@ -7655,7 +7655,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "PVA1"
+		(property "Value" "D6R00 F1 LFS"
 			(at 240.03 165.1 0)
 			(effects
 				(font
@@ -7664,7 +7664,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "ShieldXL:Choc_MX_combo"
+		(property "Footprint" "MMM:SW_CK_D6R"
 			(at 243.84 163.83 0)
 			(effects
 				(font
@@ -9939,7 +9939,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "PVA1"
+		(property "Value" "D6R00 F1 LFS"
 			(at 240.03 129.54 0)
 			(effects
 				(font
@@ -9948,7 +9948,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "ShieldXL:Choc_MX_combo"
+		(property "Footprint" "MMM:SW_CK_D6R"
 			(at 243.84 128.27 0)
 			(effects
 				(font
