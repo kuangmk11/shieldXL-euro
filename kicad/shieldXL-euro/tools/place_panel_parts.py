@@ -62,6 +62,13 @@ COR_REF, COR_FP, COR_AT = "COR1", "Corone_Daughterboard", (101.65, 98.5)
 # corner below the header, seen from the front
 PI_REF = "X1"
 PI_X0, PI_Y0, PI_W = 1.65 + 2.6, 10.25 + 0.5, 56.0
+# the two USB adapters (../usb-adapter), for the 3D view: board-only, each at
+# one of the Pi's USB stacks - USBA1 beside Ethernet (to J112), USBA2 the outer
+# (J113). The stacks' centres are 27.0 and 9.0 up the Pi 4's port edge, with
+# Ethernet above them at 45.75 (its drawing); their faces 2.0 past its 85 mm
+# PCB; the adapter's plug face 3 mm further, its 15 mm plugs 12 mm in
+USB_FP, USB_STACKS = "USB_Adapter_Pi", {"USBA1": 27.0, "USBA2": 9.0}
+USB_FACE_X = PI_X0 + 85.0 + 2.0 + 3.0
 
 
 def mm(v):
@@ -86,7 +93,8 @@ def main():
         raise SystemExit("the board is open in KiCad (lock file found): save, close it, then run again")
     # KiCad's Python reads a footprint library only before it loads a board
     protos = {ref: (name, pcbnew.FootprintLoad(os.path.join(HERE, "MMM.pretty"), name))
-              for ref, name in ((DISP_REF, DISP_FP), (PNL_REF, PNL_FP), (COR_REF, COR_FP))}
+              for ref, name in ((DISP_REF, DISP_FP), (PNL_REF, PNL_FP), (COR_REF, COR_FP),
+                                *((r, USB_FP) for r in USB_STACKS))}
     board = pcbnew.LoadBoard(BOARD)
     fps = {f.GetReference(): f for f in board.GetFootprints()}
     for ref, (name, proto) in protos.items():
@@ -142,6 +150,12 @@ def main():
     c.SetPosition(pcbnew.VECTOR2I(mm(COR_AT[0]), mm(COR_AT[1])))
     c.SetLocked(True)
     placed.append(f"{COR_REF} Corone")
+    for ref, up in USB_STACKS.items():
+        a = fps[ref]
+        a.SetOrientationDegrees(0)
+        a.SetPosition(pcbnew.VECTOR2I(mm(OX + USB_FACE_X), mm(OY + PI_Y0 + PI_W - up)))
+        a.SetLocked(True)
+        placed.append(f"{ref} USB adapter")
     pi = fps.get(PI_REF)
     if pi is not None:
         if pi.IsFlipped():

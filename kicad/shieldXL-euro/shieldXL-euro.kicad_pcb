@@ -136,6 +136,7 @@
 		)
 	)
 	(footprint "Connector_USB:USB_C_Receptacle_JAE_DX07S024WJ1R350"
+		(locked yes)
 		(layer "F.Cu")
 		(uuid "1731366b-998b-487d-a8fc-47dbf83732b2")
 		(at 107.025 141.975 90)
@@ -3047,6 +3048,100 @@
 			)
 		)
 	)
+	(footprint "MMM:USB_Adapter_Pi"
+		(locked yes)
+		(layer "F.Cu")
+		(uuid "577b1ecd-5d75-4440-aaa8-218a398f9e2c")
+		(at 194.25 87.75)
+		(descr "A Pi USB adapter (../usb-adapter) as a 3D model in place: board-only, no pads. It stands upright behind the main board at one of the Pi's USB stacks, its plugs in the ports. Origin on the stack's centre line, at the adapter's plug face (its F side), which stands 3 mm off the Pi's port faces, the 15 mm plugs 12 mm in. Model: 3d/USB_adapter.step from tools/export_usb_adapter_step.sh, turned to stand (90, 0, 270), from 1.6 below the main board's front (its back).")
+		(tags "Pi USB adapter")
+		(property "Reference" "USBA2"
+			(at 3 -10 90)
+			(layer "B.Fab")
+			(uuid "eb28fa01-56c1-4420-8aac-5bd3afedb80d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Value" "USB adapter"
+			(at 4.5 0 90)
+			(layer "B.Fab")
+			(uuid "fb08ed40-edcb-457d-8e6e-1d240a11d707")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "13e5e7ee-989c-4093-b55a-65ed132e1316")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "fcc856ba-a9ef-4d9f-8aa1-bf32a252cdeb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(attr through_hole board_only exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_rect
+			(start -15 -6)
+			(end 0 6)
+			(stroke
+				(width 0.1)
+				(type dash)
+			)
+			(fill no)
+			(layer "B.Fab")
+			(uuid "a25ac192-f12b-4212-9dbc-69946f5db89b")
+		)
+		(fp_rect
+			(start 0 -8.6)
+			(end 1.6 8.6)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "B.Fab")
+			(uuid "892fd66b-c3e2-41bf-96c1-7a745525bdbb")
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/3d/USB_adapter.step"
+			(offset
+				(xyz 0 0 -1.6)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 90 0 270)
+			)
+		)
+	)
 	(footprint "MMM:Jack_3.5mm_QingPu_WQP-PJ366ST_Vertical"
 		(locked yes)
 		(layer "F.Cu")
@@ -4680,6 +4775,100 @@
 			)
 			(rotate
 				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "MMM:USB_Adapter_Pi"
+		(locked yes)
+		(layer "F.Cu")
+		(uuid "75f8a8a2-f6ca-4425-b5a3-11944d05b6d5")
+		(at 194.25 69.75)
+		(descr "A Pi USB adapter (../usb-adapter) as a 3D model in place: board-only, no pads. It stands upright behind the main board at one of the Pi's USB stacks, its plugs in the ports. Origin on the stack's centre line, at the adapter's plug face (its F side), which stands 3 mm off the Pi's port faces, the 15 mm plugs 12 mm in. Model: 3d/USB_adapter.step from tools/export_usb_adapter_step.sh, turned to stand (90, 0, 270), from 1.6 below the main board's front (its back).")
+		(tags "Pi USB adapter")
+		(property "Reference" "USBA1"
+			(at 3 -10 90)
+			(layer "B.Fab")
+			(uuid "8aa20645-2cb0-45a0-a8f6-68999b6186c3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Value" "USB adapter"
+			(at 4.5 0 90)
+			(layer "B.Fab")
+			(uuid "f51b830f-e7d6-4dea-b6e2-fc4bd6d822e3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c649f3d6-4aff-4de2-aae9-3be0c488f6fc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1b3cf851-b923-44b8-acf3-f09b511e17f7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(attr through_hole board_only exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_rect
+			(start -15 -6)
+			(end 0 6)
+			(stroke
+				(width 0.1)
+				(type dash)
+			)
+			(fill no)
+			(layer "B.Fab")
+			(uuid "9262f7af-4916-4e45-9f35-7fc7f52be57e")
+		)
+		(fp_rect
+			(start 0 -8.6)
+			(end 1.6 8.6)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "B.Fab")
+			(uuid "5793b64c-fc3d-44c7-bc89-4c98d002a7ae")
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/3d/USB_adapter.step"
+			(offset
+				(xyz 0 0 -1.6)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 90 0 270)
 			)
 		)
 	)

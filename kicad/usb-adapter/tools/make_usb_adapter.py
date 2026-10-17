@@ -5,8 +5,10 @@ cover the Pi's four ports. Run with KiCad's own Python:
 
     "/mnt/g/Program Files/KiCad/10.0/bin/python.exe" tools/make_usb_adapter.py
 
-writes usb-adapter.kicad_sch, usb-adapter.kicad_pcb, usb-adapter.kicad_pro and
-usb-adapter.pretty/USB_A_Plug_Vertical.kicad_mod. The board is left unrouted.
+writes usb-adapter.kicad_sch, usb-adapter.kicad_pro and
+usb-adapter.pretty/USB_A_Plug_Vertical.kicad_mod, and usb-adapter.kicad_pcb
+unplaced and unrouted only if there is none: the board is now routed by hand,
+and the script leaves it alone (delete it to start over).
 
 Board frame: u across the stack (along the Pi's port edge), v the height
 above the main board's back. Drawn with x = 100 + u, y = 100 - v.
@@ -16,9 +18,8 @@ PLACEHOLDERS - set before ordering:
             STEP model (openings 2.45-7.55 and 11.57-16.69 above its 1.5 mm
             PCB's underside, tongue at the top of each). Check with calipers.
   the plug  a side-mount USB-A male (USB-71, L 15 mm) stood on end; the
-            tail and tab slots are from its drawing, the tails' offset (2.1
-            from the centre, on the insert's face) from its 4.5 mm body.
-            Check a sample's tails before ordering.
+            tail and tab slots are from its drawing, the tails on its centre
+            line. Its 3D model is a 12 x 4.5 x 15 mm placeholder box.
 
 IDC pinout, in ribbon order (each pair between grounds):
   1 VBUS_A  2 GND  3 D-_A  4 D+_A  5 GND  6 GND  7 D-_B  8 D+_B  9 GND  10 VBUS_B
@@ -50,12 +51,12 @@ IDC_CLEAR = 0.6              # IDC body clear of the Pi's underside
 # as Molex 48037) stood on its back end. Its four contact tails leave the back
 # straight, in line with the plug, along the face the plastic insert is on;
 # its shell tabs drop at the jack's two edges, 11.7 apart. Footprint origin at
-# the plug's centre, which goes on the port's centre; the insert side (the
-# tails) toward the Pi's PCB, so the Pi's tongue, along the top of each port,
-# meets it. The two bottom posts, 4.5 apart, stand clear of the board: clip
+# the plug's centre, which goes on the port's centre, the tails on its centre
+# line; the insert side toward the Pi's PCB, so the Pi's tongue, along the top
+# of each port, meets it. The two bottom posts, 4.5 apart, stand clear of the board: clip
 # them or leave them.
 PLUG_PINS = (-3.5, -1.0, 1.0, 3.5)   # 1 VBUS, 2 D-, 3 D+, 4 GND
-PLUG_PIN_DY = -2.1                   # the tails: on the insert's face (body 4.5 thick)
+PLUG_PIN_DY = 0.0                    # the tails, on the plug's centre line
 PLUG_TAIL_SLOT, PLUG_TAIL_PAD = (1.0, 0.6), (1.5, 1.2)   # tails 0.7 wide
 PLUG_SHELL_DX = 5.85                 # the tabs, at the jack's edges
 PLUG_SHELL_SLOT, PLUG_SHELL_PAD = (0.9, 4.0), (1.5, 4.6)  # along the shell's 4.5 side
@@ -93,7 +94,10 @@ def plug_footprint():
             '\t(attr through_hole)\n'
             '\t(property "Reference" "REF**" (at 0 -4.5 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))\n'
             '\t(property "Value" "USB_A_Plug_Vertical" (at 0 4.0 0) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15))))\n'
-            + body + "\n".join(pads) + "\n)\n")
+            + body + "\n".join(pads) + "\n"
+            # a 12 x 4.5 x 15 mm box standing in for the plug
+            '\t(model "${KIPRJMOD}/3d/USB_A_plug_placeholder.step" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))\n'
+            ")\n")
 
 
 # --- schematic ----------------------------------------------------------------------
@@ -266,7 +270,11 @@ def write_board(sym_uuid):
         t.SetPosition(at(W / 2 + 10, v + 0.8))
         t.SetTextSize(pcbnew.VECTOR2I(mm(1), mm(1)))
         board.Add(t)
-    pcbnew.SaveBoard(os.path.join(HERE, f"{NAME}.kicad_pcb"), board)
+    out = os.path.join(HERE, f"{NAME}.kicad_pcb")
+    if os.path.exists(out):
+        print(f"{NAME}.kicad_pcb exists (routed by hand): left alone")
+    else:
+        pcbnew.SaveBoard(out, board)
     return W, top - bottom, bottom, top
 
 

@@ -1,0 +1,50 @@
+(footprint "USB_Adapter_Pi"
+	(version 20240108)
+	(generator "pcbnew")
+	(layer "F.Cu")
+	(descr "A Pi USB adapter (../usb-adapter) as a 3D model in place: board-only, no pads. It stands upright behind the main board at one of the Pi's USB stacks, its plugs in the ports. Origin on the stack's centre line, at the adapter's plug face (its F side), which stands 3 mm off the Pi's port faces, the 15 mm plugs 12 mm in. Model: 3d/USB_adapter.step from tools/export_usb_adapter_step.sh, turned to stand (90, 0, 270), from 1.6 below the main board's front (its back).")
+	(tags "Pi USB adapter")
+	(property "Reference" "REF**"
+		(at 3 -10 90)
+		(layer "B.Fab")
+		(uuid "6dd2c2ec-61e7-5fd5-895e-6abce57b76b3")
+		(effects (font (size 1 1) (thickness 0.15)) (justify mirror))
+	)
+	(property "Value" "USB adapter"
+		(at 4.5 0 90)
+		(layer "B.Fab")
+		(uuid "a9b2f3ed-9863-5c7b-bce4-4a908e548451")
+		(effects (font (size 1 1) (thickness 0.15)) (justify mirror))
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "B.Fab")
+		(hide yes)
+		(uuid "b3bb3842-db08-561b-bb99-4719940f793d")
+		(effects (font (size 1 1) (thickness 0.15)) (justify mirror))
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "B.Fab")
+		(hide yes)
+		(uuid "63bbfcef-5720-52b2-8de4-fec443c5fdab")
+		(effects (font (size 1 1) (thickness 0.15)) (justify mirror))
+	)
+	(attr through_hole board_only exclude_from_bom)
+	(fp_rect (start 0 -8.6) (end 1.6 8.6)
+		(stroke (width 0.1) (type solid)) (fill no) (layer "B.Fab") (uuid "0b126907-0a61-5239-8d83-e425b33bff79"))
+	(fp_rect (start -15 -6) (end 0 6)
+		(stroke (width 0.1) (type dash)) (fill no) (layer "B.Fab") (uuid "5daf7602-88fd-5141-8193-235954450ea1"))
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/USB_adapter.step"
+		(offset
+			(xyz 0 0 -1.6)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 90 0 270)
+		)
+	)
+)
