@@ -38,8 +38,9 @@ between grounds.
   centre line; shell legs 13.3 apart, 2.3 mm holes, on it. Redraw it from
   the chosen part's drawing. A USB-A plug fits one way up: check which side
   its insert sits on against the Pi's ports.
-- **The plug spacing.** `PORT_ZC`, each port's centre above the Pi's PCB, is
-  a placeholder (4.3 and 11.7). The Pi's drawing gives only the stack's
-  16 mm; measure it.
+- **The plug spacing.** `PORT_ZC`, each port's centre above the Pi's PCB:
+  3.49 and 12.63 (9.14 apart), read off the Pi 4 STEP model, where each
+  opening is 5.1 mm tall with the port's tongue along its top. Check it with
+  calipers on a real Pi.
 - **The stack height.** `H`, the Pi's PCB above the main board's back, is
   20 mm, set by the 40-pin header and standoffs chosen for the main board.

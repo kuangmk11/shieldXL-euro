@@ -12,8 +12,9 @@ Board frame: u across the stack (along the Pi's port edge), v the height
 above the main board's back. Drawn with x = 100 + u, y = 100 - v.
 
 PLACEHOLDERS - set before ordering:
-  PORT_ZC   each port's centre height above the Pi's PCB; the Pi's drawing
-            gives only the stack's 16 mm. Measure.
+  PORT_ZC   each port's centre height above the Pi's PCB, read off the Pi 4
+            STEP model (openings 2.45-7.55 and 11.57-16.69 above its 1.5 mm
+            PCB's underside, tongue at the top of each). Check with calipers.
   the plug  USB_A_Plug_Vertical follows the common vertical USB-A pattern
             (pins 2.5 / 2.0 / 2.5, shell legs 13.3 apart, 2.1 behind the
             pins). Redraw it from the chosen part's drawing, and check which
@@ -40,7 +41,7 @@ ROOT_UUID = str(uuid.uuid5(NS, "file"))
 # --- the stack, from the main board's back ---------------------------------------
 H = 20.0                     # the Pi's PCB (its top face) above the main board's back
 PI_T, PI_UNDER = 1.4, 2.0    # Pi PCB thickness; its underside parts (microSD)
-PORT_ZC = (4.3, 11.7)        # PLACEHOLDER: port centres above the Pi's PCB, A then B
+PORT_ZC = (3.49, 12.63)      # port centres above the Pi's PCB, A then B (from its STEP model)
 W = 17.2                     # across the stack; the two stacks are 18 mm apart, 0.8 between boards
 IDC_CLEAR = 0.6              # IDC body clear of the Pi's underside
 
@@ -252,4 +253,4 @@ if __name__ == "__main__":
     write_schematic()
     w, h, bottom, top = write_board()
     print(f"board {w:.1f} x {h:.1f} mm, from {bottom:.1f} to {top:.1f} above the main board's back")
-    print(f"plugs at {v_of_port(0):.1f} (A) and {v_of_port(1):.1f} (B); pitch {PORT_ZC[1] - PORT_ZC[0]:.2f} (placeholder)")
+    print(f"plugs at {v_of_port(0):.1f} (A) and {v_of_port(1):.1f} (B); pitch {PORT_ZC[1] - PORT_ZC[0]:.2f}")
