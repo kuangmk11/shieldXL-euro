@@ -66200,6 +66200,18 @@
 			(justify left bottom mirror)
 		)
 	)
+	(gr_text "MOIRAE"
+		(at 177.9 84.75 0)
+		(layer "B.SilkS")
+		(uuid "24abef81-3f38-4269-8b5e-ce29bc747e04")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom mirror)
+		)
+	)
 	(gr_text "*"
 		(at 178.590687 57.210206 0)
 		(layer "B.SilkS")
