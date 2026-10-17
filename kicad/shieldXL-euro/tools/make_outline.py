@@ -6,9 +6,10 @@ the stack traced on user layers. Run with KiCad's own Python:
 The board shares the panel builder's frame: panel point (x, y) is board point
 (100 + x, 30 + y), so the panel's holes land on the board as drawn.
 
-First run only: everything shieldXL left on the board (parts, tracks, zones,
-artwork) moves aside by STASH_DX as a stash for Update PCB to reuse, and its
-outline goes to User.9. Every run: Edge.Cuts and User.1-4 are redrawn.
+Every run: Edge.Cuts and User.1-5 are redrawn; parts, tracks and pours are
+left alone. (The first version also moved shieldXL's desktop layout 160 mm
+aside as a stash for Update PCB; that stash has been used up and deleted, and
+the step is gone - it would have moved the finished board.)
 
   User.1  Panel        the panel as seen from the front: outline, holes and
                        its front artwork (title, labels, rings, the CORONE box)
@@ -30,9 +31,7 @@ BOARD = os.path.join(HERE, "shieldXL-euro.kicad_pcb")
 PANEL = os.path.normpath(os.path.join(HERE, "..", "..", "..", "Missing Mile Modular", "ShieldXL Euro",
                                      "shieldxl_euro_panel.kicad_pcb"))
 OX, OY = 100.0, 30.0                 # panel origin on the board
-STASH_DX = 160.0
 SILK = {pcbnew.F_SilkS: "F", pcbnew.B_SilkS: "B"}
-STASH_MARK = "SHIELDXL DESKTOP BOARD - PARTS STASH"
 
 # --- the board: inside the rails, inside the panel's width ------------------------
 # 108 mm between the rails (10.25 - 118.25 of the 128.5 panel), 1.65 mm in from
@@ -129,21 +128,6 @@ def text(board, layer, s, x, y, size=1.5):
     board.Add(t)
 
 
-def stash(board):
-    """Move shieldXL's desktop layout aside, once, and keep its outline on User.9."""
-    for d in board.GetDrawings():
-        if isinstance(d, pcbnew.PCB_TEXT) and d.GetText() == STASH_MARK:
-            return False
-    v = pcbnew.VECTOR2I(mm(STASH_DX), 0)
-    for item in list(board.GetFootprints()) + list(board.GetTracks()) + list(board.Zones()) + list(board.GetDrawings()):
-        item.Move(v)
-    for d in board.GetDrawings():
-        if d.GetLayer() == pcbnew.Edge_Cuts:
-            d.SetLayer(pcbnew.User_9)
-    text(board, pcbnew.User_9, STASH_MARK, 140 + STASH_DX - OX, 20, 3)
-    return True
-
-
 def panel_geometry():
     """The panel's cuts, holes and silkscreen as plain numbers (panel frame,
     mm). KiCad's Python holds one board at a time, so this is read before the
@@ -225,11 +209,10 @@ def build():
         raise SystemExit("the board is open in KiCad (lock file found): save, close it, then run again")
     cuts, holes, art = panel_geometry()
     board = pcbnew.LoadBoard(BOARD)
-    moved = stash(board)
     layers = {pcbnew.Edge_Cuts: None, pcbnew.User_1: "Panel", pcbnew.User_2: "Front",
               pcbnew.User_3: "Pi (back)", pcbnew.User_4: "Corone", pcbnew.User_5: "Panel back"}
     for d in list(board.GetDrawings()):
-        if d.GetLayer() in layers and not (isinstance(d, pcbnew.PCB_TEXT) and d.GetText() == STASH_MARK):
+        if d.GetLayer() in layers:
             board.Remove(d)
     for layer, name in layers.items():
         if name:
@@ -303,12 +286,11 @@ def build():
     text(board, pcbnew.User_4, "CORONE", (CORONE[0] + CORONE[2]) / 2, (CORONE[1] + CORONE[3]) / 2 + 4)
 
     pcbnew.SaveBoard(BOARD, board)
-    return moved, len(art)
+    return len(art)
 
 
 if __name__ == "__main__":
-    moved, n_art = build()
-    print("stashed shieldXL's layout" if moved else "stash already in place")
+    n_art = build()
     print(f"board {BX1 - BX0:.2f} x {BY1 - BY0:.2f} mm; Pi x {PI_X0:.2f}-{PI_X0 + PI_L:.2f}, y {PI_Y0:.2f}-{PI_Y0 + PI_W:.2f}; "
           f"adapters to x {PI_X0 + PI_L + PORT_PROUD + ADAPTER:.2f} (panel {PANEL_W})")
     print(f"panel artwork copied: {n_art} shapes")

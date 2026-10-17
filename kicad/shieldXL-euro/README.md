@@ -88,8 +88,9 @@ The panel layout is in the Missing Mile Modular repo
 
 - **The board.** The outline is drawn (`tools/make_outline.py`, run with
   KiCad's Python): 98 x 108 mm behind the 20 HP panel, with the panel, the
-  display and the Pi traced on User.1-4. shieldXL's desktop layout sits
-  160 mm aside as a stash for Update PCB. The panel parts and the Pi are
+  display and the Pi traced on User.1-4. The board is routed and DRC clean;
+  ground stitching is `tools/stitch_ground.py`, net classes
+  `tools/set_netclasses.py`. The panel parts and the Pi are
   placed and locked by `tools/place_panel_parts.py`; the panel, artwork
   included, is on User.1 (back artwork on User.5). The
   stack, front to back: panel, display on standoffs behind the window, main
