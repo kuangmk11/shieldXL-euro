@@ -3149,7 +3149,7 @@
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R11"
-			(at 0 -1.43 0)
+			(at -2.85 0.1 0)
 			(layer "F.SilkS")
 			(uuid "ad60f070-c3ad-44ac-87f9-faf6ef26e216")
 			(effects
@@ -3295,7 +3295,7 @@
 		(descr "LQFP, 64 Pin (https://www.analog.com/media/en/technical-documentation/data-sheets/ad7606_7606-6_7606-4.pdf)")
 		(tags "LQFP QFP")
 		(property "Reference" "U8"
-			(at 0 -7.4 0)
+			(at -0.2 -0.325 0)
 			(layer "F.SilkS")
 			(uuid "c5de6be6-ee95-4c63-8f60-08a4ec3479f3")
 			(effects
@@ -4330,7 +4330,7 @@
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C51"
-			(at 0 -1.43 90)
+			(at -2.75 -0.15 90)
 			(layer "F.SilkS")
 			(uuid "dda8e685-8a89-4748-a5ad-1bc1cce1db01")
 			(effects
@@ -4476,7 +4476,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
 		(tags "capacitor")
 		(property "Reference" "C2"
-			(at 0 -1.68 90)
+			(at 1.2 -1.45 90)
 			(layer "F.SilkS")
 			(uuid "9c7359d3-5ee6-4d98-90a3-34130e4a5d17")
 			(effects
@@ -5316,7 +5316,7 @@
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R64"
-			(at 0 -1.43 0)
+			(at 2.05 0.1 90)
 			(layer "F.SilkS")
 			(uuid "5e6422bd-820f-456a-b99f-b98e9f626764")
 			(effects
@@ -8362,7 +8362,7 @@
 		(descr "TSSOP, 16 Pin (https://www.jedec.org/document_search?search_api_views_fulltext=MO-153)")
 		(tags "TSSOP SO JEDEC-MO-153-AB Texas_PW0016A Microchip-ST Toshiba-TSSOP16-P-0044-0.65A NXP-SOT403-1 Infineon-P-TSSOP-16-800")
 		(property "Reference" "U4"
-			(at 0 -3.45 90)
+			(at 0.0625 -0.025 90)
 			(layer "F.SilkS")
 			(uuid "c802aeba-4ec5-470c-93c2-e6db25a7a28a")
 			(effects
@@ -9651,7 +9651,7 @@
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R56"
-			(at 0 -1.43 0)
+			(at 0.075 1.35 0)
 			(layer "F.SilkS")
 			(uuid "0fac884e-ee05-4f85-8535-695ce233f07d")
 			(effects
@@ -9797,7 +9797,7 @@
 		(descr "SOT, 6 Pin (JEDEC MO-178 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=MO-178)")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U9"
-			(at 0 -2.4 0)
+			(at 0.0625 2.25 0)
 			(layer "F.SilkS")
 			(uuid "ea0af32d-e92c-4e42-94c3-f69c7e501e42")
 			(effects
@@ -12030,7 +12030,7 @@
 		(descr "TSSOP, 14 Pin (JEDEC MO-153 variation AB-1, 1.00mm body thickness, https://www.jedec.org/document_search?search_api_views_fulltext=MO-153)")
 		(tags "TSSOP SO")
 		(property "Reference" "U6"
-			(at 0 -3.45 90)
+			(at -0.0125 -0.075 90)
 			(layer "F.SilkS")
 			(uuid "c2202a80-d99f-4fb6-933a-c8f53e05e9bf")
 			(effects
@@ -13164,7 +13164,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
 		(tags "capacitor")
 		(property "Reference" "C5"
-			(at 0.075 -1.708571 90)
+			(at -2.9 0.2 90)
 			(layer "F.SilkS")
 			(uuid "29112ec5-65e9-406d-af85-e9db223b34e2")
 			(effects
@@ -13311,7 +13311,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
 		(tags "capacitor")
 		(property "Reference" "C1"
-			(at 0 -1.68 0)
+			(at -0.725 -1.45 0)
 			(layer "F.SilkS")
 			(uuid "7410a19a-e8bf-4f52-9d6c-f759b4bd4f97")
 			(effects
@@ -14188,7 +14188,7 @@
 		(descr "SOT, 5 Pin (JEDEC MO-178 Var AA https://www.jedec.org/document_search?search_api_views_fulltext=MO-178)")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U2"
-			(at 0 -2.4 90)
+			(at 0.0875 2.15 90)
 			(layer "F.SilkS")
 			(uuid "d59160e7-ced9-4732-9a9f-a2f45c4bc981")
 			(effects
@@ -14864,6 +14864,7 @@
 		)
 	)
 	(footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+		(locked yes)
 		(layer "F.Cu")
 		(uuid "b7d3af71-7fc0-4067-9d09-459dcd9403b2")
 		(at 141.04 105.95 -90)
@@ -17723,7 +17724,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
 		(tags "capacitor")
 		(property "Reference" "C4"
-			(at 0 -1.68 90)
+			(at 0.015001 1.8 90)
 			(layer "F.SilkS")
 			(uuid "d175b826-1e4a-4fb8-aa8d-5706f6abf25c")
 			(effects
@@ -17882,7 +17883,7 @@
 			)
 		)
 		(property "Value" "To main board"
-			(at -1.27 -25.63 180)
+			(at -5.339999 -17.6 90)
 			(layer "B.Fab")
 			(uuid "88f14607-f8b1-4519-a2c9-71ac9e42e7a8")
 			(effects

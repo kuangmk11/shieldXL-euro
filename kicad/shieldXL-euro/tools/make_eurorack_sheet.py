@@ -21,10 +21,12 @@ What it adds (references in the 100s, clear of shieldXL's):
                     J104 / J105. Codec full scale, about 2.85 Vpp, leaves as
                     about 10 Vpp.
   MIDI              J106 in (PJ366ST) to MIDI_IN_TIP / _RING; J107 out, its
-                    tip and ring chosen by JP101 / JP102 from MIDI_OUT_SNK /
-                    _SRC - Type A as made (1-2 bridged), Type B by cutting
-                    1-2 on both and bridging 2-3. Replaces shieldXL's slide
-                    switch.
+                    tip and ring chosen from MIDI_OUT_SNK / _SRC by two
+                    shunts on J123, a 2 x 3 header: odd pins the tip, even
+                    the ring, the middle row the jack. Both shunts on the
+                    top row (1-3, 2-4) is Type A (tip sink, ring source),
+                    both on the bottom row (3-5, 4-6) Type B. Replaces
+                    shieldXL's slide switch.
   Pi power          J108 USB-C (JAE DX07S024WJ1R350, vertical, 12 mm), power only (5.1k on CC1 / CC2), F101 polyfuse
                     and D103 TVS onto +5V, which reaches the Pi through the
                     header as shieldXL's +5V does. Bulk C113.
@@ -137,9 +139,9 @@ FP_R = "Resistor_SMD:R_0805_2012Metric"
 FP_C = "Capacitor_SMD:C_0805_2012Metric"
 FP_JACK = "MMM:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
 FP_TRS = "MMM:Jack_3.5mm_QingPu_WQP-PJ366ST_Vertical"
-FP_JP = "Jumper:SolderJumper-3_P1.3mm_Bridged12_Pad1.0x1.5mm"
 GLOBAL = {"IN_L_LINE", "IN_R_LINE", "OUT_L_LINE", "OUT_R_LINE",
           "MIDI_OUT_SRC", "MIDI_OUT_SNK", "MIDI_IN_TIP", "MIDI_IN_RING", "MIDI_TX", "MIDI_TX_BUF"}
+UID_PAD = {"J123": 1}
 POWER = {"+5V": "shield", "+3V3": "shield", "GND": "shield", "AGND": "shield", "+12V": "power", "-12V": "power"}
 
 # ref, lib, symbol, unit, value, footprint, (x, y), {pin: net or None}
@@ -186,8 +188,9 @@ PARTS = [
     ("J105", "Connector_Audio", "AudioJack2_SwitchT", 1, "OUT R", FP_JACK, (215.9, 137.16), {"T": "OUT_R_JACK", "TN": None, "S": "AGND"}),
     # --- MIDI -----------------------------------------------------------------
     ("J106", "Connector_Audio", "AudioJack3", 1, "MIDI IN", FP_TRS, (241.3, 50.8), {"T": "MIDI_IN_TIP", "R": "MIDI_IN_RING", "S": None}),
-    ("JP101", "Jumper", "SolderJumper_3_Bridged12", 1, "TIP A/B", FP_JP, (279.4, 43.18), {"1": "MIDI_OUT_SNK", "2": "MIDI_OUT_T", "3": "MIDI_OUT_SRC"}),
-    ("JP102", "Jumper", "SolderJumper_3_Bridged12", 1, "RING A/B", FP_JP, (279.4, 66.04), {"1": "MIDI_OUT_SRC", "2": "MIDI_OUT_R", "3": "MIDI_OUT_SNK"}),
+    ("J123", "Connector_Generic", "Conn_02x03_Odd_Even", 1, "MIDI OUT A/B", "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical",
+     (279.4, 53.34), {"1": "MIDI_OUT_SNK", "2": "MIDI_OUT_SRC", "3": "MIDI_OUT_T", "4": "MIDI_OUT_R",
+                      "5": "MIDI_OUT_SRC", "6": "MIDI_OUT_SNK"}),
     ("J107", "Connector_Audio", "AudioJack3", 1, "MIDI OUT", FP_TRS, (304.8, 53.34), {"T": "MIDI_OUT_T", "R": "MIDI_OUT_R", "S": "GND"}),
     # --- Pi power: USB-C on the panel ------------------------------------------
     # JAE DX07S024WJ1R350, vertical, 12.0 mm tall so its face reaches the
@@ -331,6 +334,10 @@ def build():
                 o.append(power(net, ax, ay))
             else:
                 o.append(label(net, ax, ay))
+        # J123 took the place of two solder jumpers that drew one id more;
+        # keep the count so every later symbol keeps its id (and its footprint)
+        if ref in UID_PAD:
+            _n[0] += UID_PAD[ref]
     for i, net in enumerate(FLAGS):
         x, y = 25.4 + 15.24 * i, 20.32
         o.append(label(net, x, y) if net not in POWER else power(net, x, y))

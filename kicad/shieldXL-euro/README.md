@@ -12,7 +12,7 @@ upstream fixes still merge. This copy changes only what Eurorack needs.
 | | shieldXL | shieldXL-euro |
 |---|---|---|
 | audio | 4 x 6.35 mm, line level | 4 x 3.5 mm (Thonkiconn); TL074 stages scale 10 Vpp modular to the codec and back |
-| MIDI | PJ-320B TRS jacks, Type A/B slide switch | PJ366ST stereo Thonkiconns; A/B by two solder jumpers, Type A as made |
+| MIDI | PJ-320B TRS jacks, Type A/B slide switch | PJ366ST stereo Thonkiconns; A/B by two shunts on a 2 x 3 header (J123): top row Type A, bottom row Type B |
 | Pi power | the Pi's own USB | USB-C on the panel, through a polyfuse and TVS onto +5V. The Pi never runs from the rack, so a rack power cycle cannot catch it mid-write |
 | rack power | - | 10-pin header, ±12 V for the op-amps only, reverse protected |
 | USB host | the Pi's own ports | three USB-A sockets on the panel, each cabled from a Pi port |
