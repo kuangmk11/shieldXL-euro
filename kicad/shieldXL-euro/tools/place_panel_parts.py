@@ -53,6 +53,8 @@ DISP_X0, DISP_TOP = 101.3 / 2 - 82.0 / 2, 10.5
 # the display module itself: a board-only footprint (no pads, not in the
 # schematic) that carries its outline and 3D model, origin at its top-left
 DISP_REF, DISP_FP = "DS1", "Display_NHD-2.7-12864WDW3"
+# the panel itself, for the 3D view: board-only too, origin at its top-left
+PNL_REF, PNL_FP = "PNL1", "Panel_Moirae"
 
 # the Pi, as tools/make_outline.py draws it: its footprint's origin is the
 # corner below the header, seen from the front
@@ -81,16 +83,18 @@ def main():
     if os.path.exists(lock):
         raise SystemExit("the board is open in KiCad (lock file found): save, close it, then run again")
     # KiCad's Python reads a footprint library only before it loads a board
-    disp_proto = pcbnew.FootprintLoad(os.path.join(HERE, "MMM.pretty"), DISP_FP)
+    protos = {ref: (name, pcbnew.FootprintLoad(os.path.join(HERE, "MMM.pretty"), name))
+              for ref, name in ((DISP_REF, DISP_FP), (PNL_REF, PNL_FP))}
     board = pcbnew.LoadBoard(BOARD)
     fps = {f.GetReference(): f for f in board.GetFootprints()}
-    if DISP_REF not in fps:
-        d = pcbnew.FOOTPRINT(disp_proto)
-        d.SetParent(board)
-        d.SetFPID(pcbnew.LIB_ID("MMM", DISP_FP))
-        d.SetReference(DISP_REF)
-        board.Add(d)
-        fps[DISP_REF] = d
+    for ref, (name, proto) in protos.items():
+        if ref not in fps:
+            d = pcbnew.FOOTPRINT(proto)
+            d.SetParent(board)
+            d.SetFPID(pcbnew.LIB_ID("MMM", name))
+            d.SetReference(ref)
+            board.Add(d)
+            fps[ref] = d
     placed, missing, unknown = [], [], []
     for name, (x, y) in targets().items():
         ref = REF.get(name)
@@ -126,6 +130,11 @@ def main():
     d.SetPosition(pcbnew.VECTOR2I(mm(OX + DISP_X0), mm(OY + DISP_TOP)))
     d.SetLocked(True)
     placed.append(f"{DISP_REF} display")
+    p = fps[PNL_REF]
+    p.SetOrientationDegrees(0)
+    p.SetPosition(pcbnew.VECTOR2I(mm(OX), mm(OY)))
+    p.SetLocked(True)
+    placed.append(f"{PNL_REF} panel")
     pi = fps.get(PI_REF)
     if pi is not None:
         if pi.IsFlipped():
