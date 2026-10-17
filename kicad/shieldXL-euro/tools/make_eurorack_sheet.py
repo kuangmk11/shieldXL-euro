@@ -32,7 +32,7 @@ What it adds (references in the 100s, clear of shieldXL's):
                     header as shieldXL's +5V does. Bulk C113.
   USB host (x3)     J109-J111 vertical USB-A on the panel. The Pi's four
                     ports come down from two USB adapters (../usb-adapter),
-                    one per stack, on 2 x 5 IDC ribbons to J112 / J113. At
+                    one per stack, on 2 x 4 IDC ribbons to J112 / J113. At
                     each panel socket: a USBLC6-2SC6 on D+ / D- (U102-U104)
                     and 47u + 100n on its VBUS (C114-C119). The ribbons:
                     J112 the stack beside Ethernet, port A (nearer the Pi's
@@ -141,7 +141,7 @@ FP_JACK = "MMM:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
 FP_TRS = "MMM:Jack_3.5mm_QingPu_WQP-PJ366ST_Vertical"
 GLOBAL = {"IN_L_LINE", "IN_R_LINE", "OUT_L_LINE", "OUT_R_LINE",
           "MIDI_OUT_SRC", "MIDI_OUT_SNK", "MIDI_IN_TIP", "MIDI_IN_RING", "MIDI_TX", "MIDI_TX_BUF"}
-UID_PAD = {"J123": 1}
+UID_PAD = {"J123": 1, "J112": 6}   # parts that drew fewer ids than the ones they replaced
 POWER = {"+5V": "shield", "+3V3": "shield", "GND": "shield", "AGND": "shield", "+12V": "power", "-12V": "power"}
 
 # ref, lib, symbol, unit, value, footprint, (x, y), {pin: net or None}
@@ -253,9 +253,9 @@ PARTS = [
      (342.9, 132.08), {"1": "AGND", "2": "GND"}),
 ] + [
     # --- the Pi's ports, from the two USB adapters (pinout: ../usb-adapter) --------
-    (ref, "Connector_Generic", "Conn_02x05_Odd_Even", 1, value, "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical", xy,
-     {"1": f"{a}_VBUS", "2": "GND", "3": f"{a}_DM", "4": f"{a}_DP", "5": "GND",
-      "6": "GND", "7": f"{b}_DM", "8": f"{b}_DP", "9": "GND", "10": f"{b}_VBUS"})
+    (ref, "Connector_Generic", "Conn_02x04_Odd_Even", 1, value, "Connector_IDC:IDC-Header_2x04_P2.54mm_Vertical", xy,
+     {"1": f"{a}_VBUS", "2": "GND", "3": f"{a}_DM", "4": f"{a}_DP",
+      "5": "GND", "6": f"{b}_DM", "7": f"{b}_DP", "8": f"{b}_VBUS"})
     for ref, value, xy, a, b in (("J112", "Pi USB, inner stack", (88.9, 248.92), "USB1", "USB2"),
                                  ("J113", "Pi USB, outer stack", (165.1, 248.92), "USB3", "CRW_USB"))
 ]
@@ -334,8 +334,9 @@ def build():
                 o.append(power(net, ax, ay))
             else:
                 o.append(label(net, ax, ay))
-        # J123 took the place of two solder jumpers that drew one id more;
-        # keep the count so every later symbol keeps its id (and its footprint)
+        # a part that draws fewer ids than the one it replaced (J123 for two
+        # solder jumpers, J112's 2 x 4 for a 2 x 5) pads the count, so every
+        # later symbol keeps its id (and its footprint)
         if ref in UID_PAD:
             _n[0] += UID_PAD[ref]
     for i, net in enumerate(FLAGS):

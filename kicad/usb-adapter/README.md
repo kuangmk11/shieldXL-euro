@@ -3,7 +3,7 @@
 Brings the Pi 4's four USB ports to Moirae's main board. The Pi lies upside
 down on the main board's back, ports toward the right edge; a small board
 stands at each of its two USB stacks with two vertical male USB-A plugs, one
-per port, and a 2 x 5 IDC whose ribbon runs behind the Pi down to the main
+per port, and a 2 x 4 pin header whose IDC ribbon runs behind the Pi down to the main
 board (J112 for the stack beside Ethernet, J113 for the outer one). The two
 boards are identical.
 
@@ -20,21 +20,23 @@ In Moirae's 3D view, USBA1 / USBA2 on the main board carry this board as
     "/mnt/g/Program Files/KiCad/10.0/bin/python.exe" tools/make_usb_adapter.py
 
 Board: 17.2 x 40 mm, standing at the port faces, from 5.3 to 45.3 mm off the
-main board's back. The plugs face the Pi; so does the IDC, above the Pi's
+main board's back. The plugs face the Pi; so does the header, above the Pi's
 underside, its ribbon running behind the Pi. Routed.
 
-## IDC pinout, in ribbon order
+## Header pinout, in ribbon order
+
+A plain 2 x 4 pin header here; a boxed 2 x 4 IDC (J112 / J113) on the main
+board; an 8-way ribbon with IDC sockets between.
 
 | pin | | pin | |
 |---|---|---|---|
 | 1 | VBUS A | 2 | GND |
 | 3 | D- A | 4 | D+ A |
-| 5 | GND | 6 | GND |
-| 7 | D- B | 8 | D+ B |
-| 9 | GND | 10 | VBUS B |
+| 5 | GND | 6 | D- B |
+| 7 | D+ B | 8 | VBUS B |
 
-A is the port nearer the Pi's PCB, B the further one. Each pair rides
-between grounds.
+A is the port nearer the Pi's PCB, B the further one. Pair A rides between
+grounds, pair B between ground and its VBUS.
 
 ## Before ordering
 

@@ -103,7 +103,7 @@ The panel layout is in the Missing Mile Modular repo
   clear of the controls. That is why the module is 20 HP: 85 mm of Pi, its
   ports, a USB adapter and the microSD card come to about 96 mm, more than
   18 HP's 91.3. Two small adapter boards plug into its USB stacks and
-  carry the four ports to J112 / J113 on 2 x 5 IDC ribbons
+  carry the four ports to J112 / J113 (boxed 2 x 4) on 8-way IDC ribbons
   (`../usb-adapter`). Only its two holes by the header are screwed down
   (footprint `MMM:RASPI_BOARD_B+_UPPER_HOLES`): the other two land on K1's
   and E2's pins, so those corners stand on 3D-printed feet fixed to the Pi,

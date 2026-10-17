@@ -349,7 +349,7 @@
 			)
 			(embedded_fonts no)
 		)
-			(symbol "Connector_Generic:Conn_02x05_Odd_Even"
+			(symbol "Connector_Generic:Conn_02x04_Odd_Even"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -360,7 +360,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J"
-				(at 1.27 7.62 0)
+				(at 1.27 5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -369,7 +369,7 @@
 					)
 				)
 			)
-			(property "Value" "Conn_02x05_Odd_Even"
+			(property "Value" "Conn_02x04_Odd_Even"
 				(at 1.27 -7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -401,7 +401,7 @@
 					)
 				)
 			)
-			(property "Description" "Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -434,9 +434,9 @@
 					)
 				)
 			)
-			(symbol "Conn_02x05_Odd_Even_1_1"
+			(symbol "Conn_02x04_Odd_Even_1_1"
 				(rectangle
-					(start -1.27 6.35)
+					(start -1.27 3.81)
 					(end 3.81 -6.35)
 					(stroke
 						(width 0.254)
@@ -444,17 +444,6 @@
 					)
 					(fill
 						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 5.207)
-					(end 0 4.953)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
 					)
 				)
 				(rectangle
@@ -493,17 +482,6 @@
 				(rectangle
 					(start -1.27 -4.953)
 					(end 0 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 5.207)
-					(end 2.54 4.953)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -557,7 +535,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 5.08 0)
+					(at -5.08 2.54 0)
 					(length 3.81)
 					(name "Pin_1"
 						(effects
@@ -575,7 +553,7 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 5.08 180)
+					(at 7.62 2.54 180)
 					(length 3.81)
 					(name "Pin_2"
 						(effects
@@ -593,7 +571,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 2.54 0)
+					(at -5.08 0 0)
 					(length 3.81)
 					(name "Pin_3"
 						(effects
@@ -611,7 +589,7 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 2.54 180)
+					(at 7.62 0 180)
 					(length 3.81)
 					(name "Pin_4"
 						(effects
@@ -629,7 +607,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at -5.08 -2.54 0)
 					(length 3.81)
 					(name "Pin_5"
 						(effects
@@ -647,7 +625,7 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 0 180)
+					(at 7.62 -2.54 180)
 					(length 3.81)
 					(name "Pin_6"
 						(effects
@@ -665,7 +643,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -2.54 0)
+					(at -5.08 -5.08 0)
 					(length 3.81)
 					(name "Pin_7"
 						(effects
@@ -683,7 +661,7 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 -2.54 180)
+					(at 7.62 -5.08 180)
 					(length 3.81)
 					(name "Pin_8"
 						(effects
@@ -693,42 +671,6 @@
 						)
 					)
 					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -5.08 180)
-					(length 3.81)
-					(name "Pin_10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1038,11 +980,11 @@
 		(pin "1" (uuid "91cfbcff-be14-56b9-8958-be4e6f45fa5f"))
 		(instances (project "usb-adapter" (path "/9158d672-1858-5b79-ba31-28ce8190e675" (reference "#PWR04") (unit 1))))
 	)
-	(symbol (lib_id "Connector_Generic:Conn_02x05_Odd_Even") (at 127 66.04 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+	(symbol (lib_id "Connector_Generic:Conn_02x04_Odd_Even") (at 127 66.04 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
 		(uuid "29d6dd83-b214-5c9b-803c-89679b6379f4")
 		(property "Reference" "J3" (at 129.54 55.88 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "To main board" (at 129.54 76.2 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" (at 127 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" (at 127 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "" (at 127 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(pin "1" (uuid "cf681d56-d1c7-5eb1-9a64-86001db275a5"))
 		(pin "2" (uuid "c7ce0d67-241e-5fc3-994e-19dac7c8b876"))
@@ -1052,88 +994,68 @@
 		(pin "6" (uuid "6440a064-b207-5431-86ab-4adead421cd8"))
 		(pin "7" (uuid "5f051873-3e7b-51d1-a73a-8ac0837fd5eb"))
 		(pin "8" (uuid "cbec5c04-fce7-5470-8878-b18c5c53e667"))
-		(pin "9" (uuid "94e7085c-9865-52b0-b5c3-13c3e8e10e9b"))
-		(pin "10" (uuid "1e48f0a7-5bde-53af-b640-075262c19dbf"))
 		(instances (project "usb-adapter" (path "/9158d672-1858-5b79-ba31-28ce8190e675" (reference "J3") (unit 1))))
 	)
-	(label "VBUS_A" (at 121.92 60.96 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "50c84d4f-cbfb-5848-8f59-f54ec168e4d1"))
-	(symbol (lib_id "power:GND") (at 134.62 60.96 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no)
-		(uuid "88d5da6c-5dbd-5144-92e4-3567398cf6c8")
-		(property "Reference" "#PWR05" (at 137.16 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "Value" "GND" (at 137.16 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "Footprint" "" (at 134.62 60.96 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "Datasheet" "" (at 134.62 60.96 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "0b297056-2e10-5dea-a03b-7418edb81bad"))
+	(label "VBUS_A" (at 121.92 63.5 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "94e7085c-9865-52b0-b5c3-13c3e8e10e9b"))
+	(symbol (lib_id "power:GND") (at 134.62 63.5 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no)
+		(uuid "1e48f0a7-5bde-53af-b640-075262c19dbf")
+		(property "Reference" "#PWR05" (at 137.16 53.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 137.16 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Footprint" "" (at 134.62 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "" (at 134.62 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "50c84d4f-cbfb-5848-8f59-f54ec168e4d1"))
 		(instances (project "usb-adapter" (path "/9158d672-1858-5b79-ba31-28ce8190e675" (reference "#PWR05") (unit 1))))
 	)
-	(label "DM_A" (at 121.92 63.5 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "43d438f8-545c-5157-b2c0-f06541807bc2"))
-	(label "DP_A" (at 134.62 63.5 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "bb52cc07-b9bc-524b-bb10-d1421bd23db0"))
-	(symbol (lib_id "power:GND") (at 121.92 66.04 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no)
-		(uuid "338e5c85-1f5c-59ae-8649-4242d792fb17")
-		(property "Reference" "#PWR06" (at 124.46 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "Value" "GND" (at 124.46 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "Footprint" "" (at 121.92 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "Datasheet" "" (at 121.92 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "33d184ab-b1ce-513b-8ab7-971263811202"))
+	(label "DM_A" (at 121.92 66.04 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "88d5da6c-5dbd-5144-92e4-3567398cf6c8"))
+	(label "DP_A" (at 134.62 66.04 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "0b297056-2e10-5dea-a03b-7418edb81bad"))
+	(symbol (lib_id "power:GND") (at 121.92 68.58 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no)
+		(uuid "43d438f8-545c-5157-b2c0-f06541807bc2")
+		(property "Reference" "#PWR06" (at 124.46 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 124.46 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Footprint" "" (at 121.92 68.58 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "" (at 121.92 68.58 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "bb52cc07-b9bc-524b-bb10-d1421bd23db0"))
 		(instances (project "usb-adapter" (path "/9158d672-1858-5b79-ba31-28ce8190e675" (reference "#PWR06") (unit 1))))
 	)
-	(symbol (lib_id "power:GND") (at 134.62 66.04 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no)
-		(uuid "8fbaee91-15ec-596f-98b1-1fc02470881e")
-		(property "Reference" "#PWR07" (at 137.16 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "Value" "GND" (at 137.16 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "Footprint" "" (at 134.62 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "Datasheet" "" (at 134.62 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "34e300f1-8691-5fe8-8499-1592d40ba4ea"))
-		(instances (project "usb-adapter" (path "/9158d672-1858-5b79-ba31-28ce8190e675" (reference "#PWR07") (unit 1))))
-	)
-	(label "DM_B" (at 121.92 68.58 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "e87ab7a8-ba83-5914-bdc8-4e727ac7ba81"))
-	(label "DP_B" (at 134.62 68.58 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "42f9cd9f-87da-5c47-a57d-0d224d17f9e8"))
-	(symbol (lib_id "power:GND") (at 121.92 71.12 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no)
-		(uuid "6fee01f8-aa70-54aa-a133-056918104432")
-		(property "Reference" "#PWR08" (at 124.46 60.96 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "Value" "GND" (at 124.46 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "Footprint" "" (at 121.92 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "Datasheet" "" (at 121.92 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "d4d8f2d7-d81b-5784-a90d-a8fc122cdb07"))
-		(instances (project "usb-adapter" (path "/9158d672-1858-5b79-ba31-28ce8190e675" (reference "#PWR08") (unit 1))))
-	)
-	(label "VBUS_B" (at 134.62 71.12 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "7ee6c9f4-56e7-53ad-879a-73ae72813149"))
+	(label "DM_B" (at 134.62 68.58 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "338e5c85-1f5c-59ae-8649-4242d792fb17"))
+	(label "DP_B" (at 121.92 71.12 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "33d184ab-b1ce-513b-8ab7-971263811202"))
+	(label "VBUS_B" (at 134.62 71.12 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "8fbaee91-15ec-596f-98b1-1fc02470881e"))
 	(symbol (lib_id "power:GND") (at 25.4 25.4 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no)
-		(uuid "b4c05d57-91ae-57c8-9142-d11d57aa538e")
+		(uuid "34e300f1-8691-5fe8-8499-1592d40ba4ea")
 		(property "Reference" "#PWR99" (at 27.94 15.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Value" "GND" (at 27.94 35.56 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Footprint" "" (at 25.4 25.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "" (at 25.4 25.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "3e162f5a-7c84-5e83-b821-9da6b78366aa"))
+		(pin "1" (uuid "e87ab7a8-ba83-5914-bdc8-4e727ac7ba81"))
 		(instances (project "usb-adapter" (path "/9158d672-1858-5b79-ba31-28ce8190e675" (reference "#PWR99") (unit 1))))
 	)
 	(symbol (lib_id "power:PWR_FLAG") (at 25.4 25.4 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no)
-		(uuid "3e3da15a-fb53-5d3b-a46e-f759a727c119")
+		(uuid "42f9cd9f-87da-5c47-a57d-0d224d17f9e8")
 		(property "Reference" "#FLG01" (at 27.94 15.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Value" "PWR_FLAG" (at 27.94 35.56 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Footprint" "" (at 25.4 25.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "" (at 25.4 25.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "d625a4bb-2f52-55aa-b324-15e930dd6fc6"))
+		(pin "1" (uuid "6fee01f8-aa70-54aa-a133-056918104432"))
 		(instances (project "usb-adapter" (path "/9158d672-1858-5b79-ba31-28ce8190e675" (reference "#FLG01") (unit 1))))
 	)
-	(label "VBUS_A" (at 40.64 25.4 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "60c91121-5de9-5b7e-9bd7-3f52c52ef07c"))
+	(label "VBUS_A" (at 40.64 25.4 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "d4d8f2d7-d81b-5784-a90d-a8fc122cdb07"))
 	(symbol (lib_id "power:PWR_FLAG") (at 40.64 25.4 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no)
-		(uuid "a17ec057-8975-542e-97e9-9ad1eed300af")
+		(uuid "7ee6c9f4-56e7-53ad-879a-73ae72813149")
 		(property "Reference" "#FLG02" (at 43.18 15.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Value" "PWR_FLAG" (at 43.18 35.56 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Footprint" "" (at 40.64 25.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "" (at 40.64 25.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "e459f1e2-a220-5b65-8a34-82b0e8c4fdd8"))
+		(pin "1" (uuid "b4c05d57-91ae-57c8-9142-d11d57aa538e"))
 		(instances (project "usb-adapter" (path "/9158d672-1858-5b79-ba31-28ce8190e675" (reference "#FLG02") (unit 1))))
 	)
-	(label "VBUS_B" (at 55.88 25.4 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "1b9299f1-26d6-5430-bb29-1adc95111295"))
+	(label "VBUS_B" (at 55.88 25.4 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "3e162f5a-7c84-5e83-b821-9da6b78366aa"))
 	(symbol (lib_id "power:PWR_FLAG") (at 55.88 25.4 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no)
-		(uuid "34427b9e-d367-5a46-b1a0-e46b63f11bfa")
+		(uuid "3e3da15a-fb53-5d3b-a46e-f759a727c119")
 		(property "Reference" "#FLG03" (at 58.42 15.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Value" "PWR_FLAG" (at 58.42 35.56 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Footprint" "" (at 55.88 25.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "" (at 55.88 25.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "110b26c5-7bf2-52b5-8ef6-65fafa750a06"))
+		(pin "1" (uuid "d625a4bb-2f52-55aa-b324-15e930dd6fc6"))
 		(instances (project "usb-adapter" (path "/9158d672-1858-5b79-ba31-28ce8190e675" (reference "#FLG03") (unit 1))))
 	)
 	(sheet_instances (path "/" (page "1")))

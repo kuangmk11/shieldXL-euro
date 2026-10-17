@@ -1,5 +1,5 @@
 """Write the Pi USB adapter: a small board that stands at one of the Pi 4's
-USB stacks, two vertical male USB-A plugs in its two ports, and a 2 x 5 IDC
+USB stacks, two vertical male USB-A plugs in its two ports, and a 2 x 4 header
 whose ribbon runs behind the Pi to the main board. Two identical boards
 cover the Pi's four ports. Run with KiCad's own Python:
 
@@ -21,8 +21,9 @@ PLACEHOLDERS - set before ordering:
             tail and tab slots are from its drawing, the tails on its centre
             line. Its 3D model is a 12 x 4.5 x 15 mm placeholder box.
 
-IDC pinout, in ribbon order (each pair between grounds):
-  1 VBUS_A  2 GND  3 D-_A  4 D+_A  5 GND  6 GND  7 D-_B  8 D+_B  9 GND  10 VBUS_B
+Header pinout, in ribbon order (pair A between grounds, B between ground
+and its VBUS):
+  1 VBUS_A  2 GND  3 D-_A  4 D+_A  5 GND  6 D-_B  7 D+_B  8 VBUS_B
 A is the port nearer the Pi's PCB, B the further one.
 """
 
@@ -60,10 +61,13 @@ PLUG_PIN_DY = 0.0                    # the tails, on the plug's centre line
 PLUG_TAIL_SLOT, PLUG_TAIL_PAD = (1.0, 0.6), (1.5, 1.2)   # tails 0.7 wide
 PLUG_SHELL_DX = 5.85                 # the tabs, at the jack's edges
 PLUG_SHELL_SLOT, PLUG_SHELL_PAD = (0.9, 4.0), (1.5, 4.6)  # along the shell's 4.5 side
-IDC_FP = ("Connector_IDC", "IDC-Header_2x05_P2.54mm_Vertical")
-IDC_BODY = 20.3              # along v; the pins span 10.16 of it
-NETS_IDC = {"1": "VBUS_A", "2": "GND", "3": "DM_A", "4": "DP_A", "5": "GND",
-            "6": "GND", "7": "DM_B", "8": "DP_B", "9": "GND", "10": "VBUS_B"}
+# a plain (unboxed) 2 x 4 pin header; the ribbon's IDC socket plugs onto it,
+# and the main board's end (J112 / J113) is a boxed 2 x 4
+IDC_FP = ("Connector_PinHeader_2.54mm", "PinHeader_2x04_P2.54mm_Vertical")
+IDC_ROWS = 4
+IDC_BODY = 10.16             # along v; the pins span 7.62 of it
+NETS_IDC = {"1": "VBUS_A", "2": "GND", "3": "DM_A", "4": "DP_A",
+            "5": "GND", "6": "DM_B", "7": "DP_B", "8": "VBUS_B"}
 
 
 def v_of_port(i):
@@ -130,7 +134,7 @@ SCH_PARTS = [
      {"1": "VBUS_A", "2": "DM_A", "3": "DP_A", "4": "GND", "SH": "GND"}),
     ("J2", "Connector", "USB_A", "USB-A plug, port B", f"{NAME}:USB_A_Plug_Vertical", (50.8, 88.9),
      {"1": "VBUS_B", "2": "DM_B", "3": "DP_B", "4": "GND", "SH": "GND"}),
-    ("J3", "Connector_Generic", "Conn_02x05_Odd_Even", "To main board", ":".join(IDC_FP), (127.0, 66.04), NETS_IDC),
+    ("J3", "Connector_Generic", "Conn_02x04_Odd_Even", "To main board", ":".join(IDC_FP), (127.0, 66.04), NETS_IDC),
 ]
 
 
@@ -242,7 +246,7 @@ def write_board(sym_uuid):
 
     # the IDC: behind the Pi, clear of its underside; pins in two columns along v
     body_bottom = H + PI_T + PI_UNDER + IDC_CLEAR
-    pin1_v = body_bottom + (IDC_BODY - 4 * 2.54) / 2 + 4 * 2.54
+    pin1_v = body_bottom + (IDC_BODY - (IDC_ROWS - 1) * 2.54) / 2 + (IDC_ROWS - 1) * 2.54
     place(os.path.join(KFP, IDC_FP[0] + ".pretty"), IDC_FP[0], IDC_FP[1], "J3", "To main board", -1.27, pin1_v, NETS_IDC)
 
     # outline
