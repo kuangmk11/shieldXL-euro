@@ -1,0 +1,3 @@
+Refs,Qty,Value,Footprint,Manufacturer,MPN,DigiKey PN,DigiKey PN status,Notes
+"J1,J2",2,"USB-A plug, port A / USB-A plug, port B",USB_A_Plug_Vertical,generic,"USB-71 USB-A male, L=15 mm short",,,AliExpress; side-mount part stood on end
+J3,1,To main board,PinHeader_2x04_P2.54mm_Vertical,Sullins,PRPC004DAAN-RC,,,
