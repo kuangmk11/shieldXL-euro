@@ -2,7 +2,10 @@
 ground's front and back fill together. Run with KiCad's own Python, KiCad
 closed:
 
-    "/mnt/g/Program Files/KiCad/10.0/bin/python.exe" tools/stitch_ground.py
+    "/mnt/g/Program Files/KiCad/10.0/bin/python.exe" tools/stitch_ground.py [board]
+
+The board defaults to Moirae's; give another's path (Corone's) to stitch that.
+Grounds without a pour on that board are skipped.
 
 - AGND's pour takes priority over GND's, so where they overlap AGND wins and
   GND flows around it, and both pours drop islands nothing connects to.
@@ -19,11 +22,12 @@ HOLE_GAP of any existing hole, so it only fills in what edits have opened up.
 
 import math
 import os
+import sys
 
 import pcbnew
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BOARD = os.path.join(HERE, "shieldXL-euro.kicad_pcb")
+BOARD = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.path.join(HERE, "shieldXL-euro.kicad_pcb")
 PITCH = 5.0                      # mm, the stitching grid
 VIA_D, VIA_DRILL = 0.6, 0.3      # the Ground net class's via
 MARGIN = 0.05                    # mm inside the fill beyond the via's edge
@@ -49,14 +53,15 @@ def fits(fill, x, y, r):
 
 
 def main():
-    lock = os.path.join(HERE, "~" + os.path.basename(BOARD) + ".lck")
+    lock = os.path.join(os.path.dirname(BOARD), "~" + os.path.basename(BOARD) + ".lck")
     if os.path.exists(lock):
         raise SystemExit("the board is open in KiCad (lock file found): save, close it, then run again")
     board = pcbnew.LoadBoard(BOARD)
     zones = {n: [z for z in board.Zones() if z.GetNetname() == n] for n in NETS}
-    for z in zones["AGND"]:
+    nets = [n for n in NETS if zones[n]]
+    for z in zones.get("AGND", []):
         z.SetAssignedPriority(7)
-    for n in NETS:
+    for n in nets:
         for z in zones[n]:
             z.SetIslandRemovalMode(pcbnew.ISLAND_REMOVAL_MODE_ALWAYS)
 
@@ -75,7 +80,7 @@ def main():
 
     r = mm(VIA_D / 2 + MARGIN)
     edge = board.GetBoardEdgesBoundingBox()
-    added = {n: 0 for n in NETS}
+    added = {n: 0 for n in nets}
 
     def clear(x, y, yards_too=True):
         pt = pcbnew.VECTOR2I(x, y)
@@ -102,7 +107,7 @@ def main():
                 s.Append(z.GetFilledPolysList(layer))
         return s
 
-    for n in NETS:
+    for n in nets:
         ff, bf = fills(n, F), fills(n, B)
         x0, y0 = edge.GetLeft(), edge.GetTop()
         step = mm(PITCH)
@@ -117,7 +122,7 @@ def main():
 
     # islands still on their own
     filler.Fill(board.Zones())
-    for n in NETS:
+    for n in nets:
         net = board.FindNet(n).GetNetCode()
         ff, bf = fills(n, F), fills(n, B)
         anchors = [(t.GetPosition().x, t.GetPosition().y) for t in board.GetTracks()
