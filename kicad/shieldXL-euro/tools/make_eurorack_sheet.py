@@ -11,14 +11,16 @@ What it adds (references in the 100s, clear of shieldXL's):
                     only - the Pi does not run from the rack.
   audio in  (x2)    J102 / J103 3.5 mm, T -> 69.8k / 30.1k divider (100k in,
                     x0.301) -> follower, out to IN_L_LINE / IN_R_LINE, which
-                    feed shieldXL's own 4.99k / 10k dividers into the codec.
+                    feed the codec through shieldXL's dividers, re-set for
+                    the PCM3060's 10k input: 1.27k / 4.53k (x0.71 loaded).
                     Non-inverting, so audio keeps its polarity through the
-                    module; 13.4 Vpp reaches the codec's 2.7 Vpp full scale.
+                    module; 13.3 Vpp reaches the PCM3060's 2.85 Vpp full scale.
                     100p across the 30.1k: about 76 kHz. Switch contact to
                     AGND: unpatched reads zero.
   audio out (x2)    OUT_L_LINE / OUT_R_LINE (codec, after shieldXL's filter)
-                    -> non-inverting stage, gain 3.49 (24.9k / 10k) -> 1k ->
-                    J104 / J105. Codec full scale, about 2.85 Vpp, leaves as
+                    -> non-inverting stage, gain 2.62 (16.2k / 10k) -> 1k ->
+                    J104 / J105. The PCM3060's single-ended full scale,
+                    0.8 x 4.75 V = 3.8 Vpp, leaves as
                     about 10 Vpp.
   MIDI              J106 in (PJ366ST) to MIDI_IN_TIP / _RING; J107 out, its
                     tip and ring chosen from MIDI_OUT_SNK / _SRC by two
@@ -171,18 +173,18 @@ PARTS = [
     ("C106", "Device", "C", 1, "100p", FP_C, (66.04, 147.32), {"1": "INR_DIV", "2": "AGND"}),
     ("U101", "Amplifier_Operational", "TL074", 2, "TL074", "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
      (88.9, 137.16), {"5": "INR_DIV", "6": "IN_R_LINE", "7": "IN_R_LINE"}),
-    # --- audio out: non-inverting, gain 3.49, 1k out ---------------------------
+    # --- audio out: non-inverting, gain 2.62, 1k out ---------------------------
     ("U101", "Amplifier_Operational", "TL074", 3, "TL074", "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
      (165.1, 106.68), {"10": "OUT_L_LINE", "9": "OUTL_FB", "8": "OUTL_AMP"}),
     ("R105", "Device", "R", 1, "10k", FP_R, (152.4, 119.38), {"1": "OUTL_FB", "2": "AGND"}),
-    ("R106", "Device", "R", 1, "24.9k", FP_R, (165.1, 93.98), {"1": "OUTL_FB", "2": "OUTL_AMP"}),
+    ("R106", "Device", "R", 1, "16.2k", FP_R, (165.1, 93.98), {"1": "OUTL_FB", "2": "OUTL_AMP"}),
     ("C107", "Device", "C", 1, "100p", FP_C, (177.8, 93.98), {"1": "OUTL_FB", "2": "OUTL_AMP"}),
     ("R107", "Device", "R", 1, "1k", FP_R, (190.5, 106.68), {"1": "OUTL_AMP", "2": "OUT_L_JACK"}),
     ("J104", "Connector_Audio", "AudioJack2_SwitchT", 1, "OUT L", FP_JACK, (215.9, 106.68), {"T": "OUT_L_JACK", "TN": None, "S": "AGND"}),
     ("U101", "Amplifier_Operational", "TL074", 4, "TL074", "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
      (165.1, 137.16), {"12": "OUT_R_LINE", "13": "OUTR_FB", "14": "OUTR_AMP"}),
     ("R108", "Device", "R", 1, "10k", FP_R, (152.4, 149.86), {"1": "OUTR_FB", "2": "AGND"}),
-    ("R109", "Device", "R", 1, "24.9k", FP_R, (165.1, 124.46), {"1": "OUTR_FB", "2": "OUTR_AMP"}),
+    ("R109", "Device", "R", 1, "16.2k", FP_R, (165.1, 124.46), {"1": "OUTR_FB", "2": "OUTR_AMP"}),
     ("C108", "Device", "C", 1, "100p", FP_C, (177.8, 124.46), {"1": "OUTR_FB", "2": "OUTR_AMP"}),
     ("R110", "Device", "R", 1, "1k", FP_R, (190.5, 137.16), {"1": "OUTR_AMP", "2": "OUT_R_JACK"}),
     ("J105", "Connector_Audio", "AudioJack2_SwitchT", 1, "OUT R", FP_JACK, (215.9, 137.16), {"T": "OUT_R_JACK", "TN": None, "S": "AGND"}),

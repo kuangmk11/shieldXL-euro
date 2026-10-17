@@ -1,0 +1,94 @@
+// Moirae: TI PCM3060 codec on the Pi's I2S, in place of the norns shield's
+// CS4270 (monome-snd-4270). Needs Moirae's copy of the PCM3060 driver
+// (software/pcm3060-moirae: ./build.sh on the Pi). Then:
+//
+//   dtc -@ -I dts -O dtb -o moirae-pcm3060.dtbo moirae-pcm3060-overlay.dts
+//   sudo cp moirae-pcm3060.dtbo /boot/overlays/
+//   # /boot/config.txt: replace  dtoverlay=monome-snd-4270
+//   #                    with     dtoverlay=moirae-pcm3060
+//
+// Clocking, as the CS4270 shield: the codec is clock master off the board's
+// 12.288 MHz crystal (SCKI1 and SCKI2), fixed at 48 kHz (256 fs). The ADC and
+// DAC share one BCK / LRCK pair, so the DAC drives them (64 fs) and the ADC
+// listens - "moirae,adc-clock-consumer", which the stock driver lacks. The
+// Pi's I2S is the clock consumer, in 32-bit slots to match 64 fs.
+//
+// Hardware (norns-shield-210330_1 sheet, U1):
+//   I2C1 at 0x46: MODE tied low (I2C), MS/ADR low.
+//   RST on GPIO17 (R15 pulls it low): the driver has no reset GPIO, so a hog
+//   holds it high.
+//   DAC outputs used single-ended (VOUTx- open): ti,out-single-ended.
+//
+// The driver has two DAIs, 0 = pcm3060-dac (playback), 1 = pcm3060-adc
+// (capture); one link carries both, so jack sees one full-duplex device.
+// Run jack duplex: the DAC is the clock source, so playback must be open for
+// capture to be clocked.
+
+/dts-v1/;
+/plugin/;
+
+/ {
+	compatible = "brcm,bcm2835";
+
+	fragment@0 {
+		target = <&i2s>;
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@1 {
+		target = <&i2c1>;
+		__overlay__ {
+			#address-cells = <1>;
+			#size-cells = <0>;
+			status = "okay";
+
+			pcm3060: audio-codec@46 {
+				compatible = "moirae,pcm3060";
+				reg = <0x46>;
+				#sound-dai-cells = <1>;
+				ti,out-single-ended;
+				moirae,adc-clock-consumer;
+				status = "okay";
+			};
+		};
+	};
+
+	fragment@2 {
+		target = <&gpio>;
+		__overlay__ {
+			pcm3060_rst: pcm3060-rst-hog {
+				gpio-hog;
+				gpios = <17 0>;
+				output-high;
+				line-name = "pcm3060-rst";
+			};
+		};
+	};
+
+	fragment@3 {
+		target = <&sound>;
+		__overlay__ {
+			compatible = "simple-audio-card";
+			simple-audio-card,name = "Moirae";
+			status = "okay";
+
+			simple-audio-card,dai-link@0 {
+				format = "i2s";
+				bitclock-master = <&dailink0_codec>;
+				frame-master = <&dailink0_codec>;
+
+				cpu {
+					sound-dai = <&i2s>;
+					dai-tdm-slot-num = <2>;
+					dai-tdm-slot-width = <32>;
+				};
+				dailink0_codec: codec {
+					sound-dai = <&pcm3060 0>, <&pcm3060 1>;
+					system-clock-frequency = <12288000>;
+				};
+			};
+		};
+	};
+};

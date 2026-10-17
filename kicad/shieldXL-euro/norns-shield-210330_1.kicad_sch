@@ -5,6 +5,581 @@
 	(uuid "5483b7b3-0686-4585-9334-d7a9151fc8f4")
 	(paper "User" 443.23 305.206)
 	(lib_symbols
+		(symbol "Moirae:PCM3060"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -17.78 20.32 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" "PCM3060"
+				(at 2.54 -20.32 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "Package_SO:TSSOP-28_4.4x9.7mm_P0.65mm"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/pcm3060.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "24-bit 96/192 kHz stereo codec, single-ended ADC in, single-ended or differential DAC out, I2C/SPI, TSSOP-28"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PCM3060_0_1"
+				(rectangle
+					(start -17.78 17.78)
+					(end 17.78 -17.78)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "PCM3060_1_1"
+				(pin input line
+					(at -22.86 12.7 0)
+					(length 5.08)
+					(name "DIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -22.86 10.16 0)
+					(length 5.08)
+					(name "LRCK1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -22.86 10.16 0)
+					(length 5.08)
+					(hide yes)
+					(name "LRCK2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -22.86 7.62 0)
+					(length 5.08)
+					(name "SCKI1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -22.86 7.62 0)
+					(length 5.08)
+					(hide yes)
+					(name "SCKI2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -22.86 5.08 0)
+					(length 5.08)
+					(name "BCK1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -22.86 5.08 0)
+					(length 5.08)
+					(hide yes)
+					(name "BCK2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -22.86 2.54 0)
+					(length 5.08)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -22.86 0 0)
+					(length 5.08)
+					(name "DGND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -22.86 -2.54 0)
+					(length 5.08)
+					(name "DOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -22.86 -7.62 0)
+					(length 5.08)
+					(name "MD/SDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -22.86 -10.16 0)
+					(length 5.08)
+					(name "MC/SCL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -22.86 -12.7 0)
+					(length 5.08)
+					(name "MODE"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "28"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -22.86 -15.24 0)
+					(length 5.08)
+					(name "MS/ADR"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "27"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 22.86 -12.7 180)
+					(length 5.08)
+					(name "~{RST}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 22.86 -10.16 180)
+					(length 5.08)
+					(name "VINL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "25"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 22.86 -7.62 180)
+					(length 5.08)
+					(name "VINR"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "26"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 22.86 -5.08 180)
+					(length 5.08)
+					(name "VCOM"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 22.86 0 180)
+					(length 5.08)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 22.86 2.54 180)
+					(length 5.08)
+					(name "AGND1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 22.86 2.54 180)
+					(length 5.08)
+					(hide yes)
+					(name "AGND2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 22.86 2.54 180)
+					(length 5.08)
+					(hide yes)
+					(name "SGND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 22.86 5.08 180)
+					(length 5.08)
+					(name "ZEROL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 22.86 7.62 180)
+					(length 5.08)
+					(name "VOUTL+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 22.86 10.16 180)
+					(length 5.08)
+					(name "VOUTR+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 22.86 12.7 180)
+					(length 5.08)
+					(name "ZEROR"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 12.7 22.86 270)
+					(length 5.08)
+					(name "VOUTL-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 15.24 22.86 270)
+					(length 5.08)
+					(name "VOUTR-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector_Audio:NRJ6HF"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -4364,6 +4939,22 @@
 		(color 0 0 0 0)
 		(uuid "f980665c-1c96-44d0-9d49-7f4085323249")
 	)
+	(no_connect
+		(at 259.08 99.06)
+		(uuid "f3af987a-3d21-5403-bd00-5b600fbd06af")
+	)
+	(no_connect
+		(at 259.08 91.44)
+		(uuid "e2d7a7c8-6163-51aa-a40b-d2c4875d3f7a")
+	)
+	(no_connect
+		(at 248.92 81.28)
+		(uuid "b26f9f15-514f-56b9-9947-fd141ab2cf4f")
+	)
+	(no_connect
+		(at 251.46 81.28)
+		(uuid "ea14351a-196c-51bd-927c-ba71c7fa0208")
+	)
 	(wire
 		(pts
 			(xy 279.4 129.54) (xy 271.78 129.54)
@@ -4646,16 +5237,6 @@
 	)
 	(wire
 		(pts
-			(xy 213.36 109.22) (xy 182.88 109.22)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "28881533-c79e-4af8-8043-4b7b957adc8c")
-	)
-	(wire
-		(pts
 			(xy 259.08 104.14) (xy 294.64 104.14)
 		)
 		(stroke
@@ -4926,16 +5507,6 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 106.68) (xy 279.4 106.68)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "504e44f7-6136-4801-a367-540cda6b78f2")
-	)
-	(wire
-		(pts
 			(xy 365.76 167.64) (xy 373.38 167.64)
 		)
 		(stroke
@@ -5163,16 +5734,6 @@
 			(type solid)
 		)
 		(uuid "6c74956e-febc-4ff1-a3cc-bef5bc2f4f8d")
-	)
-	(wire
-		(pts
-			(xy 279.4 106.68) (xy 279.4 119.38)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "6cc65254-1822-49e2-b8ad-ac73fa9b4119")
 	)
 	(wire
 		(pts
@@ -5483,16 +6044,6 @@
 			(type solid)
 		)
 		(uuid "9f9415f0-fb5c-4233-b1c8-225a4ff603d3")
-	)
-	(wire
-		(pts
-			(xy 259.08 121.92) (xy 259.08 119.38)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "9ff9c197-cd4d-4bc6-b1dc-95ce39f4e9ff")
 	)
 	(wire
 		(pts
@@ -5953,16 +6504,6 @@
 			(type solid)
 		)
 		(uuid "e0683e94-afab-431f-84d5-e5d2303f35cb")
-	)
-	(wire
-		(pts
-			(xy 182.88 109.22) (xy 182.88 101.6)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "e19dce08-4200-4070-9710-c700a66a4ab5")
 	)
 	(wire
 		(pts
@@ -8001,7 +8542,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "4.99k"
+		(property "Value" "1.27k"
 			(at 133.35 187.198 0)
 			(effects
 				(font
@@ -8264,9 +8805,9 @@
 		(at 287.02 124.46 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
+		(in_bom no)
+		(on_board no)
+		(dnp yes)
 		(uuid "695a29f8-80ee-4178-9228-ba2abd09bcab")
 		(property "Reference" "C7"
 			(at 288.036 123.825 0)
@@ -8958,7 +9499,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "4.53k"
 			(at 133.858 222.25 0)
 			(effects
 				(font
@@ -9613,7 +10154,7 @@
 		)
 	)
 	(symbol
-		(lib_id "norns-shield-210330-eagle-import:CS4270")
+		(lib_id "Moirae:PCM3060")
 		(at 236.22 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9631,7 +10172,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "CS4270"
+		(property "Value" "PCM3060PW"
 			(at 243.84 124.46 0)
 			(effects
 				(font
@@ -9640,7 +10181,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "ShieldXL:TSSOP24"
+		(property "Footprint" "Package_SO:TSSOP-28_4.4x9.7mm_P0.65mm"
 			(at 236.22 104.14 0)
 			(effects
 				(font
@@ -9649,7 +10190,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/pcm3060.pdf"
 			(at 236.22 104.14 0)
 			(effects
 				(font
@@ -9667,77 +10208,89 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "44c0c814-639e-438d-bfcc-2de3ae628db6")
-		)
-		(pin "10"
-			(uuid "5396fafa-24f3-4b11-b09d-505a37d0edee")
-		)
-		(pin "11"
-			(uuid "3623fc93-c1ef-4781-a099-f6968205a4e3")
-		)
 		(pin "12"
-			(uuid "e8886390-e43c-4f4d-8941-43cd5870e4a8")
-		)
-		(pin "13"
-			(uuid "fd52d3c9-4c95-4c44-bc87-0244f4d12bb3")
-		)
-		(pin "14"
-			(uuid "f3055865-99f5-4b65-b5e2-1b97059faf11")
-		)
-		(pin "15"
-			(uuid "25f6fa11-5690-47a8-a93d-f6ca37d5f346")
-		)
-		(pin "16"
-			(uuid "aba61b05-3197-43a7-b68d-35635e449820")
-		)
-		(pin "17"
-			(uuid "cd19be1f-01b5-4421-9c37-df18c94a4cb5")
-		)
-		(pin "18"
-			(uuid "ab766861-8001-4d0b-aee5-bd29315236fb")
-		)
-		(pin "19"
-			(uuid "58f09587-cbfe-4f26-b05e-1c5d2133bba4")
-		)
-		(pin "2"
-			(uuid "05482a78-d570-4194-b59c-d77383bdb257")
-		)
-		(pin "20"
-			(uuid "4e8b0c56-f880-45df-a8c5-449cacb084cf")
-		)
-		(pin "21"
-			(uuid "ea4c2434-c709-4062-ac26-ceebf511a10e")
-		)
-		(pin "22"
-			(uuid "ac4643f1-4d0f-4a0c-a878-f00bd248ee4c")
-		)
-		(pin "23"
-			(uuid "3ed6e24a-ae98-4a7b-a213-c37950251051")
-		)
-		(pin "24"
-			(uuid "1046c422-8f39-4b1e-a0c9-477fef372251")
-		)
-		(pin "3"
-			(uuid "1967515c-05a4-4f89-8aab-6f1d44c3cd69")
+			(uuid "3d2c56fb-81a4-507b-8f50-4862cfb6827e")
 		)
 		(pin "4"
-			(uuid "3b615367-8a7d-408f-a6ea-7d31723afb63")
+			(uuid "530fa07f-0a58-58d2-a493-2951d5a45e3f")
 		)
-		(pin "5"
-			(uuid "64e108f3-47f9-4da5-922d-2491de17ceb6")
+		(pin "11"
+			(uuid "5472125a-055d-5451-8fa4-5f2974349116")
 		)
 		(pin "6"
-			(uuid "afaefd42-0ce3-483f-a809-dd0ef4b3620f")
-		)
-		(pin "7"
-			(uuid "11e0bd4f-c3f4-40b9-87ea-296862c40e50")
-		)
-		(pin "8"
-			(uuid "fa09b876-9f9f-407a-90d6-453412132882")
+			(uuid "e5093c1f-3ac3-5e54-ac40-65f81acd9f88")
 		)
 		(pin "9"
-			(uuid "f60d4ceb-b3c9-4b05-a4a1-ca142b983502")
+			(uuid "b45ccd99-bd25-56a4-b6e2-9b4ffdb51b42")
+		)
+		(pin "5"
+			(uuid "731a5510-e5e1-5a22-a5bc-6671eedb348c")
+		)
+		(pin "10"
+			(uuid "0db59794-d03d-558b-9fab-6861e33132b0")
+		)
+		(pin "7"
+			(uuid "10dbd78f-fb1f-57b6-b16e-45ad7624338b")
+		)
+		(pin "8"
+			(uuid "8a2c0480-4033-51c7-93f3-a0c144f95bda")
+		)
+		(pin "3"
+			(uuid "ad6b12bc-9ae8-5a1f-a99b-127fcd7701e5")
+		)
+		(pin "2"
+			(uuid "4041a06e-872e-545d-a8db-d1307985c282")
+		)
+		(pin "1"
+			(uuid "36b41713-dfb4-585d-99d2-181774c81890")
+		)
+		(pin "28"
+			(uuid "fa398ecb-39c8-5c83-87ff-5834f8582210")
+		)
+		(pin "27"
+			(uuid "783c3b50-7484-5fee-833d-9a9e1462b2c2")
+		)
+		(pin "15"
+			(uuid "21c4d7e2-5a8d-5794-b346-428d643bbb32")
+		)
+		(pin "25"
+			(uuid "38151cce-e332-52bf-be39-084b6d72e28a")
+		)
+		(pin "26"
+			(uuid "158fd729-252c-568e-b14c-30cbec6b04c7")
+		)
+		(pin "21"
+			(uuid "ba8e45f4-b0ff-57d5-bf59-8093d5da9e85")
+		)
+		(pin "24"
+			(uuid "b4c9da37-657c-58e0-ba62-0f84af186dbd")
+		)
+		(pin "23"
+			(uuid "198fe29e-bb1a-5b12-8b44-03d89fd34d77")
+		)
+		(pin "22"
+			(uuid "b5346e1f-402c-5220-9508-cb35e7f2d2ed")
+		)
+		(pin "16"
+			(uuid "dca0b37f-cc23-5d56-99c9-192df4aa586f")
+		)
+		(pin "14"
+			(uuid "70a26820-e6df-54b6-a0ed-044422defdbe")
+		)
+		(pin "20"
+			(uuid "ee3fe8d7-117e-5a72-b293-ba06110e3f9e")
+		)
+		(pin "18"
+			(uuid "5ed4492e-0b48-574e-983c-a440fd426a3f")
+		)
+		(pin "13"
+			(uuid "54c587a5-9f2e-52ad-ac67-24b5bb7d4b30")
+		)
+		(pin "19"
+			(uuid "889c2bae-e655-56c7-8751-5c0f4f4c9f77")
+		)
+		(pin "17"
+			(uuid "09f9769a-2306-5a47-9b42-f6c0a3b332cb")
 		)
 		(instances
 			(project "shieldXL-euro"
@@ -10001,72 +10554,6 @@
 		)
 	)
 	(symbol
-		(lib_id "norns-shield-210330-eagle-import:GND")
-		(at 259.08 124.46 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b5bd45f1-571e-4ede-af75-85a0e4bd62ac")
-		(property "Reference" "#GND07"
-			(at 259.08 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 256.54 127 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" ""
-			(at 259.08 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 259.08 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 259.08 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "81f3f55e-07d6-4df6-aaeb-dcc1dbfd707f")
-		)
-		(instances
-			(project "shieldXL-euro"
-				(path "/b86e8947-58dc-49c6-bb5d-ce6d33c2e465/d872c92c-5229-43e6-807a-8bd0f3dfa8f7"
-					(reference "#GND07")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "norns-shield-210330-eagle-import:C-USC0603")
 		(at 330.2 180.34 0)
 		(unit 1)
@@ -10222,7 +10709,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "4.53k"
 			(at 133.858 194.31 0)
 			(effects
 				(font
@@ -10982,7 +11469,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "4.99k"
+		(property "Value" "1.27k"
 			(at 133.35 215.138 0)
 			(effects
 				(font
@@ -11650,9 +12137,9 @@
 		(at 279.4 124.46 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
+		(in_bom no)
+		(on_board no)
+		(dnp yes)
 		(uuid "f622bd15-c344-4e59-bd42-c8f261bb2148")
 		(property "Reference" "C6"
 			(at 280.416 123.825 0)

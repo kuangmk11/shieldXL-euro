@@ -18,17 +18,24 @@ upstream fixes still merge. This copy changes only what Eurorack needs.
 | USB host | the Pi's own ports | three USB-A sockets on the panel, each cabled from a Pi port |
 | headphones | - | none: the outputs go to the rack |
 
-Codec, display, keys, encoders and the MIDI circuit are shieldXL's, unchanged.
+Display, keys, encoders and the MIDI circuit are shieldXL's. The codec is a
+TI PCM3060 in place of shieldXL's CS4270, which Cirrus ended in 2023 (last buy
+Dec 2023): same place, same wires, swapped by `tools/swap_codec_pcm3060.py`
+(pin map there). Still the I2S clock master off the 12.288 MHz crystal; its
+ADC follows the DAC's clocks, which takes Moirae's copy of the kernel driver
+(`../../software/pcm3060-moirae`) and the overlay in
+`../../install/boot/overlays`.
 
 ## Levels
 
-- **In:** 100k into an inverting stage, gain −0.40, then shieldXL's own
-  4.99k / 10k divider. A 10 Vpp signal reaches the CS4270 at about its
-  2.7 Vpp full scale; hotter signals clip in the codec, not the op-amp.
-- **Out:** shieldXL's output filter into a non-inverting stage, gain 3.49,
-  then 1k. Codec full scale, about 2.85 Vpp, leaves as about 10 Vpp.
-- **Phase:** the input stage inverts. Fine for audio; flip the sign in
-  software if a CV use needs it.
+- **In:** a 69.8k / 30.1k divider (100k in, x0.301) into a follower, then
+  shieldXL's divider re-set for the PCM3060's 10k input, 1.27k / 4.53k
+  (x0.71 loaded). 13.3 Vpp at the jack reaches the ADC's full scale,
+  0.6 x 4.75 V = 2.85 Vpp; hotter signals clip in the codec, not the op-amp.
+- **Out:** the DAC runs single-ended, 0.8 x 4.75 V = 3.8 Vpp full scale,
+  through shieldXL's output filter into a non-inverting stage, gain 2.62
+  (16.2k / 10k), then 1k: about 10 Vpp at the jack.
+- **Phase:** both stages are non-inverting.
 
 ## Pi power
 
