@@ -55,6 +55,8 @@ DISP_X0, DISP_TOP = 101.3 / 2 - 82.0 / 2, 10.5
 DISP_REF, DISP_FP = "DS1", "Display_NHD-2.7-12864WDW3"
 # the panel itself, for the 3D view: board-only too, origin at its top-left
 PNL_REF, PNL_FP = "PNL1", "Panel_Moirae"
+# and Corone, behind the board on J121, for the 3D view: origin at its corner
+COR_REF, COR_FP, COR_AT = "COR1", "Corone_Daughterboard", (101.65, 98.5)
 
 # the Pi, as tools/make_outline.py draws it: its footprint's origin is the
 # corner below the header, seen from the front
@@ -84,7 +86,7 @@ def main():
         raise SystemExit("the board is open in KiCad (lock file found): save, close it, then run again")
     # KiCad's Python reads a footprint library only before it loads a board
     protos = {ref: (name, pcbnew.FootprintLoad(os.path.join(HERE, "MMM.pretty"), name))
-              for ref, name in ((DISP_REF, DISP_FP), (PNL_REF, PNL_FP))}
+              for ref, name in ((DISP_REF, DISP_FP), (PNL_REF, PNL_FP), (COR_REF, COR_FP))}
     board = pcbnew.LoadBoard(BOARD)
     fps = {f.GetReference(): f for f in board.GetFootprints()}
     for ref, (name, proto) in protos.items():
@@ -135,6 +137,11 @@ def main():
     p.SetPosition(pcbnew.VECTOR2I(mm(OX), mm(OY)))
     p.SetLocked(True)
     placed.append(f"{PNL_REF} panel")
+    c = fps[COR_REF]
+    c.SetOrientationDegrees(0)
+    c.SetPosition(pcbnew.VECTOR2I(mm(COR_AT[0]), mm(COR_AT[1])))
+    c.SetLocked(True)
+    placed.append(f"{COR_REF} Corone")
     pi = fps.get(PI_REF)
     if pi is not None:
         if pi.IsFlipped():

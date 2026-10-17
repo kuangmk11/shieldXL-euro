@@ -1996,6 +1996,118 @@
 			)
 		)
 	)
+	(footprint "MMM:Corone_Daughterboard"
+		(locked yes)
+		(layer "F.Cu")
+		(uuid "3a029229-7a25-464b-a18c-7d7133bfb169")
+		(at 101.65 98.5)
+		(descr "The Corone daughterboard (../corone) as a 3D model in place, behind the main board on J121: board-only, no pads. Origin at main (101.65, 98.5), Corone's corner. Model: 3d/Corone.step from tools/export_corone_step.sh, turned 180 deg about y, its J1 side 12.6 mm behind the main board's front.")
+		(tags "Corone crow daughterboard")
+		(property "Reference" "COR1"
+			(at 31.675 -1.5 0)
+			(layer "B.Fab")
+			(uuid "07c202e0-e986-4bb0-90e5-40fe5a340dca")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Value" "Corone"
+			(at 31.675 51.25 0)
+			(layer "B.Fab")
+			(uuid "c71e9058-0d0d-4bf3-8d8a-5af884404f26")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f8d8a597-1279-49ff-b5ca-cb41acaeead8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "07cc7c2a-e679-432f-918d-2d5845c689c4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(attr through_hole board_only exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start 0 0)
+			(end 63.35 0)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.Fab")
+			(uuid "ad8b127a-381a-48d2-88e7-1e5bbbaacc39")
+		)
+		(fp_line
+			(start 0 49.75)
+			(end 0 0)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.Fab")
+			(uuid "e305972d-56f3-46d8-b930-a80f37e8dc5b")
+		)
+		(fp_line
+			(start 63.35 0)
+			(end 63.35 49.75)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.Fab")
+			(uuid "4d6b1a5a-0941-4a97-99e8-ef694d1e993f")
+		)
+		(fp_line
+			(start 63.35 49.75)
+			(end 0 49.75)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.Fab")
+			(uuid "6156aee1-0233-4ebe-9a51-d8eefa11e965")
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/3d/Corone.step"
+			(offset
+				(xyz 0 0 -12.6)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 180 0)
+			)
+		)
+	)
 	(footprint "MMM:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
 		(locked yes)
 		(layer "F.Cu")
