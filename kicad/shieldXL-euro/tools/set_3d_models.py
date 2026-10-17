@@ -63,6 +63,11 @@ STACK, BOARD_T, SOCKET_H, SEAT_GAP, PI_HEADER_BASE = 20.0, 1.6, 8.5, 0.5, 2.5
 SOCKET = K + "Connector_PinSocket_2.54mm.3dshapes/PinSocket_2x20_P2.54mm_Vertical.step"
 PIN1 = (8.37, 51.23)                  # X1's pad 1, y up
 MULTI = {
+    # the MIDI LEDs stand on spacers so their flange (z 3-4 in the model) meets
+    # the panel's back at 10.0; -1.27 in x as the footprint's own note explains
+    ("MMM", "LED_3mm_PadsAC"): [
+        (K + "LED_THT.3dshapes/LED_D3.0mm.step", (0, 0, 0), (-1.27, 0, 6.0)),
+    ],
     # JAE's model (SamacSys) stands on its y axis, legs at -y, centred like
     # KiCad's footprint; the board is 7.3 up its legs, so the top lands 12.0 up
     ("Connector_USB", "USB_C_Receptacle_JAE_DX07S024WJ1R350"): [
