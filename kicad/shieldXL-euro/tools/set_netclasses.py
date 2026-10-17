@@ -21,7 +21,7 @@ PRO = os.path.join(HERE, "shieldXL-euro.kicad_pro")
 # name: (track, clearance, via diameter, via drill, diff-pair width, diff-pair gap), patterns
 CLASSES = {
     "Default":    ((0.25, 0.2, 0.6, 0.3, 0.25, 0.2), []),
-    "Power_5V":   ((1.5, 0.25, 0.8, 0.4, 0.25, 0.2), ["+5V", "*VBUS_C"]),
+    "Power_5V":   ((1.5, 0.2, 0.8, 0.4, 0.25, 0.2), ["+5V", "*VBUS_C"]),   # 0.2: J108 pads sit 0.23 apart
     "USB_VBUS":   ((0.8, 0.2, 0.8, 0.4, 0.25, 0.2), ["*VBUS"]),
     "Rails_12V":  ((0.5, 0.25, 0.6, 0.3, 0.25, 0.2), ["*12V*"]),
     "Ground":     ((0.5, 0.2, 0.6, 0.3, 0.25, 0.2), ["GND", "AGND"]),
