@@ -278,7 +278,7 @@
 		(descr "Through hole straight pin header, 2x04, 2.54mm pitch, double rows")
 		(tags "Through hole pin header THT 2x04 2.54mm double row")
 		(property "Reference" "J3"
-			(at 1.27 -2.38 90)
+			(at 1.27 10.22 90)
 			(layer "F.SilkS")
 			(uuid "d1bc99df-ba76-4c51-8a7b-429438bdf612")
 			(effects
@@ -770,6 +770,17 @@
 			)
 		)
 	)
+	(gr_rect
+		(start 93.8 69.699999)
+		(end 94.5 74.04)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "94b88805-1fcc-4020-9f32-2fe59392dbd6")
+	)
 	(gr_line
 		(start 88.4 76.6)
 		(end 111.6 76.6)
@@ -801,6 +812,17 @@
 		(fill no)
 		(layer "Edge.Cuts")
 		(uuid "d03b20d9-acb6-47b4-9d2a-44eacfeab2b2")
+	)
+	(gr_text "RED"
+		(at 92.899999 71.87 90)
+		(layer "F.SilkS")
+		(uuid "74437b3a-9a74-4e5c-a754-df15a8aafd45")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
 	)
 	(gr_text "PI UNDERSIDE"
 		(at 118.6 75.8 0)
