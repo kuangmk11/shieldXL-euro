@@ -15,10 +15,10 @@ PLACEHOLDERS - set before ordering:
   PORT_ZC   each port's centre height above the Pi's PCB, read off the Pi 4
             STEP model (openings 2.45-7.55 and 11.57-16.69 above its 1.5 mm
             PCB's underside, tongue at the top of each). Check with calipers.
-  the plug  USB_A_Plug_Vertical follows the common vertical USB-A pattern
-            (pins 2.5 / 2.0 / 2.5, shell legs 13.3 apart, 2.1 behind the
-            pins). Redraw it from the chosen part's drawing, and check which
-            way its insert faces against the Pi's ports.
+  the plug  a side-mount USB-A male (USB-71, L 15 mm) stood on end; the
+            tail and tab slots are from its drawing, the tails' offset (2.1
+            from the centre, on the insert's face) from its 4.5 mm body.
+            Check a sample's tails before ordering.
 
 IDC pinout, in ribbon order (each pair between grounds):
   1 VBUS_A  2 GND  3 D-_A  4 D+_A  5 GND  6 GND  7 D-_B  8 D+_B  9 GND  10 VBUS_B
@@ -46,10 +46,19 @@ W = 17.2                     # across the stack; the two stacks are 18 mm apart,
 IDC_CLEAR = 0.6              # IDC body clear of the Pi's underside
 
 # --- parts ------------------------------------------------------------------------
-# footprint origin at the plug's centre (the shell's), which goes on the port's
-# centre; the contacts sit 2.1 to one side of it, the shell legs on the centre line
+# The plug: a side-mount USB-A male ("USB-71", L = 15 mm short; the same pattern
+# as Molex 48037) stood on its back end. Its four contact tails leave the back
+# straight, in line with the plug, along the face the plastic insert is on;
+# its shell tabs drop at the jack's two edges, 11.7 apart. Footprint origin at
+# the plug's centre, which goes on the port's centre; the insert side (the
+# tails) toward the Pi's PCB, so the Pi's tongue, along the top of each port,
+# meets it. The two bottom posts, 4.5 apart, stand clear of the board: clip
+# them or leave them.
 PLUG_PINS = (-3.5, -1.0, 1.0, 3.5)   # 1 VBUS, 2 D-, 3 D+, 4 GND
-PLUG_PIN_DY, PLUG_SHELL_DX = -2.1, 6.65
+PLUG_PIN_DY = -2.1                   # the tails: on the insert's face (body 4.5 thick)
+PLUG_TAIL_SLOT, PLUG_TAIL_PAD = (1.0, 0.6), (1.5, 1.2)   # tails 0.7 wide
+PLUG_SHELL_DX = 5.85                 # the tabs, at the jack's edges
+PLUG_SHELL_SLOT, PLUG_SHELL_PAD = (0.9, 4.0), (1.5, 4.6)  # along the shell's 4.5 side
 IDC_FP = ("Connector_IDC", "IDC-Header_2x05_P2.54mm_Vertical")
 IDC_BODY = 20.3              # along v; the pins span 10.16 of it
 NETS_IDC = {"1": "VBUS_A", "2": "GND", "3": "DM_A", "4": "DP_A", "5": "GND",
@@ -61,20 +70,29 @@ def v_of_port(i):
 
 
 def plug_footprint():
+    tw, th = PLUG_TAIL_SLOT
+    pw, ph = PLUG_TAIL_PAD
+    sw, sh = PLUG_SHELL_SLOT
+    qw, qh = PLUG_SHELL_PAD
     pads = []
     for n, x in enumerate(PLUG_PINS, 1):
-        shape = "rect" if n == 1 else "circle"
-        pads.append(f'\t(pad "{n}" thru_hole {shape} (at {x:g} {PLUG_PIN_DY:g}) (size 1.5 1.5) (drill 0.92) (layers "*.Cu" "*.Mask"))')
+        shape = "rect" if n == 1 else "oval"
+        pads.append(f'\t(pad "{n}" thru_hole {shape} (at {x:g} {PLUG_PIN_DY:g}) (size {pw:g} {ph:g}) '
+                    f'(drill oval {tw:g} {th:g}) (layers "*.Cu" "*.Mask"))')
     for x in (-PLUG_SHELL_DX, PLUG_SHELL_DX):
-        pads.append(f'\t(pad "SH" thru_hole circle (at {x:g} 0) (size 2.9 2.9) (drill 2.3) (layers "*.Cu" "*.Mask"))')
+        pads.append(f'\t(pad "SH" thru_hole oval (at {x:g} 0) (size {qw:g} {qh:g}) '
+                    f'(drill oval {sw:g} {sh:g}) (layers "*.Cu" "*.Mask"))')
     y0, y1 = -2.25, 2.25
-    body = (f'\t(fp_rect (start -6 {y0:g}) (end 6 {y1:g}) (stroke (width 0.12) (type solid)) (fill none) (layer "F.Fab"))\n'
-            f'\t(fp_rect (start -8.4 {y0 - 0.5:g}) (end 8.4 {y1 + 0.5:g}) (stroke (width 0.05) (type solid)) (fill none) (layer "F.CrtYd"))\n')
+    body = (f'\t(fp_rect (start -6 {y0:g}) (end 6 {y1:g}) (stroke (width 0.1) (type solid)) (fill none) (layer "F.Fab"))\n'
+            f'\t(fp_line (start -4.5 {y0 + 0.6:g}) (end 4.5 {y0 + 0.6:g}) (stroke (width 0.1) (type solid)) (layer "F.Fab"))\n'
+            f'\t(fp_text user "insert" (at 0 {y0 + 1.4:g} 0) (layer "F.Fab") (effects (font (size 0.6 0.6) (thickness 0.08))))\n'
+            f'\t(fp_rect (start -7.0 {y0 - 0.75:g}) (end 7.0 {y1 + 0.75:g}) (stroke (width 0.05) (type solid)) (fill none) (layer "F.CrtYd"))\n')
     return ('(footprint "USB_A_Plug_Vertical"\n\t(version 20240108)\n\t(generator "make_usb_adapter.py")\n\t(layer "F.Cu")\n'
-            '\t(descr "USB-A male plug, vertical (180 deg), through hole. PLACEHOLDER: common pattern, redraw from the chosen part")\n'
+            '\t(descr "USB-A male plug, side-mount USB-71 type (L 15 mm, Molex 48037 pattern) stood on its back end: '
+            'tails straight through in slots, shell tabs in slots at the jack edges")\n'
             '\t(attr through_hole)\n'
             '\t(property "Reference" "REF**" (at 0 -4.5 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))\n'
-            '\t(property "Value" "USB_A_Plug_Vertical" (at 0 5.5 0) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15))))\n'
+            '\t(property "Value" "USB_A_Plug_Vertical" (at 0 4.0 0) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15))))\n'
             + body + "\n".join(pads) + "\n)\n")
 
 
@@ -113,7 +131,9 @@ SCH_PARTS = [
 
 
 def write_schematic():
+    """Write the schematic; return each part's symbol uuid, for the board to link to."""
     n = [0]
+    sym_uuid = {}
 
     def uid():
         n[0] += 1
@@ -133,8 +153,9 @@ def write_schematic():
     o.append("\t)")
 
     def inst(lib_id, ref, value, fp, x, y, pins, hide=False):
+        sym_uuid[ref] = uid()
         s = (f'\t(symbol (lib_id "{lib_id}") (at {x:g} {y:g} 0) (unit 1) (exclude_from_sim no) '
-             f'(in_bom {"no" if ref.startswith("#") else "yes"}) (on_board yes) (dnp no)\n\t\t(uuid "{uid()}")\n'
+             f'(in_bom {"no" if ref.startswith("#") else "yes"}) (on_board yes) (dnp no)\n\t\t(uuid "{sym_uuid[ref]}")\n'
              + prop("Reference", ref, x + 2.54, y - 10.16, hide) + prop("Value", value, x + 2.54, y + 10.16, hide)
              + prop("Footprint", fp, x, y, True) + prop("Datasheet", "", x, y, True))
         s += "".join(f'\t\t(pin "{p}" (uuid "{uid()}"))\n' for p in pins)
@@ -166,6 +187,7 @@ def write_schematic():
     o.append(")")
     with open(os.path.join(HERE, f"{NAME}.kicad_sch"), "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(o) + "\n")
+    return sym_uuid
 
 
 # --- board --------------------------------------------------------------------------
@@ -177,7 +199,12 @@ def at(u, v):
     return pcbnew.VECTOR2I(mm(100 + u), mm(100 - v))
 
 
-def write_board():
+def net_name(n):
+    """The schematic's name for a net: local labels get the root sheet's '/'."""
+    return n if n == "GND" else "/" + n
+
+
+def write_board(sym_uuid):
     lib = os.path.join(HERE, f"{NAME}.pretty")
     os.makedirs(lib, exist_ok=True)
     with open(os.path.join(lib, "USB_A_Plug_Vertical.kicad_mod"), "w", encoding="utf-8", newline="\n") as f:
@@ -186,12 +213,16 @@ def write_board():
     board = pcbnew.BOARD()
     nets = {}
     for name in sorted(set(NETS_IDC.values())):
-        n = pcbnew.NETINFO_ITEM(board, name)
+        n = pcbnew.NETINFO_ITEM(board, net_name(name))
         board.Add(n)
         nets[name] = n
 
-    def place(libpath, fpname, ref, value, u, v, conn):
+    def place(libpath, nick, fpname, ref, value, u, v, conn):
         fp = pcbnew.FootprintLoad(libpath, fpname)
+        fp.SetFPID(pcbnew.LIB_ID(nick, fpname))
+        fp.SetPath(pcbnew.KIID_PATH("/" + sym_uuid[ref]))
+        fp.SetSheetname("/")
+        fp.SetSheetfile(f"{NAME}.kicad_sch")
         fp.SetReference(ref)
         fp.SetValue(value)
         board.Add(fp)
@@ -203,12 +234,12 @@ def write_board():
         return fp
 
     for port, (ref, _, _, value, _, _, conn) in enumerate(SCH_PARTS[:2]):
-        place(lib, "USB_A_Plug_Vertical", ref, value, 0, v_of_port(port), conn)
+        place(lib, NAME, "USB_A_Plug_Vertical", ref, value, 0, v_of_port(port), conn)
 
     # the IDC: behind the Pi, clear of its underside; pins in two columns along v
     body_bottom = H + PI_T + PI_UNDER + IDC_CLEAR
     pin1_v = body_bottom + (IDC_BODY - 4 * 2.54) / 2 + 4 * 2.54
-    place(os.path.join(KFP, IDC_FP[0] + ".pretty"), IDC_FP[1], "J3", "To main board", -1.27, pin1_v, NETS_IDC)
+    place(os.path.join(KFP, IDC_FP[0] + ".pretty"), IDC_FP[0], IDC_FP[1], "J3", "To main board", -1.27, pin1_v, NETS_IDC)
 
     # outline
     bottom = min(v_of_port(i) for i in (0, 1)) - 2.25 - 0.75
@@ -250,7 +281,6 @@ def write_project():
 
 if __name__ == "__main__":
     write_project()
-    write_schematic()
-    w, h, bottom, top = write_board()
+    w, h, bottom, top = write_board(write_schematic())
     print(f"board {w:.1f} x {h:.1f} mm, from {bottom:.1f} to {top:.1f} above the main board's back")
     print(f"plugs at {v_of_port(0):.1f} (A) and {v_of_port(1):.1f} (B); pitch {PORT_ZC[1] - PORT_ZC[0]:.2f}")

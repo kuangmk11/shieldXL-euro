@@ -16,7 +16,7 @@ boards are identical.
 Board: 17.2 x 40 mm, standing at the port faces, from 5.3 to 45.3 mm off the
 main board's back. The plugs face the Pi; so does the IDC, above the Pi's
 underside, its ribbon running behind the Pi. ERC clean; DRC shows only the
-unrouted connections - routing waits for the plug part.
+unrouted connections.
 
 ## IDC pinout, in ribbon order
 
@@ -33,11 +33,15 @@ between grounds.
 
 ## Before ordering
 
-- **The plug.** `USB_A_Plug_Vertical` is a placeholder in the common vertical
-  USB-A pattern: contacts 2.5 / 2.0 / 2.5, 0.92 mm holes, 2.1 mm off the
-  centre line; shell legs 13.3 apart, 2.3 mm holes, on it. Redraw it from
-  the chosen part's drawing. A USB-A plug fits one way up: check which side
-  its insert sits on against the Pi's ports.
+- **The plug.** A side-mount USB-A male, the "USB-71" (L = 15 mm short;
+  Molex 48037 pattern), stood on its back end. `USB_A_Plug_Vertical` takes
+  its four contact tails straight through in 1.0 x 0.6 plated slots at the
+  side-mount spacing (2.5 / 2.0 / 2.5), 2.1 mm off the plug's centre on the
+  insert's face, and its shell tabs in 0.9 x 4.0 plated slots at the jack's
+  edges, 11.7 apart. The insert faces the Pi's PCB, where the Pi's tongue
+  (along the top of each port) wants it. Its two bottom posts stand clear of
+  the board; clip them or leave them. Check a sample's tails against the
+  slots before ordering.
 - **The plug spacing.** `PORT_ZC`, each port's centre above the Pi's PCB:
   3.49 and 12.63 (9.14 apart), read off the Pi 4 STEP model, where each
   opening is 5.1 mm tall with the port's tongue along its top. Check it with

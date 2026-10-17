@@ -87,146 +87,16 @@
 			(outputdirectory "")
 		)
 	)
-	(footprint "USB_A_Plug_Vertical"
+	(footprint "usb-adapter:USB_A_Plug_Vertical"
 		(layer "F.Cu")
-		(uuid "157f377a-ad9d-48ed-9ea2-0cdf1612c436")
-		(at 100 92.63)
-		(descr "USB-A male plug, vertical (180 deg), through hole. PLACEHOLDER: common pattern, redraw from the chosen part")
-		(property "Reference" "J2"
-			(at 0 -4.5 0)
-			(layer "F.SilkS")
-			(hide yes)
-			(uuid "0f68feec-7541-475b-bec0-faba5eb1cce0")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Value" "USB-A plug, port B"
-			(at 0 5.5 0)
-			(layer "F.Fab")
-			(uuid "a2c69f2c-ff26-401b-835a-15626767080b")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "973a9eb1-65ab-4b20-9b74-9018a581fc6c")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "a9d8f2c6-337c-4d13-9f45-41e9bb81207a")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(attr through_hole)
-		(duplicate_pad_numbers_are_jumpers no)
-		(fp_rect
-			(start -8.4 -2.75)
-			(end 8.4 2.75)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(fill no)
-			(layer "F.CrtYd")
-			(uuid "a507f41c-621d-4de0-82b0-f7c77a626420")
-		)
-		(fp_rect
-			(start -6 -2.25)
-			(end 6 2.25)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(fill no)
-			(layer "F.Fab")
-			(uuid "258881da-57c8-466f-96bd-458e2c307959")
-		)
-		(pad "1" thru_hole rect
-			(at -3.5 -2.1)
-			(size 1.5 1.5)
-			(drill 0.92)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net "VBUS_B")
-			(uuid "4d85b5f7-7b98-4f55-9da1-b3a18394faa1")
-		)
-		(pad "2" thru_hole circle
-			(at -1 -2.1)
-			(size 1.5 1.5)
-			(drill 0.92)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net "DM_B")
-			(uuid "ad8b99f9-99d3-4873-8df5-78b9e282f732")
-		)
-		(pad "3" thru_hole circle
-			(at 1 -2.1)
-			(size 1.5 1.5)
-			(drill 0.92)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net "DP_B")
-			(uuid "0e0891de-ab26-4cc4-ac89-bd44ce171c45")
-		)
-		(pad "4" thru_hole circle
-			(at 3.5 -2.1)
-			(size 1.5 1.5)
-			(drill 0.92)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net "GND")
-			(uuid "b07ba5b6-f355-44fc-8e35-fc671e140c67")
-		)
-		(pad "SH" thru_hole circle
-			(at -6.65 0)
-			(size 2.9 2.9)
-			(drill 2.3)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net "GND")
-			(uuid "bcd61204-7dc2-40bd-9400-4f972a474d85")
-		)
-		(pad "SH" thru_hole circle
-			(at 6.65 0)
-			(size 2.9 2.9)
-			(drill 2.3)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net "GND")
-			(uuid "e3fd6a62-49e4-4feb-a694-d3660a31d9bf")
-		)
-		(embedded_fonts no)
-	)
-	(footprint "USB_A_Plug_Vertical"
-		(layer "F.Cu")
-		(uuid "354dffdf-76bf-465e-8d58-c5aa3abdd3c2")
+		(uuid "6bc9618d-b082-417c-9020-a2b45da7bafd")
 		(at 100 83.49)
-		(descr "USB-A male plug, vertical (180 deg), through hole. PLACEHOLDER: common pattern, redraw from the chosen part")
+		(descr "USB-A male plug, side-mount USB-71 type (L 15 mm, Molex 48037 pattern) stood on its back end: tails straight through in slots, shell tabs in slots at the jack edges")
 		(property "Reference" "J1"
 			(at 0 -4.5 0)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "1902696f-ffcb-4a03-a8f1-307808ade310")
+			(uuid "ae0177b2-cc0e-4bc2-b08c-580b9b40d89f")
 			(effects
 				(font
 					(size 1 1)
@@ -235,9 +105,9 @@
 			)
 		)
 		(property "Value" "USB-A plug, port A"
-			(at 0 5.5 0)
+			(at 0 4 0)
 			(layer "F.Fab")
-			(uuid "4e1b6041-716a-424d-853b-4e6f4b723caf")
+			(uuid "b1d4f881-bc1b-4ff3-86a4-41b074ee8d23")
 			(effects
 				(font
 					(size 1 1)
@@ -249,7 +119,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "01434eb8-de76-4f94-852a-e898957bb2f7")
+			(uuid "a2fb8dd9-774d-4c52-968a-4359b23ae9e1")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -260,96 +130,120 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "38c9f834-a034-496e-bc07-f9d00174d5b7")
+			(uuid "26974ded-df08-4991-b25a-1ccce8e815f1")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
+		(path "/3dc4cbd4-5c2d-574f-a973-c14210401d1d")
+		(sheetname "/")
+		(sheetfile "usb-adapter.kicad_sch")
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
-			(start -8.4 -2.75)
-			(end 8.4 2.75)
+			(start -7 -3)
+			(end 7 3)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "7e57bc7f-f377-41e3-ab90-3b98f20a7fd4")
+			(uuid "fdc62553-2ec4-4ccc-8ab7-4964e8708321")
+		)
+		(fp_line
+			(start -4.5 -1.65)
+			(end 4.5 -1.65)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "eee4072d-34ad-4516-80b7-f92ec6d10739")
 		)
 		(fp_rect
 			(start -6 -2.25)
 			(end 6 2.25)
 			(stroke
-				(width 0.12)
+				(width 0.1)
 				(type solid)
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "e75db30b-6c67-4549-939c-2af058fde6e0")
+			(uuid "b552061c-ad03-4797-8f8e-b793a2c8d1c3")
+		)
+		(fp_text user "insert"
+			(at 0 -0.85 0)
+			(layer "F.Fab")
+			(uuid "953518de-74a0-4376-9035-1481f5dbc1a8")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.08)
+				)
+			)
 		)
 		(pad "1" thru_hole rect
 			(at -3.5 -2.1)
-			(size 1.5 1.5)
-			(drill 0.92)
+			(size 1.5 1.2)
+			(drill oval 1 0.6)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "VBUS_A")
-			(uuid "77965a5e-1767-4f36-946c-166cc7d3c249")
+			(net "/VBUS_A")
+			(uuid "44c08033-9b65-4309-b422-7076b9f6897a")
 		)
-		(pad "2" thru_hole circle
+		(pad "2" thru_hole oval
 			(at -1 -2.1)
-			(size 1.5 1.5)
-			(drill 0.92)
+			(size 1.5 1.2)
+			(drill oval 1 0.6)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "DM_A")
-			(uuid "15602934-a49a-431e-b119-d6b161b74032")
+			(net "/DM_A")
+			(uuid "c67460b6-4237-45ac-b048-086dbb5b851d")
 		)
-		(pad "3" thru_hole circle
+		(pad "3" thru_hole oval
 			(at 1 -2.1)
-			(size 1.5 1.5)
-			(drill 0.92)
+			(size 1.5 1.2)
+			(drill oval 1 0.6)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "DP_A")
-			(uuid "bc313216-2760-40f5-b4b5-5e9db8b35d79")
+			(net "/DP_A")
+			(uuid "2179dd44-0722-4368-a41e-935bfb86d7e1")
 		)
-		(pad "4" thru_hole circle
+		(pad "4" thru_hole oval
 			(at 3.5 -2.1)
-			(size 1.5 1.5)
-			(drill 0.92)
+			(size 1.5 1.2)
+			(drill oval 1 0.6)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(uuid "97e9f47a-0cae-4f59-b583-c24ba034d196")
+			(uuid "b30ecd9a-f77c-4d29-af1f-f180fc270d44")
 		)
-		(pad "SH" thru_hole circle
-			(at -6.65 0)
-			(size 2.9 2.9)
-			(drill 2.3)
+		(pad "SH" thru_hole oval
+			(at -5.85 0)
+			(size 1.5 4.6)
+			(drill oval 0.9 4)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(uuid "8ef92d0a-9c0c-45c5-98af-ab8af88c87bb")
+			(uuid "e6fe921b-76bc-4520-9bfd-19e869cd7cad")
 		)
-		(pad "SH" thru_hole circle
-			(at 6.65 0)
-			(size 2.9 2.9)
-			(drill 2.3)
+		(pad "SH" thru_hole oval
+			(at 5.85 0)
+			(size 1.5 4.6)
+			(drill oval 0.9 4)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(uuid "4ff381c0-61b0-4734-a7e8-f46f649dd548")
+			(uuid "45c9981a-466a-4018-bae3-eb0fbe0e27cf")
 		)
 		(embedded_fonts no)
 	)
-	(footprint "IDC-Header_2x05_P2.54mm_Vertical"
+	(footprint "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical"
 		(layer "F.Cu")
-		(uuid "51e94842-eb1c-4c84-8c4c-5db85f7ec5ef")
+		(uuid "87784f8a-30eb-4066-9c64-c698dd5eb764")
 		(at 98.73 60.769999)
 		(descr "Through hole IDC box header, 2x05, 2.54mm pitch, DIN 41651 / IEC 60603-13, double rows, https://docs.google.com/spreadsheets/d/16SsEcesNF15N3Lb4niX7dcUr-NY5_MFPQhobNuNppn4/edit#gid=0")
 		(tags "Through hole vertical IDC box header THT 2x05 2.54mm double row")
@@ -357,7 +251,7 @@
 			(at 1.27 -6.1 0)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "24e5a6d2-e632-45fb-bad5-a663ef901f33")
+			(uuid "761459a2-036a-4268-ad9d-cc0120cfcf05")
 			(effects
 				(font
 					(size 1 1)
@@ -368,7 +262,7 @@
 		(property "Value" "To main board"
 			(at 1.27 16.26 0)
 			(layer "F.Fab")
-			(uuid "b35fd99f-f5c6-4bd2-9d52-d12bd395d847")
+			(uuid "275d9af2-3e30-472a-98d6-23cd1d166901")
 			(effects
 				(font
 					(size 1 1)
@@ -380,7 +274,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "cd3b7e79-b9ce-4112-a3a2-c9281d84e949")
+			(uuid "433d64b1-3b9b-4dca-af1a-bbd32d1694b2")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -391,7 +285,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "89050ff5-a5d0-4faf-bbd6-79392ec52469")
+			(uuid "4fa6e0f6-50e5-48f8-9543-77b03931c170")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -402,7 +296,7 @@
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "f767fb1b-eae7-413c-a5af-22ba4607947c")
+			(uuid "c04228cc-5e8a-47f4-ba76-c5ce801786db")
 			(effects
 				(font
 					(size 1 1)
@@ -410,6 +304,9 @@
 				)
 			)
 		)
+		(path "/29d6dd83-b214-5c9b-803c-89679b6379f4")
+		(sheetname "/")
+		(sheetfile "usb-adapter.kicad_sch")
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -420,7 +317,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "23873d69-c74b-401d-baf6-51411a099b05")
+			(uuid "918b9ae7-81a0-43e7-b55b-588e114b8c83")
 		)
 		(fp_line
 			(start -4.68 0.5)
@@ -430,7 +327,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "901ea201-6a1d-4fd0-af7e-f6ee6bd63cdc")
+			(uuid "bdb3bb50-04e4-4dbd-9e83-c6d1d87e0166")
 		)
 		(fp_line
 			(start -3.68 0)
@@ -440,7 +337,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "e8daccd8-0941-44c1-8fb5-58ac84494cab")
+			(uuid "d13103ff-922d-47be-9976-8d78fb03f0ce")
 		)
 		(fp_line
 			(start -3.29 -5.21)
@@ -450,7 +347,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "f1332a0c-6205-470d-a3e0-788fa53316b7")
+			(uuid "12dc057d-9cd7-42e5-a6db-5b1ce0a825b1")
 		)
 		(fp_line
 			(start -3.29 3.03)
@@ -460,7 +357,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "a0c5c986-a617-439d-b7b1-44b4946ebf44")
+			(uuid "06771573-bb2e-4708-b269-2e63c3955f4b")
 		)
 		(fp_line
 			(start -3.29 15.37)
@@ -470,7 +367,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "edf27783-b7bf-4f82-b380-626d673788cb")
+			(uuid "391281cc-ba96-4c50-9359-cf0a0dbd8bad")
 		)
 		(fp_line
 			(start -1.98 -3.91)
@@ -480,7 +377,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "e519f684-ed17-44ee-8848-24a1c87c1b9e")
+			(uuid "182b61eb-338f-49e5-83b0-1fb8683b0a2e")
 		)
 		(fp_line
 			(start -1.98 3.03)
@@ -490,7 +387,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "044bf2be-58d5-47cf-b4ad-f1f482366abb")
+			(uuid "d171d3fa-f824-4a86-a7f2-f36136cd3169")
 		)
 		(fp_line
 			(start -1.98 7.13)
@@ -500,7 +397,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "1b6e5b78-f69a-4733-aa48-b5c023343fd9")
+			(uuid "93f9ca25-c08c-4b8d-8e24-2f142adc0b8d")
 		)
 		(fp_line
 			(start -1.98 14.07)
@@ -510,7 +407,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "3aab0a7d-2116-42bf-9472-04130e9a0763")
+			(uuid "6b27a89d-ab8d-48f6-9bad-9ea0715c9d38")
 		)
 		(fp_line
 			(start 4.52 -3.91)
@@ -520,7 +417,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "2a504f02-409a-4b15-91f1-6616d4936cf3")
+			(uuid "406a8552-ead3-446a-bb89-b3f741394ccd")
 		)
 		(fp_line
 			(start 4.52 14.07)
@@ -530,7 +427,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "41d92fdc-28c2-493c-a550-ea3f4128e5d9")
+			(uuid "31b6cee7-47fa-420b-99c0-e05d3a732c4c")
 		)
 		(fp_line
 			(start 5.83 -5.21)
@@ -540,7 +437,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "edf775cb-bb94-4395-867d-03d1efff6632")
+			(uuid "6c256b39-93e5-4016-ac47-e726fa86b464")
 		)
 		(fp_line
 			(start 5.83 15.37)
@@ -550,7 +447,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "83f5b73f-3412-4dbc-a19f-39b2c59e6ad4")
+			(uuid "28dc70de-8efa-46df-992c-fb4f1f9bf208")
 		)
 		(fp_rect
 			(start -3.68 -5.6)
@@ -561,7 +458,7 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "aa6da598-fc48-48b2-a21b-036bb2a9b301")
+			(uuid "c89430a7-ad8f-46a2-94dc-44d46cec596f")
 		)
 		(fp_line
 			(start -3.18 -4.1)
@@ -571,7 +468,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "df3d87e5-5ca7-4bbe-9daf-75e978231a82")
+			(uuid "eaf40980-47f9-4b4f-a64d-55e60668bfdb")
 		)
 		(fp_line
 			(start -3.18 3.03)
@@ -581,7 +478,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "3060fefe-c04f-43bf-a699-fa69924821ea")
+			(uuid "0045c9d7-4682-4b5f-bb16-f95b1c62c0f8")
 		)
 		(fp_line
 			(start -3.18 15.26)
@@ -591,7 +488,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "62dfc70e-f101-4dba-8820-ee8d17e93fa6")
+			(uuid "bc14ed92-4c46-4927-8ed7-7e401ec5dd69")
 		)
 		(fp_line
 			(start -2.18 -5.1)
@@ -601,7 +498,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "ce6a3edf-38cc-4109-bbc3-1e059e3b7935")
+			(uuid "f9d41e0a-0ab3-47b1-af11-e01bd36a5d47")
 		)
 		(fp_line
 			(start -1.98 -3.91)
@@ -611,7 +508,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "6a9a8230-53f3-4d01-9816-c726d4ffbc43")
+			(uuid "5782322f-4ea0-4e29-a172-5f0cbd26b4a3")
 		)
 		(fp_line
 			(start -1.98 3.03)
@@ -621,7 +518,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "24fbbbbf-b4f2-497f-8503-9ea50c4e5f3c")
+			(uuid "3b06b145-24dd-4a90-b445-014596242efb")
 		)
 		(fp_line
 			(start -1.98 7.13)
@@ -631,7 +528,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "26f23a19-6f7f-4a70-8543-9d7149c197db")
+			(uuid "89692851-b0cc-4c5f-90da-129e0a2e2a34")
 		)
 		(fp_line
 			(start -1.98 14.07)
@@ -641,7 +538,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "958cce79-6b83-4612-9c88-1fd5a337963c")
+			(uuid "625d7b43-9467-431c-b1e5-953060955b04")
 		)
 		(fp_line
 			(start 4.52 -3.91)
@@ -651,7 +548,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "905bb032-824c-42f5-89a7-5c82e52d10c4")
+			(uuid "eabb57f2-2d70-4cd1-a25f-1b310abb4843")
 		)
 		(fp_line
 			(start 4.52 14.07)
@@ -661,7 +558,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "324dc6d9-2448-422e-89d2-2c3231c3eb83")
+			(uuid "2bfc0e7e-b49e-421f-978f-606ed4863a04")
 		)
 		(fp_line
 			(start 5.72 -5.1)
@@ -671,7 +568,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "beeced4d-a18f-493f-953b-ea4ccc484b4c")
+			(uuid "2de5b22c-915c-4533-a1a7-b0dac82d483e")
 		)
 		(fp_line
 			(start 5.72 15.26)
@@ -681,12 +578,12 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "e2b92c74-eb74-420f-9931-1a06070811f0")
+			(uuid "9a0af1ea-f2be-4208-9eab-0f4164286278")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 1.27 5.08 90)
 			(layer "F.Fab")
-			(uuid "df0f249d-7234-4a27-8a7f-19f53371003c")
+			(uuid "e0dbafc5-6aac-4ab0-b805-e73617976d33")
 			(effects
 				(font
 					(size 1 1)
@@ -701,8 +598,8 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
-			(net "VBUS_A")
-			(uuid "a1457b34-76fb-4e70-89cc-063bb21fdff5")
+			(net "/VBUS_A")
+			(uuid "91b94dba-5f91-4319-903e-93e8c1b87718")
 		)
 		(pad "2" thru_hole circle
 			(at 2.54 0)
@@ -711,7 +608,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(uuid "5221b737-8e33-4e5d-93e1-5215c338a475")
+			(uuid "1b7c4f91-591c-449d-99bf-087dfe212dad")
 		)
 		(pad "3" thru_hole circle
 			(at 0 2.54)
@@ -719,8 +616,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "DM_A")
-			(uuid "35e9eb7f-2206-4359-8340-a5d44ea5c29d")
+			(net "/DM_A")
+			(uuid "42170a64-06a5-4e11-ae53-d0ef711bae7a")
 		)
 		(pad "4" thru_hole circle
 			(at 2.54 2.54)
@@ -728,8 +625,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "DP_A")
-			(uuid "02d43682-d2ea-4cae-be95-0fee3d948f1a")
+			(net "/DP_A")
+			(uuid "ac743ff5-b439-4bce-9f8b-318be1019078")
 		)
 		(pad "5" thru_hole circle
 			(at 0 5.08)
@@ -738,7 +635,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(uuid "7df10d70-93cd-47b2-9410-1573b7296572")
+			(uuid "6d5e1eb5-7afb-44a3-8175-27cebe918a0d")
 		)
 		(pad "6" thru_hole circle
 			(at 2.54 5.08)
@@ -747,7 +644,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(uuid "bf2c6ee1-5207-4ff0-81c6-dfa828052803")
+			(uuid "3fbcf483-b7a2-404e-90e8-dbee69070795")
 		)
 		(pad "7" thru_hole circle
 			(at 0 7.62)
@@ -755,8 +652,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "DM_B")
-			(uuid "0d702f5c-6c36-4fbd-bf62-803d8b537358")
+			(net "/DM_B")
+			(uuid "78ef4755-3ea6-4636-b083-4a403fdf149c")
 		)
 		(pad "8" thru_hole circle
 			(at 2.54 7.62)
@@ -764,8 +661,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "DP_B")
-			(uuid "fd88386b-be5e-4e6a-94be-242455a0ad2c")
+			(net "/DP_B")
+			(uuid "1e2c3e3b-d12b-40e2-b8f9-8a1113cf1fb9")
 		)
 		(pad "9" thru_hole circle
 			(at 0 10.16)
@@ -774,7 +671,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(uuid "6a94a6dc-60ee-4eb3-bc18-314431560e36")
+			(uuid "6a5fb291-56e3-4a11-9705-5bf3cd13997b")
 		)
 		(pad "10" thru_hole circle
 			(at 2.54 10.16)
@@ -782,8 +679,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "VBUS_B")
-			(uuid "1bab95e8-ee23-489c-8e57-2a9bac0be65c")
+			(net "/VBUS_B")
+			(uuid "49ed7c81-6fc6-4e65-814f-57210661ad3f")
 		)
 		(embedded_fonts no)
 		(model "${KICAD10_3DMODEL_DIR}/Connector_IDC.3dshapes/IDC-Header_2x05_P2.54mm_Vertical.step"
@@ -798,6 +695,160 @@
 			)
 		)
 	)
+	(footprint "usb-adapter:USB_A_Plug_Vertical"
+		(layer "F.Cu")
+		(uuid "c7a819f7-10c8-47ab-aff8-a2ac7fd07b4a")
+		(at 100 92.63)
+		(descr "USB-A male plug, side-mount USB-71 type (L 15 mm, Molex 48037 pattern) stood on its back end: tails straight through in slots, shell tabs in slots at the jack edges")
+		(property "Reference" "J2"
+			(at 0 -4.5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "8131c552-c17a-4e0e-9525-0999004aff8b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "USB-A plug, port B"
+			(at 0 4 0)
+			(layer "F.Fab")
+			(uuid "b719d0dc-6b4c-4fb2-bd40-585707cad419")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d9319dfb-00d0-40e5-9ad7-6fac41e140ee")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e00c8693-325f-4157-99a6-d320aba88314")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/2f4414ba-6549-5292-84b2-94999f0c715f")
+		(sheetname "/")
+		(sheetfile "usb-adapter.kicad_sch")
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_rect
+			(start -7 -3)
+			(end 7 3)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "a23009f4-4086-4fcf-8eb7-94a6a918da8d")
+		)
+		(fp_line
+			(start -4.5 -1.65)
+			(end 4.5 -1.65)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "7a32a615-2d67-46cf-bde0-83816c21db0f")
+		)
+		(fp_rect
+			(start -6 -2.25)
+			(end 6 2.25)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "a76bff96-ab7d-47f2-a1b0-bc4d00a49c62")
+		)
+		(fp_text user "insert"
+			(at 0 -0.85 0)
+			(layer "F.Fab")
+			(uuid "498a3c16-7636-4ad6-9210-26f2f1b4e0da")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.08)
+				)
+			)
+		)
+		(pad "1" thru_hole rect
+			(at -3.5 -2.1)
+			(size 1.5 1.2)
+			(drill oval 1 0.6)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "/VBUS_B")
+			(uuid "3852695d-1d1e-4a71-83ea-96f1cd62f443")
+		)
+		(pad "2" thru_hole oval
+			(at -1 -2.1)
+			(size 1.5 1.2)
+			(drill oval 1 0.6)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "/DM_B")
+			(uuid "815038ef-5259-4790-adcc-b1edd0e0154b")
+		)
+		(pad "3" thru_hole oval
+			(at 1 -2.1)
+			(size 1.5 1.2)
+			(drill oval 1 0.6)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "/DP_B")
+			(uuid "9ef1e7ed-54bd-4547-947a-11861e3ca49a")
+		)
+		(pad "4" thru_hole oval
+			(at 3.5 -2.1)
+			(size 1.5 1.2)
+			(drill oval 1 0.6)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(uuid "e6396f25-6c28-44a7-a4b6-3f59935dbe15")
+		)
+		(pad "SH" thru_hole oval
+			(at -5.85 0)
+			(size 1.5 4.6)
+			(drill oval 0.9 4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(uuid "b7ac8a28-7018-48f5-8da6-78ce7943a652")
+		)
+		(pad "SH" thru_hole oval
+			(at 5.85 0)
+			(size 1.5 4.6)
+			(drill oval 0.9 4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(uuid "7dda0e2f-b90a-4eb8-bcde-3b35ed14c3f8")
+		)
+		(embedded_fonts no)
+	)
 	(gr_line
 		(start 88.4 76.6)
 		(end 111.6 76.6)
@@ -806,7 +857,7 @@
 			(type default)
 		)
 		(layer "Dwgs.User")
-		(uuid "77b18ed8-5c49-4a13-a280-00b218f967a0")
+		(uuid "db80b797-d5d5-40c6-b099-20f3d0a7a38e")
 	)
 	(gr_line
 		(start 88.4 80)
@@ -816,7 +867,7 @@
 			(type default)
 		)
 		(layer "Dwgs.User")
-		(uuid "d1f7fc3a-a832-4204-be43-5a351c297bda")
+		(uuid "71a29e54-6415-4056-ad95-d3d1938b020b")
 	)
 	(gr_rect
 		(start 91.4 54.7)
@@ -828,12 +879,12 @@
 		)
 		(fill no)
 		(layer "Edge.Cuts")
-		(uuid "445ee5e2-edb6-498b-8d82-1186216c2892")
+		(uuid "d03b20d9-acb6-47b4-9d2a-44eacfeab2b2")
 	)
 	(gr_text "PI UNDERSIDE"
 		(at 118.6 75.8 0)
 		(layer "Dwgs.User")
-		(uuid "4149dba4-8f24-4a84-bc23-224bda4bb0cc")
+		(uuid "6a0a2476-5d90-4b92-a0a2-497855896a4c")
 		(effects
 			(font
 				(size 1 1)
@@ -843,7 +894,7 @@
 	(gr_text "PI PCB"
 		(at 118.6 79.2 0)
 		(layer "Dwgs.User")
-		(uuid "0fd7d06d-ea90-4f94-8958-03eddc5db150")
+		(uuid "e591a1df-2ecd-4639-87f1-ad4a13026080")
 		(effects
 			(font
 				(size 1 1)
